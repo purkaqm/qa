@@ -1,0 +1,275 @@
+{
+  "__type": "ArtOfTest.WebAii.Design.ProjectModel.Test",
+  "__value": {
+    "DomStatesCounter": {},
+    "WebKitExecutionDelay": 0,
+    "ReuseAppWindow": 0,
+    "ProfilerResultsDirectory": null,
+    "ProfilerServerName": null,
+    "ProfilerBenchmarkResultsFilePath": null,
+    "ProfilerBenchmarkResultsId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurationId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurations": {},
+    "CurrentReferences": [],
+    "Steps": {
+      "__type": "ArtOfTest.Common.Design.ProjectModel.AutomationStepList",
+      "__value": [
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "98515b60-edd0-4bc4-92a6-66372f6f47ab",
+            "Description": "Navigate to Landing Page and Login",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CommentActionDescriptor",
+              "__value": {
+                "Comment": null,
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 1,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_HIST_002hyow2mlt.vll",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "64628a6d-84f6-44d9-bc0a-994198122cb2",
+            "Description": "Execute test 'TS_Login'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "TS_Login",
+                "TestPath": "ApplicationLibrary\\CommonFeatures&Navigation\\TS_Login.tstest",
+                "TestUniqueId": "f0cfc9cb-5d6e-45f3-95d8-409c6181aa54",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 2,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_HIST_0020ncypzjy.u0u",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "edb0b3f2-342b-4b17-a9df-1dbf04cf9a80",
+            "Description": "Open Favorites navigation menu",
+            "CustomDescription": "Open user dropdown from left corner and click Edit History link/tab",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CommentActionDescriptor",
+              "__value": {
+                "Comment": null,
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 3,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_HIST_0022m22u0oa.gtq",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "b8c82301-9ffc-4953-9d47-496c888e1400",
+            "Description": "Execute test 'TS_Open_Edit_History_Page'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "TS_Open_Edit_History_Page",
+                "TestPath": "ApplicationLibrary\\CommonFeatures&Navigation\\TS_Open_Edit_History_Page.tstest",
+                "TestUniqueId": "d52eeaa0-2745-43db-ae20-010c562cc013",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 4,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_HIST_0022clgi1ri.ldk",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "0bddb2e5-b41a-4372-a61a-a0d6ef47459a",
+            "Description": "Verify user is navigated to Manage History page",
+            "CustomDescription": " Verify user is navigated to Manage History page",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "                        Pages.PS_ManageHistoryPage.GoButton.Wait.ForExists();\r\n                        Assert.IsTrue(Pages.PS_ManageHistoryPage.SearchInputBox.IsVisible(),\"User should be navigated to History page\");\r\n                        Assert.IsTrue(Pages.PS_ManageHistoryPage.FromDateInputBox.IsVisible(),\"User should be navigated to History page\");\r\n                        Assert.IsTrue(Pages.PS_ManageHistoryPage.GoButton.IsVisible(),\"User should be navigated to History page\");\r\n                        Assert.IsTrue(ActiveBrowser.Find.AllByXPath(AppLocators.get(\"manage_history_name_records\")).Count > 0,\"Records with name should be present\");\r\n                        Assert.IsTrue(ActiveBrowser.Find.AllByXPath(AppLocators.get(\"manage_history_desc_records\")).Count > 0,\"Records with description should be present\");\r\n                        Assert.IsTrue(ActiveBrowser.Find.AllByXPath(AppLocators.get(\"manage_history_url_records\")).Count > 0,\"Records with url should be present\");\r\n                        Assert.IsTrue(ActiveBrowser.Find.AllByXPath(AppLocators.get(\"manage_history_delete_icon_records\")).Count > 0,\"Records with delete icon should be present\");\r\n                        Assert.IsTrue(ActiveBrowser.Find.AllByXPath(AppLocators.get(\"manage_history_add_to_fav_icon_records\")).Count > 0,\"Records with add to fav icon should be present\");",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 5,
+            "Id": "TST_HIS_002_CodedStep",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_HIST_0023cg2lm43.ydo",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        }
+      ]
+    },
+    "IndependentDescriptors": [],
+    "HtmlDescription": "",
+    "SilverlightEnabled": false,
+    "IsSilverlightApp": false,
+    "SilverlightAppWebUrl": "",
+    "SilverlightAppLocalDirectory": "",
+    "SilverlightAppRecordLocal": false,
+    "SilverlightAppOriginUri": null,
+    "WpfAppPath": null,
+    "UseDefaultWpfAppPath": false,
+    "TestAssembly": "PSS_Automation.dll",
+    "TestAssemblyPath": "bin",
+    "TestClass": "PSS_Automation.TST_HIST_002",
+    "IsManual": false,
+    "ResourceFilePath": "AutomationTests\\History\\TST_HIST_002.resx",
+    "HasCodeBehind": true,
+    "DataInfo": {
+      "__type": "ArtOfTest.Common.Design.Data.DataInfo",
+      "__value": {
+        "ConnectionString": "",
+        "DefaultToGrid": true,
+        "DataRange": "",
+        "LoadRecordsCount": null,
+        "DataTableName": "",
+        "DataProvider": "",
+        "DataEnabled": true,
+        "HasBuiltinGrid": false,
+        "DataType": 4,
+        "BuiltInData": null,
+        "BuiltInDocumentKey": null,
+        "TSQL": ""
+      }
+    },
+    "VSProperties": {},
+    "DeploymentItems": [],
+    "IsTestFragment": false,
+    "StopTestListOnFailure": false,
+    "InheritParentDataSource": false,
+    "BrowserType": 0,
+    "QcId": 0,
+    "QcFilePath": null,
+    "QcTestVersionStamp": 0,
+    "CustomProperty1": "Regression",
+    "CustomProperty2": "HistoryManagement",
+    "TestLinks": [],
+    "Description": "This script verifies that  Navigate to History Manager by selecting Edit History in the User Profile drop-down\r\nTC Reference : C212453",
+    "Name": "TST_HIST_002",
+    "Owner": "Pratik Gajjar",
+    "Path": "AutomationTests\\History\\TST_HIST_002.tstest",
+    "Priority": 0,
+    "TestType": 0,
+    "UniqueId": "86d619c6-3322-425d-8a23-26e81199b630",
+    "Id": "86d619c6-3322-425d-8a23-26e81199b630",
+    "ProjectId": "8482a1a8-662a-40c8-b69e-343a43a257af",
+    "Version": 200
+  }
+}

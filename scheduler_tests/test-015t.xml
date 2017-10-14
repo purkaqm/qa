@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="no"?>
+
+
+<Project>
+	<Tasks>
+		<Task Name="Test15" PSObjectId="o2k00300000ecmuo44u0000000">
+			<Task Name="CP1" PSObjectId="o2k00300000ecmuobbdg000000">
+				<Relation PSObjectId="o2k00300000ecmuoh71g000000" Type="Finish-Start"/>
+			</Task>
+			<Task Name="CP2" PSObjectId="o2k00300000ecmuoh71g000000">
+				<Relation PSObjectId="o2k00300000ecmuom31g000000" Type="Finish-Start"/>
+			</Task>
+			<Task Name="CP3" PSObjectId="o2k00300000ecmuom31g000000">
+				<Relation PSObjectId="o2k00300000ecmuorvj0000000" Type="Finish-Start"/>
+			</Task>
+			<Task Name="CP4" PSObjectId="o2k00300000ecmuorvj0000000">
+				<Relation PSObjectId="o2k00300000ecmuobbdg000000" Type="Finish-Start"/>
+			</Task>
+		</Task>
+	</Tasks>
+	<ResourcePool/>
+	<Problems>
+		<Problem Type="CYCLIC_DESCR" PSObjectId="o2k00300000ecmuo44u0000000">
+			<Recommendation Type="CYCLIC_REC"/>
+		</Problem>
+
+	</Problems>	
+</Project>

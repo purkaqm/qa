@@ -1,0 +1,612 @@
+{
+  "__type": "ArtOfTest.WebAii.Design.ProjectModel.Test",
+  "__value": {
+    "DomStatesCounter": {},
+    "WebKitExecutionDelay": 0,
+    "ReuseAppWindow": 0,
+    "ProfilerResultsDirectory": null,
+    "ProfilerServerName": null,
+    "ProfilerBenchmarkResultsFilePath": null,
+    "ProfilerBenchmarkResultsId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurationId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurations": {},
+    "CurrentReferences": [
+      "System",
+      "System.Core",
+      "ArtOfTest.WebAii, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=4fd5f65be123776c",
+      "ArtOfTest.WebAii.Design, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=4fc62bbc3827ab1d",
+      "Telerik.WebAii.Controls.Html, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.WebAii.Controls.Xaml, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.WebAii.Controls.Xaml.Wpf, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.TestingFramework.Controls.KendoUI, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a",
+      "Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a",
+      "System.Data",
+      "System.Drawing",
+      "System.Windows.Forms"
+    ],
+    "Steps": {
+      "__type": "ArtOfTest.Common.Design.ProjectModel.AutomationStepList",
+      "__value": [
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "3858b6f2-6ae5-469a-b24e-31ea068026f2",
+            "Description": "Navigate to Landing Page and Login",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CommentActionDescriptor",
+              "__value": {
+                "Comment": null,
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 1,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_SRT_015vtixxgsm.ex5",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "ed01eccc-c4d3-41b5-926d-ccd54ccdefe1",
+            "Description": "Execute test 'TS_Login'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "TS_Login",
+                "TestPath": "ApplicationLibrary\\CommonFeatures&Navigation\\TS_Login.tstest",
+                "TestUniqueId": "f0cfc9cb-5d6e-45f3-95d8-409c6181aa54",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 2,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_SRT_015cpnut1qu.mtj",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "6f93ec65-7e4b-4401-a35c-faae91151444",
+            "Description": "Click Admin from Left Navigation Bar",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CommentActionDescriptor",
+              "__value": {
+                "Comment": null,
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 3,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_SRT_015bh4evime.2cv",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "a0d0805c-c07f-4c7a-bea4-06f0f9f0b6b6",
+            "Description": "Execute test 'TS_Admin_Open_Left_Panel'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "TS_Admin_Open_Left_Panel",
+                "TestPath": "ApplicationLibrary\\CommonFeatures&Navigation\\TS_Admin_Open_Left_Panel.tstest",
+                "TestUniqueId": "f20f4382-a425-4b34-8ad7-da6050882223",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 4,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_SRT_015jhjmrura.d1n",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "3b5b7c3b-8d86-4356-b82d-8a22df42af86",
+            "Description": "Execute test 'TS_Open_Status_Report_Templates_Page'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "TS_Open_Status_Report_Templates_Page",
+                "TestPath": "ApplicationLibrary\\Admin\\TS_Open_Status_Report_Templates_Page.tstest",
+                "TestUniqueId": "53bd925e-c1d9-407b-8ad3-bd58a423afd9",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 5,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_SRT_015y2scibyq.y1k",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "5b45aa64-f84c-417b-ab6f-a1a5f35ce6e9",
+            "Description": "Click on Add New button",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "                                    Pages.PS_StatusReportTemplatesPage.AddNewBtn.Wait.ForExists();\r\n                                    Pages.PS_StatusReportTemplatesPage.AddNewBtn.Click();\r\n                                    ActiveBrowser.WaitForAjax(Manager.Settings.ElementWaitTimeout);",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 6,
+            "Id": "CS_SRT_015_01",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_SRT_0150yhto0ko.gp3",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "5b384611-625e-473e-82ee-245bb2fcd259",
+            "Description": "Comment: ",
+            "CustomDescription": "Create inactive status report template",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CommentActionDescriptor",
+              "__value": {
+                "Comment": null,
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 7,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_SRT_015tpwgfayt.q0r",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "3d972bdf-464c-43ab-ac92-c3a4ed7dcec8",
+            "Description": "Execute test 'TS_Create_Status_Report_Template_With_Given_Data'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "TS_Create_Status_Report_Template_With_Given_Data",
+                "TestPath": "ApplicationLibrary\\Admin\\StatusReportTemplates\\TS_Create_Status_Report_Template_With_Given_Data.tstest",
+                "TestUniqueId": "08166184-b815-4df5-8469-ce58dbd1c15e",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 8,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_SRT_015yksjw3ug.hjr",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "a67e6a25-d489-425e-9d86-919d6d240c6d",
+            "Description": "Verify that newly added statur report template is added to the table as inactive",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "                                    string srtName = GetExtractedValue(\"GeneratedStatusReportTemplateName\").ToString();\r\n                                    string expectedSRTRecordLocator = string.Format(AppLocators.get(\"statur_report_table_record_name_icon\"),srtName);\r\n                                    HtmlImage iconImg = ActiveBrowser.Find.ByXPath<HtmlImage>(expectedSRTRecordLocator);\r\n                                    Assert.IsTrue(iconImg.BaseElement.GetAttribute(\"title\").Value.ToString().Equals(\"Inactive\"), \"Newly Created SRT should be displayed as inactive in table\");",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 9,
+            "Id": "CS_SRT_015_02",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_SRT_015eppcwuie.qlh",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "91dd8d8a-dc57-4d8e-adab-6100fd6830fa",
+            "Description": "Click on Newly Craeted Template Name Link",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "                                                            string srtName = GetExtractedValue(\"GeneratedStatusReportTemplateName\").ToString();\r\n                                                            string expectedSRTRecordLocator = string.Format(AppLocators.get(\"statur_report_table_record_name_link\"),srtName);\r\n                                                            HtmlDiv srtNameLink = ActiveBrowser.Find.ByXPath<HtmlDiv>(expectedSRTRecordLocator);\r\n                                                            srtNameLink.Wait.ForExists();\r\n                                                            srtNameLink.Click();\r\n                                                            ActiveBrowser.WaitForAjax(Manager.Settings.ElementWaitTimeout);",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 10,
+            "Id": "CS_SRT_015_04",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_SRT_015qa2xiwap.1dg",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "bb13c7cd-3f2c-478a-b2a5-7b841fcda7cb",
+            "Description": "Edit Template Activity from inactive to active and save",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "                                    //change name\r\n                                    string editedTemplateName = \"Edited\"+Randomizers.generateRandomInt(10000,99999);\r\n                                    ActiveBrowser.Window.SetFocus();\r\n                                    Pages.PS_StatusReportTemplatesPage.AddNewTemplateNameInput.Click();\r\n                                    Pages.PS_StatusReportTemplatesPage.AddNewTemplateNameInput.Focus();\r\n                                    Actions.SetText(Pages.PS_StatusReportTemplatesPage.AddNewTemplateNameInput, editedTemplateName);\r\n                                                        \r\n                                    //make the template active\r\n                                    Pages.PS_StatusReportTemplatesPage.AddNewTemplateActiveCheckbox.Click();\r\n            \r\n                                    //save the template\r\n                                    Pages.PS_StatusReportTemplatesPage.AddNewTemplateSaveBtn.Click();\r\n                                    ActiveBrowser.WaitUntilReady();\r\n                                    ActiveBrowser.RefreshDomTree();\r\n                                    \r\n                                    SetExtractedValue(\"GeneratedStatusReportTemplateName\",editedTemplateName);",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 11,
+            "Id": "CS_SRT_015_05",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_SRT_015oo1iflcb.umh",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "c3c5f908-5d81-40c9-baf6-89ba7d233144",
+            "Description": "Verify that the template is displayed as active in the table",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "                                    string srtName = GetExtractedValue(\"GeneratedStatusReportTemplateName\").ToString();\r\n                                    string expectedSRTRecordLocator = string.Format(AppLocators.get(\"statur_report_table_record_name_icon\"),srtName);\r\n                                    HtmlImage iconImg = ActiveBrowser.Find.ByXPath<HtmlImage>(expectedSRTRecordLocator);\r\n                                    Assert.IsTrue(iconImg.BaseElement.GetAttribute(\"title\").Value.ToString().Equals(\"Active\"), \"Newly Created SRT should be displayed as active in table\");",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 12,
+            "Id": "CS_SRT_015_06",
+            "StepState": 1,
+            "ContinueOnFailure": true,
+            "StepImageKey": "TST_SRT_015ixxozk5x.cef",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "3e10260f-5877-4a87-be05-bbbd8c73ab4f",
+            "Description": "Execute test 'TS_DeActivate_Status_Report_Template_And_Delete'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "TS_DeActivate_Status_Report_Template_And_Delete",
+                "TestPath": "ApplicationLibrary\\Admin\\StatusReportTemplates\\TS_DeActivate_Status_Report_Template_And_Delete.tstest",
+                "TestUniqueId": "ec271d25-7dee-4a90-886d-dbb63a4c9cd4",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 13,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_SRT_015wbz0mj3z.o3q",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        }
+      ]
+    },
+    "IndependentDescriptors": [],
+    "HtmlDescription": "",
+    "SilverlightEnabled": false,
+    "IsSilverlightApp": false,
+    "SilverlightAppWebUrl": "",
+    "SilverlightAppLocalDirectory": "",
+    "SilverlightAppRecordLocal": false,
+    "SilverlightAppOriginUri": null,
+    "WpfAppPath": null,
+    "UseDefaultWpfAppPath": false,
+    "TestAssembly": "PSS_Automation.dll",
+    "TestAssemblyPath": "bin",
+    "TestClass": "PSS_Automation.TST_SRT_015",
+    "IsManual": false,
+    "ResourceFilePath": "AutomationTests\\Admin\\StatusReports\\TST_SRT_015.resx",
+    "HasCodeBehind": true,
+    "DataInfo": {
+      "__type": "ArtOfTest.Common.Design.Data.DataInfo",
+      "__value": {
+        "ConnectionString": "",
+        "DefaultToGrid": false,
+        "DataRange": "",
+        "LoadRecordsCount": null,
+        "DataTableName": "TST_SRT_Inactive$",
+        "DataProvider": "StatusReportTemplate.xlsx",
+        "DataEnabled": true,
+        "HasBuiltinGrid": false,
+        "DataType": 5,
+        "BuiltInData": null,
+        "BuiltInDocumentKey": null,
+        "TSQL": ""
+      }
+    },
+    "VSProperties": {},
+    "DeploymentItems": [],
+    "IsTestFragment": false,
+    "StopTestListOnFailure": false,
+    "InheritParentDataSource": false,
+    "BrowserType": 0,
+    "QcId": 0,
+    "QcFilePath": null,
+    "QcTestVersionStamp": 0,
+    "CustomProperty1": "Regression",
+    "CustomProperty2": "StatusReports",
+    "TestLinks": [],
+    "Description": "This script verifies that user can edit template record and activate an inactive template\r\n\r\nTC Ref : C4152926 and C4152927",
+    "Name": "TST_SRT_015",
+    "Owner": "Pratik Gajjar",
+    "Path": "AutomationTests\\Admin\\StatusReports\\TST_SRT_015.tstest",
+    "Priority": 0,
+    "TestType": 0,
+    "UniqueId": "f4c2b708-45a2-4f82-96c0-8839dd4fa390",
+    "Id": "f4c2b708-45a2-4f82-96c0-8839dd4fa390",
+    "ProjectId": "8482a1a8-662a-40c8-b69e-343a43a257af",
+    "Version": 200
+  }
+}

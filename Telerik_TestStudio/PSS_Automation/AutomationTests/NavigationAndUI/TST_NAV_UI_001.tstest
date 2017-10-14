@@ -1,0 +1,1076 @@
+{
+  "__type": "ArtOfTest.WebAii.Design.ProjectModel.Test",
+  "__value": {
+    "DomStatesCounter": {},
+    "WebKitExecutionDelay": 0,
+    "ReuseAppWindow": 0,
+    "ProfilerResultsDirectory": null,
+    "ProfilerServerName": null,
+    "ProfilerBenchmarkResultsFilePath": null,
+    "ProfilerBenchmarkResultsId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurationId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurations": {},
+    "CurrentReferences": [
+      "System",
+      "System.Core",
+      "ArtOfTest.WebAii, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=4fd5f65be123776c",
+      "ArtOfTest.WebAii.Design, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=4fc62bbc3827ab1d",
+      "Telerik.WebAii.Controls.Html, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.WebAii.Controls.Xaml, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.WebAii.Controls.Xaml.Wpf, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.TestingFramework.Controls.KendoUI, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+    ],
+    "Steps": {
+      "__type": "ArtOfTest.Common.Design.ProjectModel.AutomationStepList",
+      "__value": [
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "150dc42a-2ccf-44e7-95e4-23d315dccbf1",
+            "Description": "Navigate to Landing Page and Login",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CommentActionDescriptor",
+              "__value": {
+                "Comment": null,
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 1,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Verify_Default_Page_Layoutnbxeioxa.s1b",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "25c64e00-f047-4084-854d-6ea34da21b12",
+            "Description": "Execute test 'TS_Login'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "TS_Login",
+                "TestPath": "ApplicationLibrary\\CommonFeatures&Navigation\\TS_Login.tstest",
+                "TestUniqueId": "f0cfc9cb-5d6e-45f3-95d8-409c6181aa54",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 2,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Verify_Default_Page_Layoutsfujgsse.j23",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "b414dcb0-ee37-4388-a718-b892027ca8b1",
+            "Description": "[TST_Verify_Default_Page_Layout_CodedStep] : New Coded Step",
+            "CustomDescription": "Verify default layout contains icon bar, navigation bar, content area and header bar",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Assert.IsTrue(Pages.PS_HomePage.LeftNavigationBarDiv.IsVisible(), \"Icon Bar should be visible\");\r\n            Assert.IsTrue(Pages.PS_HomePage.NavPanelMenuBarDiv.IsVisible(),\"Navigation Menu should be visible\");\r\n            Assert.IsTrue(Pages.PS_HomePage.HeaderBarDiv.IsVisible(),\"Header bar should be visible\");\r\n            Assert.IsTrue(Pages.PS_HomePage.PageContentDiv.IsVisible(),\"Content Area should be visible\");",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 3,
+            "Id": "TST_Verify_Default_Page_Layout_CodedStep",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Verify_Default_Page_Layoutmybag2nf.l1s",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "6df2c22a-1b2d-4312-8412-013b1dc5637f",
+            "Description": "[TST_Verify_Default_Page_Layout_CodedStep1] : New Coded Step",
+            "CustomDescription": "Verify all module icons are displayed correctly in icon bar",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Assert.IsTrue(Pages.PS_HomePage.HomeLeftNavLink.IsVisible(),\"Home icon should be visible\");\r\n            Assert.IsTrue(Pages.PS_HomePage.InboxLeftNavLink.IsVisible(), \"Inbox icon should be visible\");\r\n            Assert.IsTrue(Pages.PS_HomePage.AddLeftNavLink.IsVisible(), \"Add icon should be visible\");\r\n            Assert.IsTrue(Pages.PS_HomePage.ReviewLeftNavLink.IsVisible(), \"Review icon should be visible\");\r\n            Assert.IsTrue(Pages.PS_HomePage.ProjectLeftNavLink.IsVisible(), \"Project icon should be visible\");\r\n            Assert.IsTrue(Pages.PS_HomePage.AdminLeftNavLink.IsVisible(), \"Admin icon should be visible\");\r\n            \r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 4,
+            "Id": "TST_Verify_Default_Page_Layout_CodedStep1",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Verify_Default_Page_Layoutgismrnmm.xkx",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "2ac99659-3bb8-404b-82c2-5e14f74d0289",
+            "Description": "[TST_Verify_Default_Page_Layout_CodedStep2] : New Coded Step",
+            "CustomDescription": "Verify tooltip text and menu title for 'Home'",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_HomePage.HomeLeftNavLink.MouseHover();\r\n            System.Threading.Thread.Sleep(3000);\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForVisible();\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForContent(FindContentType.InnerText,\"HOME\");\r\n            Assert.IsTrue(Pages.PS_HomePage.HomeLeftNavLink.Attributes.Single(x => x.Name == \"title\").Value.Equals(\"Home\"),\"Home icon on hover tool tip text should be 'Home'\");\r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 5,
+            "Id": "TST_Verify_Default_Page_Layout_CodedStep2",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Verify_Default_Page_Layoutfpzye42p.jjr",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "3703fa9b-263d-44d1-9841-dd98bee0f572",
+            "Description": "[TST_Verify_Default_Page_Layout_CodedStep3] : New Coded Step",
+            "CustomDescription": "Verify tooltip text and menu title for 'Inbox'",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_HomePage.InboxLeftNavLink.MouseHover();\r\n            System.Threading.Thread.Sleep(3000);\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForVisible();\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForContent(FindContentType.InnerText,\"INBOX\");\r\n            Assert.IsTrue(Pages.PS_HomePage.InboxLeftNavLink.Attributes.Single(x => x.Name == \"title\").Value.Equals(\"Inbox\"),\"Inbox icon on hover tool tip text should be 'Inbox'\");",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 6,
+            "Id": "TST_Verify_Default_Page_Layout_CodedStep3",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Verify_Default_Page_Layoutoqb5jdos.rsj",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "f9cdfc63-31e5-49f8-a228-ca00bd975c24",
+            "Description": "[TST_Verify_Default_Page_Layout_CodedStep4] : New Coded Step",
+            "CustomDescription": "Verify tooltip text and menu title for 'Add'",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_HomePage.AddLeftNavLink.MouseHover();\r\n            System.Threading.Thread.Sleep(3000);\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForVisible();\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForContent(FindContentType.InnerText,\"ADD\");\r\n            Assert.IsTrue(Pages.PS_HomePage.AddLeftNavLink.Attributes.Single(x => x.Name == \"title\").Value.Equals(\"Add\"),\"Add icon on hover tool tip text should be 'Add'\");\r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 7,
+            "Id": "TST_Verify_Default_Page_Layout_CodedStep4",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Verify_Default_Page_Layoutke412ypk.hqm",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "7f22dd11-1b4d-420e-b7d2-0aacc3610eb7",
+            "Description": "[TST_Verify_Default_Page_Layout_CodedStep5] : New Coded Step",
+            "CustomDescription": "Verify tooltip text and menu title for 'Review'",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            \r\n            Pages.PS_HomePage.ReviewLeftNavLink.MouseHover();\r\n            System.Threading.Thread.Sleep(3000);\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForVisible();\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForContent(FindContentType.InnerText,\"REVIEW\");\r\n            Assert.IsTrue(Pages.PS_HomePage.ReviewLeftNavLink.Attributes.Single(x => x.Name == \"title\").Value.Equals(\"Review\"),\"Review icon on hover tool tip text should be 'Review'\");\r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 8,
+            "Id": "TST_Verify_Default_Page_Layout_CodedStep5",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Verify_Default_Page_Layoute0icdgvx.xsq",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "fd3c07a6-4a76-4ef2-a69c-b342ab5296a6",
+            "Description": "[TST_Verify_Default_Page_Layout_CodedStep6] : New Coded Step",
+            "CustomDescription": "Verify tooltip text and menu title for 'Admin'",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            \r\n            Pages.PS_HomePage.AdminLeftNavLink.MouseHover();\r\n            System.Threading.Thread.Sleep(3000);\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForVisible();\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForContent(FindContentType.InnerText,\"ADMIN\");\r\n            Assert.IsTrue(Pages.PS_HomePage.AdminLeftNavLink.Attributes.Single(x => x.Name == \"title\").Value.Equals(\"Admin\"),\"Admin icon on hover tool tip text should be 'Admin'\");\r\n            \r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 9,
+            "Id": "TST_Verify_Default_Page_Layout_CodedStep6",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Verify_Default_Page_Layoutppno5bb4.oly",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "de1007c3-d3bd-47ce-b209-04842d1d0411",
+            "Description": "[TST_Verify_Default_Page_Layout_CodedStep7] : New Coded Step",
+            "CustomDescription": "Verify tooltip text and menu title for 'Project'",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_HomePage.ProjectLeftNavLink.MouseHover();\r\n            System.Threading.Thread.Sleep(3000);\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForVisible();\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForContent(FindContentType.InnerText,\"PROJECT\");\r\n            Assert.IsTrue(Pages.PS_HomePage.ProjectLeftNavLink.Attributes.Single(x => x.Name == \"title\").Value.Equals(\"Project\"),\"Project icon on hover tool tip text should be 'Project'\");\r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 10,
+            "Id": "TST_Verify_Default_Page_Layout_CodedStep7",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Verify_Default_Page_Layout0vqlukj5.3x5",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        }
+      ]
+    },
+    "IndependentDescriptors": [
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "/Home.page",
+              "Query": "",
+              "BaseUrl": "http://lax1qapp05.cinteractive.com:8080/Cognex/Home.page",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "Home | PowerSteering v14",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_HomePage"
+            }
+          },
+          "Frame": null,
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "yRtWBP9TpQAY8a8R5SILGwz2rd0=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "NavPanelMenuBarDiv",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "xpath=//div[@id='MenuBar']"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/div[9]/div[1]/div[2]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlDiv",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      },
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "/Home.page",
+              "Query": "",
+              "BaseUrl": "http://lax1qapp05.cinteractive.com:8080/Cognex/Home.page",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "Home | PowerSteering v14",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_HomePage"
+            }
+          },
+          "Frame": null,
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "Zbobj73nx0R0W0iBp9N1lI71vog=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "HeaderBarDiv",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "xpath=//div[@id='header']"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/div[4]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlDiv",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      },
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "/Home.page",
+              "Query": "",
+              "BaseUrl": "http://lax1qapp05.cinteractive.com:8080/Cognex/Home.page",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "Home | PowerSteering v14",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_HomePage"
+            }
+          },
+          "Frame": null,
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "r1NLaceHwIVbBMbKklMtK8ldAuY=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "PageContentDiv",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "xpath=//div[@id='PageContent']"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/div[9]/div[2]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlDiv",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      },
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "/Home.page",
+              "Query": "",
+              "BaseUrl": "http://lax1qapp05.cinteractive.com:8080/Cognex/Home.page",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "Home | PowerSteering v14",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_HomePage"
+            }
+          },
+          "Frame": null,
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "WHOQlA+yKmFVkVn0RVnq8Wawna8=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "HomeLeftNavLink",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "xpath=//div[@id='NavBar']//a[@title='Home']"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/div[9]/div[1]/div[1]/ul[1]/li[1]/a[1]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlAnchor",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      },
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "/Home.page",
+              "Query": "",
+              "BaseUrl": "http://lax1qapp05.cinteractive.com:8080/Cognex/Home.page",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "Home | PowerSteering v14",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_HomePage"
+            }
+          },
+          "Frame": null,
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "2GGrwb3AVy6E2mfFGwf51Wd2g94=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "InboxLeftNavLink",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "xpath=//div[@id='NavBar']//a[@title='Inbox']"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/div[9]/div[1]/div[1]/ul[1]/li[2]/a[1]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlAnchor",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      },
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "/Home.page",
+              "Query": "",
+              "BaseUrl": "http://lax1qapp05.cinteractive.com:8080/Cognex/Home.page",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "Home | PowerSteering v14",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_HomePage"
+            }
+          },
+          "Frame": null,
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "Hiug52fl7REhXckOiLNfrYX0kXk=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "AddLeftNavLink",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "xpath=//div[@id='NavBar']//a[@title='Add']"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/div[9]/div[1]/div[1]/ul[1]/li[3]/a[1]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlAnchor",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      },
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "/Home.page",
+              "Query": "",
+              "BaseUrl": "http://lax1qapp05.cinteractive.com:8080/Cognex/Home.page",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "Home | PowerSteering v14",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_HomePage"
+            }
+          },
+          "Frame": null,
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "RBn+qVy4hLUD0PVRkdUv0ceDSZE=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "FavoritesLeftNavLink",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "xpath=//div[@id='NavBar']//a[@title='Favorites']"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/div[9]/div[1]/div[1]/ul[2]/li[1]/a[1]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlAnchor",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      },
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "/Home.page",
+              "Query": "",
+              "BaseUrl": "http://lax1qapp05.cinteractive.com:8080/Cognex/Home.page",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "Home | PowerSteering v14",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_HomePage"
+            }
+          },
+          "Frame": null,
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "RrSe9xxlGLo7rvpWfBmV5ENmKEw=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "HistoryLeftNavLink",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "xpath=//div[@id='NavBar']//a[@title='History']"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/div[9]/div[1]/div[1]/ul[2]/li[2]/a[1]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlAnchor",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      },
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "/Home.page",
+              "Query": "",
+              "BaseUrl": "http://lax1qapp05.cinteractive.com:8080/Cognex/Home.page",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "Home | PowerSteering v14",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_HomePage"
+            }
+          },
+          "Frame": null,
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.HtmlFindExpressionElement",
+            "__value": {
+              "uniqueKey": "vlyFZ5Xq5OcLxv+rA3ZM0/HnPxc=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "ImportantLinksLeftNavLink",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "xpath=//div[@id='NavBar']//a[@title='Important Links']"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/div[9]/div[1]/div[1]/ul[2]/li[3]/a[1]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlAnchor",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      },
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "/Home.page",
+              "Query": "",
+              "BaseUrl": "http://lax1qapp05.cinteractive.com:8080/Cognex/Home.page",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "Home | PowerSteering v14",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_HomePage"
+            }
+          },
+          "Frame": null,
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.HtmlFindExpressionElement",
+            "__value": {
+              "uniqueKey": "vlyFZ5Xq5OcLxv+rA3ZM0/HnPxc=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "ImportantLinksLeftNavLink",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "xpath=//div[@id='NavBar']//a[@title='Important Links']"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/div[9]/div[1]/div[1]/ul[2]/li[3]/a[1]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlAnchor",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      }
+    ],
+    "HtmlDescription": "",
+    "SilverlightEnabled": false,
+    "IsSilverlightApp": false,
+    "SilverlightAppWebUrl": "",
+    "SilverlightAppLocalDirectory": "",
+    "SilverlightAppRecordLocal": false,
+    "SilverlightAppOriginUri": null,
+    "WpfAppPath": null,
+    "UseDefaultWpfAppPath": false,
+    "TestAssembly": "PSS_Automation.dll",
+    "TestAssemblyPath": "bin",
+    "TestClass": "PSS_Automation.TST_NAV_UI_001",
+    "IsManual": false,
+    "ResourceFilePath": "AutomationTests\\NavigationAndUI\\TST_NAV_UI_001.resx",
+    "HasCodeBehind": true,
+    "DataInfo": {
+      "__type": "ArtOfTest.Common.Design.Data.DataInfo",
+      "__value": {
+        "ConnectionString": "",
+        "DefaultToGrid": true,
+        "DataRange": "",
+        "LoadRecordsCount": null,
+        "DataTableName": "",
+        "DataProvider": "",
+        "DataEnabled": true,
+        "HasBuiltinGrid": false,
+        "DataType": 4,
+        "BuiltInData": null,
+        "BuiltInDocumentKey": null,
+        "TSQL": ""
+      }
+    },
+    "VSProperties": {},
+    "DeploymentItems": [],
+    "IsTestFragment": false,
+    "StopTestListOnFailure": false,
+    "InheritParentDataSource": false,
+    "BrowserType": 0,
+    "QcId": 0,
+    "QcFilePath": null,
+    "QcTestVersionStamp": 0,
+    "CustomProperty1": "Regression",
+    "CustomProperty2": "LeftNavAndUI",
+    "TestLinks": [],
+    "Description": "This test verifies default layout of the home page after login. The icon bar, navigation bar, content area and header are present on the page.\r\nAlso varifies the tool tip text on mouse hover on each icon bar items.\r\n\r\nTestRail Test case(s) reference: C208130, C208131, C208132, C208133, C208134",
+    "Name": "TST_NAV_UI_001",
+    "Owner": "Pratik Gajjar",
+    "Path": "AutomationTests\\NavigationAndUI\\TST_NAV_UI_001.tstest",
+    "Priority": 0,
+    "TestType": 0,
+    "UniqueId": "8949c5ed-6eb1-4b22-bc53-843796dda96d",
+    "Id": "8949c5ed-6eb1-4b22-bc53-843796dda96d",
+    "ProjectId": "8482a1a8-662a-40c8-b69e-343a43a257af",
+    "Version": 200
+  }
+}

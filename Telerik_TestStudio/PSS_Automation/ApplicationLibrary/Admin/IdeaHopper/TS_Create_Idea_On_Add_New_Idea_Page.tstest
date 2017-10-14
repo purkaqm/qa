@@ -1,0 +1,1111 @@
+{
+  "__type": "ArtOfTest.WebAii.Design.ProjectModel.Test",
+  "__value": {
+    "DomStatesCounter": {},
+    "WebKitExecutionDelay": 0,
+    "ReuseAppWindow": 0,
+    "ProfilerResultsDirectory": null,
+    "ProfilerServerName": null,
+    "ProfilerBenchmarkResultsFilePath": null,
+    "ProfilerBenchmarkResultsId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurationId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurations": {},
+    "CurrentReferences": [
+      "System",
+      "System.Core",
+      "ArtOfTest.WebAii, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=4fd5f65be123776c",
+      "ArtOfTest.WebAii.Design, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=4fc62bbc3827ab1d",
+      "Telerik.WebAii.Controls.Html, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.WebAii.Controls.Xaml, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.WebAii.Controls.Xaml.Wpf, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.TestingFramework.Controls.KendoUI, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a",
+      "Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a",
+      "System.Data",
+      "System.Drawing",
+      "System.Windows.Forms"
+    ],
+    "Steps": {
+      "__type": "ArtOfTest.Common.Design.ProjectModel.AutomationStepList",
+      "__value": [
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "d427e657-822d-4a99-915e-a8195e3f3f6b",
+            "Description": "Enter Idea Name",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            string ideaName = Data[\"IdeaName\"].ToString() + Randomizers.generateRandomInt(1000,9999);\r\n            Actions.SetText(Pages.PS_AddSubmitNewIdeaPage.IdeaNameText,ideaName);\r\n            SetExtractedValue(\"GeneratedIdeaName\",ideaName);",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 1,
+            "Id": "TS_CS_01",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Create_Idea_On_Add_New_Idea_Paged2ol3jz4.0sm",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "301d97be-387a-4bcf-9531-ba662eeb1a2b",
+            "Description": "Enter User name",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Actions.SetText(Pages.PS_AddSubmitNewIdeaPage.YourNameText,Data[\"UserName\"].ToString());",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 2,
+            "Id": "TS_CS_02",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Create_Idea_On_Add_New_Idea_Pagejqtcaqsq.4n1",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "6274d1cf-a135-4d8d-8c57-2e633cca1adf",
+            "Description": "Enter Project type",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            HtmlDiv ProjectTypeDiv = ActiveBrowser.Find.ByXPath<HtmlDiv>(AppLocators.get(\"idea_hopper_create_idea_project_type_div\"));\r\n            ProjectTypeDiv.Wait.ForExists();\r\n            ProjectTypeDiv.Click(true);\r\n            ActiveBrowser.RefreshDomTree();\r\n            Pages.PS_AddSubmitNewIdeaPage.ProjectTypeDoneButton.Wait.ForExists();\r\n            Pages.PS_AddSubmitNewIdeaPage.ProjectTypeDoneButton.IsVisible();\r\n               \r\n           string objectTypeStr = Data[\"ProjectType\"].ToString();\r\n           Log.WriteLine(objectTypeStr);\r\n           string[] objectTypes = System.Text.RegularExpressions.Regex.Split(objectTypeStr,\"---\");\r\n               \r\n               for(int i=0; i < objectTypes.Length ; i++)\r\n               {\r\n                   System.Threading.Thread.Sleep(3000);\r\n                   string projectTypeCheckboxLoc = string.Format(AppLocators.get(\"add_submit_idea_project_type_input\"),objectTypes[i]);\r\n                   Log.WriteLine(projectTypeCheckboxLoc);\r\n                   if(ActiveBrowser.Find.AllByXPath(projectTypeCheckboxLoc).Count > 0)\r\n                   {\r\n                       HtmlInputCheckBox projectTypeChkbx = ActiveBrowser.Find.ByXPath<HtmlInputCheckBox>(projectTypeCheckboxLoc);\r\n                       projectTypeChkbx.Click(true);\r\n                   }\r\n                   else\r\n                   {\r\n                       Assert.IsTrue(false, objectTypes[i] + \" Not present in project type list\");\r\n                   }\r\n    \r\n               }\r\n               \r\n               Pages.PS_AddSubmitNewIdeaPage.ProjectTypeDoneButton.Click();\r\n               ActiveBrowser.RefreshDomTree();",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 3,
+            "Id": "TS_CS_03",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Create_Idea_On_Add_New_Idea_Pagesrz0snzf.apx",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "1cd47632-8e58-4149-b114-48c12ea5d3ef",
+            "Description": "Enter Department",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_SubmitAnIdeaPage.DepartmentDiv.Wait.ForExists();\r\n            Pages.PS_SubmitAnIdeaPage.DepartmentDiv.Click(true);\r\n            ActiveBrowser.RefreshDomTree();\r\n            Pages.PS_AddSubmitNewIdeaPage.DepartmentDoneButton.Wait.ForExists();\r\n            Pages.PS_AddSubmitNewIdeaPage.DepartmentDoneButton.IsVisible();\r\n               \r\n           string objectTypeStr = Data[\"Department\"].ToString();          \r\n           string[] objectTypes = System.Text.RegularExpressions.Regex.Split(objectTypeStr, \"---\");\r\n               \r\n               for(int i=0; i < objectTypes.Length ; i++)\r\n               {\r\n                   System.Threading.Thread.Sleep(3000);\r\n                   string departmentCheckboxLoc = string.Format(AppLocators.get(\"add_submit_idea_department_checkbox\"),objectTypes[i]);\r\n                   Log.WriteLine(departmentCheckboxLoc);\r\n                   if(ActiveBrowser.Find.AllByXPath(departmentCheckboxLoc).Count > 0)\r\n                   {\r\n                       HtmlInputCheckBox departmentChkbx = ActiveBrowser.Find.ByXPath<HtmlInputCheckBox>(departmentCheckboxLoc);\r\n                       departmentChkbx.Check(true);\r\n                       Log.WriteLine(departmentCheckboxLoc);\r\n                   }\r\n                   else\r\n                   {\r\n                       Assert.IsTrue(false, objectTypes[i] + \" Not present in work items list\");\r\n                   }\r\n               }\r\n               \r\n               Pages.PS_AddSubmitNewIdeaPage.DepartmentDoneButton.Click();\r\n               ActiveBrowser.WaitForAjax(Manager.Settings.ElementWaitTimeout);\r\n               System.Threading.Thread.Sleep(3000);",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 4,
+            "Id": "TS_CS_04",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Create_Idea_On_Add_New_Idea_Pageyuws43e1.n4h",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "e4186a1d-c8c5-4f4b-b6ab-e9fa0e79be0d",
+            "Description": "Enter Functional Group",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            ActiveBrowser.RefreshDomTree();\r\n            HtmlDiv functionalGrpDiv = ActiveBrowser.Find.AllByXPath<HtmlDiv>(AppLocators.get(\"add_submit_idea_functional_grp_div\"))[0];\r\n            functionalGrpDiv.Wait.ForExists();\r\n            functionalGrpDiv.Click(true);\r\n \r\n            ActiveBrowser.RefreshDomTree();\r\n            Pages.PS_AddSubmitNewIdeaPage.FunctionalGrpDoneButton.Wait.ForExists();\r\n            Pages.PS_AddSubmitNewIdeaPage.FunctionalGrpDoneButton.IsVisible();\r\n               \r\n           string objectTypeStr = Data[\"FunctionalGroup1\"].ToString();          \r\n           string[] objectTypes = System.Text.RegularExpressions.Regex.Split(objectTypeStr, \"---\");\r\n               \r\n               for(int i=0; i < objectTypes.Length ; i++)\r\n               {\r\n                   System.Threading.Thread.Sleep(3000);\r\n                   string functionalGrpCheckboxLoc = string.Format(AppLocators.get(\"add_submit_idea_functional_group_chkbox\"),objectTypes[i]);\r\n                   Log.WriteLine(functionalGrpCheckboxLoc);\r\n                   if(ActiveBrowser.Find.AllByXPath(functionalGrpCheckboxLoc).Count > 0)\r\n                   {\r\n                       HtmlInputCheckBox functionalGrpChkbx = ActiveBrowser.Find.ByXPath<HtmlInputCheckBox>(functionalGrpCheckboxLoc);\r\n                       functionalGrpChkbx.Check(true);\r\n                       Log.WriteLine(functionalGrpCheckboxLoc);\r\n                   }\r\n                   else\r\n                   {\r\n                       Assert.IsTrue(false, objectTypes[i] + \" Not present in functional group list\");\r\n                   }\r\n               }\r\n               \r\n               Pages.PS_AddSubmitNewIdeaPage.FunctionalGrpDoneButton.Click(); ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 5,
+            "Id": "TS_CS_05",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Create_Idea_On_Add_New_Idea_Pagemnkeukeh.k22",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "45b23cac-e3ed-48a0-b76d-9511e5ac6f51",
+            "Description": "Enter Location",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            ActiveBrowser.RefreshDomTree();\r\n            HtmlDiv locationDiv = ActiveBrowser.Find.ByXPath<HtmlDiv>(AppLocators.get(\"idea_hopper_create_idea_location_type_div\"));\r\n            locationDiv.Wait.ForExists();\r\n            locationDiv.Click(true);\r\n            ActiveBrowser.RefreshDomTree();\r\n            Pages.PS_AddSubmitNewIdeaPage.LocationDoneButton.Wait.ForExists();\r\n            Pages.PS_AddSubmitNewIdeaPage.LocationDoneButton.IsVisible();\r\n               \r\n           string objectTypeStr = Data[\"Location\"].ToString();          \r\n           string[] objectTypes = System.Text.RegularExpressions.Regex.Split(objectTypeStr, \"---\");\r\n               \r\n               for(int i=0; i < objectTypes.Length ; i++)\r\n               {\r\n                   System.Threading.Thread.Sleep(3000);\r\n                   string locationCheckboxLoc = string.Format(AppLocators.get(\"add_submit_idea_location_checkbox\"),objectTypes[i]);\r\n                   Log.WriteLine(locationCheckboxLoc);\r\n                   if(ActiveBrowser.Find.AllByXPath(locationCheckboxLoc).Count > 0)\r\n                   {\r\n                       HtmlInputCheckBox locationChkbx = ActiveBrowser.Find.ByXPath<HtmlInputCheckBox>(locationCheckboxLoc);\r\n                       locationChkbx.Check(true);\r\n                       Log.WriteLine(locationCheckboxLoc);\r\n                   }\r\n                   else\r\n                   {\r\n                       Assert.IsTrue(false, objectTypes[i] + \" Not present in work items list\");\r\n                   }\r\n               }\r\n               \r\n               Pages.PS_AddSubmitNewIdeaPage.ProjectTypeDoneButton.Click();",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 6,
+            "Id": "TS_CS_06",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Create_Idea_On_Add_New_Idea_Pagepdzn5020.abg",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "66692acf-a4a5-4206-883f-20c1758703d8",
+            "Description": "Enter Stratagic Alignment",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            string strategicValue = Data[\"Strategic Alignment\"].ToString();\r\n            ActiveBrowser.RefreshDomTree();\r\n            HtmlDiv StratagicAlignmentDiv = ActiveBrowser.Find.ByXPath<HtmlDiv>(AppLocators.get(\"idea_hopper_create_idea_stratagic_alignment_type_div\"));\r\n            StratagicAlignmentDiv.Wait.ForExists();\r\n            StratagicAlignmentDiv.Click(true);\r\n            //Pages.PS_AddSubmitNewIdeaPage.StratagicAlignmentDiv.Click(true);\r\n            ActiveBrowser.RefreshDomTree();\r\n            Log.WriteLine(string.Format(AppLocators.get(\"add_submit_idea_strategic_alignment_div\"),strategicValue));\r\n            HtmlDiv stratagicAlignmtValueDiv = ActiveBrowser.Find.ByXPath<HtmlDiv>(string.Format(AppLocators.get(\"add_submit_idea_strategic_alignment_div\"),strategicValue));\r\n            stratagicAlignmtValueDiv.Wait.ForExists();\r\n            stratagicAlignmtValueDiv.MouseClick(MouseClickType.LeftClick);\r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 7,
+            "Id": "TS_CS_07",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Create_Idea_On_Add_New_Idea_Pagedoyrmjuv.4nx",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "150872e3-5272-4ba3-8863-d907748824e2",
+            "Description": "Enter Project description",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Actions.SetText(Pages.PS_AddSubmitNewIdeaPage.OpportunityStatementTextArea,\"Generated by Automation script\");\r\n            Actions.SetText(Pages.PS_AddSubmitNewIdeaPage.GoalStatementTextArea,\"Creating idea for testing purpose\");",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 8,
+            "Id": "TS_CS_08",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Create_Idea_On_Add_New_Idea_Page1yfwe15r.5ks",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "87fb2432-c790-49bd-a3d9-00f28d2f4189",
+            "Description": "Click Submit button",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_AddSubmitNewIdeaPage.SubmitButton.Click();\r\n            ActiveBrowser.WaitUntilReady();",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 9,
+            "Id": "TS_CS_09",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Create_Idea_On_Add_New_Idea_Pagel4dtl0io.b2z",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        }
+      ]
+    },
+    "IndependentDescriptors": [
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "/Cognex/project/IdeaPortal.epage",
+              "Query": "?sp=S19d4g0g0000lisrcj9pg000000",
+              "BaseUrl": "http://lax1qapp05.cinteractive.com:8080",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "Add: Submit New Idea | PowerSteering trunk",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_AddSubmitNewIdeaPage"
+            }
+          },
+          "Frame": null,
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "5OA2cT6aiodZ6pHfIgPtGgDAtO0=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "IdeaNameText",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "TagName=input"
+                          }
+                        },
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "id=name"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/div[3]/div[1]/div[2]/form[1]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/input[1]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlInputText",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      },
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "/Cognex/project/IdeaPortal.epage",
+              "Query": "?sp=S19d4g0g0000lisrcj9pg000000",
+              "BaseUrl": "http://lax1qapp05.cinteractive.com:8080",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "Add: Submit New Idea | PowerSteering trunk",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_AddSubmitNewIdeaPage"
+            }
+          },
+          "Frame": null,
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "mwo6kHJ4kaMESrAUefxArcrr+vY=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "YourNameText",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "TagName=input"
+                          }
+                        },
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "id=TextField"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/div[3]/div[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/input[1]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlInputText",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      },
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "/Cognex/project/IdeaPortal.epage",
+              "Query": "?sp=S19d4g0g0000lisrcj9pg000000",
+              "BaseUrl": "http://lax1qapp05.cinteractive.com:8080",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "Add: Submit New Idea | PowerSteering trunk",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_AddSubmitNewIdeaPage"
+            }
+          },
+          "Frame": null,
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "ObONugp3BhWdGzj2hPgDoQxbJVQ=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "OpportunityStatementTextArea",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "TagName=textarea"
+                          }
+                        },
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "id=TextArea"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/div[3]/div[1]/div[2]/form[1]/div[3]/div[1]/fieldset[2]/table[1]/tbody[1]/tr[1]/td[1]/textarea[1]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlTextArea",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      },
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "/Cognex/project/IdeaPortal.epage",
+              "Query": "?sp=S19d4g0g0000lisrcj9pg000000",
+              "BaseUrl": "http://lax1qapp05.cinteractive.com:8080",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "Add: Submit New Idea | PowerSteering trunk",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_AddSubmitNewIdeaPage"
+            }
+          },
+          "Frame": null,
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "XbPtZX2OH8cCR1jNUUtu2oTJP+M=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "GoalStatementTextArea",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "TagName=textarea"
+                          }
+                        },
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "id=TextArea_0"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/div[3]/div[1]/div[2]/form[1]/div[3]/div[1]/fieldset[2]/table[1]/tbody[1]/tr[2]/td[1]/textarea[1]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlTextArea",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      },
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "/Cognex/project/IdeaPortal.epage",
+              "Query": "?sp=S19d4g0g0000lisrcj9pg000000",
+              "BaseUrl": "http://lax1qapp05.cinteractive.com:8080",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "Add: Submit New Idea | PowerSteering trunk",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_AddSubmitNewIdeaPage"
+            }
+          },
+          "Frame": null,
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "zpoSMtjlSE0/tXbwfP6BREVt6Zk=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "SubmitButton",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "TagName=input"
+                          }
+                        },
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "id=Submit"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/div[3]/div[1]/div[2]/form[1]/div[4]/div[1]/input[1]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlInputSubmit",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      },
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "/Cognex/project/IdeaPortal.epage",
+              "Query": "?sp=S19d4g0g0000lisrcj9pg000000",
+              "BaseUrl": "http://lax1qapp05.cinteractive.com:8080",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "Add: Submit New Idea | PowerSteering trunk",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_AddSubmitNewIdeaPage"
+            }
+          },
+          "Frame": null,
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "qDVXIF1w+b1mWkbTPpUOU/GsysE=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "StratagicAlignmentDiv",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "TagName=div"
+                          }
+                        },
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "config=~\"displayName\":\"Strategic Alignment\""
+                          }
+                        },
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "class=Selector Combo"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/div[3]/div[1]/div[2]/form[1]/div[3]/div[1]/fieldset[1]/table[1]/tbody[3]/tr[2]/td[1]/div[1]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlDiv",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      },
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "/Cognex/project/IdeaPortal.epage",
+              "Query": "?sp=S19d4g0g0000lisrcj9pg000000",
+              "BaseUrl": "http://lax1qapp05.cinteractive.com:8080",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "Add: Submit New Idea | PowerSteering trunk",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_AddSubmitNewIdeaPage"
+            }
+          },
+          "Frame": null,
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "LpcIwqpilLVf5sOPnAQw5V+gj0k=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "ProjectTypeDoneButton",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "xpath=//div[@id='ps_ui_SelectorPopup_0']//input[@value='Done']"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/div[3]/div[1]/div[2]/form[1]/div[3]/div[1]/fieldset[1]/table[1]/tbody[2]/tr[1]/td[1]/div[10]/div[1]/div[1]/div[4]/div[1]/input[1]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlInputButton",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      },
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "http://lax1qapp05.cinteractive.com:8080/Cognex/project/IdeaPortal.epage",
+              "Query": "?sp=S1801a2g0000ijctg4deg000000",
+              "BaseUrl": "",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "Submit an Idea | PowerSteering trunk",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_SubmitAnIdeaPage"
+            }
+          },
+          "Frame": null,
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "wBrtZ5Jqr0DCge/5K/Y0kDYYaKM=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "DepartmentDiv",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "TagName=div"
+                          }
+                        },
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "class=MultiSelect left"
+                          }
+                        },
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "id=~TreeDispideaPortal"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/div[3]/div[1]/div[2]/form[1]/div[3]/div[1]/fieldset[1]/table[1]/tbody[2]/tr[2]/td[1]/div[1]/div[1]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlDiv",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      },
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "/Cognex/project/IdeaPortal.epage",
+              "Query": "?sp=S19d4g0g0000lisrcj9pg000000",
+              "BaseUrl": "http://lax1qapp05.cinteractive.com:8080",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "Add: Submit New Idea | PowerSteering trunk",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_AddSubmitNewIdeaPage"
+            }
+          },
+          "Frame": null,
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "+P+Om7IxLyWkKdfBDqsXRZrJOFE=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "DepartmentDoneButton",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "TagName=input"
+                          }
+                        },
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "value=Done"
+                          }
+                        },
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "id=~TreeDispideaPortal"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[4]/div[1]/input[1]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlInputButton",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      },
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "/Cognex/project/IdeaPortal.epage",
+              "Query": "?sp=S19d4g0g0000lisrcj9pg000000",
+              "BaseUrl": "http://lax1qapp05.cinteractive.com:8080",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "Add: Submit New Idea | PowerSteering trunk",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_AddSubmitNewIdeaPage"
+            }
+          },
+          "Frame": null,
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "cbL5mKgHCP+1ZbBKx0rJJzuAsHE=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "FunctionalGrpDoneButton",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "value=Done"
+                          }
+                        },
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "id=~TreeDispideaPortal"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[4]/div[1]/input[1]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlInputButton",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      }
+    ],
+    "HtmlDescription": "",
+    "SilverlightEnabled": false,
+    "IsSilverlightApp": false,
+    "SilverlightAppWebUrl": "",
+    "SilverlightAppLocalDirectory": "",
+    "SilverlightAppRecordLocal": false,
+    "SilverlightAppOriginUri": null,
+    "WpfAppPath": null,
+    "UseDefaultWpfAppPath": false,
+    "TestAssembly": "PSS_Automation.dll",
+    "TestAssemblyPath": "bin",
+    "TestClass": "PSS_Automation.TS_Create_Idea_On_Add_New_Idea_Page",
+    "IsManual": false,
+    "ResourceFilePath": "ApplicationLibrary\\Admin\\IdeaHopper\\TS_Create_Idea_On_Add_New_Idea_Page.resx",
+    "HasCodeBehind": true,
+    "DataInfo": {
+      "__type": "ArtOfTest.Common.Design.Data.DataInfo",
+      "__value": {
+        "ConnectionString": "",
+        "DefaultToGrid": false,
+        "DataRange": "",
+        "LoadRecordsCount": null,
+        "DataTableName": "Submit_Idea_Page$",
+        "DataProvider": "IdeaHopper.xlsx",
+        "DataEnabled": true,
+        "HasBuiltinGrid": false,
+        "DataType": 5,
+        "BuiltInData": null,
+        "BuiltInDocumentKey": null,
+        "TSQL": ""
+      }
+    },
+    "VSProperties": {},
+    "DeploymentItems": [],
+    "IsTestFragment": false,
+    "StopTestListOnFailure": false,
+    "InheritParentDataSource": false,
+    "BrowserType": 0,
+    "QcId": 0,
+    "QcFilePath": null,
+    "QcTestVersionStamp": 0,
+    "TestLinks": [],
+    "Description": "",
+    "Name": "TS_Create_Idea_On_Add_New_Idea_Page",
+    "Owner": "",
+    "Path": "ApplicationLibrary\\Admin\\IdeaHopper\\TS_Create_Idea_On_Add_New_Idea_Page.tstest",
+    "Priority": 0,
+    "TestType": 0,
+    "UniqueId": "ac52eabf-7912-4de3-8c7c-bb4a59e207f2",
+    "Id": "ac52eabf-7912-4de3-8c7c-bb4a59e207f2",
+    "ProjectId": "8482a1a8-662a-40c8-b69e-343a43a257af",
+    "Version": 200
+  }
+}

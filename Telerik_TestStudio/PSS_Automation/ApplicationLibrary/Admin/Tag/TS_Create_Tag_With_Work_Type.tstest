@@ -1,0 +1,273 @@
+{
+  "__type": "ArtOfTest.WebAii.Design.ProjectModel.Test",
+  "__value": {
+    "DomStatesCounter": {},
+    "WebKitExecutionDelay": 0,
+    "ReuseAppWindow": 0,
+    "ProfilerResultsDirectory": null,
+    "ProfilerServerName": null,
+    "ProfilerBenchmarkResultsFilePath": null,
+    "ProfilerBenchmarkResultsId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurationId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurations": {},
+    "CurrentReferences": [],
+    "Steps": {
+      "__type": "ArtOfTest.Common.Design.ProjectModel.AutomationStepList",
+      "__value": [
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "044ea8fb-87b2-4d4e-9395-659cc2ce21ad",
+            "Description": "Wait till Add New Tag pop up is displayed",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_TagsListPage.AddNewTagDialogNameText.Wait.ForExists();           \r\n            Pages.PS_TagsListPage.AddNewTagDailogDescriptionTextArea.Wait.ForExists();\r\n            Pages.PS_TagsListPage.AddNewTagsDailogAddTagButton.Wait.ForVisible();                                   \r\n                                                                      ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 1,
+            "Id": "TS_CTAG_00",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Create_Tag_With_Work_Typecgpw5u51.n1x",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "2cc526a3-3d23-46fe-bf4f-4694d2fcd68f",
+            "Description": "Enter Name",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            custTagName = Data[\"CustomTagName\"].ToString()+Randomizers.generateRandomInt(1000,9999);\r\n            SetExtractedValue(\"CustTagName\",custTagName);\r\n            ActiveBrowser.Window.SetFocus();\r\n            Pages.PS_TagsListPage.AddNewTagDialogNameText.Click();\r\n            Pages.PS_TagsListPage.AddNewTagDialogNameText.Focus();\r\n            Actions.SetText(Pages.PS_TagsListPage.AddNewTagDialogNameText, custTagName);",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 2,
+            "Id": "TS_CTAG_Name",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Create_Tag_With_Work_Type231ytkha.jte",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "2b40f3f0-b037-4bcd-a3cf-fedec3e1d116",
+            "Description": "Enter Description",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            if(Data[\"CustomTagDesc\"].ToString().Length > 0){\r\n            ActiveBrowser.Window.SetFocus();\r\n            Pages.PS_TagsListPage.AddNewTagDailogDescriptionTextArea.Click();\r\n            Pages.PS_TagsListPage.AddNewTagDailogDescriptionTextArea.Focus();\r\n            Actions.SetText(Pages.PS_TagsListPage.AddNewTagDailogDescriptionTextArea, Data[\"CustomTagDesc\"].ToString());\r\n            }",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 3,
+            "Id": "TS_CTAG_Descreption",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Create_Tag_With_Work_Type2ue3juo1.kle",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "a8f4f8f6-e7e3-4052-ab6b-91ba6c62bbf2",
+            "Description": "Choose Work item",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "                        \r\n            if(!Data[\"TagWorkType\"].ToString().ToLower().Contains(\"no\"))\r\n            {\r\n                \r\n                HtmlDiv worktypeChoose = ActiveBrowser.Find.ByXPath<HtmlDiv>(AppLocators.get(\"select_work_item_for_tags\"));\r\n                worktypeChoose.Wait.ForExists();\r\n                worktypeChoose.Click();\r\n                ActiveBrowser.RefreshDomTree();\r\n                Pages.PS_TagsListPage.AddNewTagDailogWorkTypesDoneButton.Wait.ForVisible();\r\n                \r\n                string workTypeStr = Data[\"TagWorkType\"].ToString();\r\n                \r\n                string[] workType = System.Text.RegularExpressions.Regex.Split(workTypeStr,\"---\");\r\n                \r\n                for(int i=0; i < workType.Length; i++)\r\n                {\r\n                 string workTypeCheckboxLocator = string.Format(\"//input[@name='{0}']\",workType[i]);\r\n                 Log.WriteLine(workTypeCheckboxLocator);   \r\n                 if(ActiveBrowser.Find.AllByXPath(workTypeCheckboxLocator).Count > 0)\r\n                 {\r\n                   HtmlInputCheckBox workItemChkbx = ActiveBrowser.Find.ByXPath<HtmlInputCheckBox>(workTypeCheckboxLocator);\r\n                   workItemChkbx.Click();\r\n                 }\r\n                 else\r\n                 {\r\n                   Assert.IsTrue(false, workType[i] + \" Not present in work items list\");\r\n                 }\r\n                }\r\n                \r\n                Pages.PS_TagsListPage.AddNewTagDailogWorkTypesDoneButton.Click();\r\n                ActiveBrowser.RefreshDomTree();\r\n            }\r\n                        \r\n                        ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 4,
+            "Id": "TS_CTAG_WorkItem",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Create_Tag_With_Work_Typer3yq3fq0.pyg",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "dd0d27f9-c87a-4938-8818-917bd41f2a24",
+            "Description": "Click on 'Add Tag' button",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_TagsListPage.AddNewTagsDailogAddTagButton.Click();\r\n            ActiveBrowser.WaitUntilReady();\r\n                                    ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 5,
+            "Id": "TS_CTAG_AddTag",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Create_Tag_With_Work_Typemubbidda.rbw",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        }
+      ]
+    },
+    "IndependentDescriptors": [],
+    "HtmlDescription": "",
+    "SilverlightEnabled": false,
+    "IsSilverlightApp": false,
+    "SilverlightAppWebUrl": "",
+    "SilverlightAppLocalDirectory": "",
+    "SilverlightAppRecordLocal": false,
+    "SilverlightAppOriginUri": null,
+    "WpfAppPath": null,
+    "UseDefaultWpfAppPath": false,
+    "TestAssembly": "PSS_Automation.dll",
+    "TestAssemblyPath": "bin",
+    "TestClass": "PSS_Automation.TST_Create_Tag_With_Work_Type",
+    "IsManual": false,
+    "ResourceFilePath": "ApplicationLibrary\\Admin\\Tag\\TS_Create_Tag_With_Work_Type.resx",
+    "HasCodeBehind": true,
+    "DataInfo": {
+      "__type": "ArtOfTest.Common.Design.Data.DataInfo",
+      "__value": {
+        "ConnectionString": "",
+        "DefaultToGrid": true,
+        "DataRange": "",
+        "LoadRecordsCount": null,
+        "DataTableName": "",
+        "DataProvider": "",
+        "DataEnabled": true,
+        "HasBuiltinGrid": false,
+        "DataType": 4,
+        "BuiltInData": null,
+        "BuiltInDocumentKey": null,
+        "TSQL": ""
+      }
+    },
+    "VSProperties": {},
+    "DeploymentItems": [],
+    "IsTestFragment": false,
+    "StopTestListOnFailure": false,
+    "InheritParentDataSource": true,
+    "BrowserType": 0,
+    "QcId": 0,
+    "QcFilePath": null,
+    "QcTestVersionStamp": 0,
+    "TestLinks": [],
+    "Description": "",
+    "Name": "TS_Create_Tag_With_Work_Type",
+    "Owner": "",
+    "Path": "ApplicationLibrary\\Admin\\Tag\\TS_Create_Tag_With_Work_Type.tstest",
+    "Priority": 0,
+    "TestType": 0,
+    "UniqueId": "83fe1997-f424-4be7-aa1d-500c074e1c3a",
+    "Id": "83fe1997-f424-4be7-aa1d-500c074e1c3a",
+    "ProjectId": "8482a1a8-662a-40c8-b69e-343a43a257af",
+    "Version": 200
+  }
+}

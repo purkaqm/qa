@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+
+<project name="${app.name}" default="jar">
+
+    <description>Build jar with Selenium tests</description>
+
+	<buildnumber file="build.number" description="PS Mailer." />
+
+    <property name="app.name" value="psmailer" />
+    <property name="app.mainclass"  value="com.powersteering.mail.PSMailerManager"/>
+	<property name="app.version" value="1b${build.number}" />
+    <property name="dir.src" value="src"/>
+    <property name="dir.build" value="build"/>
+    <property name="dir.lib"  value="lib"/>
+    <property name="dir.target"  value="target"/>
+    <property name="dir.docs"  value="docs"/>
+    <property name="dir.docs.api"  value="docs/api"/>
+
+    <property name="app.classpath" value="
+         lib/activation.jar
+         lib/mail.jar
+    	 lib/log4j-1.2.15.jar
+        " />
+
+    <path id="lib-classpath">
+        <fileset dir="${dir.lib}">
+            <include name="*.jar" />
+        </fileset>
+        <pathelement path="${app.build}" />
+    </path>
+
+   <target name="clean">
+    <delete includeemptydirs="yes">
+        <fileset dir="${dir.build}" includes="**/*" />
+        <fileset dir="${dir.target}" includes="**/*" />
+    </delete>
+    <mkdir dir="${dir.build}"/>
+    <mkdir dir="${dir.target}"/>
+   </target>
+
+    <target name="init" depends="clean">
+    </target>
+
+    <target name="build" depends="init">
+       <javac
+           srcdir="${dir.src}"
+           destdir="${dir.build}"
+           classpathref="lib-classpath"
+           fork="false"
+       >
+       <src path="${dir.src}" />
+      </javac>
+   </target>
+
+   <target name="jar" depends="build">
+    <jar destfile="${dir.target}/${app.name}-${app.version}.jar" basedir="${dir.build}">
+            <manifest>
+            	<attribute name="Main-Class" value="${app.mainclass}" />
+            	<attribute name="Class-Path" value="${app.classpath}" />
+            	<attribute name="Implementation-Title" value="${app.name}" />
+            	<attribute name="Implementation-Verison" value="${app.version}" />
+            	<attribute name="Implementation-Vendor" value="selyaev_ag" />
+            </manifest>
+    </jar>
+   </target>
+
+
+
+</project>

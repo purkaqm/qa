@@ -1,0 +1,186 @@
+{
+  "__type": "Telerik.TestStudio.Load.LoadDesignTest",
+  "__value": {
+    "ControllerConfiguration": {
+      "__type": "Telerik.TestStudio.Load.LoadControllerConfiguration",
+      "__value": {
+        "MachineName": null
+      }
+    },
+    "ProfiledServers": [],
+    "Goals": [
+      {
+        "__type": "Telerik.TestStudio.Load.ViewModels.LoadTestGoalViewModel",
+        "__value": {
+          "MessageInfo": {
+            "__type": "Telerik.TestStudio.Load.Common.GoalsHelpers.GoalMessageInfo",
+            "__value": {
+              "MetricName": "Average Response Time (ms)",
+              "MachineName": "Overall Test",
+              "IsCustomGoal": false,
+              "Threshold": 0.0,
+              "Operator": ">",
+              "PassWhenGoalMet": false,
+              "StopWhenGoalMet": false
+            }
+          },
+          "Name": "Average Response Time (ms)",
+          "MachineName": "Overall Test",
+          "RunTitleDisplay": "Average Response Time (ms) for Overall Test",
+          "RunDescription": "Fail this goal if Average Response Time (ms) is greater than",
+          "ResultsDescription": "You specified to fail this goal if the value is greater than 0. The value reached is {0:0.}.",
+          "Operator": ">",
+          "Threshold": 0.0,
+          "IsEnabled": false,
+          "StopTestWhenGoalMet": false,
+          "PassWhenGoalMet": false,
+          "IsCustomGoal": false,
+          "ExampleText": "Example: \"Does my application respond in less than 3000 milliseconds?\""
+        }
+      },
+      {
+        "__type": "Telerik.TestStudio.Load.ViewModels.LoadTestGoalViewModel",
+        "__value": {
+          "MessageInfo": {
+            "__type": "Telerik.TestStudio.Load.Common.GoalsHelpers.GoalMessageInfo",
+            "__value": {
+              "MetricName": "HTTP Errors/second",
+              "MachineName": "Overall Test",
+              "IsCustomGoal": false,
+              "Threshold": 0.0,
+              "Operator": ">",
+              "PassWhenGoalMet": false,
+              "StopWhenGoalMet": false
+            }
+          },
+          "Name": "HTTP Errors/second",
+          "MachineName": "Overall Test",
+          "RunTitleDisplay": "HTTP Errors/second for Overall Test",
+          "RunDescription": "Fail this goal if HTTP Errors/second is greater than",
+          "ResultsDescription": "You specified to fail this goal if the value is greater than 0. The value reached is {0:0.}.",
+          "Operator": ">",
+          "Threshold": 0.0,
+          "IsEnabled": false,
+          "StopTestWhenGoalMet": false,
+          "PassWhenGoalMet": false,
+          "IsCustomGoal": false,
+          "ExampleText": "Example: \"Does my application throw no more than 10 errors per second?\""
+        }
+      },
+      {
+        "__type": "Telerik.TestStudio.Load.ViewModels.LoadTestGoalViewModel",
+        "__value": {
+          "MessageInfo": {
+            "__type": "Telerik.TestStudio.Load.Common.GoalsHelpers.GoalMessageInfo",
+            "__value": {
+              "MetricName": "Responses Received/second",
+              "MachineName": "Overall Test",
+              "IsCustomGoal": false,
+              "Threshold": 0.0,
+              "Operator": ">",
+              "PassWhenGoalMet": true,
+              "StopWhenGoalMet": false
+            }
+          },
+          "Name": "Responses Received/second",
+          "MachineName": "Overall Test",
+          "RunTitleDisplay": "Responses Received/second for Overall Test",
+          "RunDescription": "Pass this goal if Responses Received/second is greater than",
+          "ResultsDescription": "You specified to pass this goal if the value is greater than 0. The value reached is {0:0.}.",
+          "Operator": ">",
+          "Threshold": 0.0,
+          "IsEnabled": false,
+          "StopTestWhenGoalMet": false,
+          "PassWhenGoalMet": true,
+          "IsCustomGoal": false,
+          "ExampleText": "Example: \"Does my application return more than 100 responses per second?\""
+        }
+      },
+      {
+        "__type": "Telerik.TestStudio.Load.ViewModels.LoadTestGoalViewModel",
+        "__value": {
+          "MessageInfo": {
+            "__type": "Telerik.TestStudio.Load.Common.GoalsHelpers.GoalMessageInfo",
+            "__value": {
+              "MetricName": "Current Virtual Users",
+              "MachineName": "Overall Test",
+              "IsCustomGoal": false,
+              "Threshold": 0.0,
+              "Operator": ">",
+              "PassWhenGoalMet": true,
+              "StopWhenGoalMet": false
+            }
+          },
+          "Name": "Current Virtual Users",
+          "MachineName": "Overall Test",
+          "RunTitleDisplay": "Current Virtual Users for Overall Test",
+          "RunDescription": "Pass this goal if Current Virtual Users is greater than",
+          "ResultsDescription": "You specified to pass this goal if the value is greater than 0. The value reached is {0:0.}.",
+          "Operator": ">",
+          "Threshold": 0.0,
+          "IsEnabled": false,
+          "StopTestWhenGoalMet": false,
+          "PassWhenGoalMet": true,
+          "IsCustomGoal": false,
+          "ExampleText": "Example: \"Does my application handle more than 1000 user requests concurrently?\""
+        }
+      }
+    ],
+    "ControlAndLoadFromThisComputer": false,
+    "ReportingSampleInterval": "00:00:05",
+    "Duration": "00:10:00",
+    "Preferences": {
+      "ForceNewConnection": true,
+      "DelayGC": false
+    },
+    "IgnoreGoalsForXSeconds": 0,
+    "AuthorizationProfiles": [],
+    "IsManual": false,
+    "AutomaticallyDistributeUserGroups": false,
+    "LoadAgentConfigurations": [],
+    "UserGroups": [
+      {
+        "__type": "Telerik.TestStudio.Load.LoadDesignScenarioGroup",
+        "__value": {
+          "MinimumUsers": 0,
+          "StartUserCount": 1,
+          "MaxUserCount": 1,
+          "UserRampTimeInMinutes": 0.0,
+          "Name": null,
+          "UserScenarios": []
+        }
+      }
+    ],
+    "UserScenarios": [],
+    "LastView": 3,
+    "TestLinks": [],
+    "DataInfo": {
+      "__type": "ArtOfTest.Common.Design.Data.DataInfo",
+      "__value": {
+        "ConnectionString": "",
+        "DefaultToGrid": true,
+        "DataRange": "",
+        "LoadRecordsCount": null,
+        "DataTableName": "",
+        "DataProvider": "",
+        "DataEnabled": true,
+        "HasBuiltinGrid": false,
+        "DataType": 4,
+        "BuiltInData": null,
+        "BuiltInDocumentKey": null,
+        "TSQL": ""
+      }
+    },
+    "Description": "",
+    "Name": "LoadTest",
+    "Owner": null,
+    "Path": "LoadTests\\LoadTest.tstest",
+    "Priority": 0,
+    "TestType": 3,
+    "UniqueId": "b1ee103b-9bb1-4498-86bc-c60d3188f186",
+    "Id": "b1ee103b-9bb1-4498-86bc-c60d3188f186",
+    "ProjectId": "8482a1a8-662a-40c8-b69e-343a43a257af",
+    "Version": 200,
+    "ExecutionDescription": "LoadTest for 10 minutes with 1 users"
+  }
+}

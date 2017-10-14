@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="no"?>
+
+
+<Project>
+	<Tasks>
+		<Task Name="Test 34" PSObjectId="o2k00300000ecls6a5gg000000">
+			<Task Name="CP1" Start="04/05/2002  09:00:00" Duration="4800" PSObjectId="o2k00300000ecls6jffg000000">
+	                        <Relation PSObjectId="o2k00380000ecdtl8j8g000000" Type="Finish-Start"/>
+	                </Task>
+			<Task Name="CP2" Start="04/10/2002  09:00:00" Duration="4800" PSObjectId="o2k00380000ecdtl8j8g000000"/>
+		</Task>
+	</Tasks>
+	<Problems>
+		<Problem Type="DEPENDENCY_DESCR" PSObjectId="o2k00300000ecls6jffg000000">
+			<Recommendation Type="DEP_ON_SECOND_WORK"/>
+			<Recommendation Type="DEP_ON_BOTH_WORKS"/>
+		</Problem>
+	</Problems>	
+</Project>

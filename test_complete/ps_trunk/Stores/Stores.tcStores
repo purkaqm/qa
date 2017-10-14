@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="child list">
+			<Node name="item0000000000">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="WebTesting\WebTesting.tcWtc"/>
+				</Node>
+				<Prp name="index" type="I" value="0"/>
+				<Prp name="key" type="S" value="{40AD840A-76C4-4819-8B2A-A93FBE538A1D}"/>
+				<Prp name="pluginname" type="S" value="Web Checkpoints"/>
+				<Prp name="type" type="S" value="{B205BEB2-E15D-463E-8F95-9AF50A3E8F46}"/>
+				<Prp name="typename" type="S" value="Web Testing"/>
+			</Node>
+			<Node name="item0000000001">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="Objects.tcObjects"/>
+				</Node>
+				<Prp name="index" type="I" value="1"/>
+				<Prp name="key" type="S" value="{005545FA-6366-4481-8355-333FB0CB1AB5}"/>
+				<Prp name="pluginname" type="S" value="Stores"/>
+				<Prp name="type" type="S" value="{30501691-969F-4007-923F-BA4459E51E6A}"/>
+				<Prp name="typename" type="S" value="Objects"/>
+			</Node>
+			<Node name="item0000000002">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="Regions.tcRegions"/>
+				</Node>
+				<Prp name="index" type="I" value="2"/>
+				<Prp name="key" type="S" value="{96AE020A-1EB2-4965-88FA-E0E0B5B3E044}"/>
+				<Prp name="pluginname" type="S" value="Stores"/>
+				<Prp name="type" type="S" value="{DA6D7EF7-5B05-4735-AAF0-A85E47D47989}"/>
+				<Prp name="typename" type="S" value="Regions"/>
+			</Node>
+		</Node>
+		<Node name="folders">
+			<Node name="folders"/>
+		</Node>
+		<Node name="settings">
+			<Prp name="settingsversion" type="S" value="9.20"/>
+		</Node>
+		<Prp name="signature" type="S" value="{5238AF17-5FE2-48FF-8BCC-9803A975A4F4}"/>
+		<Prp name="version" type="S" value="10.0"/>
+	</Node>
+</Nodes>

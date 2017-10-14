@@ -1,0 +1,179 @@
+<project name="AutoTests" default="jar">
+
+    <description>Build jar with Selenium tests</description>
+
+    <property name="app.name" value="autotests"/>
+    <property name="app.version" value="trunk"/>
+    <property name="app.mainclass" value="com.powersteeringsoftware.libs.tests.core.RunTestNG"/>
+    <property name="mail.name" value="psmailer"/>
+    <property name="mail.mainclass" value="com.powersteeringsoftware.mail.PSMailerManager"/>
+    <property name="runner.name" value="rautotests"/>
+    <property name="runner.mainclass" value="com.powersteeringsoftware.remote.RemoteRunner"/>
+    <property name="load.runner.name" value="loadtests"/>
+    <property name="load.runner.mainclass" value="com.powersteeringsoftware.libs.tests.core.ParallelRunner"/>
+
+    <property name="dir.src" value="src"/>
+    <property name="dir.build" value="build"/>
+    <property name="dir.lib" value="lib"/>
+    <property name="dir.logs" value="logs"/>
+    <property name="dir.target" value="target"/>
+    <property name="dir.docs.api" value="docs/api"/>
+
+    <property name="selenium.version" value="2.45.0"/>
+
+    <path id="app-classpath">
+        <fileset dir="${dir.lib}">
+            <include name="*.jar"/>
+        </fileset>
+        <pathelement location="${dir.lib}/selenium-2.0/selenium-server-standalone-${selenium.version}.jar"/>
+    </path>
+
+    <path id="runner-classpath">
+        <pathelement location="${dir.lib}/commons-io-2.0.1.jar"/>
+        <pathelement location="${dir.lib}/dom4j-1.6.1.jar"/>
+        <pathelement location="${dir.lib}/log4j-1.2.15.jar"/>
+        <pathelement location="${dir.lib}/commons-cli-1.1.jar"/>
+        <pathelement location="${dir.lib}/properJavaRDP.jar"/>
+    </path>
+
+    <path id="mail-classpath">
+        <pathelement location="${dir.lib}/commons-lang-2.2.jar"/>
+        <pathelement location="${dir.lib}/commons-io-2.0.1.jar"/>
+        <pathelement location="${dir.lib}/mail.jar"/>
+        <pathelement location="${dir.lib}/htmlcleaner1_6.jar"/>
+        <pathelement location="${dir.lib}/dom4j-1.6.1.jar"/>
+        <pathelement location="${dir.lib}/jaxen-1.1.1.jar"/>
+        <pathelement location="${dir.lib}/log4j-1.2.15.jar"/>
+        <pathelement location="${dir.lib}/commons-cli-1.1.jar"/>
+    </path>
+
+    <buildnumber file="build.number"/>
+
+    <target name="clean">
+        <delete includeemptydirs="yes" failonerror="false">
+            <fileset dir="${dir.build}" includes="**/*"/>
+            <fileset dir="${dir.target}" includes="**/*"/>
+        </delete>
+        <!--<delete dir="${dir.logs}"/>-->
+        <mkdir dir="${dir.build}"/>
+        <mkdir dir="${dir.target}"/>
+    </target>
+
+    <target name="init" depends="clean"/>
+    <!--<target name="init"/>-->
+
+    <target name="app.build" depends="init">
+        <echo message="Build main jar, selenium version is ${selenium.version}"/>
+        <javac debug="true"
+               debuglevel="lines,vars,source"
+               target="1.6"
+               source="1.6"
+               srcdir="${dir.src}"
+               destdir="${dir.build}"
+               classpathref="app-classpath"
+               encoding="UTF-8"
+               fork="false">
+            <src path="${dir.src}"/>
+        </javac>
+    </target>
+
+    <target name="runner.build" depends="init">
+        <javac debug="true"
+               debuglevel="lines,vars,source"
+               target="1.6"
+               source="1.6"
+               srcdir="${dir.src}"
+               destdir="${dir.build}"
+               classpathref="runner-classpath"
+               encoding="UTF-8"
+               fork="false">
+            <src path="${dir.src}"/>
+        </javac>
+    </target>
+
+    <target name="mail.build" depends="init">
+        <javac
+                target="1.6"
+                source="1.6"
+                srcdir="${dir.src}"
+                destdir="${dir.build}"
+                classpathref="mail-classpath"
+                encoding="ISO8859-1"
+                fork="false"
+                >
+            <src path="${dir.src}"/>
+        </javac>
+    </target>
+
+    <target name="jar" depends="app.build,runner.build">
+        <manifestclasspath property="app.jar.classpath" jarfile="${app.name}.jar">
+            <classpath refid="app-classpath"/>
+        </manifestclasspath>
+        <manifestclasspath property="runner.jar.classpath" jarfile="${runner.name}.jar">
+            <classpath refid="runner-classpath"/>
+        </manifestclasspath>
+        <manifestclasspath property="mail.jar.classpath" jarfile="${mail.name}.jar">
+            <classpath refid="mail-classpath"/>
+        </manifestclasspath>
+
+        <jar destfile="${app.name}.jar" basedir="${dir.build}">
+            <manifest>
+                <attribute name="Main-Class" value="${app.mainclass}"/>
+                <attribute name="Class-Path" value="${app.jar.classpath}"/>
+                <attribute name="Implementation-Title" value="${app.name}"/>
+                <attribute name="Implementation-Vendor" value="PS-Automation"/>
+                <attribute name="Implementation-Version" value="${app.version}-b${build.number}"/>
+            </manifest>
+        </jar>
+        <jar destfile="${runner.name}.jar" basedir="${dir.build}">
+            <manifest>
+                <attribute name="Main-Class" value="${runner.mainclass}"/>
+                <attribute name="Class-Path" value="${runner.jar.classpath}"/>
+                <attribute name="Implementation-Title" value="${runner.name}"/>
+                <attribute name="Implementation-Vendor" value="PS-Automation"/>
+                <attribute name="Implementation-Verison" value="${app.version}"/>
+            </manifest>
+        </jar>
+        <jar destfile="${mail.name}.jar" basedir="${dir.build}">
+            <manifest>
+                <attribute name="Main-Class" value="${mail.mainclass}"/>
+                <attribute name="Class-Path" value="${mail.jar.classpath}"/>
+                <attribute name="Implementation-Title" value="${mail.name}"/>
+                <attribute name="Implementation-Vendor" value="PS-Automation"/>
+                <attribute name="Implementation-Verison" value="${app.version}"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="mail-jar" depends="mail.build">
+        <manifestclasspath property="mail.jar.classpath" jarfile="${mail.name}.jar">
+            <classpath refid="mail-classpath"/>
+        </manifestclasspath>
+        <jar destfile="${mail.name}.jar" basedir="${dir.build}">
+            <manifest>
+                <attribute name="Main-Class" value="${mail.mainclass}"/>
+                <attribute name="Class-Path" value="${mail.jar.classpath}"/>
+                <attribute name="Implementation-Title" value="${mail.name}"/>
+                <attribute name="Implementation-Vendor" value="PS-Automation"/>
+                <attribute name="Implementation-Verison" value="${app.version}"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="load-jar" depends="app.build">
+        <manifestclasspath property="load.jar.classpath" jarfile="${app.name}.jar">
+            <classpath refid="app-classpath"/>
+        </manifestclasspath>
+
+        <jar destfile="${load.runner.name}.jar" basedir="${dir.build}">
+            <manifest>
+                <attribute name="Main-Class" value="${load.runner.mainclass}"/>
+                <attribute name="Class-Path" value="${load.jar.classpath}"/>
+                <attribute name="Implementation-Title" value="${app.name}"/>
+                <attribute name="Implementation-Vendor" value="PS-Automation"/>
+                <attribute name="Implementation-Version" value="${app.version}-b${build.number}"/>
+            </manifest>
+        </jar>
+    </target>
+
+</project>

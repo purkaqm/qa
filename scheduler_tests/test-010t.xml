@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="no"?>
+
+
+<Project>
+	<Tasks>
+		<Task ActualStart="01/17/2001 09:00:00" ActualFinish="01/25/2001 17:00:00" PercentComplete="100.0"  Name="Test10" PSObjectId="o2k00300000ecmrap5r0000000">
+			<Task ActualStart="01/17/2001 09:00:00" ActualFinish="01/19/2001 17:00:00" PercentComplete="100.0" Name="CP2" PSObjectId="o2k00300000ecmrbu8cg000000">
+				<Relation PSObjectId="o2k00300000ecmrcblog000000" Type="Start-Start"/>
+				<Relation PSObjectId="o2k00300000ecmrbaktg000000" Type="Finish-Start"/>
+			</Task>
+			<Task ActualStart="01/22/2001 09:00:00" ActualFinish="01/25/2001 17:00:00" PercentComplete="100.0" Name="CP1" PSObjectId="o2k00300000ecmrbaktg000000">
+				<Relation PSObjectId="o2k00300000ecmrcblog000000" Type="Finish-Finish"/>
+			</Task>
+			<Task ActualStart="01/18/2001 09:00:00" ActualFinish="01/25/2001 17:00:00" PercentComplete="100.0" Name="CP3" PSObjectId="o2k00300000ecmrcblog000000"/>
+		</Task>
+	</Tasks>
+	<ResourcePool/>
+</Project>

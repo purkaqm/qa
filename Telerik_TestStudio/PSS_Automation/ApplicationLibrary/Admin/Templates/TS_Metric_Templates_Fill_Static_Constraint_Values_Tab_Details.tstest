@@ -1,0 +1,403 @@
+{
+  "__type": "ArtOfTest.WebAii.Design.ProjectModel.Test",
+  "__value": {
+    "DomStatesCounter": {},
+    "WebKitExecutionDelay": 0,
+    "ReuseAppWindow": 0,
+    "ProfilerResultsDirectory": null,
+    "ProfilerServerName": null,
+    "ProfilerBenchmarkResultsFilePath": null,
+    "ProfilerBenchmarkResultsId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurationId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurations": {},
+    "CurrentReferences": [],
+    "Steps": {
+      "__type": "ArtOfTest.Common.Design.ProjectModel.AutomationStepList",
+      "__value": [
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "8cb6516b-65c0-4090-a61b-3f4cffdf2d2b",
+            "Description": "[TS_Metric_Templates_Fill_Static_Constraint_Values_Tab_Details_CodedStep] : Wait for Line Items Tab",
+            "CustomDescription": "Wait for Static Constraint Items Tab",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            ActiveBrowser.RefreshDomTree();\r\n            HtmlTableCell contstraintTab = Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.Find.ByXPath<HtmlTableCell>(\"//td[contains(.,'Static/Constraint Values')]\");\r\n            contstraintTab.Wait.ForExists();\r\n            contstraintTab.Wait.ForAttributes(\"class\",\"tabOn\");\r\n            //Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.MoreItemsLink.Wait.ForVisible();\r\n            //Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.StaticItemInput.Wait.ForExists();",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 1,
+            "Id": "TS_Metric_Templates_Fill_Static_Constraint_Values_Tab_Details_CodedStep",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Metric_Templates_Fill_Static_Constraint_Values_Tab_Details3tnuulon.biv",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "42b2575b-6bc9-45da-9cb4-9456e0bda85b",
+            "Description": "[TS_Metric_Templates_Fill_Static_Constraint_Values_Tab_Details_CodedStep1] : Enter Line Items Details",
+            "CustomDescription": "Enter Static and Constraint values",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            \r\n            //Enter Static Item Details\r\n            int staticItemsCount = Int32.Parse(Data[\"StaticValuesCount\"].ToString()); \r\n            for(int i = 1; i <=staticItemsCount;i++){\r\n                \r\n                string itemName = Data[\"StaticItemName\"+i].ToString();\r\n                string itemInputLocator = string.Format(AppLocators.get(\"metric_static_value_input\"),itemName);\r\n                HtmlInputText lineItemName= Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.Find.ByXPath<HtmlInputText>(itemInputLocator);\r\n                lineItemName.SetValue(\"value\",Data[\"StaticItemValue\"+i].ToString());\r\n            }\r\n            \r\n            //Enter Range Item Details\r\n            int rangeItems = Int32.Parse(Data[\"RangeValuesCount\"].ToString()); \r\n            for(int i = 1; i <=rangeItems;i++){\r\n                \r\n                string itemName = Data[\"RangeItemName\"+i].ToString();\r\n                string rangeMinValueLocator = string.Format(AppLocators.get(\"metric_range_value_min_input\"),itemName);\r\n                HtmlInputText rangeMinVal= Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.Find.ByXPath<HtmlInputText>(rangeMinValueLocator);\r\n                rangeMinVal.SetValue(\"value\",Data[\"RangeStart\"+i].ToString());\r\n                \r\n                string rangeMaxValueLocator = string.Format(AppLocators.get(\"metric_range_value_max_input\"),itemName);\r\n                HtmlInputText rangeMaxVal= Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.Find.ByXPath<HtmlInputText>(rangeMaxValueLocator);\r\n                rangeMaxVal.SetValue(\"value\",Data[\"RangeEnd\"+i].ToString());\r\n                \r\n                string rangeDefaultValueLocator = string.Format(AppLocators.get(\"metric_range_value_default_input\"),itemName);\r\n                if(Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.Find.AllByXPath<HtmlInputText>(rangeDefaultValueLocator).Count > 0){\r\n                    HtmlInputText rangeDefaultVal= Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.Find.ByXPath<HtmlInputText>(rangeDefaultValueLocator);\r\n                    rangeDefaultVal.SetValue(\"value\",Data[\"RangeDefault\"+i].ToString());\r\n                }\r\n            }\r\n            \r\n            \r\n             //Enter Set Item Details\r\n            int setItems = Int32.Parse(Data[\"SetValuesCount\"].ToString()); \r\n            for(int i = 1; i <=setItems;i++){\r\n                              \r\n                string itemName = Data[\"SetItemName\"+i].ToString();\r\n                int itemOptions = Int32.Parse(Data[\"SetItemOptions\"+i].ToString()); \r\n                int defaultOpt = Int32.Parse(Data[\"SetDefaultOption\"+i].ToString()); \r\n                for(int j=1;j<=itemOptions;j++){\r\n                    string itemSeqLoc = string.Format(AppLocators.get(\"metric_set_seq_input\"),itemName,j);\r\n                    HtmlInputText itemSeqInput= Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.Find.ByXPath<HtmlInputText>(itemSeqLoc);\r\n                    itemSeqInput.SetValue(\"value\",Data[string.Format(\"SetOption{0}Seq{1}\",j,i)].ToString());\r\n                    \r\n                    System.Threading.Thread.Sleep(1000);\r\n                    string itemValLoc = string.Format(AppLocators.get(\"metric_set_value_input\"),itemName,j);\r\n                    HtmlInputText itemValInput= Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.Find.ByXPath<HtmlInputText>(itemValLoc);\r\n                    itemValInput.SetValue(\"value\",Data[string.Format(\"SetOption{0}Value{1}\",j,i)].ToString());\r\n                    System.Threading.Thread.Sleep(1000);\r\n                    string itemLabelLoc = string.Format(AppLocators.get(\"metric_set_label_input\"),itemName,j);\r\n                    HtmlInputText itemLabelInput= Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.Find.ByXPath<HtmlInputText>(itemLabelLoc);\r\n                    itemLabelInput.SetValue(\"value\",Data[string.Format(\"SetOption{0}Label{1}\",j,i)].ToString());\r\n                    System.Threading.Thread.Sleep(1000);\r\n                }\r\n                \r\n                string defaultRadioLoc = string.Format(AppLocators.get(\"metric_set_default_radio_input\"),itemName,defaultOpt);\r\n                if(Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.Find.AllByXPath<HtmlInputRadioButton>(defaultRadioLoc).Count > 0){\r\n                    HtmlInputRadioButton itemDefaultRadio= Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.Find.ByXPath<HtmlInputRadioButton>(defaultRadioLoc);\r\n                    itemDefaultRadio.Click();\r\n                }\r\n            }\r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 2,
+            "Id": "TS_Metric_Templates_Fill_Static_Constraint_Values_Tab_Details_CodedStep1",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Metric_Templates_Fill_Static_Constraint_Values_Tab_Detailsxunvojko.acm",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        }
+      ]
+    },
+    "IndependentDescriptors": [
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "http://lax1qapp05.cinteractive.com:8080/Cognex/admin/MetricTemplates.page",
+              "Query": "",
+              "BaseUrl": "",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "Financial Templates | PowerSteering trunk",
+              "CompareMode": 2,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_MetricTemplatesPage"
+            }
+          },
+          "Frame": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.Frame",
+            "__value": {
+              "FrameInfo": {
+                "__type": "ArtOfTest.WebAii.Core.FrameInfo",
+                "__value": {
+                  "_index": 0,
+                  "_name": "jspFrame",
+                  "_id": "",
+                  "TestStudioTag": "",
+                  "_baseURL": "~admin/all_metrics.jsp",
+                  "_query": "",
+                  "_useQuery": false,
+                  "_usesBaseUrlHost": false
+                }
+              },
+              "FriendlyName": "TemplatesContainerFrame"
+            }
+          },
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "ITZtAd/HQIqFWgnTHTsQg9LA89g=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "MoreItemsLink",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "TagName=a"
+                          }
+                        },
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "InnerText=more items"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/table[1]/tbody[1]/tr[1]/td[1]/form[1]/table[1]/tbody[1]/tr[1]/td[1]/table[3]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[9]/td[2]/a[1]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlAnchor",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      },
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "http://lax1qapp05.cinteractive.com:8080/Cognex/admin/MetricTemplates.page",
+              "Query": "",
+              "BaseUrl": "",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "Financial Templates | PowerSteering trunk",
+              "CompareMode": 2,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_MetricTemplatesPage"
+            }
+          },
+          "Frame": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.Frame",
+            "__value": {
+              "FrameInfo": {
+                "__type": "ArtOfTest.WebAii.Core.FrameInfo",
+                "__value": {
+                  "_index": 0,
+                  "_name": "jspFrame",
+                  "_id": "",
+                  "TestStudioTag": "",
+                  "_baseURL": "~admin/all_metrics.jsp",
+                  "_query": "",
+                  "_useQuery": false,
+                  "_usesBaseUrlHost": false
+                }
+              },
+              "FriendlyName": "TemplatesContainerFrame"
+            }
+          },
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "dzvSdZDoaGm1elzy4VL8HzOjMYA=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "StaticItemInput",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "TagName=input"
+                          }
+                        },
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "name=!Expression"
+                          }
+                        },
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "class=titleCap"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/table[1]/tbody[1]/tr[1]/td[1]/form[1]/table[1]/tbody[1]/tr[1]/td[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[3]/input[1]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlInputText",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      },
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "http://lax1qapp05.cinteractive.com:8080/Cognex/admin/MetricTemplates.page",
+              "Query": "",
+              "BaseUrl": "",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "Financial Templates | PowerSteering trunk",
+              "CompareMode": 2,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_MetricTemplatesPage"
+            }
+          },
+          "Frame": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.Frame",
+            "__value": {
+              "FrameInfo": {
+                "__type": "ArtOfTest.WebAii.Core.FrameInfo",
+                "__value": {
+                  "_index": 0,
+                  "_name": "jspFrame",
+                  "_id": "",
+                  "TestStudioTag": "",
+                  "_baseURL": "~admin/all_metrics.jsp",
+                  "_query": "",
+                  "_useQuery": false,
+                  "_usesBaseUrlHost": false
+                }
+              },
+              "FriendlyName": "TemplatesContainerFrame"
+            }
+          },
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.HtmlFindExpressionElement",
+            "__value": {
+              "uniqueKey": "pN6YqUaXRzfElI+r9njXePcKmf8=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "WindowedControlSelect",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "xpath=/html[1]/body[1]/table[1]/tbody[1]/tr[1]/td[1]/form[1]/table[1]/tbody[1]/tr[1]/td[1]/table[2]/tbody[1]/tr[3]/td[5]/div[1]/select[1]"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/table[1]/tbody[1]/tr[1]/td[1]/form[1]/table[1]/tbody[1]/tr[1]/td[1]/table[2]/tbody[1]/tr[3]/td[5]/div[1]/select[1]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlSelect",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      }
+    ],
+    "HtmlDescription": "",
+    "SilverlightEnabled": false,
+    "IsSilverlightApp": false,
+    "SilverlightAppWebUrl": "",
+    "SilverlightAppLocalDirectory": "",
+    "SilverlightAppRecordLocal": false,
+    "SilverlightAppOriginUri": null,
+    "WpfAppPath": null,
+    "UseDefaultWpfAppPath": false,
+    "TestAssembly": "PSS_Automation.dll",
+    "TestAssemblyPath": "bin",
+    "TestClass": "PSS_Automation.TS_Metric_Templates_Fill_Static_Constraint_Values_Tab_Details",
+    "IsManual": false,
+    "ResourceFilePath": "ApplicationLibrary\\Admin\\Templates\\TS_Metric_Templates_Fill_Static_Constraint_Values_Tab_Details.resx",
+    "HasCodeBehind": true,
+    "DataInfo": {
+      "__type": "ArtOfTest.Common.Design.Data.DataInfo",
+      "__value": {
+        "ConnectionString": "",
+        "DefaultToGrid": true,
+        "DataRange": "",
+        "LoadRecordsCount": null,
+        "DataTableName": "",
+        "DataProvider": "",
+        "DataEnabled": true,
+        "HasBuiltinGrid": false,
+        "DataType": 4,
+        "BuiltInData": null,
+        "BuiltInDocumentKey": null,
+        "TSQL": ""
+      }
+    },
+    "VSProperties": {},
+    "DeploymentItems": [],
+    "IsTestFragment": false,
+    "StopTestListOnFailure": false,
+    "InheritParentDataSource": true,
+    "BrowserType": 0,
+    "QcId": 0,
+    "QcFilePath": null,
+    "QcTestVersionStamp": 0,
+    "TestLinks": [],
+    "Description": "",
+    "Name": "TS_Metric_Templates_Fill_Static_Constraint_Values_Tab_Details",
+    "Owner": "",
+    "Path": "ApplicationLibrary\\Admin\\Templates\\TS_Metric_Templates_Fill_Static_Constraint_Values_Tab_Details.tstest",
+    "Priority": 0,
+    "TestType": 0,
+    "UniqueId": "cd0d61e6-5fb9-4673-81e9-f61696d5322b",
+    "Id": "cd0d61e6-5fb9-4673-81e9-f61696d5322b",
+    "ProjectId": "8482a1a8-662a-40c8-b69e-343a43a257af",
+    "Version": 200
+  }
+}

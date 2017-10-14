@@ -1,0 +1,709 @@
+<?xml version="1.0" standalone="no"?>
+
+<!DOCTYPE context SYSTEM "../context.dtd">
+
+
+<context proxy="default" version="133">
+	<name>test</name>
+	<jdbc>
+		<jdbc.driver>com.inet.tds.TdsDriver</jdbc.driver>
+		<jdbc.url>jdbc:cipool:jdbc:inetdae7:psstagedb:1433?database=psstage_test</jdbc.url>
+		<jdbc.prop>
+			<jdbc.prop.name>user</jdbc.prop.name>
+			<jdbc.prop.value>psdev</jdbc.prop.value>
+		</jdbc.prop>
+		<jdbc.prop>
+			<jdbc.prop.name>password</jdbc.prop.name>
+			<jdbc.prop.value>psdev</jdbc.prop.value>
+		</jdbc.prop>
+		<jdbc.prop>
+			<jdbc.prop.name>connections.max</jdbc.prop.name>
+			<jdbc.prop.value>30</jdbc.prop.value>
+		</jdbc.prop>
+		<jdbc.prop>
+			<jdbc.prop.name>expire.millis</jdbc.prop.name>
+			<jdbc.prop.value>1000000</jdbc.prop.value>
+		</jdbc.prop>
+		<jdbc.prop>
+			<jdbc.prop.name>wait.millis</jdbc.prop.name>
+			<jdbc.prop.value>4000</jdbc.prop.value>
+		</jdbc.prop>
+		<jdbc.prop>
+			<jdbc.prop.name>lock.millis</jdbc.prop.name>
+			<jdbc.prop.value>300000</jdbc.prop.value>
+		</jdbc.prop>
+      	<jdbc.prop> 
+			<jdbc.prop.name>transaction.isolation</jdbc.prop.name> 
+			<jdbc.prop.value>1</jdbc.prop.value> 
+		</jdbc.prop> 
+		<jdbc.backup backup="true" upgrade="true">
+			<backup.prop>
+				<backup.prop.name>db.backup.path</backup.prop.name>
+				<backup.prop.value>D:\backup\</backup.prop.value>
+			</backup.prop>
+		</jdbc.backup>
+	</jdbc>
+
+	<url host="localhost" path="/bugfix/test/"/>
+	<smtp host="psmail.psteering.com" prefix="PS: " spoofing="false">
+		<email>
+			<address>psreminder@psteering.com</address>
+			<title>PowerSteering</title>
+		</email>
+	</smtp>
+	<company>
+		<name>PowerStering Software</name>
+		<branding>&lt;div&gt;PowerStering Software&lt;/div&gt;</branding>
+		<colophon>&lt;A href=&quot;http://www.psteering.com&quot;&gt;PowerStering Software&lt;/A&gt;</colophon>
+	</company>
+	<product>
+		<name>PowerSteering 3</name>
+		<branding>&lt;a href=&quot;http://www.psteering.com&quot;&gt;&lt;img
+			src=&quot;/test/images/logo_ps.gif&quot;
+			width=&quot;205&quot; height=&quot;28&quot; border=&quot;0&quot; hspace=&quot;10&quot; vspace=&quot;4&quot;&gt;&lt;/a&gt;</branding>
+	</product>
+	<locale country="us" dateformat="MM/dd/yyyy" language="en" timeformat="hh:mma z" timezone="EST"/>
+	<accounting_locale country="us" currency_symbol="$" dateformat="MM/dd/yyyy" language="en" timeformat="hh:mma z" timezone="GMT"/>
+	<alerts synchronous="true">
+		<alert children="false" email="true" for="owners">
+			<event type="Discussion"/>
+			<event type="DocumentLink"/>
+			<event type="StatusReport"/>
+		</alert>
+		<alert children="false" email="true" for="members">
+			<event type="Discussion"/>
+			<event type="DocumentLink"/>
+			<event type="StatusReport"/>
+		</alert>
+		<alert children="false" email="true" for="ownerDocs">
+			<event type="Discussion"/>
+		</alert>
+		<alert children="false" email="true" for="memberDocs">
+			<event type="Discussion"/>
+		</alert>
+	</alerts>
+	<public guest="Guest" signup="true"/>
+	<contact>
+		<helpdesk>
+			<email>
+				<address>pshelp@psteering.com</address>
+			</email>
+			<phone>617 520 2100 x200</phone>
+		</helpdesk>
+		<access>
+			<email>
+				<address>globalaccess@psteering.com</address>
+			</email>
+			<phone>(617) 520-2100 x200</phone>
+		</access>
+		<suggestions>
+			<email>
+				<address>suggestions@psteering.com</address>
+			</email>
+		</suggestions>
+		<demonstration>
+			<email>
+				<address>demonstration@psteering.com</address>
+			</email>
+		</demonstration>
+		<bugreport>
+			<email>
+				<address>bugs@psteering.com</address>
+				<title>500 Servlet Exception</title>
+			</email>
+		</bugreport>
+	</contact>
+	<uix>
+		<categories>
+			<category code="feature" display-sequence="100" name="Feature Options">Items that are checked indicate that it has been set as a default. You can customize your settings by checking or unchecking items that are set as your default.</category>
+			<category code="alert.email" display-sequence="200" name="Alert Email Options">These options concern Alerts sent to your Email address.</category>
+			<category code="alert.subscription" display-sequence="300" name="Default Alert Subscription Settings">The system subscribes you automatically to default settings for work Alerts and document Alerts, which are defined by your PS Administrator. The list below contains items that you can customize from your default settings.</category>
+		</categories>
+		<features>
+			<feature category="feature" code="person.help" default_permission="everybody" level="default-on" uix-admin="false">Keep Help open all the time</feature>
+			<feature category="feature" code="people.list" default_permission="everybody" level="default-on" uix-admin="false">Show People Tab</feature>
+			<feature category="feature" class_name="" code="person.rollovermenu" default_permission="everybody" help_url="javascript:openWindow('../help/preferences.jsp?feature=person.rollovermenu')" itemname="" level="default-off" uix-admin="false">Enable the Rollover Menu - provides pull down navigation from the Navigation Bar (available only on IE browsers)</feature>
+			<feature category="feature" class_name="com.cinteractive.ps3.uix.DashboardPref" code="dashboard.isdefault" default_permission="everybody" level="default-off" uix-admin="false">Make the Dashboard my default screen.</feature>
+			<feature category="feature" code="email.mobile.hide" default_permission="everybody" level="default-off" uix-admin="false">Hide my mobile address from all users except Administrators.</feature>
+			<feature category="feature" class_name="com.cinteractive.ps3.uix.ShowArchiveFeature" code="archive.view" default_permission="everybody" level="default-off" uix-admin="false">Show Archives</feature>
+			<feature category="feature" code="projects.tree.sortByDate" default_permission="everybody" level="default-off" uix-admin="false">Show Work Hierarchies by their dates</feature>
+			<feature category="feature" code="person.last" default_permission="everybody" level="default-off" uix-admin="false">Keep Last Visited open all the time</feature>
+			<feature category="alert.subscription" class_name="" code="alerts.subscriptions.work" default_permission="everybody" help_url="javascript:openWindow('../help/preferences.jsp?feature=alerts.subscriptions.work')" itemname="work" level="default-on" uix-admin="false">Automatically add my new Work Items to my Edit Alerts page.</feature>
+			<feature category="alert.email" class_name="" code="email.alerts.authored" default_permission="everybody" help_url="javascript:openWindow('../help/preferences.jsp?feature=email.alerts.authored')" itemname="" level="default-off" uix-admin="false">Do not send me alert emails that I generate</feature>
+			<feature category="alert.subscription.work" class_name="" code="alerts.subscriptions.default.sendEmail" default_permission="everybody" help_url="javascript:openWindow('../help/preferences.jsp?feature=alerts.subscriptions.default.sendEmail')" itemname="" level="default-on" uix-admin="false">When a new project is added to my Edit Alerts page, automatically send alerts to my PowerSteering inbox only, and not to my email account.</feature>
+			<feature category="alert.subscription.work" class_name="" code="alerts.subscriptions.default.includeChildren" default_permission="everybody" help_url="javascript:openWindow('../help/preferences.jsp?feature=alerts.subscriptions.default.includeChildren')" itemname="" level="default-on" uix-admin="false">When a new project is added to my Edit Alerts page, automatically send the same alerts for Child Work Items.</feature>
+			<feature category="alert.subscription.work" class_name="" code="alerts.subscriptions.metricTemplate" default_permission="everybody" help_url="javascript:openWindow('../help/preferences.jsp?feature=alerts.subscriptions.metricTemplate')" itemname="" level="default-on" uix-admin="false">Automatically add my Metric Templates to my Edit Alerts page.</feature>
+			<feature category="alert.subscription" code="email.reminders" default_permission="everybody" itemname="reminder" level="default-on" uix-admin="false">Send me email reminders for Events I create.</feature>
+			<feature category="alert.subscription.reminder" code="email.mobile.reminders" default_permission="everybody" level="default-off" uix-admin="false">Send Event reminders to my mobile phone too.</feature>
+			<feature category="alert.email" class_name="" code="email.alerts" default_permission="everybody" help_url="javascript:openWindow('../help/preferences.jsp?feature=email.alerts')" itemname="send" level="default-on" uix-admin="false">Send alerts to my email address.</feature>
+			<feature category="alert.email" class_name="" code="email.mobile.alerts" default_permission="everybody" help_url="javascript:openWindow('../help/preferences.jsp?feature=email.mobile.alerts')" itemname="" level="default-off" uix-admin="false">...Include mobile address</feature>
+			<feature category="alert.email" code="email.html" default_permission="everybody" itemname="html" level="default-off" uix-admin="false">Send email alerts formatted with HTML (rather than plain text).</feature>
+			<feature category="alert.email.html" code="email.mobile.html" default_permission="everybody" level="default-off" uix-admin="false">...Include mobile address</feature>
+			<feature class_name="com.cinteractive.ps3.uix.TimesheetFeature" code="timesheet" default_permission="everybody" help_url="" level="on" uix-admin="false">Track Time</feature>
+			<feature code="person.datatemplate" default_permission="everybody" help_url="javascript:alert('\'Associate Data Template with a new work object\'\n\nIndicate if a Data Template is associated with a new work object that is introduced.')" level="default-on" uix-admin="false">Associate Data Template with a new work object</feature>
+			<feature code="metrics" default_permission="everybody" level="on" uix-admin="true">Metrics</feature>
+			<feature code="tollgates" default_permission="everybody" level="on" uix-admin="true">Tollgates</feature>
+			<feature code="custom-data-fields" default_permission="everybody" level="on" uix-admin="true">Custom Data Fields</feature>
+			<feature code="tasks" default_permission="everybody" level="on" uix-admin="true">Tasks</feature>
+			<feature code="idnumber" default_permission="everybody" level="on" uix-admin="true">Project ID</feature>
+			<feature code="dashboard" default_permission="everybody" level="on" uix-admin="true">Dashboard</feature>
+			<feature code="accounts" default_permission="administrators" level="on" uix-admin="true">Accounts</feature>
+			<feature code="schedulertype" default_permission="everybody" level="default-on" uix-admin="false">Use scheduler</feature>
+			<feature code="template.prepend-name" default_permission="administrators" level="on" uix-admin="false">Template Name is added to copied work on expand</feature>
+			<feature code="login-cookie" default_permission="everybody" level="on" uix-admin="false">Persistent Login Cookie</feature>
+			<feature category="feature" class_name="" code="person.createnewwindow" default_permission="everybody" help_url="javascript:openWindow('../help/preferences.jsp?feature=person.createnewwindow')" itemname="" level="default-off" uix-admin="false">Open a new browser window for each discussion item alert and document creation alert</feature>
+			<feature category="feature" code="work.new.base" default_permission="everybody" level="default-off" uix-admin="false">Disable Create New Work wizard</feature>
+			<feature category="feature" code="projects.tree.showMilestones" default_permission="everybody" level="default-off" uix-admin="false">Show milestones on the work breakdown screen</feature>
+			<feature code="person.folderNavigation" default_permission="everybody" level="default-off" uix-admin="false">Enable Folder Navigation</feature>
+			<feature code="lessons" default_permission="everybody" level="off" uix-admin="true">Lessons Learned</feature>
+			<feature category="feature" class_name="com.cinteractive.ps3.uix.FullTextSearchFeature" code="person.fullTextSearch" default_permission="everybody" help_url="javascript:openWindow('../help/preferences.jsp?feature=person.fullTextSearch')" itemname="" level="default-off" uix-admin="false">Enable Boolean Advanced Search.</feature>
+			<feature class_name="com.cinteractive.ps3.uix.KMFeature" code="resources" default_permission="everybody" level="off" uix-admin="true">Knowledge Management</feature>
+			<feature category="feature" code="report.createnewwindow" default_permission="everybody" level="default-off" uix-admin="false">Open a new browser window for each new report</feature>
+		</features>
+	</uix>
+	<object_types>
+		<object_type code="Group">
+			<name>Group</name>
+			<plural>Groups</plural>
+			<img src="../images/icon_group.gif"/>
+			<img src="../images/icon_group.gif"/>
+			<img src="../images/icon_people_lrg.gif"/>
+		</object_type>
+		<object_type code="Person">
+			<name>Person</name>
+			<plural>People</plural>
+			<img src="../images/icon_users.gif"/>
+			<img src="../images/icon_users.gif"/>
+			<img src="../images/icon_people_lrg.gif"/>
+		</object_type>
+		<object_type code="User">
+			<name>User</name>
+			<plural>Users</plural>
+			<img src="../images/icon_users.gif"/>
+			<img src="../images/icon_users.gif"/>
+			<img src="../images/icon_people_lrg.gif"/>
+		</object_type>
+		<object_type code="Work">
+			<name>Work</name>
+			<plural>Work Items</plural>
+			<img src="../images/icon_projects_clear_z.gif"/>
+			<img src="../images/icon_archive_work.gif"/>
+			<img src="../images/icon_project_lrg.gif"/>
+			<description>Your basic work object with discussions, documents, etc. </description>
+		</object_type>
+		<object_type code="FileFolder">
+			<name>Folder</name>
+			<plural>Folders</plural>
+			<img src="../images/icon_file_folder.gif"/>
+			<img src="../images/icon_archive_folder.gif"/>
+			<img src="../images/icon_folder_lrg.gif"/>
+			<description>A 'Web Folder' used to hold documents and other Web Folders. This simple work object has no cost or scheduling information features. </description>
+		</object_type>
+		<object_type code="ProjectEvent">
+			<name>Event</name>
+			<plural>Events</plural>
+			<img src="../images/icon_event.gif"/>
+			<img src="../images/icon_archive_event.gif"/>
+			<img src="../images/icon_event_lrg.gif"/>
+			<description>Events are work objects that appear on your calendar. PowerSteering can remind you of pending events before they start and archive them when they end. </description>
+		</object_type>
+		<object_type code="Agent">
+			<name>Agent</name>
+			<plural>Agents</plural>
+			<img src="../images/icon_projects_clear_z.gif"/>
+			<img src="../images/icon_projects_clear_z.gif"/>
+			<img src="../images/icon_admin_lrg.gif"/>
+		</object_type>
+		<object_type code="Document">
+			<name>Document</name>
+			<plural>Documents</plural>
+			<img src="../images/icon_docs_clear_z.gif"/>
+			<img src="../images/icon_docs_clear_z.gif"/>
+			<img src="../images/icon_docs_lrg.gif"/>
+		</object_type>
+		<object_type code="UrlDocument">
+			<name>Link</name>
+			<plural>Links</plural>
+			<img src="../images/icon_url.gif"/>
+			<img src="../images/icon_url.gif"/>
+			<img src="../images/icon_docs_lrg.gif"/>
+		</object_type>
+		<object_type code="FileDocument">
+			<name>Document</name>
+			<plural>Documents</plural>
+			<img src="../images/icon_doclink.gif"/>
+			<img src="../images/icon_doclink.gif"/>
+			<img src="../images/icon_docs_lrg.gif"/>
+		</object_type>
+		<object_type code="Contact">
+			<name>Contact</name>
+			<plural>Contacts</plural>
+			<img src="../images/icon_users.gif"/>
+			<img src="../images/icon_users.gif"/>
+			<img src="../images/icon_people_lrg.gif"/>
+		</object_type>
+		<object_type code="Milestone">
+			<name>Milestone</name>
+			<plural>Milestones</plural>
+			<img src="../images/icon_milestone.gif"/>
+			<img src="../images/icon_milestone.gif"/>
+			<img src="../images/icon_milestone_lrg.gif"/>
+			<description>A Milestone is a goal fulfilled along the course of your project. </description>
+		</object_type>
+		<object_type code="Template">
+			<name>Template</name>
+			<plural>Templates</plural>
+			<img src="../images/icon_template.gif"/>
+			<img src="../images/icon_template.gif"/>
+			<img src="../images/icon_template_lrg.gif"/>
+			<description>A template is a basic framework for a work breakdown structure and has expansion capabilities. </description>
+		</object_type>
+		<object_type code="UnexpandedWork">
+			<name>UnexpandedWork</name>
+			<plural>UnexpandedWork Items</plural>
+			<img src="../images/icon_utemplate.gif"/>
+			<img src="../images/icon_utemplate.gif"/>
+			<img src="../images/icon_utemplate_lrg.gif"/>
+			<description>A pointer to a template. </description>
+		</object_type>
+		<object_type code="MetricTemplate">
+			<name>Metric Template</name>
+			<plural>Metric Templates</plural>
+			<img src="../images/icon_metric.gif"/>
+			<img src="../images/icon_metric.gif"/>
+			<img src="../images/icon_metric_lrg.gif"/>
+			<description>Metric Template is something...</description>
+		</object_type>
+		<object_type code="MetricInstance">
+			<name>Metric</name>
+			<plural>Metrics</plural>
+			<img src="../images/icon_metric.gif"/>
+			<img src="../images/icon_metric.gif"/>
+			<img src="../images/icon_metric_lrg.gif"/>
+			<description>Metric Instance is something...
+				            </description>
+		</object_type>
+		<object_type code="Tollgate">
+			<name>Gated Project</name>
+			<plural>Gated Projects</plural>
+			<img src="../images/icon_tollgate.gif"/>
+			<img src="../images/icon_archive_tollgate.gif"/>
+			<img src="../images/icon_tollgate_lrg.gif"/>
+			<description>A specific instance of a Gated Project.</description>
+		</object_type>
+		<object_type code="Checkpoint">
+			<name>Gate</name>
+			<plural>Gates</plural>
+			<img src="../images/icon_checkpt.gif"/>
+			<img src="../images/icon_archive_checkpt.gif"/>
+			<img src="../images/icon_checkpt_lrg.gif"/>
+			<description>A given phase of a Tollgate process, or the deliverable that must be completed for that phase.</description>
+		</object_type>
+		<object_type code="MasterTask">
+			<name>Task</name>
+			<plural>Tasks</plural>
+			<img src="../images/icon_task_small.gif"/>
+			<img src="../images/icon_archive_work.gif"/>
+			<img src="../images/icon_task_lrg.gif"/>
+			<description>Task is lightweight work object</description>
+		</object_type>
+		<object_type code="ChildTask">
+			<name>ChildTask</name>
+			<plural>ChildTasks</plural>
+			<img src="../images/icon_task_small.gif"/>
+			<img src="../images/icon_archive_work.gif"/>
+			<img src="../images/icon_task_lrg.gif"/>
+			<description>ChildTask is something...</description>
+		</object_type>
+		<object_type code="DeliverableDocument">
+			<name>Document</name>
+			<plural>Documents</plural>
+			<img src="../images/icon_doclink.gif"/>
+			<img src="../images/icon_doclink.gif"/>
+			<img src="../images/icon_docs_lrg.gif"/>
+		</object_type>
+		<object_type code="DiscussionItem">
+			<name>Discussion</name>
+			<plural>Discussions</plural>
+			<img src="../images/icon_projects_clear_z.gif"/>
+			<img src="../images/icon_projects_clear_z.gif"/>
+			<img src="../images/icon_projects_clear_z.gif"/>
+			<description>Discussions...</description>
+		</object_type>
+		<object_type code="LessonLearned">
+			<name>Lesson Learned</name>
+			<plural>Lessons Learned</plural>
+			<img src="../images/icon_lesson.gif"/>
+			<img src="../images/icon_lesson.gif"/>
+			<img src="../images/icon_lesson.gif"/>
+			<description>Lessons...</description>
+		</object_type>
+		<object_type code="VersionDocument">
+			<name>Financial Version Document</name>
+			<plural>Financial Version Documents</plural>
+			<img src="../images/icon_doclink.gif"/>
+			<img src="../images/icon_doclink.gif"/>
+			<img src="../images/icon_docs_lrg.gif"/>
+			<description>Financial Version Documents provide snapshots of financial data at key points in time.</description>
+		</object_type>
+		<object_type code="Resource">
+			<name>Knowledge</name>
+			<plural>Knowledge</plural>
+			<img src="../images/icon_resource_small.gif"/>
+			<img src="../images/icon_resource_small.gif"/>
+			<img src="../images/icon_resource_large.gif"/>
+			<description>Knowledge is represented by shared documents.</description>
+		</object_type>
+	</object_types>
+	<permissions>
+		<permission_category default="false" id="0">
+			<name>None</name>
+			<description>No permissions</description>
+			<sequence>100</sequence>
+		</permission_category>
+		<permission_category default="false" id="1">
+			<name>View</name>
+			<description>View permissions</description>
+			<sequence>200</sequence>
+			<verb value="true">View</verb>
+			<verb value="true">View Group</verb>
+			<verb value="true">View Profile</verb>
+			<verb value="true">View Agenda</verb>
+			<verb value="true">View Time</verb>
+		</permission_category>
+		<permission_category default="false" id="2">
+			<name>Edit</name>
+			<description>Edit permissions</description>
+			<sequence>300</sequence>
+			<verb value="true">View</verb>
+			<verb value="true">Edit</verb>
+			<verb value="true">Edit Tags</verb>
+			<verb value="true">Add Discussion Item</verb>
+			<verb value="true">Make an Issue</verb>
+			<verb value="true">Remove Issues</verb>
+			<verb value="true">Add Document</verb>
+			<verb value="true">Edit Document</verb>
+			<verb value="true">Add Team Member</verb>
+			<verb value="true">View Work Breakdown</verb>
+			<verb value="true">Edit Work Breakdown</verb>
+			<verb value="true">Add Child</verb>
+			<verb value="true">Add task</verb>
+			<verb value="true">View Group</verb>
+			<verb value="true">View Profile</verb>
+			<verb value="true">View Agenda</verb>
+			<verb value="true">View Load</verb>
+			<verb value="true">View Time</verb>
+			<verb value="true">Edit Preferences</verb>
+			<verb value="true">Update Metric numbers</verb>
+		</permission_category>
+		<permission_category default="true" id="3">
+			<name>Work</name>
+			<description>Everything but Delete</description>
+			<sequence>400</sequence>
+			<verb value="false">Delete</verb>
+			<verb value="false">Delegate</verb>
+			<verb value="false">Move</verb>
+			<verb value="false">Edit Priority</verb>
+			<verb value="false">Edit Controls</verb>
+			<verb value="false">Add Group Member</verb>
+			<verb value="false">Remove Group Member</verb>
+			<verb value="false">Change Group Owner</verb>
+			<verb value="false">Edit Login Information</verb>
+		</permission_category>
+		<permission_category default="true" id="2147483647">
+			<name>All</name>
+			<description>All permissions</description>
+			<sequence>500</sequence>
+		</permission_category>
+		<permission_category default="false" id="4">
+			<name>Guest</name>
+			<description>Basic view permissions without any metrics</description>
+			<sequence>200</sequence>
+			<verb value="true">View</verb>
+		</permission_category>
+	</permissions>
+	<project_states>
+		<project_status code="Proposed" display_sequence="8" sequence="2">
+			<name>Proposed</name>
+			<img src="../images/status_proposed.gif"/>
+			<gantt-bar-color blue="204" border="1" green="204" hatching="0" red="204"/>
+		</project_status>
+		<project_status code="Off Track" display_sequence="2" sequence="6">
+			<name>Off Track</name>
+			<img src="../images/status_red_med.gif"/>
+			<gantt-bar-color blue="0" border="1" green="51" hatching="0" red="255"/>
+		</project_status>
+		<project_status code="Needs Attention" display_sequence="3" sequence="5">
+			<name>Needs Attn</name>
+			<img src="../images/status_yel_med.gif"/>
+			<gantt-bar-color blue="0" border="1" green="255" hatching="0" red="255"/>
+		</project_status>
+		<project_status code="On Track" display_sequence="4" sequence="4">
+			<name>On Track</name>
+			<img src="../images/status_green_med.gif"/>
+			<gantt-bar-color blue="51" border="1" green="255" hatching="0" red="102"/>
+		</project_status>
+		<project_status code="Not Started" display_sequence="5" sequence="3">
+			<name>Not Started</name>
+			<img src="../images/status_not_started.gif"/>
+			<gantt-bar-color blue="153" border="1" green="153" hatching="0" red="153"/>
+		</project_status>
+		<project_status code="Completed" display_sequence="6" sequence="7">
+			<name>Completed</name>
+			<img src="../images/status_completed.gif"/>
+			<gantt-bar-color blue="0" border="1" green="0" hatching="0" red="0"/>
+		</project_status>
+		<project_status code="Canceled" display_sequence="7" sequence="8">
+			<name>Canceled</name>
+			<img src="../images/status_cancelled.gif"/>
+			<gantt-bar-color blue="255" border="1" green="255" hatching="1" red="255"/>
+		</project_status>
+	</project_states>
+	<event_types>
+		<event_type code="Create" visible="true">
+			<name>Create</name>
+			<description>...when a Work Item is created</description>
+		</event_type>
+		<event_type code="Archive" visible="true">
+			<name>Archive</name>
+			<description>...when a Work Item is archived</description>
+		</event_type>
+		<event_type code="Login" visible="false">
+			<name>Login</name>
+			<description>...when a user logs in</description>
+		</event_type>
+		<event_type code="Document" visible="true">
+			<name>Document Version</name>
+			<description>...when a document is checked in or out, rolled back to an earlier version, or a checkin is canceled</description>
+		</event_type>
+		<event_type code="Discussion" visible="true">
+			<name>New Discussion Item</name>
+			<description>...when a discussion receives a new post</description>
+		</event_type>
+		<event_type code="DocumentLink" visible="true">
+			<name>Document Added/Removed</name>
+			<description>...when a document is added to or removed from a Work Item</description>
+		</event_type>
+		<event_type code="Delegation" visible="true">
+			<name>Work Delegation</name>
+			<description>...when a user is asked to take ownership of a Work Item, accepts, or declines</description>
+		</event_type>
+		<event_type code="Team" visible="true">
+			<name>Team Membership</name>
+			<description>...when a user is asked to join the team of a Work Item, accepts, or declines</description>
+		</event_type>
+		<event_type code="StatusChange" visible="true">
+			<name>Status Change</name>
+			<description>...when a Work Item's status changes</description>
+		</event_type>
+		<event_type code="Schedule" visible="true">
+			<name>Schedule Change</name>
+			<description>...when a Work Item's schedule changes</description>
+		</event_type>
+		<event_type code="BudgetChange" visible="true">
+			<name>Budget Change</name>
+			<description>...when a Work Item's budget changes</description>
+		</event_type>
+		<event_type code="OverBudget" visible="true">
+			<name>Over Budget</name>
+			<description>...when a Work Item goes over budget due to a budget change or when new costs are incurred</description>
+		</event_type>
+		<event_type code="Comment" visible="true">
+			<name>Comment</name>
+			<description>...when a user enters a comment to a Work Item</description>
+		</event_type>
+		<event_type code="TimeRejected" visible="true">
+			<name>Submitted Time Rejected</name>
+			<description>...when time waiting for approval is rejected</description>
+		</event_type>
+		<event_type code="StatusReport" visible="true">
+			<name>Status Report</name>
+			<description>...when work has been submitted by a project owner for reporting.</description>
+		</event_type>
+		<event_type code="Delete" visible="true">
+			<name>User Deleted</name>
+			<description>...when a user is deleted</description>
+		</event_type>
+		<event_type code="Sign" visible="true">
+			<name>Sign</name>
+			<description>...???</description>
+		</event_type>
+		<event_type code="ScheduleChange" visible="true">
+			<name>Another Schedule Change</name>
+			<description>...when a Work Item's schedule changes</description>
+		</event_type>
+		<event_type code="Move" visible="true">
+			<name>Parent Change</name>
+			<description>...when a Work Item's parent changes</description>
+		</event_type>
+		<event_type code="Tag" visible="true">
+			<name>Tag Change</name>
+			<description>...when a tag associated with a Work Item gets added/removed/changed</description>
+		</event_type>
+		<event_type code="ApprovalRequest" visible="true">
+			<name>Approval Request</name>
+			<description>...When a project owner requests approval to move the project into the next phase.</description>
+		</event_type>
+		<event_type code="MetricTmpltBasic" visible="true">
+			<name>Edit Basic Info</name>
+			<description>...changes to Basic Properties (e.g. name, frequency, start date, end date)</description>
+		</event_type>
+		<event_type code="MetricTmpltDisplay" visible="true">
+			<name>Edit Display Settings</name>
+			<description>...changes in display settings</description>
+		</event_type>
+		<event_type code="MetricTmpltItem" visible="true">
+			<name>Edit Items </name>
+			<description>...changes to the basic properties of any item (e.g. name, static value, is monetary, is cumulative)</description>
+		</event_type>
+		<event_type code="MetricTmpltCalc" visible="true">
+			<name>Edit Calculations</name>
+			<description>...changes to the calculation of any one item</description>
+		</event_type>
+		<event_type code="MetricTmpltTag" visible="true">
+			<name>Edit Phases/Views</name>
+			<description>...updates to the Views or Phases categories</description>
+		</event_type>
+		<event_type code="MetricDelegation" visible="true">
+			<name>MetricTemplate Delegation</name>
+			<description>...when a user is asked to take ownership of a MetricTemplate object, accepts, or declines</description>
+		</event_type>
+		<event_type code="ChampionAssign" visible="true">
+			<name>Champion Assign</name>
+			<description>...When a champion is assigned to a project.</description>
+		</event_type>
+		<event_type code="LessonLearned" visible="true">
+			<name>New Lesson Learned</name>
+			<description>...when a Lesson Learned Item is added</description>
+		</event_type>
+		<event_type code="ChampionControl" visible="true">
+			<name>Champion Control</name>
+			<description>...When a champion approves or rejects moving a project into the next phase, or decides to skip a step in a Tollgate, or cancels a project.</description>
+		</event_type>
+	</event_types>
+	<documents_storage buffer_bytes="1024" max_bytes="10485760" max_bytes_db="102400"/>
+	<text_search value="false"/>
+	<item_per_page>30</item_per_page>
+	<threads_per_page>25</threads_per_page>
+	<agents install="true">
+		<agent class_name="com.cinteractive.ps3.agents.event.EventAgent"/>
+		<agent class_name="com.cinteractive.ps3.agents.signup.SignupAgent"/>
+		<agent class_name="com.cinteractive.ps3.agents.system.QuestionReminderAgent"/>
+		<agent class_name="com.cinteractive.ps3.agents.system.StatusReportAgent"/>
+		<agent class_name="com.cinteractive.ps3.agents.system.TimeConversionAgent"/>
+		<agent class_name="com.cinteractive.ps3.agents.system.AlertCleaner"/>
+		<agent class_name="com.cinteractive.ps3.agents.system.ArchivalAgent"/>
+		<agent class_name="com.cinteractive.ps3.agents.system.HitLogCleaner"/>
+		<agent class_name="com.cinteractive.ps3.agents.system.DueReminderAgent"/>
+		<agent class_name="com.cinteractive.ps3.agents.system.AgentLogCleaner"/>
+		<agent class_name="com.cinteractive.ps3.metrics.MetricReminderAgent"/>
+		<agent class_name="com.cinteractive.ps3.agents.system.StatusChangeAgent"/>
+		<agent class_name="com.cinteractive.ps3.agents.system.DeleteOldUsersAgent"/>
+	</agents>
+	<calendar>
+				<week>
+			<firstday>1</firstday>
+			<dayoff>1</dayoff>
+			<dayoff>7</dayoff>
+		</week>
+		<hours>8.0</hours>
+		<holidays>
+			<holiday sequence="1">
+				<hname>Veterans' Day</hname>
+				<hdate>11/11/2000</hdate>
+			</holiday>
+			<holiday sequence="2">
+				<hname>Thanksgiving</hname>
+				<hdate>11/23/2000</hdate>
+			</holiday>
+			<holiday sequence="3">
+				<hname>Christmas Day</hname>
+				<hdate>12/25/2000</hdate>
+			</holiday>
+			<holiday sequence="4">
+				<hname>New Year's Day</hname>
+				<hdate>01/01/2001</hdate>
+			</holiday>
+			<holiday sequence="5">
+				<hname>Martin Luther King Jr. Day</hname>
+				<hdate>02/15/2001</hdate>
+			</holiday>
+			<holiday sequence="6">
+				<hname>Presidents' Day</hname>
+				<hdate>02/19/2001</hdate>
+			</holiday>
+			<holiday sequence="7">
+				<hname>Memorial Day</hname>
+				<hdate>05/28/2001</hdate>
+			</holiday>
+			<holiday sequence="8">
+				<hname>Independence Day</hname>
+				<hdate>07/04/2001</hdate>
+			</holiday>
+			<holiday sequence="9">
+				<hname>Labor Day</hname>
+				<hdate>09/03/2001</hdate>
+			</holiday>
+			<holiday sequence="10">
+				<hname>Columbus Day</hname>
+				<hdate>10/08/2001</hdate>
+			</holiday>
+			<holiday sequence="11">
+				<hname>Veterans' Day</hname>
+				<hdate>11/11/2001</hdate>
+			</holiday>
+			<holiday sequence="12">
+				<hname>Thanksgiving</hname>
+				<hdate>11/22/2001</hdate>
+			</holiday>
+			<holiday sequence="13">
+				<hname>Christmas Day</hname>
+				<hdate>12/25/2001</hdate>
+			</holiday>
+		</holidays>
+	</calendar>
+	<hit_log buffer_size="50" log_hits="true"/>
+	<alert_per_page>40</alert_per_page>
+	<configurables>
+		<configurable classname="com.cinteractive.ps3.menus.ConfigurableMenus" confname="Menus" filename="menus.xml"/>
+		<configurable classname="com.cinteractive.ps3.workview.Modules" confname="Modules" filename="modules.xml"/>
+		<configurable classname="com.cinteractive.ps3.workview.Configurations" confname="Workviews" filename="workviews.xml"/>
+		<configurable classname="com.cinteractive.ps3.wsview.Modules" confname="WSModules" filename="wsmodules.xml"/>
+		<configurable classname="com.cinteractive.ps3.wsview.Configurations" confname="WSViews" filename="wsviews.xml"/>
+	</configurables>
+	<alert_per_workspace>5</alert_per_workspace>
+	<mime_mappings>
+		<mime_mapping content_type="application/x-unknown">UNRECOGNIZED</mime_mapping>
+		<mime_mapping content_type="application/msword">WORD DOC</mime_mapping>
+		<mime_mapping content_type="application/vnd.ms-word">WORD DOC</mime_mapping>
+		<mime_mapping content_type="application/excel">EXCEL XLS</mime_mapping>
+		<mime_mapping content_type="application/vnd.ms-excel">EXCEL XLS</mime_mapping>
+		<mime_mapping content_type="application/ppt">PPT</mime_mapping>
+		<mime_mapping content_type="application/vnd.ms-powerpoint">PPT</mime_mapping>
+		<mime_mapping content_type="application/vnd.ms-project">PROJECT MPP</mime_mapping>
+		<mime_mapping content_type="application/msaccess">ACCESS MDB</mime_mapping>
+		<mime_mapping content_type="application/vnd.ms-access">ACCESS MDB</mime_mapping>
+		<mime_mapping content_type="application/pdf">ACROBAT PDF</mime_mapping>
+		<mime_mapping content_type="application/x-shockwave-flash">FLASH SWF</mime_mapping>
+		<mime_mapping content_type="application/x-photoshop">PHOTOSHOP PSD</mime_mapping>
+		<mime_mapping content_type="application/rtf">RTF DOC</mime_mapping>
+		<mime_mapping content_type="text/plain">TXT DOC</mime_mapping>
+		<mime_mapping content_type="text/html">HTML DOC</mime_mapping>
+		<mime_mapping content_type="text/rtf">RTF DOC</mime_mapping>
+		<mime_mapping content_type="image/gif">IMAGE GIF</mime_mapping>
+		<mime_mapping content_type="image/jpeg">IMAGE JPG</mime_mapping>
+	</mime_mappings>
+      <mockups association="all">
+	</mockups>
+	<dashboard>
+		<tagword code="Country"/>
+		<tagword code="Workstream"/>
+	</dashboard>
+	<header/>
+	<ganttinitload>30</ganttinitload>
+	<passwordlength>1</passwordlength>
+	<numberscales>
+		<numberscale scale="1000" sequence="1" symbol="K"/>
+		<numberscale scale="1000000" sequence="2" symbol="M"/>
+	</numberscales>
+</context>

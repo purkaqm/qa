@@ -1,0 +1,469 @@
+{
+  "__type": "ArtOfTest.WebAii.Design.ProjectModel.Test",
+  "__value": {
+    "DomStatesCounter": {},
+    "WebKitExecutionDelay": 0,
+    "ReuseAppWindow": 0,
+    "ProfilerResultsDirectory": null,
+    "ProfilerServerName": null,
+    "ProfilerBenchmarkResultsFilePath": null,
+    "ProfilerBenchmarkResultsId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurationId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurations": {},
+    "CurrentReferences": [],
+    "Steps": {
+      "__type": "ArtOfTest.Common.Design.ProjectModel.AutomationStepList",
+      "__value": [
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "064acf06-68ee-414c-89b5-6eb6b92b650c",
+            "Description": "Wait till Add New Tag Dependencies pop up is displayed",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_TagDependenciesPage.UpdateDetailsButtonTagDependencies.Wait.ForExists();           \r\n            Pages.PS_TagDependenciesPage.DescriptionTextAreaTagDependencies.Wait.ForExists();\r\n            Pages.PS_TagDependenciesPage.NameTextTagDependencies.Wait.ForVisible();                                   \r\n                                                                                  ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 1,
+            "Id": "TS_CTagDep_00",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Create_Tag_Dependenciescduwgeaj.cky",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "8219a60e-a34b-40ed-a305-8742cb94e60f",
+            "Description": "Enter Name",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            depTagName = Data[\"DependenciesTagName\"].ToString()+Randomizers.generateRandomInt(1000,9999);\r\n            SetExtractedValue(\"DependenciesTagName\",depTagName);\r\n            ActiveBrowser.Window.SetFocus();\r\n            Pages.PS_TagDependenciesPage.NameTextTagDependencies.Click();\r\n            Pages.PS_TagDependenciesPage.NameTextTagDependencies.Focus();\r\n            Actions.SetText(Pages.PS_TagDependenciesPage.NameTextTagDependencies, depTagName);",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 2,
+            "Id": "TS_CTagDep_Name",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Create_Tag_Dependencieswzuzg1wo.lhe",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "c7de0d59-e173-45f7-9d60-5fb4b21b0895",
+            "Description": "Enter Description",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            if(Data[\"DepedenciesTagDesc\"].ToString().Length > 0){\r\n            ActiveBrowser.Window.SetFocus();\r\n            Pages.PS_TagDependenciesPage.DescriptionTextAreaTagDependencies.Click();\r\n            Pages.PS_TagDependenciesPage.DescriptionTextAreaTagDependencies.Focus();\r\n            Actions.SetText(Pages.PS_TagDependenciesPage.DescriptionTextAreaTagDependencies, Data[\"DepedenciesTagDesc\"].ToString());\r\n            }",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 3,
+            "Id": "TS_CTagDep_Descreption",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Create_Tag_Dependenciesx2ygklvc.ydm",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "6198feff-831b-4311-8796-a5969864153b",
+            "Description": "Choose Work item",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "                                    \r\n            if(!Data[\"DependenciesTagWorkType\"].ToString().ToLower().Contains(\"no\"))\r\n            {\r\n                \r\n                HtmlDiv worktypeChoose = ActiveBrowser.Find.ByXPath<HtmlDiv>(AppLocators.get(\"select_work_item_for_tags\"));\r\n                worktypeChoose.Wait.ForExists();\r\n                worktypeChoose.Click();\r\n                ActiveBrowser.RefreshDomTree();\r\n                Pages.PS_TagsListPage.AddNewTagDailogWorkTypesDoneButton.Wait.ForVisible();\r\n                \r\n                string workTypeStr = Data[\"DependenciesTagWorkType\"].ToString();\r\n                \r\n                string[] workType = System.Text.RegularExpressions.Regex.Split(workTypeStr,\"---\");\r\n                \r\n                for(int i=0; i < workType.Length; i++)\r\n                {\r\n                 string workTypeCheckboxLocator = string.Format(\"//input[@name='{0}']\",workType[i]);\r\n                 Log.WriteLine(workTypeCheckboxLocator);   \r\n                 if(ActiveBrowser.Find.AllByXPath(workTypeCheckboxLocator).Count > 0)\r\n                 {\r\n                   HtmlInputCheckBox workItemChkbx = ActiveBrowser.Find.ByXPath<HtmlInputCheckBox>(workTypeCheckboxLocator);\r\n                   workItemChkbx.Click();\r\n                 }\r\n                 else\r\n                 {\r\n                   Assert.IsTrue(false, workType[i] + \" Not present in work items list\");\r\n                 }\r\n                }\r\n                \r\n                Pages.PS_TagsListPage.AddNewTagDailogWorkTypesDoneButton.Click();\r\n                ActiveBrowser.RefreshDomTree();\r\n            }\r\n                                    \r\n                                    ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 4,
+            "Id": "TS_CTagdep_WorkItem",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Create_Tag_Dependencies1zlkvkfq.g4f",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "8d70613a-9687-496b-8376-8553b01bfe7f",
+            "Description": "Click on 'Update Details' button",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_TagDependenciesPage.UpdateDetailsButtonTagDependencies.Click();\r\n            ActiveBrowser.WaitUntilReady();\r\n                                                ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 5,
+            "Id": "TS_CTagDep_AddTag",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Create_Tag_Dependenciesrnfwrkzp.geb",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        }
+      ]
+    },
+    "IndependentDescriptors": [
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "/admin/td/TDListing.epage",
+              "Query": "",
+              "BaseUrl": "http://ord1qapp18ps.cinteractive.com:8080",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "Tag Dependencies | PowerSteering 17",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_TagDependenciesPage"
+            }
+          },
+          "Frame": null,
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "/OCtWxMbRXbrmmefmv5ncKblWEM=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "NameTextTagDependencies",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "TagName=input"
+                          }
+                        },
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "id=tdName"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/div[15]/div[2]/form[1]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/input[1]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlInputText",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      },
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "/admin/td/TDListing.epage",
+              "Query": "",
+              "BaseUrl": "http://ord1qapp18ps.cinteractive.com:8080",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "Tag Dependencies | PowerSteering 17",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_TagDependenciesPage"
+            }
+          },
+          "Frame": null,
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "77Q4koanKhzuKd0NZvIuNy216jM=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "DescriptionTextAreaTagDependencies",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "TagName=textarea"
+                          }
+                        },
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "id=tdDescription"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/div[15]/div[2]/form[1]/div[2]/table[1]/tbody[1]/tr[2]/td[1]/textarea[1]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlTextArea",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      },
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "/admin/td/TDListing.epage",
+              "Query": "",
+              "BaseUrl": "http://ord1qapp18ps.cinteractive.com:8080",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "Tag Dependencies | PowerSteering 17",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_TagDependenciesPage"
+            }
+          },
+          "Frame": null,
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "svidYgaSBRHjz3CWEIyOTpSm27s=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "UpdateDetailsButtonTagDependencies",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "TagName=input"
+                          }
+                        },
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "value=Update Details"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/div[15]/div[2]/form[1]/div[3]/input[1]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlInputSubmit",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      }
+    ],
+    "HtmlDescription": "",
+    "SilverlightEnabled": false,
+    "IsSilverlightApp": false,
+    "SilverlightAppWebUrl": "",
+    "SilverlightAppLocalDirectory": "",
+    "SilverlightAppRecordLocal": false,
+    "SilverlightAppOriginUri": null,
+    "WpfAppPath": null,
+    "UseDefaultWpfAppPath": false,
+    "TestAssembly": "PSS_Automation.dll",
+    "TestAssemblyPath": "bin",
+    "TestClass": "PSS_Automation.TS_Create_Tag_Dependencies",
+    "IsManual": false,
+    "ResourceFilePath": "ApplicationLibrary\\Admin\\Tag\\TS_Create_Tag_Dependencies.resx",
+    "HasCodeBehind": true,
+    "DataInfo": {
+      "__type": "ArtOfTest.Common.Design.Data.DataInfo",
+      "__value": {
+        "ConnectionString": "",
+        "DefaultToGrid": true,
+        "DataRange": "",
+        "LoadRecordsCount": null,
+        "DataTableName": "",
+        "DataProvider": "",
+        "DataEnabled": true,
+        "HasBuiltinGrid": false,
+        "DataType": 4,
+        "BuiltInData": null,
+        "BuiltInDocumentKey": null,
+        "TSQL": ""
+      }
+    },
+    "VSProperties": {},
+    "DeploymentItems": [],
+    "IsTestFragment": false,
+    "StopTestListOnFailure": false,
+    "InheritParentDataSource": true,
+    "BrowserType": 0,
+    "QcId": 0,
+    "QcFilePath": null,
+    "QcTestVersionStamp": 0,
+    "TestLinks": [],
+    "Description": "",
+    "Name": "TS_Create_Tag_Dependencies",
+    "Owner": "",
+    "Path": "ApplicationLibrary\\Admin\\Tag\\TS_Create_Tag_Dependencies.tstest",
+    "Priority": 0,
+    "TestType": 0,
+    "UniqueId": "6f6d0088-e8f5-4d5c-b2dc-24b8bc2f6d12",
+    "Id": "6f6d0088-e8f5-4d5c-b2dc-24b8bc2f6d12",
+    "ProjectId": "8482a1a8-662a-40c8-b69e-343a43a257af",
+    "Version": 200
+  }
+}

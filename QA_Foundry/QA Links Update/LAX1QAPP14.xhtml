@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>LAX1QAPP14</title>
+	<script type="text/javascript" language="JavaScript">
+		<![CDATA[
+		
+		function sendEvent( event, target ) {
+			document.forms[ "main" ].event.value = event;
+			if( target ) {
+				document.forms[ "main" ].action += target;
+			}
+			document.forms[ "main" ].submit();
+		}
+
+		function getElement(id) {
+  			if (document.getElementById) {
+				return documen]]><![CDATA[t.getElementById(id);
+			} else if (document.all) {
+				return document.all[id];
+			} else {
+				return null;
+			}
+		}
+
+        function logOut() {
+            document.forms["main"].event.value = "logout";
+            document.forms["main"].submit();
+        }
+
+		function resetPassword]]><![CDATA[(target) {
+			document.forms["main"].current_context.value = target;
+            document.forms["main"].event.value = "reset-nobody-password";
+            document.forms["main"].submit();
+		}
+
+		function reloadContext(target) {
+			var msg = "Are you sure you want to reload ";
+			msg += target;
+			msg +="?  This will clear the cache and reload the configuration.";
+			if( confirm(msg) ) {
+				document.forms["main"].current_context.value = target;
+				document.forms["main"].event.value = "reload";
+				document.forms["main"].submit();
+			}
+		}
+		
+		function interruptCacheLoading(target) {
+			document.forms["main"].current_context.value = target;
+            document.forms["main"].event.value = "interrupt-cache-loading";
+            document.forms["main"].submit();
+		}
+		
+		function reloadCache(target) {
+			var msg = "Are you sure you want to reload the cache of " + target + " context?";
+			if (confirm(msg)) {
+				document.forms["main"].current_context.value = target;
+	            document.forms["main"].event.value = "reloadCache";
+	            document.forms["main"].submit();
+			}
+		}
+		
+        function clearCache(target) {
+        	var msg = "Are you sure you want to clear the cache of " + target + " context?";
+        	if (confirm(msg)) {
+	        	document.forms["main"].current_context.value = target;
+	            document.forms["main"].event.value = "clearCache";
+	            document.forms["main"].submit();
+        	}
+        }
+        
+        function showObjects(target) {
+        	document.forms["main"].current_context.value = target;
+            document.forms["main"].event.value = "showObjects";
+            document.forms["main"].submit();
+        }
+		
+		function resetSearcher( target ) {
+			var msg = "Are you sure you want to reset Lucene search ";
+			msg += target;
+			msg +="?\n\nThis will shutdown current search service and start a new service. \n";
+			msg +="Warning: remember to delete old index files so a new clean index is built. \n";
+			msg +="Optional: administrators also can modify the path where the new index will be built \n"; 
+			msg +="by adding a index_path property on the context.xml under the <lucene_properties>. ";
+			if( confirm(msg) ) {
+				document.forms["main"].current_context.value = target;
+				document.forms["main"].event.value = "resetSearcher";
+				document.forms["main"].submit();
+			}
+		}
+		
+		function toggleLoadCache(target) {
+			document.forms["main"].current_context.value = target;
+            document.forms["main"].event.value = "toggleLoadCache";
+            document.forms["main"].submit();
+		}
+
+		function loadContext(target) {
+			document.forms["main"].current_context.value = target;
+			document.forms["main"].event.value = "load";
+			document.forms["main"].submit();
+		}
+		
+		function refresh(details) {
+			sURL = unescape(window.location.pathname) + details;
+			window.location.replace( sURL );
+		}
+
+		function toggleContext(number) {
+   			body = document.getElementById("context_" + number);
+   			button = document.getElementById("toggleContext_" + number);
+   			if (body) {
+       			if (body.style.display == 'none') {
+           			body.style.display='table-row';
+           			button.firstChild.replaceData(0, 4, "Hide");
+         		} else { 
+         			body.style.display = 'none';
+         			button.firstChild.replaceData(0, 4, "Show");
+         		}
+       		}
+		}
+		
+		function showQueue(queueNumber) {
+			for (i = 0; i < 5; i++) {
+				queue = document.getElementById("queue" + i);
+				queueContainer = document.getElementById("queueContainer" + i);
+				if (queueNumber == i) {
+	                queue.style.backgroundColor = "white";
+	                queueContainer.style.display = "block"
+	            } else {
+	            	queue.style.backgroundColor = "#DDDDDD";
+	            	queueContainer.style.display = "none"
+	            }
+			}
+		}
+		
+		function toggleAgentLog(queueNumber) {
+			obj = document.getElementById("agentLog" + queueNumber);
+			button = document.getElementById("logButton" + queueNumber);
+			if (obj) {
+				if (obj.style.display == "none") {
+					obj.style.display = "table-row-group";
+					button.firstChild.replaceData(0, 1, "-");
+				} else {
+					obj.style.display = "none";
+					button.firstChild.replaceData(0, 1, "+");
+				}
+			}
+		}
+		
+		function toggleAgentInfo(queueNumber) {
+			tbody = document.getElementById("agentTableBody" + queueNumber);
+			button = document.getElementById("agentButton" + queueNumber);
+			if (tbody) {
+				if (tbody.style.display == "none") {
+					tbody.style.display = "table-row-group";
+					button.firstChild.replaceData(0, 1, "-");
+				} else {
+					tbody.style.display = "none";
+					button.firstChild.replaceData(0, 1, "+");
+				}
+			}
+		}
+
+		]]>
+	</script>
+
+    <style type="text/css">
+      body {margin: 0; padding: 0; background-color: white; font-family: sans-serif;}
+      .header {height: 52px; width: 100%; background-color: #0090CA;}
+      .headerLeft {float: left; font-size: 24px; color: white; padding-top: 10px; padding-left: 20px; padding-right: 20px; width: 50%;}
+      .psName {font-weight: bold;}
+      .psRoot {font-weight: normal;}
+      .headerRight {color: white; font-size: 12px; padding-top: 4px;}
+      .headerRightName {float: left; font-weight: bold; text-align: right; padding-right: 8px;}
+      .headerRightValue {float: left; font-weight: normal;}
+      .headerRigntButton {float: right; padding-right: 20px; padding-top: 10px;}
+      .refreshButton {padding-left: 10px; padding-right: 10px; padding-top: 2px; padding-bottom: 2px; border: 1px solid #C8C9CB; background-color: #5590CA; cursor: pointer; color: white; font-weight: bold;}
+      .warningCell {padding-left: 10px; padding-right: 10px; padding-top: 2px; padding-bottom: 2px; color: red; font-size: 16px; font-weight: bold;}
+      .bodyContainer {margin-left: 20px; margin-right: 20px; font-size: 12px;}
+      .tableHeader {background-color: #DDDDDD; font-size: 14px;}
+      .contextTableHeader {background-color: #DDDDDD; font-size: 12px;}
+      .contextTableTd {border-bottom: 1px solid #C8C9CB; padding-top: 5px; padding-bottom: 5px;}
+      .bottomBorder {border-bottom: 1px solid #C8C9CB;}
+      .first {border-left: 1px solid #C8C9CB;}
+      .last {border-right: 1px solid #C8C9CB;}
+      .odd {background-color: #F5F5F5;}
+      .queueHeader {background-color: #DDDDDD; height: 37px; font-weight: bold; font-size: 14px;}
+      .queueHeaderCell {float: left; padding: 10px; cursor: pointer; border-top: 1px solid #C8C9CB; border-left: 1px solid #C8C9CB;}
+      .moveRow {background-color: white; height: 40px; border-left: 1px solid #C8C9CB; border-right: 1px solid #C8C9CB;}
+      .moveRowCell {float: right; padding-top: 10px; padding-right: 10px;}
+      .moveButton {padding-left: 5px; padding-right: 5px; font-size: 14px; font-weight: bold; cursor: pointer; border: 1px solid #C8C9CB; background-color: #F5F5F5;}
+      .moveButtonDIsabled {padding-left: 5px; padding-right: 5px; font-size: 14px; font-weight: bold; cursor: pointer; border: 1px solid #C8C9CB; background-color: #F5F5F5; color:gray;}
+      .logHeaderCell {float: left; padding-left: 10px; padding-right: 10px; font-weight: bold;}
+      .spaceCell {height: 35px; border-left: 1px solid #C8C9CB; border-right: 1px solid #C8C9CB;}
+      .textRow{height: 25px; border-left: 1px solid #C8C9CB; border-right: 1px solid #C8C9CB; border-bottom: 1px solid #C8C9CB;}
+      .textCell{padding-left: 10px; font-size: 14px;}
+      .agentHeader {background-color: #CCDDEE; font-weight: bold; padding-left: 20px;}
+      .agentTableHeader {background-color: #F5F5F5; font-weight: bold;}
+      .agentButton {font-size: 16px; cursor: pointer;}
+      .setButton {padding-left: 10px; padding-right: 10px; padding-top: 1px; padding-bottom: 1px; border: 1px solid #C8C9CB; background-color: #F5F5F5; cursor: pointer;}
+      .setButtonDisabled {padding-left: 10px; padding-right: 10px; padding-top: 1px; padding-bottom: 1px; border: 1px solid #C8C9CB; background-color: #F5F5F5; color: gray;}
+      .adminTableHeader {background-color: #CCDDEE;}
+      .logoutLnk {text-align: center; color: white; font-size: 12px; padding-top: 4px; cursor: pointer;}
+    </style>
+
+</head>
+
+<body>
+
+<div class="header">
+  <div class="headerLeft">
+    <span class="psName">PowerSteering Home</span>
+    <span class="psRoot">/ci/app/app</span>
+  </div>
+  <div class="headerRight">
+    <div class="headerRightName">
+      <div>Start Time:</div>
+      <div>PS Version:</div>
+      <div>Java Version:</div>
+    </div>
+    <div class="headerRightValue">
+      <div>2016-11-24 11:00:59; TZ: Europe/Dublin</div>
+      <div>16_CR2, build 117, r125823 (2016-11-20T21)</div>
+      <div>1.8.0_71</div>
+    </div>
+  </div>
+  <div class="headerRigntButton">
+    <span class="refreshButton" onclick="javascript:refresh(&apos;&apos;)">Refresh PSHome</span>
+    <!-- div class="logoutLnk">
+      <span onclick="javascript:logOut();">Logout</span>
+    </div -->
+  </div>
+</div>
+
+<div class="bodyContainer">
+  <br />
+  <table width="100%" cellspacing="0" cellpadding="2">
+    <tr class="tableHeader">
+      <th width="10%" align="right">Contexts</th>
+      <th width="10%"> </th>
+      <th width="10%" align="right">Cache</th>
+      <th width="10%"> </th>
+      <th width="10%" align="right">Server Memory</th>
+      <th width="10%"> </th>
+      <th width="10%" align="right">Sessions</th>
+      <th> </th>
+    </tr>
+    <tr>
+      <th align="right">Total:</th>
+      <td>1</td>
+      <th align="right">Total Cached Objects:</th>
+      <td>603366</td>
+      <th align="right">Total:</th>
+      <td>32,768 MBytes</td>
+      <th align="right">Total Logged In:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th align="right">Active:</th>
+      <td>1</td>
+      <th align="right">Cached Uuids:</th>
+      <td>25414</td>
+      <th align="right">Free:</th>
+      <td>10,426.38 MBytes</td>
+      <th align="right">Distinct Permissions:</th>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th />
+      <td />
+      <th />
+      <td />
+      <th align="right">Used:</th>
+      <td>22,341.62 MBytes</td>
+      <th />
+      <td />
+    </tr>
+  </table>
+  
+  <br />
+  
+  <form name="main" method="post" action="http://10.90.26.21:8080/quicktest/PSHome#">
+    <input type="hidden" name="event" value="" />
+    <input type="hidden" name="current_context" value="" />
+  </form>
+  
+  <form name="support" method="post" action="http://10.90.26.21:8080/quicktest/PSHome#">
+  <table width="100%" border="0" bordercolor="#eeeeee" cellspacing="0" cellpadding="4">
+    <tr class="contextTableHeader">
+      <th width="10%" align="left">Context</th>
+      <th width="6%" align="left">Load Cache</th>
+      <th width="7%" align="left">Context Action</th>
+      <th width="10%" align="left">Context Load Status</th>
+      <th width="15%" align="left">Cache Loader Status</th>
+      <th width="10%" align="left">Clear Cache</th>
+      <th width="10%" align="left">Reload Cache</th>
+      <th width="10%" align="left">Search Index</th>
+      <th align="left">Details</th>
+    </tr>
+    
+            
+    <tr>
+  
+      <td class="contextTableTd first"><a href="/quicktest" target="_blank"><b>quicktest</b></a></td>
+  
+      <td class="contextTableTd" align="center"><input type="checkbox" name="loadCache_quicktest" id="loadCache_quicktest" onclick="javascript:toggleLoadCache(&apos;quicktest&apos;)" /></td>
+      <td class="contextTableTd"><span class="setButton" onclick="javascript:reloadContext(&apos;quicktest&apos;)">Reload</span></td>
+      <td class="contextTableTd"><span style="color:green">Loaded</span></td>
+      <td class="contextTableTd">
+        <span>Completed: 2016-11-24 14:04:35.<br />Duration: 01:55:15.064</span>
+        
+      </td>
+      <td class="contextTableTd"><span class="setButton" onclick="javascript:clearCache(&apos;quicktest&apos;)">Clear</span></td>
+      <td class="contextTableTd"><span class="setButton" onclick="javascript:reloadCache(&apos;quicktest&apos;)">Reload</span></td>
+      <td class="contextTableTd"><span class="setButton" onclick="javascript:resetSearcher(&apos;quicktest&apos;)">Reset</span></td>
+      <td class="contextTableTd last"><span id="toggleContext_0" class="setButton" onclick="javascript:toggleContext(&apos;0&apos;)">Show</span></td>
+    </tr>
+              
+    <tr id="context_0" style="display: none">
+  
+      <td colspan="8" class="contextTableTd first last">
+        <dl>
+          <!-- Commented until we decide on the authentication strategy
+          <dd>
+            <dt><b>Nobody password:</b>&nbsp;<span class="setButton" onclick="javascript:resetPassword('quicktest')">Reset</span></dt>
+            <br/>
+          </dd>
+          -->
+          <dd>
+            <dt><b>Time Zone:</b> EST5EDT</dt>
+            <dt><b>Logged in sessions:</b> 1</dt>
+            <dt><b>Cache size:</b> 603366   
+            <a href="http://10.90.26.21:8080/admin/objects_in_cache.jsp?context=quicktest">Show objects</a>
+            </dt>
+            <dt><b>Connection Pool Info</b></dt>
+          <dd><ul>
+  
+              <li>Pool name: quicktest@main</li>
+  
+              <li>Connection URL: jdbc:jtds:sqlserver://10.90.24.2:1433/lax1qapp14_quicktest</li>
+  
+              <li>Max Connections: 50</li>
+  
+              <li>Peak Total Connections: 7</li>
+  
+              <li>Current Total Connections: 3</li>
+  
+              <li>Current Busy Connections: 0</li>
+  
+          </ul></dd>
+            <dt><b>Mail server:</b>
+            smtp.upland.local[<em>on</em>]
+            </dt>
+            <dt><b>Search Indexer Info</b></dt>
+            <dd><ul>
+                <li>
+  
+                  <span style="color:green">Basic search indexer started and last updated on 2016-11-24 21:16:04</span>
+  
+                </li>
+  
+                <li>BasicSearchIndex storage path: /ci/app/app/contexts/quicktest/docs/indices/quicktest.basic_index/basic_index.1</li>
+  
+                <li>BasicSearchIndex updateInterval: 30 seconds,  isReady: true, isReindexing: false</li>
+                <li>
+  
+                <span>Document search indexer is disabled.</span>
+  
+                </li>
+  
+                <li>DocumentSearchIndex updateInterval: 3600 seconds, isReady: false, isReindexing: false</li>
+                </ul>
+            </dd>
+          </dd>
+        </dl>
+      </td>
+    </tr>
+  
+  </table>
+  </form>
+  
+  
+  <br />
+  <br />
+  
+  <div class="queueHeader">
+    <span id="queue0" class="queueHeaderCell" style="background-color: white;" onclick="javascript:showQueue(0)" title="Agent Task Execution Thread 0">Queue 0</span>
+     
+    <span id="queue1" class="queueHeaderCell" onclick="javascript:showQueue(1)" title="Agent Task Execution Thread 1">Queue 1</span>
+     
+    <span id="queue2" class="queueHeaderCell" onclick="javascript:showQueue(2)" title="Agent Task Execution Thread 2">Queue 2</span>
+     
+    <span id="queue3" class="queueHeaderCell" onclick="javascript:showQueue(3)" title="Agent Task Execution Thread 3">Queue 3</span>
+     
+    <span id="queue4" class="queueHeaderCell" onclick="javascript:showQueue(4)" title="Agent Task Execution Thread 4">Queue 4</span>
+     
+  </div>
+     
+  <div id="queueContainer0" style="display: block;">
+    <div class="spaceCell"> </div>
+      
+    <div class="textRow"><span class="textCell">No tasks.</span></div>
+                      
+          
+  </div>
+  
+  <div id="queueContainer1" style="display: none;">
+    <div class="spaceCell"> </div>
+      
+    <div class="textRow"><span class="textCell">No tasks.</span></div>
+                      
+          
+  </div>
+  
+  <div id="queueContainer2" style="display: none;">
+    <div class="spaceCell"> </div>
+      
+    <div class="textRow"><span class="textCell">No tasks.</span></div>
+                      
+          
+  </div>
+  
+  <div id="queueContainer3" style="display: none;">
+    <div class="spaceCell"> </div>
+      
+    <div class="textRow"><span class="textCell">No tasks.</span></div>
+                      
+          
+  </div>
+  
+  <div id="queueContainer4" style="display: none;">
+    <div class="spaceCell"> </div>
+      
+    <div class="textRow"><span class="textCell">No tasks.</span></div>
+                      
+          
+  </div>
+  
+  
+  <br />
+  <br />
+
+  <table width="100%" cellspacing="0" cellpadding="4">
+    <tr class="adminTableHeader">
+      <th width="15%" align="right">Administrative Options</th>
+      <th> </th>
+    </tr>
+    <tr>
+      <td width="15%" align="right">Performance Monitor:</td>
+      <td><a href="http://10.90.26.21:8080/admin/PerformanceMonitor.jsp">View</a>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" align="right">Thread Dump:</td>
+      <td><a href="http://10.90.26.21:8080/admin/thread_dump.jsp">View</a></td>
+    </tr>
+    <tr>
+      <td width="15%" align="right">Report Scheduler:</td>
+      <td><a href="http://10.90.26.21:8080/admin/report-scheduler-info.jsp">View</a></td>
+    </tr>
+  </table>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<config>
+    <rate-code id="code1">
+        <name>Test Rate Code 1</name>
+        <amount>3.245</amount>
+        <date>{time} - 60</date>
+        <use-timestamp>true</use-timestamp>
+        <currency>CHF</currency>
+    </rate-code>
+    <rate-code id="code2">
+        <name>Test Rate Code 2</name>
+        <amount>1</amount>
+        <date>{time} + 60</date>
+        <use-timestamp>true</use-timestamp>
+        <currency>EUR</currency>
+    </rate-code>
+    <rate-table id="table1">
+        <name>Table 1</name>
+        <description>This is a test rate table #1</description>
+        <use-timestamp>true</use-timestamp>
+        <rate role="Owner" activity="Design">
+            <rate-code>
+                <amount>123</amount>
+                <currency>RUB</currency>
+            </rate-code>
+            <date>{time} + 31</date>
+        </rate>
+        <rate role="Financial Rep" activity="Coding">
+            <rate-code xpath="//rate-code[@id='code1']/name"/>
+            <date>{time} - 10</date>
+        </rate>
+    </rate-table>
+    <rate-table id="table2">
+        <name>Table 2</name>
+        <description>This is a test rate table #2</description>
+        <use-timestamp>true</use-timestamp>
+        <rate role="Champion" activity="Testing">
+            <rate-code>
+                <amount>2</amount>
+                <currency>USD</currency>
+            </rate-code>
+        </rate>
+        <rate role="Contributor">
+            <rate-code xpath="//rate-code[@id='code1']/name"/>
+            <date>{time} - 30</date>
+        </rate>
+    </rate-table>
+    <pool id="test-pool-1">
+        <name>Test Pool 1</name>
+        <description>This is Pool #1</description>
+    </pool>
+</config>

@@ -1,0 +1,700 @@
+{
+  "__type": "ArtOfTest.WebAii.Design.ProjectModel.Test",
+  "__value": {
+    "DomStatesCounter": {},
+    "WebKitExecutionDelay": 0,
+    "ReuseAppWindow": 0,
+    "ProfilerResultsDirectory": null,
+    "ProfilerServerName": null,
+    "ProfilerBenchmarkResultsFilePath": null,
+    "ProfilerBenchmarkResultsId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurationId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurations": {},
+    "CurrentReferences": [
+      "System",
+      "System.Core",
+      "ArtOfTest.WebAii, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=4fd5f65be123776c",
+      "ArtOfTest.WebAii.Design, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=4fc62bbc3827ab1d",
+      "Telerik.WebAii.Controls.Html, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.WebAii.Controls.Xaml, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.WebAii.Controls.Xaml.Wpf, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.TestingFramework.Controls.KendoUI, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a",
+      "Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a",
+      "System.Data",
+      "System.Drawing",
+      "System.Windows.Forms"
+    ],
+    "Steps": {
+      "__type": "ArtOfTest.Common.Design.ProjectModel.AutomationStepList",
+      "__value": [
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "1c42f2d0-cc45-4312-9924-044cd75903ba",
+            "Description": "Comment: ",
+            "CustomDescription": "Navigate to Landing page",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CommentActionDescriptor",
+              "__value": {
+                "Comment": null,
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 1,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_MUT_021k1w15cnv.4p1",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "615a4675-355f-4265-91cf-33aa3842b5e2",
+            "Description": "Execute test 'TS_Login'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "TS_Login",
+                "TestPath": "ApplicationLibrary\\CommonFeatures&Navigation\\TS_Login.tstest",
+                "TestUniqueId": "f0cfc9cb-5d6e-45f3-95d8-409c6181aa54",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 2,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_MUT_0212gjign1f.512",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "36f2b64b-8118-45c3-bec6-cc680b83434b",
+            "Description": "Verify 'help icon' is displayed properly",
+            "CustomDescription": "Verify 'help icon' is displayed properly",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Assert.IsTrue(Pages.PS_HomePage.HelpIconSpan.IsVisible(),\"help icon should be present\");\r\n                         ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 3,
+            "Id": "TST_MUT_021_VerifyHelpIcon",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_MUT_021e3rjktsz.xfz",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "5e270981-91b0-408d-b277-f1af5a0b21b7",
+            "Description": "Verify 'view online link' is displayed properly",
+            "CustomDescription": "Verify 'view online link' is displayed properly",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_HomePage.HelpIconSpan.Click();\r\n            Pages.PS_HomePage.HelpIconSpan.InvokeEvent(ScriptEventType.OnMouseUp);            \r\n            Assert.IsTrue(Pages.PS_HomePage.ViewOnlineHelpCell.IsVisible(),\"view online help should be present\");\r\n                        ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 4,
+            "Id": "TST_MUT_021_VerifyOnlineLink",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_MUT_021l4r0olrx.bmh",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "947ceafd-6c55-438c-a611-0ea5985028be",
+            "Description": "Click on 'view online link' and verify help window is opened",
+            "CustomDescription": "Click on 'view online link' and verify help window is opened",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            /// \\bug Move relative page to a central place\r\n            /// Might fail for v18.0 (MadCap)\r\n            Pages.PS_HomePage.ViewOnlineHelpCell.Click();\r\n            Manager.WaitForNewBrowserConnect(\"/help/help.jsp\", true,Manager.Settings.ClientReadyTimeout);\r\n            Manager.ActiveBrowser.WaitUntilReady();\r\n            Manager.ActiveBrowser.Window.Maximize();\r\n            /// \\bug Fix this so that it works for both old and new help\r\n            //Pages.PS_PowerSteeringHelp.FrameHelpFrame0.SearchButton.Wait.ForExists();\r\n            Assert.IsTrue(ActiveBrowser.Url.Contains(\"/help/help.jsp\"),\"Help window sould be open\");            \r\n            //Assert.IsTrue(Pages.PS_PowerSteeringHelp.FrameHelpFrame0.LogOutLink.IsVisible(),\"LogOut link should be visible\");\r\n            //Assert.IsTrue(Pages.PS_PowerSteeringHelp.FrameHelpFrame0.SearchButton.IsVisible(),\"Search Button should be visible\");\r\n            //Assert.IsTrue(Pages.PS_PowerSteeringHelp.FrameHelpFrame0.SearchTextAreaInput.IsVisible(),\"Search area should be visible\");\r\n            //Assert.IsTrue(Pages.PS_PowerSteeringHelp.FrameHelpFrame0.TopicsH3Tag.IsVisible(),\"Topics header tag should be visible\");\r\n            //Assert.IsTrue(Pages.PS_PowerSteeringHelp.FrameHelpFrame0.UplandCommunityLink.IsVisible(),\"Upland community should be visible\");\r\n            ActiveBrowser.Close();            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 5,
+            "Id": "TST_MUT_021_ClickOnlineLink",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_MUT_021pfcj1wlp.ikd",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        }
+      ]
+    },
+    "IndependentDescriptors": [
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "/help/help.jsp",
+              "Query": "?topic=Home",
+              "BaseUrl": "",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "PowerSteering | Help",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_PowerSteeringHelp"
+            }
+          },
+          "Frame": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.Frame",
+            "__value": {
+              "FrameInfo": {
+                "__type": "ArtOfTest.WebAii.Core.FrameInfo",
+                "__value": {
+                  "_index": 0,
+                  "_name": "mainFrame",
+                  "_id": "helpFrame",
+                  "TestStudioTag": "",
+                  "_baseURL": "https://upland.screenstepslive.com/s/PowerSteering/m/PSUserGuide/l/163052-what-is-the-home-page",
+                  "_query": "login=PSHelpUser&password=HelpUserPS2013",
+                  "_useQuery": false,
+                  "_usesBaseUrlHost": false
+                }
+              },
+              "FriendlyName": "FrameHelpFrame0"
+            }
+          },
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "k914QEt5bpYI+oo3CZE4HTLyQ9c=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "SearchButton",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "TagName=input"
+                          }
+                        },
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "value=Search"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/div[2]/main[1]/div[2]/form[1]/div[1]/input[2]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlInputSubmit",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      },
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "/help/help.jsp",
+              "Query": "?topic=Home",
+              "BaseUrl": "",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "PowerSteering | Help",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_PowerSteeringHelp"
+            }
+          },
+          "Frame": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.Frame",
+            "__value": {
+              "FrameInfo": {
+                "__type": "ArtOfTest.WebAii.Core.FrameInfo",
+                "__value": {
+                  "_index": 0,
+                  "_name": "mainFrame",
+                  "_id": "helpFrame",
+                  "TestStudioTag": "",
+                  "_baseURL": "https://upland.screenstepslive.com/s/PowerSteering/m/PSUserGuide/l/163052-what-is-the-home-page",
+                  "_query": "login=PSHelpUser&password=HelpUserPS2013",
+                  "_useQuery": false,
+                  "_usesBaseUrlHost": false
+                }
+              },
+              "FriendlyName": "FrameHelpFrame0"
+            }
+          },
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "f5ofckG5fSMEU9YYq1jlF6RDaS4=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "SearchTextAreaInput",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "TagName=input"
+                          }
+                        },
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "id=text"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/div[2]/main[1]/div[2]/form[1]/div[1]/input[1]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlInputText",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      },
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "/help/help.jsp",
+              "Query": "?topic=Home",
+              "BaseUrl": "",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "PowerSteering | Help",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_PowerSteeringHelp"
+            }
+          },
+          "Frame": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.Frame",
+            "__value": {
+              "FrameInfo": {
+                "__type": "ArtOfTest.WebAii.Core.FrameInfo",
+                "__value": {
+                  "_index": 0,
+                  "_name": "mainFrame",
+                  "_id": "helpFrame",
+                  "TestStudioTag": "",
+                  "_baseURL": "https://upland.screenstepslive.com/s/PowerSteering/m/PSUserGuide/l/163052-what-is-the-home-page",
+                  "_query": "login=PSHelpUser&password=HelpUserPS2013",
+                  "_useQuery": false,
+                  "_usesBaseUrlHost": false
+                }
+              },
+              "FriendlyName": "FrameHelpFrame0"
+            }
+          },
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "OB0H0Oo4jJpRpCxFSKCWNvH0b0o=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "UplandCommunityLink",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "TagName=a"
+                          }
+                        },
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "InnerText=Upland Community"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/header[1]/div[1]/ul[1]/li[1]/a[1]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlAnchor",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      },
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "/help/help.jsp",
+              "Query": "?topic=Home",
+              "BaseUrl": "",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "PowerSteering | Help",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_PowerSteeringHelp"
+            }
+          },
+          "Frame": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.Frame",
+            "__value": {
+              "FrameInfo": {
+                "__type": "ArtOfTest.WebAii.Core.FrameInfo",
+                "__value": {
+                  "_index": 0,
+                  "_name": "mainFrame",
+                  "_id": "helpFrame",
+                  "TestStudioTag": "",
+                  "_baseURL": "https://upland.screenstepslive.com/s/PowerSteering/m/PSUserGuide/l/163052-what-is-the-home-page",
+                  "_query": "login=PSHelpUser&password=HelpUserPS2013",
+                  "_useQuery": false,
+                  "_usesBaseUrlHost": false
+                }
+              },
+              "FriendlyName": "FrameHelpFrame0"
+            }
+          },
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "BgbhneXfkezd0itsvmCSkR48E0Y=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "LogOutLink",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "TagName=a"
+                          }
+                        },
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "InnerText=Log out"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/header[1]/div[1]/ul[2]/li[1]/a[1]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlAnchor",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      },
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "/help/help.jsp",
+              "Query": "?topic=Home",
+              "BaseUrl": "",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "PowerSteering | Help",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_PowerSteeringHelp"
+            }
+          },
+          "Frame": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.Frame",
+            "__value": {
+              "FrameInfo": {
+                "__type": "ArtOfTest.WebAii.Core.FrameInfo",
+                "__value": {
+                  "_index": 0,
+                  "_name": "mainFrame",
+                  "_id": "helpFrame",
+                  "TestStudioTag": "",
+                  "_baseURL": "https://upland.screenstepslive.com/s/PowerSteering/m/PSUserGuide/l/163052-what-is-the-home-page",
+                  "_query": "login=PSHelpUser&password=HelpUserPS2013",
+                  "_useQuery": false,
+                  "_usesBaseUrlHost": false
+                }
+              },
+              "FriendlyName": "FrameHelpFrame0"
+            }
+          },
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "zf7Iq/pwRGnOJgwAo0wDv/oqUYs=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "TopicsH3Tag",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "xpath=//div[@id='sidebar-chapters']/h3"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/div[2]/main[1]/div[3]/div[2]/div[1]/h3[1]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlControl",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      }
+    ],
+    "HtmlDescription": "",
+    "SilverlightEnabled": false,
+    "IsSilverlightApp": false,
+    "SilverlightAppWebUrl": "",
+    "SilverlightAppLocalDirectory": "",
+    "SilverlightAppRecordLocal": false,
+    "SilverlightAppOriginUri": null,
+    "WpfAppPath": null,
+    "UseDefaultWpfAppPath": false,
+    "TestAssembly": "PSS_Automation.dll",
+    "TestAssemblyPath": "bin",
+    "TestClass": "PSS_Automation.TST_MUT_021",
+    "IsManual": false,
+    "ResourceFilePath": "AutomationTests\\Manual Upgrade Test\\TST_MUT_021.resx",
+    "HasCodeBehind": true,
+    "DataInfo": {
+      "__type": "ArtOfTest.Common.Design.Data.DataInfo",
+      "__value": {
+        "ConnectionString": "",
+        "DefaultToGrid": true,
+        "DataRange": "",
+        "LoadRecordsCount": null,
+        "DataTableName": "",
+        "DataProvider": "",
+        "DataEnabled": true,
+        "HasBuiltinGrid": false,
+        "DataType": 4,
+        "BuiltInData": null,
+        "BuiltInDocumentKey": null,
+        "TSQL": ""
+      }
+    },
+    "VSProperties": {},
+    "DeploymentItems": [],
+    "IsTestFragment": false,
+    "StopTestListOnFailure": false,
+    "InheritParentDataSource": false,
+    "BrowserType": 0,
+    "QcId": 0,
+    "QcFilePath": null,
+    "QcTestVersionStamp": 0,
+    "CustomProperty1": "Regression",
+    "CustomProperty2": "Manual Upgrade Test",
+    "TestLinks": [],
+    "Description": "This Script verifies that : By clicking 'View Online' help link, Page with online help is displayed correctly in the new window.\r\n\r\nTC: C2043936.",
+    "Name": "TST_MUT_021",
+    "Owner": "Pankaj Malviya",
+    "Path": "AutomationTests\\Manual Upgrade Test\\TST_MUT_021.tstest",
+    "Priority": 0,
+    "TestType": 0,
+    "UniqueId": "86848632-14e8-4113-acba-b02093d520dc",
+    "Id": "86848632-14e8-4113-acba-b02093d520dc",
+    "ProjectId": "8482a1a8-662a-40c8-b69e-343a43a257af",
+    "Version": 200
+  }
+}

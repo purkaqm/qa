@@ -1,0 +1,204 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Regression tests" verbose="1">
+    <test name="validation:Validation UI Tests">
+        <classes>
+            <class name="com.powersteeringsoftware.tests.validation_ui.TestDriver"/>
+        </classes>
+    </test>
+
+    <test name="acceptance:Acceptance Tests">
+        <groups>
+            <run>
+                <include name="acceptance.test"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.acceptance.TestDriver"/>
+            <class name="com.powersteeringsoftware.tests.acceptance.TestCreateBasics"/>
+        </classes>
+    </test>
+
+    <test name="common:Content Filler Tests, Gated Project Tests">
+        <groups>
+            <run>
+                <include name="contentfiller.test"/>
+                <include name="gatedproject.test"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.contentfiller.TestDriver"/>
+            <class name="com.powersteeringsoftware.tests.gatedproject.TestDriver"/>
+        </classes>
+    </test>
+
+    <test name="measures:Measures Tests">
+        <groups>
+            <run>
+                <include name="measures.test"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.measures.TestDriver"/>
+        </classes>
+    </test>
+
+    <test name="timesheets:Timesheets Tests">
+        <groups>
+            <run>
+                <include name="timesheets.test"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.timesheet.TestDriver"/>
+        </classes>
+    </test>
+
+    <test name="permissions:Permissions Tests">
+        <groups>
+            <run>
+                <include name="permissions.test"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.permissions.defaults.AddSet"/>
+            <class name="com.powersteeringsoftware.tests.permissions.categories.EditBasics"/>
+            <class name="com.powersteeringsoftware.tests.permissions.categories.CreateCategory"/>
+            <class name="com.powersteeringsoftware.tests.permissions.categories.EditNewCategory"/>
+            <class name="com.powersteeringsoftware.tests.permissions.categories.DeleteCategory"/>
+        </classes>
+    </test>
+
+    <test name="report:Report Tests">
+        <groups>
+            <run>
+                <include name="reports.test"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.reports.TestDriver"/>
+        </classes>
+    </test>
+
+    <test name="search:Search Tests">
+        <classes>
+            <class name="com.powersteeringsoftware.tests.search.TestDriver"/>
+        </classes>
+    </test>
+
+    <test name="metrics:Metrics Tests">
+        <classes>
+            <class name="com.powersteeringsoftware.tests.metrics.TestDriver"/>
+        </classes>
+    </test>
+
+    <test name="rates:Resource Rates">
+        <classes>
+            <class name="com.powersteeringsoftware.tests.resource_rates.TestDriver"/>
+        </classes>
+    </test>
+
+    <test name="pcsecond:Project Central Tests (Second Test Group)">
+        <parameter name="resource_planning" value="on"/>
+        <parameter name="immediate_delegation" value="on"/>
+        <groups>
+            <run>
+                <include name="second-work"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.project_central.TestDriver"/>
+        </classes>
+    </test>
+
+    <test name="pcfirst:Project Central Tests (First Test Group)">
+        <parameter name="resource_planning" value="on"/>
+        <parameter name="immediate_delegation" value="off"/>
+        <groups>
+            <run>
+                <include name="first-work"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.project_central.TestDriver"/>
+        </classes>
+    </test>
+
+    <test name="pcmain1:Project Central Tests (Main Test Group #1)">
+        <parameter name="resource_planning" value="on"/>
+        <parameter name="immediate_delegation" value="on"/>
+        <groups>
+            <run>
+                <include name="main-work"/>
+                <include name="main-work-after"/>
+                <exclude name="main-bulk"/>
+                <exclude name="main-filter"/>
+                <exclude name="before-main-bulk-filter"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.project_central.TestDriver"/>
+        </classes>
+    </test>
+
+    <test name="pcmain2:Project Central Tests (Main Test Group #2, Bulk operations, Filter operations)">
+        <parameter name="resource_planning" value="on"/>
+        <parameter name="immediate_delegation" value="on"/>
+        <groups>
+            <run>
+                <include name="main-bulk"/>
+                <include name="main-filter"/>
+                <include name="before-main-bulk-filter"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.project_central.TestDriver"/>
+        </classes>
+    </test>
+
+    <test name="pcgate:Project Central Tests (Gated Test Group)">
+        <parameter name="resource_planning" value="on"/>
+        <parameter name="immediate_delegation" value="on"/>
+        <groups>
+            <run>
+                <include name="gated-work"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.project_central.TestDriver"/>
+        </classes>
+    </test>
+
+    <!--
+    <test name="pcteam:Project Central Tests (Team Pane Test Group)">
+        <parameter name="immediate_delegation" value="on"/>
+        <parameter name="resource_planning" value="on"/>
+        <parameter name="resource_manager" value="on"/>
+        <groups>
+            <run>
+                <include name="team-pane-work"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.project_central.TestDriver"/>
+        </classes>
+    </test>
+    -->
+    <!--
+    <test name="pccustom:Project Central Tests (Custom Permissions)">
+        <parameter name="resource_planning" value="on"/>
+        <parameter name="immediate_delegation" value="on"/>
+        <parameter name="set" value="guest1"/>
+        <groups>
+            <run>
+                <include name="main-work"/>
+                <include name="main-work-after"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.project_central.UserTestDriver"/>
+        </classes>
+    </test>
+    -->
+
+</suite>

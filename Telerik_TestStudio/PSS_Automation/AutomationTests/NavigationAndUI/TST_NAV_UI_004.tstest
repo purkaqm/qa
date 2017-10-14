@@ -1,0 +1,585 @@
+{
+  "__type": "ArtOfTest.WebAii.Design.ProjectModel.Test",
+  "__value": {
+    "DomStatesCounter": {},
+    "WebKitExecutionDelay": 0,
+    "ReuseAppWindow": 0,
+    "ProfilerResultsDirectory": null,
+    "ProfilerServerName": null,
+    "ProfilerBenchmarkResultsFilePath": null,
+    "ProfilerBenchmarkResultsId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurationId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurations": {},
+    "CurrentReferences": [
+      "System",
+      "System.Core",
+      "ArtOfTest.WebAii, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=4fd5f65be123776c",
+      "ArtOfTest.WebAii.Design, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=4fc62bbc3827ab1d",
+      "Telerik.WebAii.Controls.Html, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.WebAii.Controls.Xaml, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.WebAii.Controls.Xaml.Wpf, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.TestingFramework.Controls.KendoUI, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+    ],
+    "Steps": {
+      "__type": "ArtOfTest.Common.Design.ProjectModel.AutomationStepList",
+      "__value": [
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "5ef6c6d4-aee1-458e-8a49-6bf71dceefd2",
+            "Description": "Navigate to Landing Page and Login",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CommentActionDescriptor",
+              "__value": {
+                "Comment": null,
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 1,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Verify_Icon_Bar_Notch_Pointer_Positionsiyednpr.ipr",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "63b85079-99bf-46c6-acb0-b00080568a65",
+            "Description": "Execute test 'TS_Login'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "TS_Login",
+                "TestPath": "ApplicationLibrary\\CommonFeatures&Navigation\\TS_Login.tstest",
+                "TestUniqueId": "f0cfc9cb-5d6e-45f3-95d8-409c6181aa54",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 2,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Verify_Icon_Bar_Notch_Pointer_Positionn5myd5vu.2y0",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "b08812be-9a6c-4a44-a5fe-59f631bf48ae",
+            "Description": "[TST_Verify_Icon_Bar_Notch_Pointer_Position_CodedStep] : New Coded Step",
+            "CustomDescription": "Click on icon bar element and verify sub menu notch pointer position for 'Home'",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_HomePage.HomeLeftNavLink.MouseHover();\r\n            Pages.PS_HomePage.HomeLeftNavLink.Click();\r\n            ActiveBrowser.WaitUntilReady();\r\n            System.Threading.Thread.Sleep(2000);\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForVisible();\r\n            ActiveBrowser.RefreshDomTree();\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForContent(FindContentType.InnerText,\"HOME\");\r\n            float homeHeight = Actions.InvokeScript<float>(\"document.querySelector(\\\"li a[title='Home']\\\").getBoundingClientRect().top\");\r\n            float notchHeight =  Actions.InvokeScript<float>(\"document.querySelector(\\\"div#notch\\\").getBoundingClientRect().top\");\r\n            Assert.IsTrue( notchHeight < (homeHeight+20) && notchHeight > (homeHeight-20), \"Icon bar notch pointer should point to 'Home'\");\r\n            \r\n            \r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 3,
+            "Id": "TST_Verify_Icon_Bar_Notch_Pointer_Position_CodedStep",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Verify_Icon_Bar_Notch_Pointer_Position413gk53u.kgu",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "276af4a8-06b6-4915-9f77-aaefb42e69fd",
+            "Description": "[TST_Verify_Icon_Bar_Notch_Pointer_Position_CodedStep1] : New Coded Step",
+            "CustomDescription": "Click on icon bar element and verify sub menu notch pointer position for 'Inbox'",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_HomePage.InboxLeftNavLink.MouseHover();\r\n            Pages.PS_HomePage.InboxLeftNavLink.Click();\r\n            ActiveBrowser.WaitUntilReady();\r\n            System.Threading.Thread.Sleep(2000);\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForVisible();\r\n            ActiveBrowser.RefreshDomTree();\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForContent(FindContentType.InnerText,\"INBOX\");\r\n            float inboxHeight = Actions.InvokeScript<float>(\"document.querySelector(\\\"li a[title='Inbox']\\\").getBoundingClientRect().top\");\r\n            float notchHeight =  Actions.InvokeScript<float>(\"document.querySelector(\\\"div#notch\\\").getBoundingClientRect().top\");\r\n            Assert.IsTrue( notchHeight < (inboxHeight+20) && notchHeight > (inboxHeight-20), \"Icon bar notch pointer should point to 'Inbox'\");\r\n            \r\n            \r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 4,
+            "Id": "TST_Verify_Icon_Bar_Notch_Pointer_Position_CodedStep1",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Verify_Icon_Bar_Notch_Pointer_Positionhtawdihl.hbv",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "f361726f-41b0-4d86-af06-cec6cb983d12",
+            "Description": "[TST_Verify_Icon_Bar_Notch_Pointer_Position_CodedStep2] : New Coded Step",
+            "CustomDescription": "Click on icon bar element and verify sub menu notch pointer position for 'Add'",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_HomePage.AddLeftNavLink.MouseHover();\r\n            Pages.PS_HomePage.AddLeftNavLink.Click();\r\n            ActiveBrowser.WaitUntilReady();\r\n            System.Threading.Thread.Sleep(2000);\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForVisible();\r\n            ActiveBrowser.RefreshDomTree();\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForContent(FindContentType.InnerText,\"ADD\");\r\n            float addHeight = Actions.InvokeScript<float>(\"document.querySelector(\\\"li a[title='Add']\\\").getBoundingClientRect().top\");\r\n            float notchHeight =  Actions.InvokeScript<float>(\"document.querySelector(\\\"div#notch\\\").getBoundingClientRect().top\");\r\n            Assert.IsTrue( notchHeight < (addHeight+20) && notchHeight > (addHeight-20), \"Icon bar notch pointer should point to 'Add'\");\r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 5,
+            "Id": "TST_Verify_Icon_Bar_Notch_Pointer_Position_CodedStep2",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Verify_Icon_Bar_Notch_Pointer_Positionqblwhzit.xfh",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "7f383f3c-6325-4a38-878d-bfb64cdcb188",
+            "Description": "[TST_Verify_Icon_Bar_Notch_Pointer_Position_CodedStep3] : New Coded Step",
+            "CustomDescription": "Click on icon bar element and verify sub menu notch pointer position for 'Review'",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_HomePage.ReviewLeftNavLink.MouseHover();\r\n            Pages.PS_HomePage.ReviewLeftNavLink.Click();\r\n            ActiveBrowser.WaitUntilReady();\r\n            System.Threading.Thread.Sleep(2000);\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForVisible();\r\n            ActiveBrowser.RefreshDomTree();\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForContent(FindContentType.InnerText,\"REVIEW\");\r\n            float reviewHeight = Actions.InvokeScript<float>(\"document.querySelector(\\\"li a[title='Review']\\\").getBoundingClientRect().top\");\r\n            float notchHeight =  Actions.InvokeScript<float>(\"document.querySelector(\\\"div#notch\\\").getBoundingClientRect().top\");\r\n            Assert.IsTrue( notchHeight < (reviewHeight+20) && notchHeight > (reviewHeight-20), \"Icon bar notch pointer should point to 'Review'\");\r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 6,
+            "Id": "TST_Verify_Icon_Bar_Notch_Pointer_Position_CodedStep3",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Verify_Icon_Bar_Notch_Pointer_Positiona4mv1qwn.sls",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "3bcdcdbe-d8a1-4234-8476-e16da289d033",
+            "Description": "[TST_Verify_Icon_Bar_Notch_Pointer_Position_CodedStep4] : New Coded Step",
+            "CustomDescription": "Click on icon bar element and verify sub menu notch pointer position for 'Admin'",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_HomePage.AdminLeftNavLink.MouseHover();\r\n            Pages.PS_HomePage.AdminLeftNavLink.Click();\r\n            ActiveBrowser.WaitUntilReady();\r\n            System.Threading.Thread.Sleep(2000);\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForVisible();\r\n            ActiveBrowser.RefreshDomTree();\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForContent(FindContentType.InnerText,\"ADMIN\");\r\n            float adminHeight = Actions.InvokeScript<float>(\"document.querySelector(\\\"li a[title='Admin']\\\").getBoundingClientRect().top\");\r\n            float notchHeight =  Actions.InvokeScript<float>(\"document.querySelector(\\\"div#notch\\\").getBoundingClientRect().top\");\r\n            Assert.IsTrue( notchHeight < (adminHeight+20) && notchHeight > (adminHeight-20), \"Icon bar notch pointer should point to 'Admin'\");\r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 7,
+            "Id": "TST_Verify_Icon_Bar_Notch_Pointer_Position_CodedStep4",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Verify_Icon_Bar_Notch_Pointer_Positionchhhfluo.hny",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "bed62b14-e401-4436-a568-e7c0caaf18a8",
+            "Description": "[TST_Verify_Icon_Bar_Notch_Pointer_Position_CodedStep5] : New Coded Step",
+            "CustomDescription": "Click on icon bar element and verify sub menu notch pointer position for 'Project'",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_HomePage.ProjectLeftNavLink.MouseHover();\r\n            Pages.PS_HomePage.ProjectLeftNavLink.Click();\r\n            ActiveBrowser.WaitUntilReady();\r\n            System.Threading.Thread.Sleep(2000);\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForVisible();\r\n            ActiveBrowser.RefreshDomTree();\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForContent(FindContentType.InnerText,\"PROJECT\");\r\n            float projectHeight = Actions.InvokeScript<float>(\"document.querySelector(\\\"li a[title='Project']\\\").getBoundingClientRect().top\");\r\n            float notchHeight =  Actions.InvokeScript<float>(\"document.querySelector(\\\"div#notch\\\").getBoundingClientRect().top\");\r\n            Assert.IsTrue( notchHeight < (projectHeight+20) && notchHeight > (projectHeight-20), \"Icon bar notch pointer should point to 'Project'\");\r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 8,
+            "Id": "TST_Verify_Icon_Bar_Notch_Pointer_Position_CodedStep5",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Verify_Icon_Bar_Notch_Pointer_Positionyegcwh0f.t2i",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "5eec222d-4db3-451c-b14b-50d14481c74d",
+            "Description": "[TST_Verify_Icon_Bar_Notch_Pointer_Position_CodedStep6] : New Coded Step",
+            "CustomDescription": "Click on icon bar element and verify sub menu notch pointer position for 'Favorites'",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_HomePage.FavoritesLeftNavLink.MouseHover();\r\n            Pages.PS_HomePage.FavoritesLeftNavLink.Click();\r\n            ActiveBrowser.WaitUntilReady();\r\n            System.Threading.Thread.Sleep(2000);\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForVisible();\r\n            ActiveBrowser.RefreshDomTree();\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForContent(FindContentType.InnerText,\"FAVORITES\");\r\n            float favoritesHeight = Actions.InvokeScript<float>(\"document.querySelector(\\\"li a[title='Favorites']\\\").getBoundingClientRect().top\");\r\n            float notchHeight =  Actions.InvokeScript<float>(\"document.querySelector(\\\"div#notch\\\").getBoundingClientRect().top\");\r\n            Assert.IsTrue( notchHeight < (favoritesHeight+20) && notchHeight > (favoritesHeight-20), \"Icon bar notch pointer should point to 'Favorites'\");\r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 9,
+            "Id": "TST_Verify_Icon_Bar_Notch_Pointer_Position_CodedStep6",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Verify_Icon_Bar_Notch_Pointer_Positionwioiviw0.0t5",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "7f359482-fa9a-43c7-9902-d0e2d3dd39e0",
+            "Description": "[TST_Verify_Icon_Bar_Notch_Pointer_Position_CodedStep7] : New Coded Step",
+            "CustomDescription": "Click on icon bar element and verify sub menu notch pointer position for 'History'",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_HomePage.HistoryLeftNavLink.MouseHover();\r\n            Pages.PS_HomePage.HistoryLeftNavLink.Click();\r\n            ActiveBrowser.WaitUntilReady();\r\n            System.Threading.Thread.Sleep(2000);\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForVisible();\r\n            ActiveBrowser.RefreshDomTree();\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForContent(FindContentType.InnerText,\"HISTORY\");\r\n            float historyHeight = Actions.InvokeScript<float>(\"document.querySelector(\\\"li a[title='History']\\\").getBoundingClientRect().top\");\r\n            float notchHeight =  Actions.InvokeScript<float>(\"document.querySelector(\\\"div#notch\\\").getBoundingClientRect().top\");\r\n            Assert.IsTrue( notchHeight < (historyHeight+20) && notchHeight > (historyHeight-20), \"Icon bar notch pointer should point to 'History'\");\r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 10,
+            "Id": "TST_Verify_Icon_Bar_Notch_Pointer_Position_CodedStep7",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Verify_Icon_Bar_Notch_Pointer_Positiondbepueuh.0j0",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "176d00a7-99c1-4b16-8df4-698ef64f7ccc",
+            "Description": "[TST_Verify_Icon_Bar_Notch_Pointer_Position_CodedStep8] : Click on icon bar element and verify sub menu notch pointer position for 'History'",
+            "CustomDescription": "Click on icon bar element and verify sub menu notch pointer position for 'Important Links'",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_HomePage.ImportantLinksLeftNavLink.MouseHover();\r\n            Pages.PS_HomePage.ImportantLinksLeftNavLink.Click();\r\n            ActiveBrowser.WaitUntilReady();\r\n            System.Threading.Thread.Sleep(2000);\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForVisible();\r\n            ActiveBrowser.RefreshDomTree();\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForContent(FindContentType.InnerText,\"IMPORTANT LINKS\");\r\n            float impLinksHeight = Actions.InvokeScript<float>(\"document.querySelector(\\\"li a[title='Important Links']\\\").getBoundingClientRect().top\");\r\n            float notchHeight =  Actions.InvokeScript<float>(\"document.querySelector(\\\"div#notch\\\").getBoundingClientRect().top\");\r\n            Assert.IsTrue( notchHeight < (impLinksHeight+20) && notchHeight > (impLinksHeight-20), \"Icon bar notch pointer should point to 'Important Links'\");\r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 11,
+            "Id": "TST_Verify_Icon_Bar_Notch_Pointer_Position_CodedStep8",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Verify_Icon_Bar_Notch_Pointer_Positionhgz1jsxr.wpg",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        }
+      ]
+    },
+    "IndependentDescriptors": [
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "/Home.page",
+              "Query": "",
+              "BaseUrl": "http://lax1qapp05.cinteractive.com:8080/Cognex/Home.page",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "Home | PowerSteering v14",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_HomePage"
+            }
+          },
+          "Frame": null,
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "CEfLq2z9eOXLFBiRE81sCJvXt80=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "IconBarNotchPointerDiv",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "xpath=//div[@id='notch']"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/div[9]/div[1]/div[1]/div[1]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlDiv",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      }
+    ],
+    "HtmlDescription": "",
+    "SilverlightEnabled": false,
+    "IsSilverlightApp": false,
+    "SilverlightAppWebUrl": "",
+    "SilverlightAppLocalDirectory": "",
+    "SilverlightAppRecordLocal": false,
+    "SilverlightAppOriginUri": null,
+    "WpfAppPath": null,
+    "UseDefaultWpfAppPath": false,
+    "TestAssembly": "PSS_Automation.dll",
+    "TestAssemblyPath": "bin",
+    "TestClass": "PSS_Automation.TST_NAV_UI_004",
+    "IsManual": false,
+    "ResourceFilePath": "AutomationTests\\NavigationAndUI\\TST_NAV_UI_004.resx",
+    "HasCodeBehind": true,
+    "DataInfo": {
+      "__type": "ArtOfTest.Common.Design.Data.DataInfo",
+      "__value": {
+        "ConnectionString": "",
+        "DefaultToGrid": true,
+        "DataRange": "",
+        "LoadRecordsCount": null,
+        "DataTableName": "",
+        "DataProvider": "",
+        "DataEnabled": true,
+        "HasBuiltinGrid": false,
+        "DataType": 4,
+        "BuiltInData": null,
+        "BuiltInDocumentKey": null,
+        "TSQL": ""
+      }
+    },
+    "VSProperties": {},
+    "DeploymentItems": [],
+    "IsTestFragment": false,
+    "StopTestListOnFailure": false,
+    "InheritParentDataSource": false,
+    "BrowserType": 0,
+    "QcId": 0,
+    "QcFilePath": null,
+    "QcTestVersionStamp": 0,
+    "CustomProperty1": "Regression",
+    "CustomProperty2": "LeftNavAndUI",
+    "TestLinks": [],
+    "Description": "This script verifies the notch pointer arrow position pointing to each icon bar item when clicked. i.e. Home, Add, Inbox etc...\r\n\r\nTestRail Test case(s) reference: C208135",
+    "Name": "TST_NAV_UI_004",
+    "Owner": "Pratik Gajjar",
+    "Path": "AutomationTests\\NavigationAndUI\\TST_NAV_UI_004.tstest",
+    "Priority": 0,
+    "TestType": 0,
+    "UniqueId": "3a50c309-f078-4b54-bb91-0e808eb3a578",
+    "Id": "3a50c309-f078-4b54-bb91-0e808eb3a578",
+    "ProjectId": "8482a1a8-662a-40c8-b69e-343a43a257af",
+    "Version": 200
+  }
+}

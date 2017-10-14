@@ -1,0 +1,165 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Debug for tests" verbose="1">
+
+    <test name="pcfirst:Project Central Tests (First Test Group)">
+        <parameter name="resource_planning" value="on"/>
+        <parameter name="immediate_delegation" value="off"/>
+        <!--<parameter name="get_full_user_name" value="on"/>-->
+        <groups>
+            <run>
+                <include name="first-work"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.project_central.TestDriver"/>
+        </classes>
+    </test>
+
+    <test name="pcsecond:Project Central Tests (Second Test Group)">
+        <parameter name="resource_planning" value="on"/>
+        <parameter name="immediate_delegation" value="on"/>
+        <!--<parameter name="get_full_user_name" value="on"/>-->
+        <groups>
+            <run>
+                <include name="second-work"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.project_central.TestDriver"/>
+        </classes>
+    </test>
+
+    <test name="pcmain:Project Central Tests (Main Test Group)">
+        <parameter name="resource_planning" value="on"/>
+        <parameter name="immediate_delegation" value="on"/>
+        <groups>
+            <run>
+                <include name="main-work"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.project_central.TestDriver"/>
+        </classes>
+    </test>
+
+    <test name="pcmaingeneral:Project Central Tests (Main Test Group)">
+        <parameter name="resource_planning" value="on"/>
+        <parameter name="immediate_delegation" value="on"/>
+        <groups>
+            <run>
+                <include name="main-work"/>
+                <exclude name="bulk-edit"/>
+                <exclude name="filter"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.project_central.TestDriver"/>
+        </classes>
+    </test>
+
+    <test name="pcmainbulk:Project Central Tests (Main Test Group, Bulk Edit)">
+        <parameter name="resource_planning" value="on"/>
+        <parameter name="immediate_delegation" value="on"/>
+        <groups>
+            <run>
+                <include name="main-bulk"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.project_central.TestDriver"/>
+        </classes>
+    </test>
+    <test name="pcmainfilter:Project Central Tests (Main Test Group, Filters)">
+        <parameter name="resource_planning" value="on"/>
+        <parameter name="immediate_delegation" value="on"/>
+        <groups>
+            <run>
+                <include name="main-filter"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.project_central.TestDriver"/>
+        </classes>
+    </test>
+
+    <test name="pcgate:Project Central Tests (Gated Test Group)">
+        <parameter name="resource_planning" value="on"/>
+        <parameter name="immediate_delegation" value="on"/>
+        <groups>
+            <run>
+                <include name="gated-work"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.project_central.TestDriver"/>
+        </classes>
+    </test>
+
+    <test name="pcteam:Project Central Tests (Team Pane Test Group)">
+        <parameter name="immediate_delegation" value="on"/>
+        <parameter name="resource_planning" value="on"/>
+        <parameter name="resource_manager" value="on"/>
+        <parameter name="team_pane" value="on"/>
+        <groups>
+            <run>
+                <include name="team-pane-work"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.project_central.TestDriver"/>
+        </classes>
+    </test>
+
+    <test name="pccustom:Project Central Tests (Custom Permissions)">
+        <parameter name="resource_planning" value="on"/>
+        <parameter name="immediate_delegation" value="on"/>
+        <!--<parameter name="get_full_user_name" value="on"/>-->
+        <parameter name="set" value="guest1"/>
+        <groups>
+            <run>
+                <include name="main-work"/>
+                <include name="main-work-after"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.project_central.UserTestDriver"/>
+        </classes>
+    </test>
+
+
+    <test name="pcdebug:Project Central Tests (Main Test Group)">
+        <parameter name="resource_planning" value="on"/>
+        <parameter name="immediate_delegation" value="on"/>
+        <groups>
+            <run>
+                <include name="main-work"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.project_central.TestDriver">
+                <methods>
+                    <include name="checkDeleteCancel"/>
+
+                    <include name="checkSetOwnerInOurGrid"/>
+                    <include name="checkSetOwnerUsingBulkEdit"/>
+
+
+                    <include name="checkSetResourcePoolInOurGrid"/>
+                    <include name="checkSetRoleInOurGrid"/>
+
+                    <include name="checkSetStatusesInOurGrid"/>
+                    <include name="checkSetStatusesUsingBulkEdit"/>
+
+                    <include name="checkDelete"/>
+
+                    <include name="checkFilterByResourcePool"/>
+                    <include name="checkFilterByRole"/>
+                    <include name="checkSetRoleAndResourcePoolUsingBulkEdit"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+</suite>

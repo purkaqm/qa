@@ -1,0 +1,327 @@
+<?xml version="1.0" standalone="no"?>
+
+<!DOCTYPE generic-test [
+	<!ELEMENT generic-test (test*, propset*)>
+		<!ELEMENT test (description?, currentdate?, source-script, target-script, use-propset)>
+		<!ATTLIST test id ID #REQUIRED>
+			<!ELEMENT description (#PCDATA)>
+			<!ELEMENT currentdate (#PCDATA)>
+			<!ELEMENT source-script (#PCDATA)>
+			<!ELEMENT target-script (#PCDATA)>
+			<!ELEMENT use-propset EMPTY>
+				<!ATTLIST use-propset id CDATA #REQUIRED>
+		<!ELEMENT propset (property+)>
+			<!ATTLIST propset id ID #REQUIRED>
+			<!ELEMENT property (name, eps)>
+				<!ELEMENT name (#PCDATA)>
+				<!ELEMENT eps (#PCDATA)>
+]>
+
+<generic-test>
+
+<!-- passed-->
+
+	<test id="Test1">
+		<description>To check if scheduler is alive</description>
+                <currentdate>05/10/2001 00:01:00</currentdate>
+		<source-script>test1.xml</source-script>
+		<target-script>test1t.xml</target-script>
+		<use-propset id="ps1" />
+	</test>
+
+
+	<test id="test-001">
+		<description>Check correctness of scheduler functionality without any given dates.</description>
+                <currentdate>01/16/2001 09:00:00</currentdate>
+		<source-script>test-001.xml</source-script>
+		<target-script>test-001t.xml</target-script>
+		<use-propset id="ps1" />
+	</test>
+	
+
+	<test id="test-002">
+		<description>Check correctness of scheduler functionality without any given dates.</description>
+                <currentdate>01/16/2001 09:00:00</currentdate>
+		<source-script>test-002.xml</source-script>
+		<target-script>test-002t.xml</target-script>
+		<use-propset id="ps1" />
+	</test>
+	
+
+
+	<test id="test-003">
+		<description>Check correctness of scheduler functionality without any given dates.</description>
+                <currentdate>01/16/2001 09:00:00</currentdate>
+		<source-script>test-003.xml</source-script>
+		<target-script>test-003t.xml</target-script>
+		<use-propset id="ps1" />
+	</test>
+	
+
+
+   	<test id="test-004">
+		<description>Check correctness of scheduler functionality without any given dates.</description>
+                <currentdate>01/16/2001 09:00:00</currentdate>
+		<source-script>test-004.xml</source-script>
+		<target-script>test-004t.xml</target-script>
+		<use-propset id="ps1" />
+	</test>
+	
+
+
+	<test id="test-005">
+		<description>Check correctness of scheduler functionality with one given date and (or) given duration(s).</description>
+		<source-script>test-005.xml</source-script>
+		<target-script>test-005t.xml</target-script>
+		<use-propset id="ps1" />
+	</test>
+	
+	<test id="test-006">
+		<description>Check if scheduler reports error that dependency cannot be satisfied becasue of the planned constraints.</description>
+		<source-script>test-006.xml</source-script>
+		<target-script>test-006t.xml</target-script>
+		<use-propset id="ps1" />
+	</test>
+
+
+
+
+   	<test id="test-007">
+		<description>Check correctness of scheduler functionality with one given date and (or) given duration(s).</description>
+		<source-script>test-007.xml</source-script>
+		<target-script>test-007t.xml</target-script>
+		<use-propset id="ps1" />
+	</test>
+
+
+
+	<test id="test-008">
+		<description>Check correctness of scheduler functionality with two given dates and (or) given duration(s).</description>
+		<source-script>test-008.xml</source-script>
+		<target-script>test-008t.xml</target-script>
+		<use-propset id="ps1" />
+	</test>
+
+
+	<test id="test-009">
+		<description>Check if scheduler reports error that planned constraints cannot be satisfied becasue of the actual dates.</description>
+		<source-script>test-009.xml</source-script>
+		<target-script>test-009t.xml</target-script>
+		<use-propset id="ps1" />
+	</test>
+
+
+    <test id="test-010">
+		<description>Check correctness of scheduler functionality with two given dates and (or) given duration(s).</description>
+		<source-script>test-010.xml</source-script>
+		<target-script>test-010t.xml</target-script>
+		<use-propset id="ps1" />
+     </test>
+
+
+
+
+    <test id="test-011">
+		<description>Check correctness of scheduler functionality with two given dates and (or) given duration(s).</description>
+		<source-script>test-011.xml</source-script>
+		<target-script>test-011t.xml</target-script>
+		<use-propset id="ps1" />
+	</test>
+
+
+ 	<test id="test-012">
+		<description>Check correctness of scheduler functionality with different work types.</description>
+		<source-script>test-012.xml</source-script>
+		<target-script>test-012t.xml</target-script>
+		<use-propset id="ps1" />
+	</test>
+
+
+    <test id="test-013">
+		<description>Check correctness of scheduler functionality with different work types.</description>
+		<source-script>test-013.xml</source-script>
+		<target-script>test-013t.xml</target-script>
+		<use-propset id="ps1" />
+	</test>
+
+
+    <test id="test-014">
+		<description>Check correctness of scheduler functionality with two clusters.</description>
+		<source-script>test-014.xml</source-script>
+		<target-script>test-014t.xml</target-script>
+		<use-propset id="ps1" />
+	</test>
+
+
+    <test id="test-015">
+		<description>Check if scheduler reports error condition with a cyclical dependency.</description>
+		<source-script>test-015.xml</source-script>
+		<target-script>test-015t.xml</target-script>
+		<use-propset id="ps1" />
+	</test>
+
+    <test id="test-016">
+		<description>Check if scheduler gets correct duration.</description>
+		<source-script>test-016.xml</source-script>
+		<target-script>test-016t.xml</target-script>
+		<use-propset id="ps2" />
+	</test>
+
+    <test id="test-017">
+		<description>Check if scheduler favours actual dates when constraints are present.</description>
+		<source-script>test-017.xml</source-script>
+		<target-script>test-017t.xml</target-script>
+		<use-propset id="ps1" />
+	</test>
+
+    <test id="test-018">
+		<description>Check if scheduler favours actual dates when constraints are present.</description>
+		<source-script>test-018.xml</source-script>
+		<target-script>test-018t.xml</target-script>
+		<use-propset id="ps1" />
+	</test>
+
+	<test id="test-020">
+		<description>D01</description>
+		<source-script>test-020.xml</source-script>
+		<target-script>test-020t.xml</target-script>
+		<use-propset id="psProblems"/>
+	</test>
+
+	<test id="test-021">
+		<description>D02</description>
+		<source-script>test-021.xml</source-script>
+		<target-script>test-021t.xml</target-script>
+		<use-propset id="psProblems"/>
+	</test>
+
+	<test id="test-022">
+		<description>D03</description>
+		<source-script>test-022.xml</source-script>
+		<target-script>test-022t.xml</target-script>
+		<use-propset id="psProblems"/>
+	</test>
+
+	<test id="test-023">
+		<description>D04</description>
+		<source-script>test-023.xml</source-script>
+		<target-script>test-023t.xml</target-script>
+		<use-propset id="psProblems"/>
+	</test>
+
+	<test id="test-024">
+		<description>D05</description>
+		<source-script>test-024.xml</source-script>
+		<target-script>test-024t.xml</target-script>
+		<use-propset id="psProblems"/>
+	</test>
+
+	<test id="test-025">
+		<description>D06</description>
+		<source-script>test-025.xml</source-script>
+		<target-script>test-025t.xml</target-script>
+		<use-propset id="psProblems"/>
+	</test>
+
+	<test id="test-026">
+		<description>D07</description>
+		<source-script>test-026.xml</source-script>
+		<target-script>test-026t.xml</target-script>
+		<use-propset id="psProblems"/>
+	</test>
+
+	<test id="test-027">
+		<description>D09</description>
+		<source-script>test-027.xml</source-script>
+		<target-script>test-027t.xml</target-script>
+		<use-propset id="psProblems"/>
+	</test>
+
+	<test id="test-028">
+		<description>D010</description>
+		<source-script>test-028.xml</source-script>
+		<target-script>test-028t.xml</target-script>
+		<use-propset id="psProblems"/>
+	</test>
+
+	<test id="test-029">
+		<description>D011</description>
+		<source-script>test-029.xml</source-script>
+		<target-script>test-029t.xml</target-script>
+		<use-propset id="psProblems"/>
+	</test>
+
+	<test id="test-030">
+		<description>D012</description>
+		<source-script>test-030.xml</source-script>
+		<target-script>test-030t.xml</target-script>
+		<use-propset id="psProblems"/>
+	</test>
+
+	<test id="test-031">
+		<description>D021</description>
+		<source-script>test-031.xml</source-script>
+		<target-script>test-031t.xml</target-script>
+		<use-propset id="psProblems"/>
+	</test>
+	<test id="test-032">
+		<description>D022</description>
+		<source-script>test-032.xml</source-script>
+		<target-script>test-032t.xml</target-script>
+		<use-propset id="psProblems"/>
+	</test>
+
+	<test id="test-033">
+		<description>D031</description>
+		<source-script>test-033.xml</source-script>
+		<target-script>test-033t.xml</target-script>
+		<use-propset id="psProblems"/>
+	</test>
+
+	<test id="test-034">
+		<description>R01</description>
+		<source-script>test-034.xml</source-script>
+		<target-script>test-034t.xml</target-script>
+		<use-propset id="psProblems"/>
+	</test>
+
+	<test id="test-035">
+		<description>R16</description>
+		<source-script>test-035.xml</source-script>
+		<target-script>test-035t.xml</target-script>
+		<use-propset id="psProblems"/>
+	</test>
+	<test id="test-036">
+		<description>R17</description>
+		<source-script>test-036.xml</source-script>
+		<target-script>test-036t.xml</target-script>
+		<use-propset id="psProblems"/>
+	</test>
+
+	<propset id="psProblems"/>
+	<propset id="ps1">
+		<property>
+			<name>ActualStart</name>
+			<eps>0</eps>
+		</property>		
+		<property>
+			<name>ActualFinish</name>
+			<eps>0</eps>
+		</property>		
+	</propset>
+	<propset id="ps2">
+		<property>
+			<name>ActualStart</name>
+			<eps>0</eps>
+		</property>		
+		<property>
+			<name>ActualFinish</name>
+			<eps>0</eps>
+		</property>		
+		<property>
+			<name>ActualDuration</name>
+			<eps>0.01</eps>
+		</property>		
+	</propset>
+
+</generic-test>

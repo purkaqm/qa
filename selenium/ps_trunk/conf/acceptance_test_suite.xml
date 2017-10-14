@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Acceptance tests">
+    <test name="validation:Validation UI Elements Tests">
+        <classes>
+            <class name="com.powersteeringsoftware.tests.validation_ui.TestDriver"/>
+        </classes>
+    </test>
+    <test name="acceptance:Acceptance Tests">
+        <groups>
+            <run>
+                <include name="acceptance.test"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.acceptance.TestDriver"/>
+            <class name="com.powersteeringsoftware.tests.acceptance.TestCreateBasics"/>
+        </classes>
+    </test>
+</suite>

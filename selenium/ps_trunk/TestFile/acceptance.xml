@@ -1,0 +1,89 @@
+<config>
+    <work id="basic1">
+        <name>TMP-BASIC - WORK</name>
+        <type>Work</type>
+    </work>
+    <work id="basic2">
+        <name>TMP-BASIC - FOLDER</name>
+        <type>Folder</type>
+    </work>
+    <work id="basic3">
+        <name>TMP-BASIC - MSP Project</name>
+        <type>MSP Project</type>
+    </work>
+    <work id="basic4">
+        <name>TMP-BASIC-2 - WORK</name>
+        <type>Work</type>
+        <user id="user1" role="Contributor"/>
+        <tag id="1" multiple="true">
+            <name>AUTOTESTS TAG 1</name>
+            <tag>
+                <name>a</name>
+            </tag>
+        </tag>
+        <status>Completed</status>
+        <priority>3</priority>
+    </work>
+    <work id="basic5">
+        <name>TMP-BASIC-3 - WORK</name>
+        <type>Work</type>
+        <user id="user2" role="Contributor"/>
+        <tag id="1" multiple="true">
+            <name>AUTOTESTS TAG 1</name>
+            <tag>
+                <name>a</name>
+            </tag>
+            <tag>
+                <name>b</name>
+            </tag>
+        </tag>
+        <status>on-track</status>
+        <priority>2</priority>
+    </work>
+
+    <issue id="main_issue">
+        <subject>issue to move</subject>
+        <body>simple body</body>
+        <issue id="ch1">
+            <subject>ch1</subject>
+            <body>body1</body>
+            <issue id="ch12">
+                <subject>ch1_ch2</subject>
+                <body>body12</body>
+            </issue>
+        </issue>
+        <issue id="ch2">
+            <body>body2</body>
+        </issue>
+    </issue>
+
+    <tag id="required" required="true">
+        <association>MESSAGES_DISCUSSIONS</association>
+        <name>RequiredTag</name>
+        <description>This should be a required tag.</description>
+        <tag>
+            <name>Value1</name>
+        </tag>
+        <tag>
+            <name>Value2</name>
+        </tag>
+        <tag>
+            <name>Value3</name>
+        </tag>
+    </tag>
+
+    <tag id="unrequired" required="false">
+        <association>MESSAGES_DISCUSSIONS</association>
+        <name>UnrequiredTag</name>
+        <description>This should be a unrequired tag.</description>
+        <tag>
+            <name>Value1</name>
+        </tag>
+        <tag>
+            <name>Value2</name>
+        </tag>
+        <tag>
+            <name>Value3</name>
+        </tag>
+    </tag>
+</config>

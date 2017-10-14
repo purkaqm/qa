@@ -1,0 +1,696 @@
+<!-- this config contains general data from database -->
+<config>
+    <user id="default-user">
+        <login>admin</login>
+        <password>qwer</password>
+        <first-name>Admin</first-name>
+        <second-name>Admin</second-name>
+        <exist>true</exist>
+        <id>fs000080000i2n8lbnp0000000</id>
+        <is_admin>true</is_admin>
+    </user>
+    <user id="user1">
+        <first-name>test</first-name>
+        <second-name>test</second-name>
+        <login>test</login>
+        <password>qwer</password>
+        <email>test@test.com</email>
+        <is_admin>false</is_admin>
+        <id>op67jrg0000iirnvn9bg000000</id>
+        <exist>true</exist>
+    </user>
+    <user id="user2">
+        <first-name>test2</first-name>
+        <second-name>test2</second-name>
+        <login>test2</login>
+        <password>qwer</password>
+        <email>test2@test.com</email>
+        <is_admin>false</is_admin>
+        <role capacity="0.5">Contributor</role>
+        <id>op67jrg0000isbkvmu6g000000</id>
+        <exist>true</exist>
+    </user>
+
+    <tag id="1" multiple="true">
+        <resources ps="_14" condition="true|false"/>
+        <association no="_14" exclude="PEOPLES_RESOURCE_QUALIFICATIONS">PEOPLES</association>
+        <association exclude="WORKS_GATED_PROJECTS_NSG">WORKS</association>
+        <name>AUTOTESTS TAG 1</name>
+        <tag>
+            <name>a</name>
+        </tag>
+        <tag>
+            <name>b</name>
+        </tag>
+        <tag>
+            <name>c</name>
+        </tag>
+    </tag>
+    <tag id="2" multiple="false">
+        <resources ps="_14" condition="true|false"/>
+        <association no="_14" xclude="PEOPLES_RESOURCE_QUALIFICATIONS">PEOPLES</association>
+        <association exclude="WORKS_GATED_PROJECTS_NSG">WORKS</association>
+        <name>AUTOTESTS TAG 2</name>
+        <tag>
+            <name>d</name>
+        </tag>
+        <tag>
+            <name>e</name>
+        </tag>
+        <tag>
+            <name>f</name>
+        </tag>
+    </tag>
+    <tag id="3" multiple="false">
+        <association>PEOPLES_USERS</association>
+        <name>AUTOTESTS TAG 3</name>
+        <tag>
+            <name></name>
+        </tag>
+        <tag ps="_8_2">
+            <name>&amp;amp;test&amp;ewrwe</name>
+        </tag>
+        <tag>
+            <name>1</name>
+        </tag>
+        <tag>
+            <name>10</name>
+        </tag>
+        <tag>
+            <name>11</name>
+        </tag>
+        <tag>
+            <name>12</name>
+        </tag>
+        <tag>
+            <name>13</name>
+        </tag>
+        <tag>
+            <name>14</name>
+        </tag>
+        <tag>
+            <name>15</name>
+        </tag>
+        <tag>
+            <name>16</name>
+        </tag>
+        <tag>
+            <name>17</name>
+        </tag>
+        <tag>
+            <name>18</name>
+        </tag>
+        <tag>
+            <name>19</name>
+        </tag>
+        <tag>
+            <name>2</name>
+        </tag>
+        <tag>
+            <name>20</name>
+        </tag>
+        <tag>
+            <name>22</name>
+        </tag>
+        <tag>
+            <name>3</name>
+        </tag>
+        <tag>
+            <name>33</name>
+        </tag>
+        <tag>
+            <name>4</name>
+        </tag>
+        <tag>
+            <name>44</name>
+        </tag>
+        <tag>
+            <name>5</name>
+        </tag>
+        <tag>
+            <name>55</name>
+        </tag>
+        <tag>
+            <name>6</name>
+        </tag>
+        <tag>
+            <name>66</name>
+        </tag>
+        <tag>
+            <name>7</name>
+        </tag>
+        <tag>
+            <name>8</name>
+        </tag>
+        <tag>
+            <name>9</name>
+        </tag>
+        <tag>
+            <name>&lt;input type='text'&gt;test&lt;/input&gt;</name>
+        </tag>
+        <tag>
+            <name>a</name>
+        </tag>
+        <tag>
+            <name>b</name>
+        </tag>
+        <tag>
+            <name>b c</name>
+        </tag>
+        <tag>
+            <name>c d</name>
+        </tag>
+        <tag>
+            <name>e f g</name>
+        </tag>
+        <tag>
+            <name>qwecre $#@^$#&amp;N$% *</name>
+        </tag>
+        <tag loading="true">
+            <name>REQWREWE</name>
+        </tag>
+        <tag loading="true">
+            <name>УЦЦЕЦУЕНК</name>
+        </tag>
+        <tag loading="true">
+            <name>а</name>
+        </tag>
+        <tag loading="true">
+            <name>м</name>
+        </tag>
+        <tag loading="true">
+            <name>па</name>
+        </tag>
+        <tag loading="true">
+            <name>фыфвуц йц шокуешд онлдж</name>
+        </tag>
+    </tag>
+
+    <tag id="4" multiple="true">
+        <association>PEOPLES_USERS</association>
+        <name>AUTOTESTS TAG 4</name>
+        <tag ps="_8_2">
+            <name>&amp;amp;test&amp;ewrwe</name>
+        </tag>
+        <tag>
+            <name>11</name>
+        </tag>
+        <tag>
+            <name>22</name>
+        </tag>
+        <tag>
+            <name>33</name>
+        </tag>
+        <tag>
+            <name>44</name>
+        </tag>
+        <tag>
+            <name>55</name>
+        </tag>
+        <tag>
+            <name>66</name>
+        </tag>
+        <tag>
+            <name>&lt;input type='text'&gt;test&lt;/input&gt;</name>
+        </tag>
+        <tag>
+            <name>a</name>
+        </tag>
+        <tag>
+            <name>aa</name>
+        </tag>
+        <tag>
+            <name>b</name>
+        </tag>
+        <tag>
+            <name>b c</name>
+        </tag>
+        <tag>
+            <name>bnm</name>
+        </tag>
+        <tag>
+            <name>c d</name>
+        </tag>
+        <tag>
+            <name>dd</name>
+        </tag>
+        <tag>
+            <name>e</name>
+        </tag>
+        <tag>
+            <name>e f g</name>
+        </tag>
+        <tag>
+            <name>ff</name>
+        </tag>
+        <tag>
+            <name>gg</name>
+        </tag>
+        <tag>
+            <name>hh</name>
+        </tag>
+        <tag>
+            <name>i</name>
+        </tag>
+        <tag>
+            <name>jj</name>
+        </tag>
+        <tag>
+            <name>klz</name>
+        </tag>
+        <tag>
+            <name>o</name>
+        </tag>
+        <tag>
+            <name>pp</name>
+        </tag>
+        <tag>
+            <name>q</name>
+        </tag>
+        <tag>
+            <name>qwecre $#@^$#&amp;N$% *</name>
+        </tag>
+        <tag>
+            <name>r</name>
+        </tag>
+        <tag>
+            <name>REQWREWE</name>
+        </tag>
+        <tag>
+            <name>ss</name>
+        </tag>
+        <tag>
+            <name>t</name>
+        </tag>
+        <tag>
+            <name>u</name>
+        </tag>
+        <tag>
+            <name>w</name>
+        </tag>
+        <tag>
+            <name>xcv</name>
+        </tag>
+        <tag>
+            <name>y</name>
+        </tag>
+        <tag>
+            <name>а</name>
+        </tag>
+        <tag>
+            <name>м</name>
+        </tag>
+        <tag>
+            <name>па</name>
+        </tag>
+        <tag>
+            <name>УЦЦЕЦУЕНК</name>
+        </tag>
+        <tag>
+            <name>фыфвуц йц шокуешд онлдж</name>
+        </tag>
+    </tag>
+    <tag id="5" multiple="false">
+        <association>PEOPLES_USERS</association>
+        <name>AUTOTESTS TAG 5</name>
+        <tag>
+            <name>5.1</name>
+        </tag>
+        <tag>
+            <name>5.2</name>
+            <tag>
+                <name>5.2.1</name>
+                <tag>
+                    <name>5.2.1.1</name>
+                </tag>
+            </tag>
+            <tag>
+                <name>5.2.2</name>
+            </tag>
+        </tag>
+        <tag>
+            <name>5.3</name>
+            <tag>
+                <name>5.3.1</name>
+            </tag>
+        </tag>
+    </tag>
+    <tag id="6" multiple="true">
+        <association>PEOPLES_USERS</association>
+        <name>AUTOTESTS TAG 6</name>
+        <tag>
+            <name>6.1</name>
+            <tag>
+                <name>6.1.1</name>
+                <tag>
+                    <name>6.1.1.1</name>
+                    <tag>
+                        <name>6.1.1.1.1</name>
+                    </tag>
+                </tag>
+                <tag>
+                    <name>6.1.1.2</name>
+                </tag>
+            </tag>
+        </tag>
+        <tag>
+            <name>6.2</name>
+            <tag>
+                <name>6.2.1</name>
+            </tag>
+        </tag>
+        <tag>
+            <name>6.3</name>
+        </tag>
+    </tag>
+    <tag id="7" multiple="true">
+    <association>PEOPLES_USERS</association>
+        <name>AUTOTESTS TAG 7</name>
+        <tag>
+            <name>7.1</name>
+        </tag>
+        <tag>
+            <name>7.1.1</name>
+        </tag>
+        <tag>
+            <name>7.1.1.1</name>
+        </tag>
+        <tag>
+            <name>7.1.2</name>
+        </tag>
+        <tag>
+            <name>7.2</name>
+        </tag>
+        <tag>
+            <name>7.2.1</name>
+        </tag>
+        <tag>
+            <name>7.2.1.1</name>
+        </tag>
+        <tag>
+            <name>7.2.2</name>
+        </tag>
+        <tag>
+            <name>7.3</name>
+        </tag>
+    </tag>
+    <tag id="TD" multiple="false"> <!-- todo: for TD should be another config and ConfigObject created -->
+        <name>AUTOTESTS TAG 7</name>
+        <tag>
+            <name>7.1</name>
+            <tag>
+                <name>7.1.1</name>
+                <tag>
+                    <name>7.1.1.1</name>
+                </tag>
+            </tag>
+            <tag>
+                <name>7.1.2</name>
+            </tag>
+        </tag>
+        <tag>
+            <name>7.2</name>
+            <tag>
+                <name>7.2.1</name>
+                <tag>
+                    <name>7.2.1.1</name>
+                </tag>
+            </tag>
+            <tag>
+                <name>7.2.2</name>
+            </tag>
+        </tag>
+        <tag>
+            <name>7.3</name>
+        </tag>
+    </tag>
+
+    <tag id="activity">
+        <name>Activity</name>
+        <tag>
+            <name>Analysis</name>
+        </tag>
+        <tag>
+            <name>Coding</name>
+        </tag>
+        <tag>
+            <name>Design</name>
+        </tag>
+        <tag>
+            <name>Testing</name>
+        </tag>
+    </tag>
+
+    <tag id="activity-types" multiple="true">
+        <name>Activity Types</name>
+        <tag>
+            <name>analysis</name>
+            <tag>
+                <name xpath="//tag[@id='activity']/tag[1]/name"/>
+            </tag>
+        </tag>
+        <tag>
+            <name>analysis-coding</name>
+            <tag>
+                <name xpath="//tag[@id='activity']/tag[1]/name"/>
+            </tag>
+            <tag>
+                <name xpath="//tag[@id='activity']/tag[2]/name"/>
+            </tag>
+        </tag>
+        <tag>
+            <name>coding1</name>
+            <tag>
+                <name xpath="//tag[@id='activity']/tag[2]/name"/>
+            </tag>
+        </tag>
+        <tag>
+            <name>coding2</name>
+            <tag>
+                <name xpath="//tag[@id='activity']/tag[2]/name"/>
+            </tag>
+        </tag>
+        <tag>
+            <name>design</name>
+            <tag>
+                <name xpath="//tag[@id='activity']/tag[3]/name"/>
+            </tag>
+        </tag>
+        <tag>
+            <name>testing</name>
+            <tag>
+                <name xpath="//tag[@id='activity']/tag[4]/name"/>
+            </tag>
+        </tag>
+    </tag>
+    <pool id="def-pool">
+        <name>AUTO RESOURCE POOL</name>
+    </pool>
+
+    <calendars>
+        <calendar name="default">
+            <name>Default Calendar</name>
+            <day hours="0">1</day>
+            <day hours="8">2</day>
+            <day hours="8">3</day>
+            <day hours="8">4</day>
+            <day hours="8">5</day>
+            <day hours="8">6</day>
+            <day hours="0">7</day>
+        </calendar>
+        <calendar name="test">
+            <name>Test Calendar</name>
+            <day hours="5">1</day>
+            <day hours="9">2</day>
+            <day hours="9">3</day>
+            <day hours="9">4</day>
+            <day hours="9">5</day>
+            <day hours="9">6</day>
+            <day hours="5">7</day>
+            <holiday>08/08/2006</holiday>
+            <holiday>05/09/1945</holiday>
+        </calendar>
+    </calendars>
+
+    <process id="dmaic">
+        <name>DMAIC_AUTOTEST</name>
+        <phase>
+            <name>Define</name>
+        </phase>
+        <phase>
+            <name>Measure</name>
+        </phase>
+        <phase>
+            <name>Analyze</name>
+        </phase>
+        <phase>
+            <name>Improve</name>
+        </phase>
+        <phase>
+            <name>Control</name>
+        </phase>
+    </process>
+
+    <currency id="CHF">
+        <name>CHF</name>
+        <description>Switzerland, Francs (CHF)</description>
+        <locale>
+            <language>fr</language>
+            <country>CH</country>
+        </locale>
+        <exchange-rate>1</exchange-rate>
+    </currency>
+    <currency id="EUR">
+        <name>EUR</name>
+        <description>Euro Member Countries, Euro (EUR)</description>
+        <locale>
+            <language>fr</language>
+            <country>FR</country>
+            <variant>EURO</variant>
+        </locale>
+        <exchange-rate>1</exchange-rate>
+    </currency>
+    <currency id="USD" default="true">
+        <name>USD</name>
+        <description>United States of America, Dollars (USD)</description>
+        <locale>
+            <language>en</language>
+            <country>US</country>
+        </locale>
+    </currency>
+    <currency id="RUB">
+        <name>RUB</name>
+        <description>Russia, Rubles (RUB)</description>
+        <locale>
+            <language>ru</language>
+            <country>RU</country>
+        </locale>
+        <exchange-rate>1</exchange-rate>
+    </currency>
+
+    <rate-table id="default" fake="true" default="true">
+        <name>Default Rate Table</name>
+    </rate-table>
+    <rate-table id="custom" fake="true">
+        <name>Custom Rate Table</name>
+    </rate-table>
+
+    <work id="work0">
+        <name>ROOT WORK FOR AUTOTESTS</name>
+        <user role="Owner" id="default-user"/>
+        <exist>true</exist>
+        <id>fs000080000i2q2clk20000000</id>
+        <status>Not Started</status>
+        <work id="work1">
+            <id>fs000080000i3ae9g65g000000</id>
+            <status>Not Started</status>
+            <name>WORK_ITEM_ANALYSIS</name>
+            <user role="Owner" id="default-user"/>
+            <exist>true</exist>
+            <work>
+                <name>CHILD_1</name>
+                <exist>true</exist>
+                <status>proposed</status>
+            </work>
+        </work>
+        <work id="work2">
+            <id>fs000080000i3ae9un80000000</id>
+            <status>Not Started</status>
+            <name>WORK_ITEM_DESIGN</name>
+            <exist>true</exist>
+            <user role="Owner" id="default-user"/>
+        </work>
+        <work id="work3">
+            <id>fs000080000i3aeakug0000000</id>
+            <status>Not Started</status>
+            <name>WORK_ITEM_CODING</name>
+            <exist>true</exist>
+            <user role="Owner" id="default-user"/>
+        </work>
+        <work id="work4">
+            <id>fs000080000i3aeaul3g000000</id>
+            <status>Not Started</status>
+            <name>WORK_ITEM_TESTING</name>
+            <user role="Owner" id="default-user"/>
+            <exist>true</exist>
+            <work>
+                <name>CHILD_1</name>
+                <exist>true</exist>
+                <status>proposed</status>
+            </work>
+        </work>
+    </work>
+
+    <work-template id="sgp">
+        <name>DMAIC_AUTOTEST_SEQUENCIAL</name>
+        <work>
+            <name>DMAIC_AUTOTEST_SEQUENCIAL</name>
+            <user role="Owner" id="default-user"/>
+            <exist>true</exist>
+            <start_date>09/21/2010</start_date>
+            <end_date>10/21/2010</end_date>
+            <enforce_sequential>true</enforce_sequential>
+            <process xpath="//process[@id='dmaic']"/>
+        </work>
+        <exist>true</exist>
+        <is-required-gate-end-dates>true</is-required-gate-end-dates>
+    </work-template>
+
+    <work-template id="nsgp">
+        <name>DMAIC_AUTOTEST_NON_SEQUENCIAL</name>
+        <work>
+            <name>DMAIC_AUTOTEST_NON_SEQUENCIAL</name>
+            <user role="Owner" id="default-user"/>
+            <process xpath="//process[@id='dmaic']"/>
+            <exist>true</exist>
+            <enforce_sequential>false</enforce_sequential>
+            <manual_scheduling>true</manual_scheduling>
+        </work>
+        <exist>true</exist>
+    </work-template>
+
+    <work id="sgp-work" gated="true">
+        <type xpath="//work-template[@id='sgp']"/>
+        <name>DMAIC_AUTOTEST_SEQUENCIAL_PROJECT</name>
+        <exist>true</exist>
+    </work>
+
+    <work id="nsgp-work" gated="true">
+        <type xpath="//work-template[@id='nsgp']"/>
+        <name>DMAIC_AUTOTEST_NON_SEQUENCIAL_PROJECT</name>
+        <exist>true</exist>
+    </work>
+
+
+    <!--default uix features:-->
+    <uix-feature>
+        <name>resource-planning</name>
+        <value ps="_14" condition="0|1"/>
+    </uix-feature>
+    <uix-feature>
+        <name>resource-manager</name>
+        <value>1</value>
+    </uix-feature>
+    <uix-feature>
+        <name>immediate.delegation</name>
+        <value>1</value>
+    </uix-feature>
+
+    <permissions_set>
+        <permissions target="wi">
+            <category name="none">
+                <permission value="false" disabled="true">VIEW</permission>
+            </category>
+            <category name="guest">
+                <permission value="true">VIEW</permission>
+            </category>
+            <category name="view">
+                <permission value="true">VIEW</permission>
+            </category>
+            <category name="edit">
+                <permission value="true">VIEW</permission>
+            </category>
+        </permissions>
+    </permissions_set>
+
+</config>

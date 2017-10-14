@@ -1,0 +1,29 @@
+# Control data for regression map
+# 
+# query = project = PS AND issuetype in standardIssueTypes() AND status = "QA Approved" AND  ORDER BY created DESC, priority DESC, updated DESC
+#
+
+# Release version
+Version = 17.2
+
+# Fields of interest
+Field = fields.components.name
+Field = fields.priority.name
+Field = fields.issuetype.name
+
+# Discovered by
+Field = fields.customfield_11603.value
+
+
+# Whether to use image API or latest chart API
+# Set this to true if just want PNG files.
+# Setting this to false will generate interactive HTML files.
+Image_API = false
+
+# Approving user
+# Multiple user can be specified.
+# Use comma(,) to separate multiple users.
+User = nil
+
+# End of file #  
+

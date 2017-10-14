@@ -1,0 +1,108 @@
+{
+  "__type": "ArtOfTest.WebAii.Design.Execution.TestList",
+  "__value": {
+    "TestListId": "94f1bce6-38b9-4204-b927-d1df420adf83",
+    "Id": "94f1bce6-38b9-4204-b927-d1df420adf83",
+    "TestListName": "MetricTemplate_Suite",
+    "CreationDate": "2016-04-13T11:44:19",
+    "OwnerName": null,
+    "Settings": {
+      "__type": "ArtOfTest.WebAii.Core.Settings",
+      "__value": {
+        "Web": {
+          "__type": "ArtOfTest.WebAii.Core.Settings+WebSettings",
+          "__value": {
+            "IsProfilingExecution": false,
+            "ExecutingBrowsers": [],
+            "UseMultiBrowserExecution": false,
+            "RecycleBrowser": true,
+            "AspNetDevServerPort": -1,
+            "LocalWebServer": 0,
+            "EnableUILessRequestViewing": false,
+            "WebAppPhysicalPath": "",
+            "DefaultBrowser": 1,
+            "EnableScriptLogging": false,
+            "BaseUrl": "http://ord1qapp24ps.cinteractive.com:8080/CBRE",
+            "KillBrowserProcessOnClose": false,
+            "UseHttpProxy": false,
+            "EnableSilverlight": false,
+            "VerboseHttpProxy": false,
+            "SilverlightConnectTimeout": 60000,
+            "SilverlightApplicationPath": null
+          }
+        },
+        "Wpf": {
+          "__type": "ArtOfTest.WebAii.Core.Settings+WpfSettings",
+          "__value": {
+            "DefaultApplicationPath": null
+          }
+        },
+        "CreateLogFile": true,
+        "LogLocation": "C:\\WebAiiLog\\",
+        "QueryEventLogErrorsOnExit": false,
+        "LogAnnotations": false,
+        "SimulatedMouseMoveSpeed": 0.3,
+        "WaitCheckInterval": 500,
+        "ElementWaitTimeout": 90000,
+        "ExecuteCommandTimeout": 90000,
+        "ExecutionDelay": 200,
+        "UnexpectedDialogAction": 2,
+        "AnnotateExecution": false,
+        "AnnotationMode": 0,
+        "XMultiMgr": true,
+        "ClientReadyTimeout": 90000,
+        "DisableDialogMonitoring": false
+      }
+    },
+    "Tests": [
+      {
+        "__type": "ArtOfTest.WebAii.Design.Execution.TestInfo",
+        "__value": {
+          "Id": "886001a9-8dfa-4152-aa80-45048a45787a",
+          "Path": "AutomationTests\\Project\\Metrics\\TST_MET_001.tstest",
+          "PathType": 0
+        }
+      },
+      {
+        "__type": "ArtOfTest.WebAii.Design.Execution.TestInfo",
+        "__value": {
+          "Id": "c4b64b6a-fcb5-46c3-bfac-07978e9d2ca9",
+          "Path": "AutomationTests\\Admin\\Template\\Metrics\\TST_MET_004.tstest",
+          "PathType": 0
+        }
+      },
+      {
+        "__type": "ArtOfTest.WebAii.Design.Execution.TestInfo",
+        "__value": {
+          "Id": "f68c9ce2-8c46-4e12-bd51-73194f324829",
+          "Path": "AutomationTests\\Admin\\Template\\Metrics\\TST_MET_003.tstest",
+          "PathType": 0
+        }
+      },
+      {
+        "__type": "ArtOfTest.WebAii.Design.Execution.TestInfo",
+        "__value": {
+          "Id": "1a8d795d-ca4a-4042-85ab-3c30ff028eb1",
+          "Path": "AutomationTests\\Admin\\Template\\Metrics\\TST_MET_002.tstest",
+          "PathType": 0
+        }
+      }
+    ],
+    "Filter": {
+      "__type": "ArtOfTest.WebAii.Design.Execution.Filter",
+      "__value": {
+        "Keys": [
+          "CustomProperty2"
+        ],
+        "Comparisons": [
+          "ArtOfTest.WebAii.Design.Execution.FilterComparison||Equals"
+        ],
+        "Values": [
+          "MetricTemplate"
+        ]
+      }
+    },
+    "ListType": 0,
+    "ProjectId": "8482a1a8-662a-40c8-b69e-343a43a257af"
+  }
+}

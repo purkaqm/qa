@@ -1,0 +1,125 @@
+<config>
+    <process id="dmaic-test">
+        <name>DMAIC</name>
+        <description>This is a sample DMAIC process created by an automated script</description>
+        <exist>false</exist>
+        <use-timestamp>true</use-timestamp>
+        <phase>
+            <name>Define</name>
+        </phase>
+        <phase>
+            <name>Measure</name>
+        </phase>
+        <phase>
+            <name>Analyze</name>
+        </phase>
+        <phase>
+            <name>Improve</name>
+        </phase>
+        <phase>
+            <name>Control</name>
+        </phase>
+    </process>
+
+    <process id="cdddrc-test">
+        <name>CDDDRC</name>
+        <description>This is a sample CDDDRC process created by an automated script</description>
+        <exist>false</exist>
+        <use-timestamp>true</use-timestamp>
+        <phase>
+            <name>Concept</name>
+            <percent>10</percent>
+        </phase>
+        <phase>
+            <name>Define</name>
+            <percent>20</percent>
+        </phase>
+        <phase>
+            <name>Design</name>
+            <percent>45</percent>
+        </phase>
+        <phase>
+            <name>Development</name>
+            <percent>75</percent>
+        </phase>
+        <phase>
+            <name>Release</name>
+            <percent>95</percent>
+        </phase>
+        <phase>
+            <name>Close</name>
+            <percent>100</percent>
+        </phase>
+    </process>
+
+    <tag id="planet">
+        <association>PEOPLES_USERS</association>
+        <association>WORKS_GATED_PROJECTS</association>
+        <association>WORKS_WORKS</association>
+        <name>Planet</name>
+        <description>This should be a non-hierarchical tag.</description>
+        <exist>false</exist>
+        <use-timestamp>true</use-timestamp>
+        <tag>
+            <name>Earth</name>
+        </tag>
+        <tag>
+            <name>Mercury</name>
+        </tag>
+        <tag>
+            <name>Venus</name>
+        </tag>
+        <tag>
+            <name>Jupiter</name>
+        </tag>
+        <tag>
+            <name>Mars</name>
+        </tag>
+        <tag>
+            <name>Saturn</name>
+        </tag>
+    </tag>
+
+    <tag id="location" multiple="true">
+        <exist>false</exist>
+        <use-timestamp>true</use-timestamp>
+        <association>PEOPLES_USERS</association>
+        <association>WORKS_GATED_PROJECTS</association>
+        <association>WORKS_WORKS</association>
+        <name>Location</name>
+        <description>This should be a hierarchical, multi-select tag.</description>
+        <tag>
+            <name>North America</name>
+            <tag>
+                <name>United States</name>
+                <tag>
+                    <name>Massachusetts</name>
+                    <tag>
+                        <name>Boston</name>
+                    </tag>
+                </tag>
+            </tag>
+        </tag>
+        <tag>
+            <name>Australia</name>
+            <tag>
+                <name>Sydney</name>
+            </tag>
+            <tag>
+                <name>Melbourne</name>
+            </tag>
+            <tag>
+                <name>Perth</name>
+            </tag>
+        </tag>
+        <tag>
+            <name>Asia</name>
+            <tag>
+                <name>Russia</name>
+                <tag>
+                    <name>Moscow</name>
+                </tag>
+            </tag>
+        </tag>
+    </tag>
+</config>

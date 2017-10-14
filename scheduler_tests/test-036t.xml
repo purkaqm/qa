@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="no"?>
+<Project>
+	<Tasks>
+		<Task Name="Test 36" PSObjectId="o2k00300000ecls6a5gg000000" TypeInfo="com.cinteractive.ps3.work.Work">
+			<Task Name="C2" TypeInfo="com.cinteractive.ps3.work.Milestone" Finish="10/14/2002  17:00:00" PSObjectId="o2k00300000ecls6jffg000000"/>
+			<Task Name="P2" TypeInfo="com.cinteractive.ps3.work.Work" PSObjectId="o2k00300000ecls6jff1000000">
+				<Task Name="C1" TypeInfo="com.cinteractive.ps3.work.Milestone" Finish="10/15/2002  17:00:00" PSObjectId="o2k00300000ecls6jff2000000">
+		                        <Relation PSObjectId="o2k00300000ecls6jffg000000" Type="Finish-Start"/>
+		                </Task>
+	                </Task>
+		</Task>
+	</Tasks>
+	<Problems>
+		<Problem Type="DEPENDENCY_DESCR" PSObjectId="o2k00300000ecls6jff2000000">
+			<Recommendation Type="DEP_ON_FIRST_WORK"/>
+			<Recommendation Type="DEP_ON_BOTH_WORKS"/>
+		</Problem>
+	</Problems>	
+
+</Project>
+

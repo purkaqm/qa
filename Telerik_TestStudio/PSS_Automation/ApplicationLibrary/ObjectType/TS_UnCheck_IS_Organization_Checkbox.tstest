@@ -1,0 +1,394 @@
+{
+  "__type": "ArtOfTest.WebAii.Design.ProjectModel.Test",
+  "__value": {
+    "DomStatesCounter": {},
+    "WebKitExecutionDelay": 0,
+    "ReuseAppWindow": 0,
+    "ProfilerResultsDirectory": null,
+    "ProfilerServerName": null,
+    "ProfilerBenchmarkResultsFilePath": null,
+    "ProfilerBenchmarkResultsId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurationId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurations": {},
+    "CurrentReferences": [],
+    "Steps": {
+      "__type": "ArtOfTest.Common.Design.ProjectModel.AutomationStepList",
+      "__value": [
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "6040cf04-5b93-4040-b936-6b87739e9a77",
+            "Description": "Execute test 'TS_Navigate_To_Object_Types_Page'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "TS_Navigate_To_Object_Types_Page",
+                "TestPath": "ApplicationLibrary\\CommonFeatures&Navigation\\TS_Navigate_To_Object_Types_Page.tstest",
+                "TestUniqueId": "ed453d31-630f-4317-a16e-0049fb182142",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 1,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_UnCheck_IS_Organization_Checkboxe4xq3eeh.4m1",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "c61f4d23-6e06-42d6-b51e-8ab694b1cae1",
+            "Description": "Verify Object type table is displayed",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_ObjectTypesPage.ObjectTable.Wait.ForExists();\r\n            Assert.IsTrue(Pages.PS_ObjectTypesPage.ObjectTable.IsVisible(),\"Object table should be visible\");",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 2,
+            "Id": "TS_UnCheck_IS_Organization_Checkbox_VerifyObjectTable",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_UnCheck_IS_Organization_Checkboxp0exlzmy.xbo",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "bde5d532-d912-4c06-9f8b-d573211b0197",
+            "Description": "Verify object type is present",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            ActiveBrowser.RefreshDomTree();\r\n            string objectType = Data[\"ObjectType\"].ToString();\r\n            HtmlAnchor customProjrctLink = ActiveBrowser.Find.ByXPath<HtmlAnchor>(string.Format(\"//a[contains(.,'{0}')]\",objectType));\r\n            customProjrctLink.Wait.ForExists();\r\n            customProjrctLink.Click();\r\n                                    ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 3,
+            "Id": "TS_UnCheck_IS_Organization_Checkbox_VeriftObjectType",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_UnCheck_IS_Organization_Checkboxvsgz35qm.tct",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "74475b77-d804-43f1-a70e-acfb8492ed71",
+            "Description": "Verify required elements are presents",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_ObjectTypesPage.CopyTypeLink.Wait.ForExists(30000);\r\n            Pages.PS_ObjectTypesPage.EditLink.Wait.ForExists(30000);\r\n            Pages.PS_ObjectTypesPage.ReturnToTypesImage.Wait.ForExists(30000);\r\n            Assert.IsTrue(Pages.PS_ObjectTypesPage.CopyTypeLink.IsVisible(),\"Copy link should be visible\");\r\n            Assert.IsTrue(Pages.PS_ObjectTypesPage.EditLink.IsVisible(),\"Edit link should be visible\");\r\n            Assert.IsTrue(Pages.PS_ObjectTypesPage.ReturnToTypesImage.IsVisible(),\" 'Return to type' image should be visible\");",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 4,
+            "Id": "TS_UnCheck_IS_Organization_Checkbox_VerifyElements",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_UnCheck_IS_Organization_Checkboxcafrc0f0.xqm",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "b632839c-9f5e-40d9-88ea-17fc9eeb5297",
+            "Description": "Click on Edit Link",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "                Pages.PS_ObjectTypesPage.EditLink.Click();\r\n                ActiveBrowser.WaitUntilReady();",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 5,
+            "Id": "TS_UnCheck_IS_Organization_Checkbox_ClickEditLink",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_UnCheck_IS_Organization_Checkbox0hj2r04v.3p4",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "974561cb-6659-40c4-9a35-d11070b73669",
+            "Description": "Verify user redirect to edit page of object type",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            ActiveBrowser.RefreshDomTree();\r\n            Log.WriteLine(ActiveBrowser.Url);\r\n            Assert.IsTrue(ActiveBrowser.Url.Contains(\"object_type_edit.jsp\"));",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 6,
+            "Id": "TS_UnCheck_IS_Organization_Checkbox_VerifyEdit",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_UnCheck_IS_Organization_Checkboxoflzzrev.nm4",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "4dd592a5-5869-4d21-a942-d0f91bdc6f54",
+            "Description": "Check 'Is Organization' checkbox",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            if(Pages.PS_ObjectTypesPage.IsOrganizationCheckBox.Checked)\r\n            {\r\n                Pages.PS_ObjectTypesPage.IsOrganizationCheckBox.Click();\r\n                \r\n            }\r\n            Pages.PS_ObjectTypesPage.SubmitLink.Click();\r\n            ActiveBrowser.WaitUntilReady();",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 7,
+            "Id": "TS_UnCheck_IS_Organization_Checkbox_CheckIsOrganization",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_UnCheck_IS_Organization_Checkbox2v2eas3f.2rt",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "08d98ac4-8e68-49e0-b26a-c1d89d80c63c",
+            "Description": "Verify Is Organization status is No",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            ActiveBrowser.RefreshDomTree();\r\n            System.Threading.Thread.Sleep(3000);\r\n            HtmlSpan statusNO = ActiveBrowser.Find.ByXPath<HtmlSpan>(\"//form[@name='main']//td[contains(.,'Is Organization:')]/following-sibling::td/span\");\r\n            statusNO.Wait.ForExists();\r\n            Log.WriteLine(statusNO.InnerText);\r\n            Assert.AreEqual(statusNO.InnerText,\"No\");\r\n            \r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 8,
+            "Id": "TS_UnCheck_IS_Organization_Checkbox_VerifyUnCheck",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_UnCheck_IS_Organization_Checkboxnsywlwpr.2nb",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        }
+      ]
+    },
+    "IndependentDescriptors": [],
+    "HtmlDescription": "",
+    "SilverlightEnabled": false,
+    "IsSilverlightApp": false,
+    "SilverlightAppWebUrl": "",
+    "SilverlightAppLocalDirectory": "",
+    "SilverlightAppRecordLocal": false,
+    "SilverlightAppOriginUri": null,
+    "WpfAppPath": null,
+    "UseDefaultWpfAppPath": false,
+    "TestAssembly": "PSS_Automation.dll",
+    "TestAssemblyPath": "bin",
+    "TestClass": "PSS_Automation.TS_UnCheck_IS_Organization_Checkbox",
+    "IsManual": false,
+    "ResourceFilePath": "ApplicationLibrary\\ObjectType\\TS_UnCheck_IS_Organization_Checkbox.resx",
+    "HasCodeBehind": true,
+    "DataInfo": {
+      "__type": "ArtOfTest.Common.Design.Data.DataInfo",
+      "__value": {
+        "ConnectionString": "",
+        "DefaultToGrid": true,
+        "DataRange": "",
+        "LoadRecordsCount": null,
+        "DataTableName": "",
+        "DataProvider": "",
+        "DataEnabled": true,
+        "HasBuiltinGrid": false,
+        "DataType": 4,
+        "BuiltInData": null,
+        "BuiltInDocumentKey": null,
+        "TSQL": ""
+      }
+    },
+    "VSProperties": {},
+    "DeploymentItems": [],
+    "IsTestFragment": false,
+    "StopTestListOnFailure": false,
+    "InheritParentDataSource": true,
+    "BrowserType": 0,
+    "QcId": 0,
+    "QcFilePath": null,
+    "QcTestVersionStamp": 0,
+    "TestLinks": [],
+    "Description": "",
+    "Name": "TS_UnCheck_IS_Organization_Checkbox",
+    "Owner": "",
+    "Path": "ApplicationLibrary\\ObjectType\\TS_UnCheck_IS_Organization_Checkbox.tstest",
+    "Priority": 0,
+    "TestType": 0,
+    "UniqueId": "90be25a0-b54f-434f-b9fa-eeaa089899ee",
+    "Id": "90be25a0-b54f-434f-b9fa-eeaa089899ee",
+    "ProjectId": "8482a1a8-662a-40c8-b69e-343a43a257af",
+    "Version": 200
+  }
+}

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <tooltip id="1">Tooltip test 1</tooltip>
+    <tooltip id="2">Tooltip checkboxTest 2</tooltip>
+    <menu id="1">
+        <item>1_1</item>
+        <item>1_2</item>
+    </menu>
+    <menu id="2">
+        <item>2_1</item>
+        <item>2_2</item>
+    </menu>
+    <menu id="3">
+        <item>3_1</item>
+        <item>3_2</item>
+    </menu>
+    <menu id="4">
+        <item>4_1</item>
+        <item>4_2</item>
+        <item has-submenu="true">Submenu</item>
+        <item>4_4</item>
+    </menu>
+    <menu id="submenu">
+        <item>Submenu 1</item>
+        <item>Submenu 2</item>
+        <item>Submenu 3</item>
+    </menu>
+    <dialog id="1">
+        <title>Test dialog 1</title>
+        <body>show dialog 2</body>
+    </dialog>
+    <dialog id="2">
+        <title>Test dialog 2</title>
+        <body>Dialog content</body>
+    </dialog>
+
+    <textarea>
+        <text not="iexplore">a</text>
+        <text>ab</text>
+        <text not="iexplore">abc def</text>
+        <text>okl;k lklk;l</text>
+        <text>уцкжджэд32</text>
+        <text not="iexplore">   1&#161;11111</text>
+        <text>&#169;#$%@#$^%$</text>
+        <!--<text>i&lt;input type="hidden" id='tags_op67j</text>-->
+    </textarea>
+    <textbox>
+        <text not="iexplore">1</text>
+        <text not="iexplore">1.1</text>
+        <text>-1.23</text>
+        <text not="iexplore">2.9999</text>
+        <text not="iexplore">20E0</text>
+        <text>3.1415926E1</text>
+        <text not="iexplore">99.9999</text>
+        <text not="iexplore">12345</text>
+        <!--<text>1.2345</text>--> <!--comment due to 68225-->
+        <text not="iexplore">  33333</text>
+        <text>000123445</text>
+        <text>0xffffff</text>
+        <text>1.0029999</text>
+        <text not="iexplore">-0.0003232</text>
+        <text>+200.0</text>
+        <text>200.</text>
+        <text>123e4</text>
+        <text>100</text>
+        <text not="iexplore">0</text>
+        <text not="iexplore">55</text>
+    </textbox>
+
+    <combobox id="1">
+        <text ps="_8_2"></text>
+        <text>1</text>
+        <text>2</text>
+        <text ps="_9_0">some value</text>
+    </combobox>
+    <combobox id="2">
+        <text>1</text>
+        <text>2</text>
+        <default>1</default>
+    </combobox>
+    <combobox id="3">
+        <text>aaaa</text>
+        <text>bbbb</text>
+        <!--its for 91: -->
+        <default>bbbb</default>
+    </combobox>
+    <combobox id="4">
+        <text>ffff</text>
+        <text>gggg</text>
+        <!--its for 91: -->
+        <default>gggg</default>
+    </combobox>
+
+    <checkbox>
+        <true>on</true>
+        <false>false</false>
+    </checkbox>
+    <radiobutton id="1">
+        <true>news</true>
+        <false>false</false>
+    </radiobutton>
+    <radiobutton id="2">
+        <true>talk</true>
+        <false>false</false>
+    </radiobutton>
+    <messages>
+        <click>\d{2}:\d{2}:\d{2} - click</click>
+    </messages>
+
+    <lighbox-dialog id="1">
+        <image>bg-login.gif</image>
+        <title>Title: img1 la-la-la-la-la-la-la-la-la-la-la-la</title>
+        <description>Description: description\n longgggggggggggggggggg very longgggggggggg</description>
+    </lighbox-dialog>
+    <lighbox-dialog id="2">
+        <image>bg-button-blue.gif</image>
+        <title>Title: img2</title>
+    </lighbox-dialog>
+
+</config>

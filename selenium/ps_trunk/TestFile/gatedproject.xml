@@ -1,0 +1,105 @@
+<config>
+    <work-name id="asap">Gated Project ASAP</work-name>
+    <work-name id="fd">Gated Project FD</work-name>
+    <work-name id="fnlt">Gated Project FNLT</work-name>
+    <work-name id="snet">Gated Project SNET</work-name>
+    <work-name id="sgp-test">Gated Project SGP</work-name>
+
+    <work-template id="asap">
+        <description>This is ASAP Gated Project Without Enforce Sequential</description>
+        <name>GatedProjectTemplate_ASAP</name>
+        <is-show-selected-children-step>false</is-show-selected-children-step>
+        <work>
+            <enforce_sequential>false</enforce_sequential>
+            <name>GATED PROJECT ASAP</name>
+            <process xpath="//process[@id='dmaic']"/>
+            <constraint name="ASAP"/>
+            <user role="Champion" id="default-user"/>
+        </work>
+        <exist>false</exist>
+        <use-timestamp>true</use-timestamp>
+    </work-template>
+
+    <work-template id="fd">
+        <name>Gate Project Template FD</name>
+        <description>This is FD Gated Project Without Enforce Sequential</description>
+        <is-show-selected-children-step>true</is-show-selected-children-step>
+        <is-required-gate-end-dates>false</is-required-gate-end-dates>
+        <work>
+            <enforce_sequential>false</enforce_sequential>
+            <name>GATED PROJECT FD</name>
+            <process xpath="//process[@id='dmaic']"/>
+            <constraint name="FD"/>
+            <start_date>02/02/2010</start_date>
+            <end_date>02/14/2010</end_date>
+            <inherit_permissions>false</inherit_permissions>
+            <inherit_controls>false</inherit_controls>
+            <manual_scheduling>true</manual_scheduling>
+            <control_cost>false</control_cost>
+            <user role="Champion" id="default-user"/>
+        </work>
+        <exist>false</exist>
+        <use-timestamp>true</use-timestamp>
+    </work-template>
+
+    <work-template id="fnlt">
+        <name>Gate Project Template FNLT</name>
+        <description>This is FNLT Gated Project Without Enforce Sequential</description>
+        <is-show-selected-children-step>false</is-show-selected-children-step>
+        <work>
+            <enforce_sequential>false</enforce_sequential>
+            <name>GATED PROJECT FNLT</name>
+            <process xpath="//process[@id='dmaic']"/>
+            <constraint name="FNLT"/>
+            <end_date>02/15/2010</end_date>
+            <user role="Champion" id="default-user"/>
+        </work>
+        <exist>false</exist>
+        <use-timestamp>true</use-timestamp>
+    </work-template>
+
+
+    <work-template id="snet">
+        <name>Gate Project Template SNET</name>
+        <description>This is SNET Gated Project Without Enforce Sequential</description>
+        <is-show-selected-children-step>false</is-show-selected-children-step>
+        <work>
+            <enforce_sequential>false</enforce_sequential>
+            <name>GATED PROJECT SNET</name>
+            <process xpath="//process[@id='dmaic']"/>
+            <constraint name="SNET"/>
+            <start_date>02/15/2010</start_date>
+            <manual_scheduling>false</manual_scheduling>
+            <user role="Champion" id="default-user"/>
+        </work>
+        <exist>false</exist>
+        <use-timestamp>true</use-timestamp>
+    </work-template>
+
+
+    <work-template id="sgp-test">
+        <name>Gate Project Template ESG</name>
+        <description>This is Gated Project With Enforce Sequential</description>
+        <is-show-selected-children-step>true</is-show-selected-children-step>
+        <is-required-gate-end-dates>true</is-required-gate-end-dates>
+        <work>
+            <enforce_sequential>true</enforce_sequential>
+            <name>GATED PROJECT ESG</name>
+            <process xpath="//process[@id='dmaic']"/>
+            <start_date>{time} + 5</start_date>
+            <end_date>{time} + 25</end_date>
+            <inherit_permissions>true</inherit_permissions>
+            <inherit_controls>true</inherit_controls>
+            <manual_scheduling>false</manual_scheduling>
+            <control_cost>true</control_cost>
+            <user role="Champion" id="user1"/>
+            <gate>
+                <end_date>{time} + 10</end_date>
+                <name>Define</name>
+            </gate>
+        </work>
+        <exist>false</exist>
+        <use-timestamp>true</use-timestamp>
+    </work-template>
+
+</config>

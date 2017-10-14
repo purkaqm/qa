@@ -1,0 +1,193 @@
+{
+  "__type": "ArtOfTest.WebAii.Design.ProjectModel.Test",
+  "__value": {
+    "DomStatesCounter": {},
+    "WebKitExecutionDelay": 0,
+    "ReuseAppWindow": 0,
+    "ProfilerResultsDirectory": null,
+    "ProfilerServerName": null,
+    "ProfilerBenchmarkResultsFilePath": null,
+    "ProfilerBenchmarkResultsId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurationId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurations": {},
+    "CurrentReferences": [],
+    "Steps": {
+      "__type": "ArtOfTest.Common.Design.ProjectModel.AutomationStepList",
+      "__value": [
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "f56f7e51-109b-48bd-b22a-92f421f4f395",
+            "Description": "[TS_Open_Add_To_Favorites_Dialog_CodedStep] : New Coded Step",
+            "CustomDescription": "Click Favorites Icon on Header",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            ActiveBrowser.WaitForAjax(Manager.Settings.ElementWaitTimeout);\r\n            Pages.PS_HomePage.HeaderFavoriteIconSpan.Wait.ForVisible();\r\n            Pages.PS_HomePage.CenterContainerDiv.Wait.ForVisible();\r\n            Pages.PS_HomePage.HeaderFavoriteIconSpan.Click();",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 1,
+            "Id": "TS_Open_Add_To_Favorites_Dialog_CodedStep",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Open_Add_To_Favorites_Dialogvvt4brq1.mez",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "5dff0eb2-f0b7-4cd9-ad85-2e9665e055d6",
+            "Description": "[TS_Open_Add_To_Favorites_Dialog_CodedStep1] : New Coded Step",
+            "CustomDescription": "Wait for Add To Favorites Pop up to be displayed",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_HomePage.AddToFavouritesDialogDiv.Wait.ForVisible();\r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 2,
+            "Id": "TS_Open_Add_To_Favorites_Dialog_CodedStep1",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Open_Add_To_Favorites_Dialogc4unpmvt.gq3",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "ee90e40b-5230-4348-86bc-eb309c21d001",
+            "Description": "[TS_Open_Add_To_Favorites_Dialog_CodedStep2] : New Coded Step",
+            "CustomDescription": "Check all Add to Favorites dialog elements are displayed",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Assert.IsTrue(Pages.PS_HomePage.AddToFavDialogTitleDiv.InnerText.Contains(\"Add to Favorites\"),\"Add to Favorites dialog should be displayed\");\r\n            Assert.IsTrue(Pages.PS_HomePage.AddToFavDialogNameText.IsVisible(),\"Name field should be present in Add to Favorites dialog\");\r\n            Assert.IsTrue(Pages.PS_HomePage.AddToFavDialogDescTextArea.IsVisible(),\"Description textarea should be present in Add to Favorites dialog\");\r\n            Assert.IsTrue(Pages.PS_HomePage.AddToFavDialogPinnedCheckBox.IsVisible(),\"Pinned check box should be displayed in Add to Favorites dialog\");\r\n            Assert.IsTrue(Pages.PS_HomePage.AddToFavDialogGoToFavCheckBox.IsVisible(),\"Go to Favorites page chec box should be present in Add to Favorites dialog\");\r\n            Assert.IsTrue(Pages.PS_HomePage.AddToFavDialogAddButton.IsVisible(),\"Add button should be displayed in Add to Favorites dialog\");\r\n            Assert.IsTrue(Pages.PS_HomePage.AddToFavDialogCancelButton.IsVisible(),\"Cancel button should be present in Add to Favorites dialog\");\r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 3,
+            "Id": "TS_Open_Add_To_Favorites_Dialog_CodedStep2",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Open_Add_To_Favorites_Dialogz2dzawxq.w4p",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        }
+      ]
+    },
+    "IndependentDescriptors": [],
+    "HtmlDescription": "",
+    "SilverlightEnabled": false,
+    "IsSilverlightApp": false,
+    "SilverlightAppWebUrl": "",
+    "SilverlightAppLocalDirectory": "",
+    "SilverlightAppRecordLocal": false,
+    "SilverlightAppOriginUri": null,
+    "WpfAppPath": null,
+    "UseDefaultWpfAppPath": false,
+    "TestAssembly": "PSS_Automation.dll",
+    "TestAssemblyPath": "bin",
+    "TestClass": "PSS_Automation.TS_Open_Add_To_Favorites_Dialog",
+    "IsManual": false,
+    "ResourceFilePath": "ApplicationLibrary\\CommonFeatures&Navigation\\TS_Open_Add_To_Favorites_Dialog.resx",
+    "HasCodeBehind": true,
+    "DataInfo": {
+      "__type": "ArtOfTest.Common.Design.Data.DataInfo",
+      "__value": {
+        "ConnectionString": "",
+        "DefaultToGrid": true,
+        "DataRange": "",
+        "LoadRecordsCount": null,
+        "DataTableName": "",
+        "DataProvider": "",
+        "DataEnabled": true,
+        "HasBuiltinGrid": false,
+        "DataType": 4,
+        "BuiltInData": null,
+        "BuiltInDocumentKey": null,
+        "TSQL": ""
+      }
+    },
+    "VSProperties": {},
+    "DeploymentItems": [],
+    "IsTestFragment": false,
+    "StopTestListOnFailure": false,
+    "InheritParentDataSource": false,
+    "BrowserType": 0,
+    "QcId": 0,
+    "QcFilePath": null,
+    "QcTestVersionStamp": 0,
+    "TestLinks": [],
+    "Description": "",
+    "Name": "TS_Open_Add_To_Favorites_Dialog",
+    "Owner": null,
+    "Path": "ApplicationLibrary\\CommonFeatures&Navigation\\TS_Open_Add_To_Favorites_Dialog.tstest",
+    "Priority": 0,
+    "TestType": 0,
+    "UniqueId": "2afa3dbc-0ba1-448d-a52b-d89bf1336789",
+    "Id": "2afa3dbc-0ba1-448d-a52b-d89bf1336789",
+    "ProjectId": "8482a1a8-662a-40c8-b69e-343a43a257af",
+    "Version": 200
+  }
+}

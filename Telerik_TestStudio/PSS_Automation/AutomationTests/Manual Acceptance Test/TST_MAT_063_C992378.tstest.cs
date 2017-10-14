@@ -1,0 +1,66 @@
+using Telerik.TestingFramework.Controls.KendoUI;
+using Telerik.WebAii.Controls.Html;
+using Telerik.WebAii.Controls.Xaml;
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Linq;
+
+using ArtOfTest.Common.UnitTesting;
+using ArtOfTest.WebAii.Core;
+using ArtOfTest.WebAii.Controls.HtmlControls;
+using ArtOfTest.WebAii.Controls.HtmlControls.HtmlAsserts;
+using ArtOfTest.WebAii.Design;
+using ArtOfTest.WebAii.Design.Execution;
+using ArtOfTest.WebAii.ObjectModel;
+using ArtOfTest.WebAii.Silverlight;
+using ArtOfTest.WebAii.Silverlight.UI;
+
+namespace PSS_Automation
+{
+
+    public class TST_MAT_063_C992378 : BaseWebAiiTest
+    {
+        #region [ Dynamic Pages Reference ]
+
+        private Pages _pages;
+
+        /// <summary>
+        /// Gets the Pages object that has references
+        /// to all the elements, frames or regions
+        /// in this project.
+        /// </summary>
+        public Pages Pages
+        {
+            get
+            {
+                if (_pages == null)
+                {
+                    _pages = new Pages(Manager.Current);
+                }
+                return _pages;
+            }
+        }
+
+        #endregion
+        
+        // Add your test methods here...
+    
+        [CodedStep(@"Mouse hover over 'Favorites' icon on icon bar")]
+        public void TST_MAT_063_C992378_MouseHoverFavoriteIcon()
+        {
+            Pages.PS_HomePage.FavoritesLeftNavLink.MouseHover();
+            System.Threading.Thread.Sleep(3*1000);
+        }
+    
+        [CodedStep(@"Verify required elements are present")]
+        public void TST_MAT_063_C992378_CodedStep()
+        {
+            Pages.PS_HomePage.ManageFavoritesLeftNavDiv.Wait.ForExists();
+            Pages.PS_HomePage.FavoritesAddToFavoritesTab.Wait.ForExists();
+            
+            Assert.IsTrue(Pages.PS_HomePage.ManageFavoritesLeftNavDiv.IsVisible(),"Manage favorite link should be visible");
+            Assert.IsTrue(Pages.PS_HomePage.FavoritesAddToFavoritesTab.IsVisible(),"Add to favorite link should be visible");
+        }
+    }
+}

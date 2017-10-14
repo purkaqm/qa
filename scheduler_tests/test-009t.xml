@@ -1,0 +1,22 @@
+<?xml version="1.0" standalone="no"?>
+
+
+<Project>
+	<Tasks>
+		<Task Name="Test 9" ActualStart="01/17/2001 09:00:00" ActualFinish="01/22/2001 17:00:00" PSObjectId="o2k00380000ecdrj8j1g000000">
+			<Task Name="CP1" ActualStart="01/17/2001 09:00:00" ActualFinish="01/17/2001 17:00:00" PSObjectId="o2k00380000ecdrkaob0000000"/>
+			<Task Name="CP2" ActualStart="01/17/2001 09:00:00" ActualFinish="01/22/2001 17:00:00" PSObjectId="o2k00380000ecdrksmeg000000"/>
+			<Task Name="CP3" ActualStart="01/18/2001 09:00:00" ActualFinish="01/18/2001 17:00:00" PSObjectId="o2k00380000ecdrl8520000000"/>
+		</Task>
+	</Tasks>
+	<ResourcePool/>
+	<Problems>
+		<Problem Type="DEPENDENCY_DESCR" PSObjectId="o2k00380000ecdrl8520000000">
+			<Recommendation Type="DEP_ON_BOTH_WORKS"/>
+		</Problem>
+		<Problem Type="ON_DATE_DESCR" PSObjectId="o2k00380000ecdrkaob0000000">
+			<Recommendation Type="DEP_ON_FIRST_WORK"/>
+		</Problem>
+
+	</Problems>	
+</Project>

@@ -1,0 +1,607 @@
+{
+  "__type": "ArtOfTest.WebAii.Design.ProjectModel.Test",
+  "__value": {
+    "DomStatesCounter": {},
+    "WebKitExecutionDelay": 0,
+    "ReuseAppWindow": 0,
+    "ProfilerResultsDirectory": null,
+    "ProfilerServerName": null,
+    "ProfilerBenchmarkResultsFilePath": null,
+    "ProfilerBenchmarkResultsId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurationId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurations": {},
+    "CurrentReferences": [
+      "System",
+      "System.Core",
+      "ArtOfTest.WebAii, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=4fd5f65be123776c",
+      "ArtOfTest.WebAii.Design, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=4fc62bbc3827ab1d",
+      "Telerik.WebAii.Controls.Html, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.WebAii.Controls.Xaml, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.WebAii.Controls.Xaml.Wpf, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.TestingFramework.Controls.KendoUI, Version=2015.1.319.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a",
+      "Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a",
+      "System.Data",
+      "System.Drawing",
+      "System.Windows.Forms"
+    ],
+    "Steps": {
+      "__type": "ArtOfTest.Common.Design.ProjectModel.AutomationStepList",
+      "__value": [
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "205f97a6-973b-4398-9fe7-f0b87227e5fa",
+            "Description": "Navigate to Landing Page and Login",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CommentActionDescriptor",
+              "__value": {
+                "Comment": null,
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 1,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Verify_Default_Pinned_Pagesqwcd4aya.pfh",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "41a7026b-75fd-408d-9e48-887d5663cafe",
+            "Description": "Execute test 'TS_Login'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "TS_Login",
+                "TestPath": "ApplicationLibrary\\CommonFeatures&Navigation\\TS_Login.tstest",
+                "TestUniqueId": "f0cfc9cb-5d6e-45f3-95d8-409c6181aa54",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 2,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Verify_Default_Pinned_Pagesjpqbv3c5.fwe",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "7fa1609e-1937-42f3-9651-870f9db498ec",
+            "Description": "New Coded Step",
+            "CustomDescription": "Verify Default Pinned Pages are present in navigation menu",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_HomePage.HomeLeftNavLink.MouseHover();\r\n            System.Threading.Thread.Sleep(3000);\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForVisible();\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForContent(FindContentType.InnerText,\"HOME\");\r\n            \r\n            string pinnedPage1MenuLocator = string.Format(AppLocators.get(\"left_nav_pinned_menu_item\"),\"Configure Home Page\");\r\n            Assert.IsTrue(ActiveBrowser.Find.AllByXPath(pinnedPage1MenuLocator).Count>0, \"Configure Home Page should be listed in Pinned Pages Menu\");\r\n            string pinnedPage2MenuLocator = string.Format(AppLocators.get(\"left_nav_pinned_menu_item\"),\"Create a Project\");\r\n            Assert.IsTrue(ActiveBrowser.Find.AllByXPath(pinnedPage2MenuLocator).Count>0, \"Create a Project page should be listed in Pinned Pages Menu\");\r\n            string pinnedPage3MenuLocator = string.Format(AppLocators.get(\"left_nav_pinned_menu_item\"),\"Submit an Idea\");\r\n            Assert.IsTrue(ActiveBrowser.Find.AllByXPath(pinnedPage3MenuLocator).Count>0, \"Submit an Idea page should be listed in Pinned Pages Menu\");\r\n            string pinnedPage4MenuLocator = string.Format(AppLocators.get(\"left_nav_pinned_menu_item\"),\"Run a Report\");\r\n            Assert.IsTrue(ActiveBrowser.Find.AllByXPath(pinnedPage4MenuLocator).Count>0, \"Run a Report page should be listed in Pinned Pages Menu\");\r\n            Assert.IsTrue(Pages.PS_HomePage.HomeLeftNavLink.Attributes.Single(x => x.Name == \"title\").Value.Equals(\"Home\"),\"Home icon on hover tool tip text should be 'Home'\");\r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 3,
+            "Id": "TST_Verify_Default_Pinned_Pages_CodedStep",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Verify_Default_Pinned_Pagesoocajm5g.x3s",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "ad0445d9-4e4f-4066-acd6-8af1b604ea0a",
+            "Description": "New Coded Step",
+            "CustomDescription": "Verify that 'Configure Home Page' redirects to user preferences page",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            HtmlAnchor configureHomeLink = ActiveBrowser.Find.ByXPath<HtmlAnchor>(string.Format(AppLocators.get(\"left_nav_pinned_menu_item\"),\"Configure Home Page\"));\r\n            configureHomeLink.Click();\r\n            ActiveBrowser.WaitUntilReady();\r\n            Pages.PS_SettingsPreferencesPage.PreferencesContainer.Wait.ForVisible();\r\n            string pageTitle = Pages.PS_HomePage.PageTitleDiv.InnerText;\r\n            Assert.IsTrue(pageTitle.Contains(\"Settings\") && pageTitle.Contains(\"Preferences\"),\"User should be navigated to Settings : Preferences page\");\r\n            \r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 4,
+            "Id": "TST_Verify_Default_Pinned_Pages_CodedStep1",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Verify_Default_Pinned_Pagesqoumude3.vn3",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "2d345135-89e4-438d-9bb0-1a14dcb22b22",
+            "Description": "New Coded Step",
+            "CustomDescription": "Verify that 'Create a Project' redirects to new project page",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_HomePage.HomeLeftNavLink.MouseHover();\r\n            System.Threading.Thread.Sleep(3000);\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForVisible();\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForContent(FindContentType.InnerText,\"HOME\");\r\n            \r\n            HtmlAnchor createProjectLink = ActiveBrowser.Find.ByXPath<HtmlAnchor>(string.Format(AppLocators.get(\"left_nav_pinned_menu_item\"),\"Create a Project\"));\r\n            createProjectLink.Click();\r\n            ActiveBrowser.WaitUntilReady();\r\n            Pages.PS_HomePage.PageTitleDiv.Wait.ForContent(FindContentType.InnerText,\"Add: Project\");\r\n            ActiveBrowser.WaitForAjax(Manager.Settings.ElementWaitTimeout);\r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 5,
+            "Id": "TST_Verify_Default_Pinned_Pages_CodedStep2",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Verify_Default_Pinned_Pagesl4hgjjtb.lls",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "6550cc1e-89c8-4b55-8c68-a41cbc29332c",
+            "Description": "New Coded Step",
+            "CustomDescription": "Verify that 'Submit an Idea' redirects to new idea page",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_HomePage.HomeLeftNavLink.MouseHover();\r\n            \r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForVisible();\r\n            ActiveBrowser.RefreshDomTree();\r\n            System.Threading.Thread.Sleep(3000);\r\n            //Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForContent(FindContentType.InnerText,\"HOME\");\r\n            \r\n            HtmlAnchor submitIdeaLink = ActiveBrowser.Find.ByXPath<HtmlAnchor>(string.Format(AppLocators.get(\"left_nav_pinned_menu_item\"),\"Submit an Idea\"));\r\n            Log.WriteLine(string.Format(AppLocators.get(\"left_nav_pinned_menu_item\"),\"Submit an Idea\"));\r\n            submitIdeaLink.MouseHover();\r\n            submitIdeaLink.Click();\r\n            ActiveBrowser.WaitUntilReady();\r\n            Pages.PS_SubmitAnIdeaPage.SubmitIdeaInputButton.Wait.ForExists();\r\n            Pages.PS_SubmitAnIdeaPage.SubmitIdeaInputButton.Wait.ForVisible();\r\n            Pages.PS_HomePage.PageTitleDiv.Wait.ForContent(FindContentType.InnerText,\"Submit an Idea\");\r\n            Pages.PS_SubmitAnIdeaPage.SubmitIdeaInputButton.Wait.ForExists();\r\n            Pages.PS_SubmitAnIdeaPage.SubmitIdeaInputButton.Wait.ForVisible();\r\n            Assert.IsTrue(Pages.PS_SubmitAnIdeaPage.SubmitIdeaInputButton.IsVisible(),\"User should be navigated to Submit an Idea page\");\r\n            \r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 6,
+            "Id": "TST_Verify_Default_Pinned_Pages_CodedStep3",
+            "StepState": 1,
+            "ContinueOnFailure": true,
+            "StepImageKey": "TST_Verify_Default_Pinned_Pagesmwaum3rj.lit",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "3e4bf596-04aa-4712-9eb5-d7d2a65d015b",
+            "Description": "New Coded Step",
+            "CustomDescription": "Verify that 'Run a Report' redirects to reports page",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_HomePage.HomeLeftNavLink.MouseHover();\r\n            Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForVisible();\r\n            ActiveBrowser.RefreshDomTree();\r\n            System.Threading.Thread.Sleep(3000);\r\n            //Pages.PS_HomePage.NavPanelTitleDiv.Wait.ForContent(FindContentType.InnerText,\"HOME\");\r\n            \r\n            HtmlAnchor runReportLink = ActiveBrowser.Find.ByXPath<HtmlAnchor>(string.Format(AppLocators.get(\"left_nav_pinned_menu_item\"),\"Run a Report\"));\r\n            runReportLink.Click();\r\n            ActiveBrowser.WaitUntilReady();\r\n            Pages.PS_MyReportsPage.AddNewReportInputButton.Wait.ForExists();\r\n            //Pages.PS_MyReportsPage.AddNewReportInputButton.Wait.ForVisible();\r\n            string pageTitle = Pages.PS_HomePage.PageTitleDiv.InnerText;\r\n            Assert.IsTrue(pageTitle.Contains(\"My Reports | Reports\"),\"User should be navigated to My Reports | Reports page\");         \r\n                      \r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 7,
+            "Id": "TST_Verify_Default_Pinned_Pages_CodedStep4",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TST_Verify_Default_Pinned_Pagesp5bv5rkd.wjs",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        }
+      ]
+    },
+    "IndependentDescriptors": [
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "/person/settings/Preferences.epage",
+              "Query": "?sp=U19d4g0g0000l2r2sksr0000000",
+              "BaseUrl": "http://lax1qapp05.cinteractive.com:8080",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "Settings",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_SettingsPreferencesPage"
+            }
+          },
+          "Frame": null,
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "B2Br9JzfDtNf8BCLq1TrCCyecng=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "PreferencesContainer",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "xpath=//div[@class='Settings']"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/div[9]/div[2]/div[2]/div[1]/form[1]/div[4]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlDiv",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      },
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "http://lax1qapp05.cinteractive.com:8080/Cognex/project/IdeaPortal.epage",
+              "Query": "?sp=S1801a2g0000ijctg4deg000000",
+              "BaseUrl": "",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "Submit an Idea | PowerSteering trunk",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_SubmitAnIdeaPage"
+            }
+          },
+          "Frame": null,
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "mfLHJtC5ydCd8I48t65MKB/ULGY=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "EnterIdeaNameHeader",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "TextContent=~enter a name for your Idea"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/div[9]/div[2]/div[1]/div[1]/div[2]/form[1]/div[2]/div[1]/h4[1]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlControl",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      },
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "http://lax1qapp05.cinteractive.com:8080/Cognex/project/IdeaPortal.epage",
+              "Query": "?sp=S1801a2g0000ijctg4deg000000",
+              "BaseUrl": "",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "Submit an Idea | PowerSteering trunk",
+              "CompareMode": 4,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_SubmitAnIdeaPage"
+            }
+          },
+          "Frame": null,
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "UNXdCBTUlg6+UxGd4Bz/X7DSEDo=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "SubmitIdeaInputButton",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "xpath=//input[@id='Submit']"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/div[9]/div[2]/div[1]/div[1]/div[2]/form[1]/div[4]/div[1]/input[1]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlInputSubmit",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      },
+      {
+        "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+        "__value": {
+          "Name": "$$Independent$$",
+          "Region": null,
+          "Page": {
+            "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+            "__value": {
+              "Path": "http://lax1qapp05.cinteractive.com:8080/Cognex/reports/ReportFolder.epage",
+              "Query": "?sp=U19d4g0g0000l2r2sksr0000004",
+              "BaseUrl": "",
+              "EquivalentUrls": [],
+              "Fragment": "",
+              "Title": "My Reports | Reports | PowerSteering trunk",
+              "CompareMode": 2,
+              "AlwaysUseTitleInCompare": false,
+              "FriendlyName": "PS_MyReportsPage"
+            }
+          },
+          "Frame": null,
+          "FindInfo": null,
+          "FindExpression": {
+            "__type": "ArtOfTest.Common.Design.ProjectModel.Elements.FindExpressionElement",
+            "__value": {
+              "uniqueKey": "cIE5NiW4E89lY2i229m/quFBvX0=",
+              "NodeKind": 4,
+              "TechnologyType": 1,
+              "Name": "AddNewReportInputButton",
+              "FindExpressions": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                    "__value": {
+                      "Clauses": [
+                        {
+                          "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                          "__value": {
+                            "Clause": "xpath=//div[@class='toolbar-bottom clearfix']//input[@value='Add New']"
+                          }
+                        }
+                      ],
+                      "Constraints": [],
+                      "ChainStops": []
+                    }
+                  }
+                }
+              ],
+              "BackupSearchClause": "/html[1]/body[1]/div[9]/div[2]/div[2]/div[1]/div[2]/form[1]/div[3]/div[2]/input[1]",
+              "DataBindingExpressions": {}
+            }
+          },
+          "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlInputSubmit",
+          "IsIndependent": true,
+          "DomStateKey": "",
+          "TechnologyType": 1,
+          "Version": 200
+        }
+      }
+    ],
+    "HtmlDescription": "",
+    "SilverlightEnabled": false,
+    "IsSilverlightApp": false,
+    "SilverlightAppWebUrl": "",
+    "SilverlightAppLocalDirectory": "",
+    "SilverlightAppRecordLocal": false,
+    "SilverlightAppOriginUri": null,
+    "WpfAppPath": null,
+    "UseDefaultWpfAppPath": false,
+    "TestAssembly": "PSS_Automation.dll",
+    "TestAssemblyPath": "bin",
+    "TestClass": "PSS_Automation.TST_FAV_003",
+    "IsManual": false,
+    "ResourceFilePath": "AutomationTests\\Favorites\\TST_FAV_003.resx",
+    "HasCodeBehind": true,
+    "DataInfo": {
+      "__type": "ArtOfTest.Common.Design.Data.DataInfo",
+      "__value": {
+        "ConnectionString": "",
+        "DefaultToGrid": true,
+        "DataRange": "",
+        "LoadRecordsCount": null,
+        "DataTableName": "",
+        "DataProvider": "",
+        "DataEnabled": true,
+        "HasBuiltinGrid": false,
+        "DataType": 4,
+        "BuiltInData": null,
+        "BuiltInDocumentKey": null,
+        "TSQL": ""
+      }
+    },
+    "VSProperties": {},
+    "DeploymentItems": [],
+    "IsTestFragment": false,
+    "StopTestListOnFailure": false,
+    "InheritParentDataSource": false,
+    "BrowserType": 0,
+    "QcId": 0,
+    "QcFilePath": null,
+    "QcTestVersionStamp": 0,
+    "CustomProperty1": "Regression",
+    "CustomProperty2": "Favorites",
+    "TestLinks": [],
+    "Description": "This test verifies that all 4 default pinned pages : Configure Home Page, Create a Project, Submit an Idea and Run a Report are present in navigation menu and redirects to respective pages\r\n\r\nTestRail Test case(s) reference: C212074, C212075, C212076, C212077",
+    "Name": "TST_FAV_003",
+    "Owner": "Pratik Gajjar",
+    "Path": "AutomationTests\\Favorites\\TST_FAV_003.tstest",
+    "Priority": 0,
+    "TestType": 0,
+    "UniqueId": "7b6f178a-c57a-4bd7-bf23-f3ae7365d123",
+    "Id": "7b6f178a-c57a-4bd7-bf23-f3ae7365d123",
+    "ProjectId": "8482a1a8-662a-40c8-b69e-343a43a257af",
+    "Version": 200
+  }
+}

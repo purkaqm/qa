@@ -1,0 +1,181 @@
+<config>
+
+    <filters>
+        <exactly>CAN'T FIND</exactly>
+        <exactly xpath="//work[@id='work2']/name"/>
+        <exactly xpath="//work[@id='work0']/name"/>
+        <any-of>CAN'T FIND</any-of>
+        <any-of>design coding</any-of>
+        <any-of>root</any-of>
+        <all-of>CAN'T FIND</all-of>
+        <all-of>design coding</all-of>
+        <all-of>item design</all-of>
+    </filters>
+
+    <input-test-data>
+        <text>1</text>
+        <text>1.1</text>
+        <text>-1.23</text>
+        <text>2.9999</text>
+        <text>+200.0</text>
+        <text>200.</text>
+        <text>123e4</text>
+        <text>100</text>
+        <text>0</text>
+        <text>55</text>
+    </input-test-data>
+
+    <work id="1">
+        <name>auto_1st</name>
+        <critical_path ps="_10_0" condition="false|true">true</critical_path>
+        <manual_scheduling>false</manual_scheduling>
+        <manual_scheduling_dependencies>false</manual_scheduling_dependencies>
+        <type>Work</type>
+        <exist>false</exist>
+        <use-timestamp>true</use-timestamp>
+    </work>
+    <work id="A">
+        <type name="work"/>
+        <name>A</name>
+        <constraint name="ASAP"/>
+        <exist>false</exist>
+    </work>
+    <work id="B">
+        <type name="msp_project"/>
+        <name>B</name>
+        <constraint name="ASAP"/>
+        <exist>false</exist>
+    </work>
+    <work id="C">
+        <type name="work"/>
+        <name>C</name>
+        <constraint name="FD"/>
+        <start_date>{time} + 5</start_date>
+        <end_date>{time} + 30</end_date>
+        <critical_path>true</critical_path>
+        <exist>false</exist>
+    </work>
+    <work id="D">
+        <type name="folder"/>
+        <name>D</name>
+        <constraint name="MSO"/>
+        <start_date>{time}</start_date>
+        <critical_path ps="_10_0" condition="false|true">true</critical_path>
+        <exist>false</exist>
+    </work>
+    <work id="E">
+        <type name="milestone"/>
+        <name>E</name>
+        <constraint name="MFO"/>
+        <end_date>{time} + 5</end_date>
+        <critical_path>true</critical_path>
+        <is_milestone>true</is_milestone>
+        <exist>false</exist>
+    </work>
+    <work id="F">
+        <type name="action_item"/>
+        <name>F</name>
+        <constraint name="SNET"/>
+        <start_date>{time}</start_date>
+        <critical_path>false</critical_path>
+        <exist>false</exist>
+    </work>
+
+    <work id="2">
+        <name>auto_2st</name>
+        <type>Work</type>
+        <exist>false</exist>
+        <work id="2.1">
+            <name>child_A</name>
+            <type>Work</type>
+        </work>
+        <work id="2.2">
+            <name>child_B</name>
+            <type>Work</type>
+        </work>
+        <use-timestamp>true</use-timestamp>
+    </work>
+
+    <work id="I">
+        <name>I</name>
+        <constraint name="ASAP"/>
+        <type name="folder"/>
+        <exist>false</exist>
+        <work id="J">
+            <name>J</name>
+            <type name="folder"/>
+            <constraint name="SNLT"/>
+            <start_date>{time}</start_date>
+            <work id="K">
+                <name>K</name>
+                <constraint name="ASAP"/>
+                <type name="work"/>
+                <work id="L">
+                    <name>L</name>
+                    <type name="work"/>
+                    <end_date>{time} + 15</end_date>
+                    <constraint name="FNLT"/>
+                </work>
+            </work>
+        </work>
+        <work id="M">
+            <name>M</name>
+            <type name="work"/>
+            <constraint name="ASAP"/>
+            <work id="N">
+                <type name="work"/>
+                <name>N</name>
+                <constraint name="ASAP"/>
+            </work>
+        </work>
+        <work id="O">
+            <type name="work"/>
+            <name>O</name>
+            <constraint name="ASAP"/>
+        </work>
+    </work>
+
+    <work id="G">
+        <type name="folder"/>
+        <name>G</name>
+        <constraint name="SNLT"/>
+        <start_date>{time}</start_date>
+        <exist>false</exist>
+    </work>
+    <work id="H">
+        <type name="work"/>
+        <name>G</name>
+        <constraint name="FNLT"/>
+        <end_date>{time} + 15</end_date>
+        <exist>false</exist>
+    </work>
+    <work id="P">
+        <type name="work"/>
+        <name>P</name>
+        <constraint name="ASAP"/>
+        <exist>false</exist>
+    </work>
+    <work id="R">
+        <type name="work"/>
+        <name>R</name>
+        <constraint name="ASAP"/>
+        <exist>false</exist>
+    </work>
+    <work id="S">
+        <type name="msp_project"/>
+        <name>S</name>
+        <constraint name="ASAP"/>
+        <exist>false</exist>
+    </work>
+
+    <work id="3">
+        <name>auto_3rd</name>
+        <type>Work</type>
+        <plan_resources>true</plan_resources>
+        <start_date></start_date>
+        <end_date></end_date>
+        <exist>false</exist>
+        <use-timestamp>true</use-timestamp>
+    </work>
+
+</config>

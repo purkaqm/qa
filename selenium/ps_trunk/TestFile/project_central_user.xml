@@ -1,0 +1,133 @@
+<config>
+
+    <permissions_set id="guest1">
+        <permissions target="wi">
+            <category name="guest">
+                <user xpath="//user[@id='user1']"/>
+                <permission value="true">VIEW_PROJECT_CENTRAL</permission>
+                <permission value="false">DELETE</permission>
+            </category>
+        </permissions>
+        <permissions target="ctx">
+            <category name="guest">
+                <user xpath="//user[@id='user1']"/>
+                <permission value="false">CREATE_NON_TEMPLATE_WORK</permission>
+            </category>
+            <category name="none">
+                <role>
+                    <name>Everybody</name>
+                </role>
+            </category>
+        </permissions>
+    </permissions_set>
+
+    <testcases id="guest1">
+        <exception name="AssertionError">
+            <testcase>checkDeleteCancel</testcase>
+            <!--dialog:-->
+            <testcase>addAfterCancel</testcase>
+            <testcase>addUnderCancel</testcase>
+
+            <!--our grid:-->
+            <testcase>checkSetTagsInOurGrid</testcase>
+            <testcase>checkSetOwnerInOurGrid</testcase>
+            <testcase>checkSetStatusesInOurGrid</testcase>
+
+            <!--bulk:-->
+            <testcase>checkSetStatusesUsingBulkEdit</testcase>
+            <testcase>checkSetConstraintsTypesUsingBulkEdit</testcase>
+            <testcase>checkSetConstraintDatesUsingBulkEdit</testcase>
+            <testcase>checkSetPercentageUsingBulkEdit</testcase>
+            <testcase>checkSetDependencyUsingBulkEdit</testcase>
+            <testcase>checkSetPriorityUsingBulkEdit</testcase>
+            <testcase>checkSetStatusReportingUsingBulkEdit</testcase>
+            <testcase>checkSetActualDatesUsingBulkEdit</testcase>
+            <testcase>checkSetOwnerUsingBulkEdit</testcase>
+            <testcase>checkSetTagsUsingBulkEdit</testcase>
+            <testcase>checkSetCurrencyUsingBulkEdit</testcase>
+            <testcase>checkSetCalendarUsingBulkEdit</testcase>
+            <testcase>checkSetControlCostUsingBulkEdit</testcase>
+            <testcase>checkSetManualSchedulingUsingBulkEdit</testcase>
+            <testcase>checkSetPersonalRateRuleUsingBulkEdit</testcase>
+            <testcase>checkSetRateTableUsingBulkEdit</testcase>
+            <testcase>checkSetActivityTypesUsingBulkEdit</testcase>
+            <testcase>checkSetDefaultActivitiesUsingBulkEdit</testcase>
+            <testcase>checkSetIncludeActionItemsUsingBulkEdit</testcase>
+            <testcase>checkSetInheritPermissionsUsingBulkEdit</testcase>
+            <testcase>checkSetPersonUsingAllocateResourceDialog</testcase>
+
+            <!--gated projects:-->
+            <testcase>checkSetConstraintDatesForSGP</testcase>
+            <testcase>validateAddWorksForGatedProject</testcase>
+            <testcase>checkSetActualDatesForSGP</testcase>
+            <testcase>cancelSequentialGatedProject</testcase>
+
+        </exception>
+        <exception name="Throwable">
+            <testcase>createEmptyWork</testcase>
+            <testcase>createEmptyWorksTree</testcase>
+
+            <!--need to set 'resource plan' to on:-->
+            <testcase>checkSetResourcePoolInOurGrid</testcase>
+            <testcase>checkSetRoleInOurGrid</testcase>
+            <testcase>checkSetRoleAndResourcePoolUsingBulkEdit</testcase>
+            <testcase>checkSetDAEUsingBulkEdit</testcase>
+
+        </exception>
+        <disabled>
+            <testcase>renameInGrid</testcase>
+            <testcase>checkDelete</testcase>
+            <testcase>checkDisplayFoldersOption</testcase>
+            <testcase>checkDisplayActionItemsOption</testcase>
+            <testcase>checkDragAndDropInGrid</testcase>
+            <testcase>checkBulkDelete</testcase>
+            <testcase>checkFilterByType</testcase>
+            <testcase>checkIndentOutdentInGrid</testcase>
+            <testcase>checkIndentOutdentTreeInPopup</testcase>
+            <testcase>checkShowLevelAndValidateTree</testcase>
+            <testcase>checkDisplayFromHereAndParentAndValidateTree</testcase>
+            <testcase>deleteChildBranchAndValidateTree</testcase>
+            <testcase>addUnderAndDragAndDrop</testcase>
+            <testcase>addAfterForFirstChild</testcase>
+            <testcase>validateAddAfterTypeColumn</testcase>
+            <testcase>validateAddUnderTypeColumn</testcase>
+            <testcase>checkFilterByConstraintEndDate</testcase>
+            <testcase>checkFilterByConstraintStartDate</testcase>
+            <testcase>checkInformationPopupSettings</testcase>
+            <testcase>checkSetOwner</testcase>
+            <testcase>checkFilterByOwnerWithSpecifiedOptions</testcase>
+            <testcase>checkSetTags</testcase>
+            <testcase>checkFilterByTagsWithAnyValueOption</testcase>
+            <testcase>checkFilterByTagsWithNoValueOption</testcase>
+            <testcase>checkFilterByTagsWithSpecifiedOptions</testcase>
+            <testcase>checkSetStatuses</testcase>
+            <testcase>checkFilterByStatus</testcase>
+            <testcase>checkInformationPopupStatuses</testcase>
+            <testcase>validateCriticalPaths</testcase>
+            <testcase>validateGanttDates</testcase>
+            <testcase>changeWorksDurationUsingGantt</testcase>
+            <testcase>checkMovingWorksInGantt</testcase>
+            <testcase>makeDependenciesInGantt</testcase>
+            <testcase>changeStatusUsingGantt</testcase>
+            <testcase>checkParentStatusesAndReset</testcase>
+            <testcase>checkRunScheduler</testcase>
+
+            <!--skip dialogs:-->
+            <testcase>checkPredecessorsAddAfter</testcase>
+            <testcase>checkPredecessorsAddUnder</testcase>
+            <testcase>checkPredecessorsWithIndentOputdentAddAfter</testcase>
+            <testcase>checkPredecessorsWithIndentOputdentAddUnder</testcase>
+            <testcase>validateTypeColumn</testcase>
+            <testcase>validateAddAfterPopupHeader</testcase>
+            <testcase>validateAddUnderPopupHeader</testcase>
+            <testcase>validateDAEInAddNewWorkPopup</testcase>
+
+            <!--gated ptemplate:-->
+            <testcase>validateAddWorksForGatedTemplate</testcase>
+            <testcase>checkSetActualDatesForSGP</testcase>
+            <testcase>checkErrorsWithConstraintDatesForSGP</testcase>
+            <testcase>checkErrorsWithActualDatesForSGP</testcase>
+        </disabled>
+    </testcases>
+
+</config>

@@ -1,0 +1,171 @@
+﻿ <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="GatedProjects" verbose="1">
+
+<!--  ACCEPTANCE AND FILLER TESTS -->
+
+    <test name="addTag">
+       <groups><run><include name="addTag"></include></run></groups>
+       <classes><class name="com.powersteeringsoftware.tests.contentfiller.TestDriver"></class></classes>
+    </test>
+
+    <test name="createCustomField">
+       <groups><run><include name="createCustomField"></include></run></groups>
+       <classes><class name="com.powersteeringsoftware.tests.contentfiller.TestDriver"></class></classes>
+    </test>
+
+    <test name="createProcess">
+       <groups><run><include name="createProcess"></include></run></groups>
+       <classes><class name="com.powersteeringsoftware.tests.contentfiller.TestDriver"></class></classes>
+    </test>
+
+    <test name="createWork">
+       <groups><run><include name="createWork"></include></run></groups>
+       <classes><class name="com.powersteeringsoftware.tests.acceptance.TestDriver"></class></classes>
+    </test>
+
+    <test name="testIssue59872">
+       <groups><run><include name="testIssue59872"></include></run></groups>
+       <classes><class name="com.powersteeringsoftware.tests.acceptance.TestDriver"></class></classes>
+    </test>
+
+ <!--  only for FF -->
+
+    <test name="updateAttachment">
+       <groups><run><include name="updateAttachment"></include></run></groups>
+       <classes><class name="com.powersteeringsoftware.tests.acceptance.TestDriver"></class></classes>
+    </test>
+
+    <test name="create.Basics">
+       <groups><run><include name="create.Basics"></include></run></groups>
+       <classes><class name="com.powersteeringsoftware.tests.acceptance.TestCreateBasics"></class></classes>
+    </test>
+
+<!--  GATED PROJECT TESTS -->
+
+    <test name="create.GP.FNLT">
+       <groups><run><include name="create.GP.FNLT"></include></run></groups>
+       <classes><class name="com.powersteeringsoftware.tests.gatedproject.TestDriver"></class></classes>
+    </test>
+
+    <test name="create.GP.SNET">
+       <groups><run><include name="create.GP.SNET"></include></run></groups>
+       <classes><class name="com.powersteeringsoftware.tests.gatedproject.TestDriver"></class></classes>
+    </test>
+
+    <test name="create.GP.FD">
+       <groups><run><include name="create.GP.FD"></include></run></groups>
+       <classes><class name="com.powersteeringsoftware.tests.gatedproject.TestDriver"></class></classes>
+    </test>
+
+    <test name="remove.deliverables">
+       <groups><run><include name="remove.deliverables"></include></run></groups>
+       <classes><class name="com.powersteeringsoftware.tests.gatedproject.TestDriver"></class></classes>
+    </test>
+
+<!-- MEASURES TESTS -->
+
+    <test name="t_mf_24. Navigate MT Library">
+       <groups><run><include name="t_mf_24"></include></run></groups>
+       <classes><class name="com.powersteeringsoftware.tests.measures.TestDriver"></class></classes>
+    </test>
+
+    <test name="t_mf_31.Add new MT(manual, goal)">
+       <groups><run><include name="t_mf_31"></include></run></groups>
+       <classes><class name="com.powersteeringsoftware.tests.measures.TestDriver"></class></classes>
+    </test>
+
+    <test name="t_mf_33.Delete MT">
+       <groups><run><include name="t_mf_33"></include></run></groups>
+       <classes><class name="com.powersteeringsoftware.tests.measures.TestDriver"></class></classes>
+    </test>
+
+    <test name="t_mf_34.Detach MT">
+       <groups><run><include name="t_mf_34"></include></run></groups>
+       <classes><class name="com.powersteeringsoftware.tests.measures.TestDriver"></class></classes>
+    </test>
+
+    <test name="t_mf_36.Copy MT">
+       <groups><run><include name="t_mf_36"></include></run></groups>
+       <classes><class name="com.powersteeringsoftware.tests.measures.TestDriver"></class></classes>
+    </test>
+
+    <test name="t_mf_96.Add new MT(manual, variance)">
+       <groups><run><include name="t_mf_96"></include></run></groups>
+       <classes><class name="com.powersteeringsoftware.tests.measures.TestDriver"></class></classes>
+    </test>
+
+    <test name="t_mf_97.Add new MT(formula,variance)">
+       <groups><run><include name="t_mf_97"></include></run></groups>
+       <classes><class name="com.powersteeringsoftware.tests.measures.TestDriver"></class></classes>
+    </test>
+
+    <test name="t_mf_98.Add new MT(formula, goal)">
+       <groups><run><include name="t_mf_98"></include></run></groups>
+       <classes><class name="com.powersteeringsoftware.tests.measures.TestDriver"></class></classes>
+    </test>
+
+    <test name="t_mf_103.Issue 57491">
+       <groups><run><include name="t_mf_103"></include></run></groups>
+       <classes><class name="com.powersteeringsoftware.tests.measures.TestDriver"></class></classes>
+    </test>
+
+    <test name="t_mf_125.Create measure(manual,variance)">
+       <groups><run><include name="t_mf_125"></include></run></groups>
+       <classes><class name="com.powersteeringsoftware.tests.measures.TestDriver"></class></classes>
+    </test>
+
+    <test name="t_mf_130.Navigate WI Manage Measure">
+       <groups><run><include name="t_mf_130"></include></run></groups>
+       <classes><class name="com.powersteeringsoftware.tests.measures.TestDriver"></class></classes>
+    </test>
+
+    <test name="t_mf_133.Edit measure">
+       <groups><run><include name="t_mf_133"></include></run></groups>
+       <classes><class name="com.powersteeringsoftware.tests.measures.TestDriver"></class></classes>
+    </test>
+
+    <test name="t_mf_210.Attach MT (manual, variance)">
+       <groups><run><include name="t_mf_210"></include></run></groups>
+       <classes><class name="com.powersteeringsoftware.tests.measures.TestDriver"></class></classes>
+    </test>
+
+ <!--  TIMESHEET TESTS-->
+
+  <test name="timesheet.SubmitTimesheet">
+       <groups><run><include name="timesheet.SubmitTimesheet"></include></run></groups>
+       <classes><class name="com.powersteeringsoftware.tests.timesheet.TestDriver"></class></classes>
+  </test>
+
+  <test name="timesheet.CopyLastTimesheet">
+       <groups><run><include name="timesheet.CopyLastTimesheet"></include></run></groups>
+       <classes><class name="com.powersteeringsoftware.tests.timesheet.TestDriver"></class></classes>
+  </test>
+
+  <test name="timesheet.ApproveTimesheet">
+       <groups><run><include name="timesheet.ApproveTimesheet"></include></run></groups>
+       <classes><class name="com.powersteeringsoftware.tests.timesheet.TestDriver"></class></classes>
+  </test>
+
+  <test name="timesheet.RejectTimesheet">
+       <groups><run><include name="timesheet.RejectTimesheet"></include></run></groups>
+       <classes><class name="com.powersteeringsoftware.tests.timesheet.TestDriver"></class></classes>
+   </test>
+
+  <test name="timesheet.ResubmitTimesheet">
+       <groups><run><include name="timesheet.ResubmitTimesheet"></include></run></groups>
+       <classes><class name="com.powersteeringsoftware.tests.timesheet.TestDriver"></class></classes>
+  </test>
+
+  <test name="timesheet.CheckTimesheetPageTotals">
+       <groups><run><include name="timesheet.CheckTimesheetPageTotals"></include></run></groups>
+       <classes><class name="com.powersteeringsoftware.tests.timesheet.TestDriver"></class></classes>
+  </test>
+
+
+  <test name="timesheet.TestManageTimeTotals">
+       <groups><run><include name="timesheet.TestManageTimeTotals"></include></run></groups>
+       <classes><class name="com.powersteeringsoftware.tests.timesheet.TestDriver"></class></classes>
+  </test>
+
+ </suite>

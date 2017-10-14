@@ -1,0 +1,948 @@
+<config>
+
+    <data id="simple">
+        <metric>
+            <name>simple</name>
+            <description>This is a Simple Test Metric.</description>
+            <period>12</period>
+            <types>
+                <type>WORK_ITEM</type>
+            </types>
+            <fiscal-year>true</fiscal-year>
+            <items>
+                <item>
+                    <seq>1</seq>
+                    <name>item a</name>
+                    <type>NUMERIC</type>
+                </item>
+                <item>
+                    <seq>2</seq>
+                    <name>item b</name>
+                </item>
+                <item>
+                    <seq>3</seq>
+                    <name>item c</name>
+                    <type>NUMERIC</type>
+                </item>
+            </items>
+            <work xpath="//work[@id='work1']"/>
+        </metric>
+        <metric id="data1">
+            <items xpath="//data[@id='simple']//items"/>
+            <data>
+                <item>
+                    <name>item a</name>
+                    <cell column="Jan">0</cell>
+                    <cell column="May">1</cell>
+                    <cell column="Oct">-24324.8989</cell>
+                    <cell column="Nov">12.22234</cell>
+                </item>
+                <item>
+                    <name>item b</name>
+                    <cell column="Sep">76</cell>
+                    <cell column="Apr">61</cell>
+                </item>
+                <item>
+                    <name>item c</name>
+                    <cell column="Feb">333</cell>
+                    <cell column="Apr">788</cell>
+                </item>
+            </data>
+        </metric>
+        <metric id="data2">
+            <items xpath="//data[@id='simple']//items"/>
+            <data>
+                <item>
+                    <name>item b</name>
+                    <cell column="Mar">31r9</cell>
+                </item>
+                <item>
+                    <name>item c</name>
+                    <cell column="Feb">612r####-11</cell>
+                </item>
+            </data>
+        </metric>
+    </data>
+
+    <data id="breakdown">
+        <metric>
+            <name>breakdown</name>
+            <description>This is a breakdown metric.</description>
+            <period>12</period>
+            <types>
+                <type>WORK_ITEM</type>
+            </types>
+            <fiscal-year>true</fiscal-year>
+            <items>
+                <item>
+                    <seq>1</seq>
+                    <name>item a</name>
+                </item>
+                <item>
+                    <seq>2</seq>
+                    <name>item b</name>
+                </item>
+            </items>
+            <views>
+                <view>
+                    <seq>1</seq>
+                    <name>view1</name>
+                </view>
+                <view>
+                    <seq>2</seq>
+                    <name>view2</name>
+                </view>
+            </views>
+            <tag type="breakdown">
+                <name>AUTOTESTS TAG 1</name>
+                <tag>
+                    <name>a</name>
+                </tag>
+                <tag>
+                    <name>b</name>
+                </tag>
+                <tag>
+                    <name>c</name>
+                </tag>
+            </tag>
+            <work xpath="//work[@id='work3']"/>
+        </metric>
+        <!--
+                <metric id="inst-1">
+                    <id>debug-id</id>
+                    <name>breakdown</name>
+                    <work xpath="//work[@id='work3']"/>
+                    <items>
+                        <item>
+                            <seq>1</seq>
+                            <name>item a</name>
+                        </item>
+                        <item>
+                            <seq>2</seq>
+                            <name>item b</name>
+                        </item>
+                    </items>
+                </metric>
+        -->
+        <metric id="data1">
+            <items xpath="//data[@id='breakdown']//items"/>
+            <tag type="breakdown" xpath="//data[@id='breakdown']//tag"/>
+            <data view="view1">
+                <item>
+                    <name>item a</name>
+                    <item>
+                        <name>a</name>
+                        <cell column="Jan">9.3453535</cell>
+                        <cell column="May">222</cell>
+                        <cell column="Oct">-222.22232332</cell>
+                    </item>
+                    <item>
+                        <name>b</name>
+                        <cell column="May">1.22</cell>
+                    </item>
+                    <item>
+                        <name>c</name>
+                    </item>
+                </item>
+                <item>
+                    <name>item b</name>
+                    <item>
+                        <name>c</name>
+                        <cell column="Apr">21</cell>
+                    </item>
+                </item>
+            </data>
+            <data view="view2">
+                <item>
+                    <name>item a</name>
+                    <item>
+                        <name>a</name>
+                        <cell column="Feb">-9.333323535</cell>
+                        <cell column="Mar">12423325455</cell>
+                        <cell column="Sep">456457676</cell>
+                    </item>
+                    <item>
+                        <name>b</name>
+                        <cell column="Feb">3434</cell>
+                    </item>
+                    <item>
+                        <name>c</name>
+                        <cell column="Feb">0</cell>
+                        <cell column="Sep">42</cell>
+                    </item>
+                </item>
+                <item>
+                    <name>item b</name>
+                    <item>
+                        <name>a</name>
+                        <cell column="Dec">134</cell>
+                        <cell column="Sep">151</cell>
+                    </item>
+                </item>
+            </data>
+        </metric>
+        <metric id="data2">
+            <items xpath="//data[@id='breakdown']//items"/>
+            <tag type="breakdown" xpath="//data[@id='breakdown']//tag"/>
+            <data view="view1">
+                <item>
+                    <name>item b</name>
+                    <item>
+                        <name>a</name>
+                        <cell column="Jan">35r5</cell>
+                    </item>
+                    <item>
+                        <name>c</name>
+                        <cell column="Feb">66r####-11</cell>
+                    </item>
+                </item>
+            </data>
+        </metric>
+    </data>
+
+    <data id="breakdown-percentage">
+        <include ps="_9_3"/>
+        <metric>
+            <name>percentage</name>
+            <description>This is a Breakdown Test Metric with Percentage Allocation.</description>
+            <period>12</period>
+            <fiscal-year>true</fiscal-year>
+            <items>
+                <item>
+                    <seq>1</seq>
+                    <name>item a</name>
+                    <type>NUMERIC</type>
+                </item>
+                <item>
+                    <seq>2</seq>
+                    <name>item b</name>
+                </item>
+            </items>
+            <tag type="breakdown">
+                <name>AUTOTESTS TAG 6</name>
+                <percent/>
+                <tag>
+                    <name>6.1</name>
+                    <percent>12</percent>
+                    <tag>
+                        <name>6.1.1</name>
+                        <tag>
+                            <name>6.1.1.1</name>
+                            <percent>24</percent>
+                            <tag>
+                                <name>6.1.1.1.1</name>
+                            </tag>
+                        </tag>
+                        <tag>
+                            <name>6.1.1.2</name>
+                            <percent>1</percent>
+                        </tag>
+                    </tag>
+                </tag>
+                <tag>
+                    <name>6.2</name>
+                    <tag>
+                        <name>6.2.1</name>
+                        <percent>42</percent>
+                    </tag>
+                </tag>
+                <tag>
+                    <name>6.3</name>
+                    <percent>1</percent>
+                </tag>
+            </tag>
+            <work xpath="//work[@id='work4']"/>
+        </metric>
+        <!--
+                <metric id="inst-1">
+                    <id>debug-id</id>
+                    <name>percentage</name>
+                    <work xpath="//work[@id='work4']"/>
+                    <items>
+                        <item>
+                            <seq>1</seq>
+                            <name>item a</name>
+                        </item>
+                        <item>
+                            <seq>2</seq>
+                            <name>item b</name>
+                        </item>
+                    </items>
+                </metric>
+        -->
+        <metric id="data1">
+            <items xpath="//data[@id='breakdown-percentage']//items"/>
+            <tag type="breakdown" xpath="//data[@id='breakdown-percentage']//tag"/>
+            <data>
+                <item>
+                    <name>item a</name>
+                    <cell column="Jan">0</cell>
+                    <cell column="May">1</cell>
+                    <cell column="Oct">-24324.8989</cell>
+                    <cell column="Nov">12.22234</cell>
+                </item>
+                <item>
+                    <name>item b</name>
+                    <cell column="Sep">76</cell>
+                    <cell column="Apr">61</cell>
+                </item>
+            </data>
+        </metric>
+        <metric id="data2">
+            <items xpath="//data[@id='breakdown-percentage']//items"/>
+            <tag type="breakdown" xpath="//data[@id='breakdown-percentage']//tag"/>
+            <data>
+                <item>
+                    <name>item b</name>
+                    <cell column="Jan">22r5</cell>
+                    <cell column="Jun">-6.34334122r####-12</cell>
+                </item>
+            </data>
+        </metric>
+    </data>
+
+    <data id="breakdown-formula">
+        <include group="general"/>
+        <metric>
+            <name>breakdown-formula</name>
+            <description>This is a breakdown metric with formula.</description>
+            <period>12</period>
+            <types>
+                <type>WORK_ITEM</type>
+            </types>
+            <fiscal-year>true</fiscal-year>
+            <items>
+                <item>
+                    <seq>1</seq>
+                    <name>item a</name>
+                </item>
+                <item>
+                    <seq>2</seq>
+                    <name>item b</name>
+                    <type>numeric</type>
+                </item>
+                <item>
+                    <seq>3</seq>
+                    <name>item c</name>
+                    <formula>[1] * [2] + 10</formula>
+                </item>
+            </items>
+            <tag type="breakdown">
+                <name>AUTOTESTS TAG 5</name>
+                <tag>
+                    <name>5.1</name>
+                </tag>
+                <tag>
+                    <name>5.3</name>
+                </tag>
+            </tag>
+            <work xpath="//work[@id='work2']"/>
+        </metric>
+        <!--
+                <metric id="inst-1">
+                    <id>debug-id</id>
+                    <items>
+                        <item>
+                            <seq>1</seq>
+                            <name>item a</name>
+                        </item>
+                        <item>
+                            <seq>2</seq>
+                            <name>item b</name>
+                            <type>numeric</type>
+                        </item>
+                        <item>
+                            <seq>3</seq>
+                            <name>item c</name>
+                            <formula>[1] * [2] + 10</formula>
+                        </item>
+                    </items>
+                </metric>
+        -->
+        <metric id="data1">
+            <items xpath="//data[@id='breakdown-formula']//items"/>
+            <tag type="breakdown" xpath="//data[@id='breakdown-formula']//tag"/>
+            <data>
+                <item>
+                    <name>item a</name>
+                    <item>
+                        <name>5.1</name>
+                        <cell column="Jan">23</cell>
+                        <cell column="Apr">1</cell>
+                        <cell column="Oct">-244.823</cell>
+                        <cell column="Nov">132.2234</cell>
+                    </item>
+                    <item>
+                        <name>5.3</name>
+                        <cell column="Feb">232</cell>
+                        <cell column="Aug">14343</cell>
+                    </item>
+                </item>
+                <item>
+                    <name>item b</name>
+                    <item>
+                        <name>5.1</name>
+                        <cell column="Oct">7.3</cell>
+                        <cell column="Nov">6.5</cell>
+                    </item>
+                    <item>
+                        <name>5.3</name>
+                        <cell column="Feb">79</cell>
+                        <cell column="Aug">965.343</cell>
+                        <cell column="Dec">-7.439</cell>
+                        <cell column="Jun">96343</cell>
+                    </item>
+                </item>
+            </data>
+        </metric>
+    </data>
+
+    <data id="breakdown-percentage-formula">
+        <include group="general" ps="_9_3"/>
+        <metric>
+            <name>percentage-formula</name>
+            <description>This is a breakdown percentage metric with formula.</description>
+            <period>12</period>
+            <types>
+                <type>WORK_ITEM</type>
+            </types>
+            <fiscal-year>true</fiscal-year>
+            <items>
+                <item>
+                    <seq>1</seq>
+                    <name>item#1</name>
+                    <type>numeric</type>
+                </item>
+                <item>
+                    <seq>2</seq>
+                    <name>item#2</name>
+                    <type>numeric</type>
+                </item>
+                <item>
+                    <seq>3</seq>
+                    <name>item#3</name>
+                    <formula>([1]) ^ 2 - 1.0 / [2]</formula>
+                    <description>item with formula</description>
+                </item>
+            </items>
+            <tag type="breakdown">
+                <name>AUTOTESTS TAG 1</name>
+                <percent/>
+                <tag>
+                    <name>a</name>
+                    <percent>35</percent>
+                </tag>
+                <tag>
+                    <name>b</name>
+                    <percent>40</percent>
+                </tag>
+                <tag>
+                    <name>c</name>
+                    <percent>25</percent>
+                </tag>
+            </tag>
+            <work xpath="//work[@id='work0']"/>
+        </metric>
+        <!--
+                <metric id="inst-1">
+                    <id>debug-id</id>
+                    <items xpath="//data[@id='breakdown-percentage-formula']//items"/>
+                    <tag type="breakdown" xpath="//data[@id='breakdown-percentage-formula']//tag"/>
+                </metric>
+        -->
+        <metric id="data1">
+            <items xpath="//data[@id='breakdown-percentage-formula']//items"/>
+            <tag type="breakdown" xpath="//data[@id='breakdown-percentage-formula']//tag"/>
+            <data>
+                <item>
+                    <name>item#1</name>
+                    <cell column="Jan">323</cell>
+                    <cell column="Feb">67</cell>
+                    <cell column="Apr">14.343</cell>
+                    <cell column="May">54787</cell>
+                    <cell column="Aug">14</cell>
+                    <cell column="Sep">-0.4343</cell>
+                    <cell column="Oct">-24.83</cell>
+                    <cell column="Nov">103.2234</cell>
+                    <cell column="Dec">20</cell>
+                </item>
+                <item>
+                    <name>item#2</name>
+                    <cell column="Jan">43</cell>
+                    <cell column="Feb">1</cell>
+                    <cell column="Mar">145</cell>
+                    <cell column="Jun">97</cell>
+                    <cell column="Oct">90923</cell>
+                    <cell column="Nov">-1.234</cell>
+                    <cell column="Dec">22</cell>
+                </item>
+            </data>
+        </metric>
+    </data>
+
+    <data id="alternative-calendar-simple">
+        <include group="general" ps="_9_4"/>
+        <metric>
+            <name>alternative-calendar-1</name>
+            <description>This is a Simple Test Metric with Alternative Calendar (13 months).</description>
+            <period>12</period>
+            <period-type>2</period-type>
+            <metric-calendar>Custom calendar</metric-calendar>
+            <types>
+                <type>WORK_ITEM</type>
+            </types>
+            <fiscal-year>true</fiscal-year>
+            <items>
+                <item>
+                    <seq>1</seq>
+                    <name>1</name>
+                    <type>NUMERIC</type>
+                </item>
+                <item>
+                    <seq>2</seq>
+                    <name>2</name>
+                </item>
+                <item>
+                    <seq>3</seq>
+                    <name>3</name>
+                    <type>NUMERIC</type>
+                </item>
+            </items>
+            <work xpath="//work[@id='work0']"/>
+        </metric>
+        <metric id="data1">
+            <period-type>2</period-type>
+            <items xpath="//data[@id='alternative-calendar-simple']//items"/>
+            <data>
+                <item>
+                    <name>1</name>
+                    <cell column="Month 1 {year}" index="0">0</cell>
+                    <cell column="Month 5 {year}" index="4">1</cell>
+                    <cell column="Month 6 {year}" index="5">-24324.89</cell>
+                    <cell column="Month 8 {year}" index="7">12.34</cell>
+                </item>
+                <item>
+                    <name>2</name>
+                    <cell column="Month 13 {year}" index="12">762</cell>
+                    <cell column="Month 4 {year}" index="3">612</cell>
+                </item>
+                <item>
+                    <name>3</name>
+                    <cell column="Month 13 {year}" index="12">313</cell>
+                    <cell column="Month 1 {year}" index="0">718</cell>
+                </item>
+            </data>
+        </metric>
+    </data>
+
+
+    <data id="alternative-calendar-breakdown-percentage-formula">
+        <include group="general" ps="_9_4"/>
+        <metric>
+            <name>alternative-calendar-2</name>
+            <description>This is a breakdown percentage metric with formula and Alternative Calendar (quarters).
+            </description>
+            <period>12</period>
+            <period-type>3</period-type>
+            <metric-calendar>Custom calendar</metric-calendar>
+            <fiscal-year>true</fiscal-year>
+            <items>
+                <item>
+                    <seq>1</seq>
+                    <name>a</name>
+                    <type>numeric</type>
+                </item>
+                <item>
+                    <seq>2</seq>
+                    <name>b</name>
+                    <type>numeric</type>
+                </item>
+                <item>
+                    <seq>3</seq>
+                    <name>c</name>
+                    <formula>([2]) ^ 3 - 2.0 / [1]</formula>
+                </item>
+            </items>
+            <tag type="breakdown">
+                <name>AUTOTESTS TAG 7</name>
+                <percent/>
+                <tag>
+                    <name>7.1.1</name>
+                    <percent>35</percent>
+                </tag>
+                <tag>
+                    <name>7.2.1.1</name>
+                    <percent>45</percent>
+                </tag>
+                <tag>
+                    <name>7.3</name>
+                    <percent>5</percent>
+                </tag>
+            </tag>
+            <work xpath="//work[@id='work3']"/>
+        </metric>
+        <metric id="data1">
+            <items xpath="//data[@id='alternative-calendar-breakdown-percentage-formula']//items"/>
+            <tag type="breakdown" xpath="//data[@id='alternative-calendar-breakdown-percentage-formula']//tag"/>
+            <period-type>3</period-type>
+            <data>
+                <item>
+                    <name>a</name>
+                    <cell column="Qtr 1 {year}" index="0">3</cell>
+                    <cell column="Qtr 2 {year}" index="1">23</cell>
+                    <cell column="Qtr 3 {year}" index="2">21</cell>
+                    <cell column="Qtr 4 {year}" index="3">-44</cell>
+                </item>
+                <item>
+                    <name>b</name>
+                    <cell column="Qtr 1 {year}" index="0">1</cell>
+                    <cell column="Qtr 2 {year}" index="1">0</cell>
+                    <cell column="Qtr 3 {year}" index="2">12</cell>
+                    <cell column="Qtr 4 {year}" index="3">13</cell>
+                </item>
+            </data>
+        </metric>
+    </data>
+
+
+    <data id="alternative-calendar-breakdown">
+        <include group="general" ps="_9_4"/>
+        <metric>
+            <name>alternative-calendar-3</name>
+            <description>This is a breakdown metric with Alternative Calendar.</description>
+            <period>12</period>
+            <period-type>2</period-type>
+            <fiscal-year>true</fiscal-year>
+            <metric-calendar>Custom calendar</metric-calendar>
+            <items>
+                <item>
+                    <seq>1</seq>
+                    <name>first</name>
+                </item>
+                <item>
+                    <seq>2</seq>
+                    <name>second</name>
+                </item>
+            </items>
+            <views>
+                <view>
+                    <seq>1</seq>
+                    <name>view1</name>
+                </view>
+                <view>
+                    <seq>2</seq>
+                    <name>view2</name>
+                </view>
+            </views>
+            <tag type="breakdown">
+                <name>AUTOTESTS TAG 1</name>
+                <tag>
+                    <name>a</name>
+                </tag>
+                <tag>
+                    <name>b</name>
+                </tag>
+            </tag>
+            <work xpath="//work[@id='work4']"/>
+        </metric>
+        <metric id="data1">
+            <items xpath="//data[@id='alternative-calendar-breakdown']//items"/>
+            <tag type="breakdown" xpath="//data[@id='alternative-calendar-breakdown']//tag"/>
+            <period-type>2</period-type>
+            <data view="view1">
+                <item>
+                    <name>first</name>
+                    <item>
+                        <name>a</name>
+                        <cell column="Month 1 {year}" index="0">9.3</cell>
+                        <cell column="Month 2 {year}" index="1">12</cell>
+                        <cell column="Month 3 {year}" index="2">2</cell>
+                        <cell column="Month 12 {year}" index="11">22</cell>
+                        <cell column="Month 13 {year}" index="12">-12.0</cell>
+                    </item>
+                    <item>
+                        <name>b</name>
+                        <cell column="Month 4 {year}" index="3">52</cell>
+                        <cell column="Month 13 {year}" index="12">9</cell>
+                    </item>
+                </item>
+                <item>
+                    <name>second</name>
+                    <item>
+                        <name>b</name>
+                        <cell column="Month 1 {year}" index="0">9</cell>
+                        <cell column="Month 5 {year}" index="4">8</cell>
+                        <cell column="Month 13 {year}" index="12">7</cell>
+                    </item>
+                </item>
+            </data>
+            <data view="view2">
+                <item>
+                    <name>first</name>
+                    <item>
+                        <name>a</name>
+                        <cell index="0">-98</cell>
+                    </item>
+                    <item>
+                        <name>b</name>
+                        <cell column="Month 3 {year}" index="2">3</cell>
+                        <cell column="Month 8 {year}" index="7">87</cell>
+                        <cell column="Month 11 {year}" index="10">6</cell>
+                        <cell column="Month 12 {year}" index="11">4</cell>
+                    </item>
+                </item>
+                <item>
+                    <name>second</name>
+                    <item>
+                        <name>a</name>
+                        <cell column="Month 1 {year}" index="0">987r13</cell>
+                    </item>
+                    <item>
+                        <name>b</name>
+                        <cell column="Month 2 {year}" index="1">123r####-12</cell>
+                    </item>
+                </item>
+            </data>
+        </metric>
+    </data>
+
+    <data id="simple-cost">
+        <include group="general"/>
+        <metric>
+            <name>simple-cost</name>
+            <description>This is a Simple Test Metric with costs.</description>
+            <period>12</period>
+            <types>
+                <type>WORK_ITEM</type>
+            </types>
+            <fiscal-year>true</fiscal-year>
+            <items>
+                <item>
+                    <seq>10</seq>
+                    <name>cost(estimated)</name>
+                    <type>COST_MONETARY</type>
+                    <cost_mapping>estimated</cost_mapping>
+                    <description>cost estimated item</description>
+                </item>
+                <item>
+                    <seq>20</seq>
+                    <name>cost(actual)</name>
+                    <type>COST_MONETARY</type>
+                    <cost_mapping>actual</cost_mapping>
+                    <description>cost actual item</description>
+                </item>
+                <item>
+                    <seq>30</seq>
+                    <name>cost(manual)</name>
+                    <type>COST_MONETARY</type>
+                    <cost_mapping>manual</cost_mapping>
+                    <description>cost manual item</description>
+                </item>
+                <item>
+                    <seq>25</seq>
+                    <name>sep2</name>
+                    <type>SEPARATOR</type>
+                    <description>separator #2</description>
+                </item>
+                <item>
+                    <seq>15</seq>
+                    <name>sep1</name>
+                    <type>SEPARATOR</type>
+                    <description>separator #1</description>
+                </item>
+            </items>
+            <work xpath="//work[@id='work2']"/>
+        </metric>
+        <metric id="data1">
+            <items xpath="//data[@id='simple-cost']//items"/>
+            <data>
+                <item>
+                    <name>cost(estimated)</name>
+                </item>
+                <item>
+                    <name>sep1</name>
+                </item>
+                <item>
+                    <name>cost(actual)</name>
+                </item>
+                <item>
+                    <name>sep2</name>
+                </item>
+                <item>
+                    <name>cost(manual)</name>
+                    <cell column="Jan">12</cell>
+                    <cell column="May">12</cell>
+                    <cell column="Oct">-243</cell>
+                    <cell column="Nov">1234</cell>
+                    <cell column="Sep">6</cell>
+                    <cell column="Apr">61</cell>
+                    <cell column="Feb">33</cell>
+                </item>
+            </data>
+        </metric>
+        <metric id="data2">
+            <items xpath="//data[@id='simple-cost']//items"/>
+            <data>
+                <item>
+                    <name>cost(estimated)</name>
+                    <cell column="Jun">14</cell>
+                    <cell column="Jul">12</cell>
+                    <cell column="Aug">-143</cell>
+                    <cell column="Sep">14</cell>
+                </item>
+                <item>
+                    <name>sep1</name>
+                </item>
+                <item>
+                    <name>cost(actual)</name>
+                    <cell column="Jan">5</cell>
+                    <cell column="Jun">-14</cell>
+                    <cell column="Jul">1</cell>
+                    <cell column="Aug">-13</cell>
+                    <cell column="Sep">4</cell>
+                </item>
+                <item>
+                    <name>sep2</name>
+                </item>
+            </data>
+        </metric>
+    </data>
+
+    <data id="simple-cost-2">
+        <include group="general"/>
+        <metric>
+            <name>simple-cost-2</name>
+            <description>This is a Simple Test Metric with costs, views and display total.</description>
+            <period>12</period>
+            <fiscal-year>true</fiscal-year>
+            <display-total>Grand Total</display-total>
+            <items>
+                <item>
+                    <seq>9</seq>
+                    <name>costs</name>
+                    <type>COST_MONETARY</type>
+                </item>
+                <item>
+                    <seq>21</seq>
+                    <name>monetary</name>
+                    <type>MONETARY</type>
+                </item>
+            </items>
+            <views>
+                <view>
+                    <seq>10</seq>
+                    <name>ESTIMATED</name>
+                    <type>estimated</type>
+                </view>
+                <view>
+                    <seq>20</seq>
+                    <name>ACTUAL</name>
+                    <type>actual</type>
+                </view>
+                <view>
+                    <seq>1</seq>
+                    <name>MANUAL</name>
+                    <type>manual</type>
+                </view>
+            </views>
+            <work xpath="//work[@id='work2']"/>
+        </metric>
+        <metric id="data1">
+            <items xpath="//data[@id='simple-cost-2']//items"/>
+            <data xpath="//data[@id='simple-cost-2']//views/view[1]">
+                <item>
+                    <name>costs</name>
+                </item>
+                <item>
+                    <name>monetary</name>
+                    <cell column="Jan">1</cell>
+                    <cell column="Feb">2</cell>
+                    <cell column="Mar">3</cell>
+                    <cell column="Apr">4</cell>
+                </item>
+            </data>
+            <data xpath="//data[@id='simple-cost-2']//views/view[2]">
+                <item>
+                    <name>costs</name>
+                </item>
+                <item>
+                    <name>monetary</name>
+                    <cell column="Sep">9</cell>
+                    <cell column="Oct">10</cell>
+                    <cell column="Nov">11</cell>
+                    <cell column="Dec">12</cell>
+                </item>
+            </data>
+            <data xpath="//data[@id='simple-cost-2']//views/view[3]">
+                <item>
+                    <name>costs</name>
+                    <cell column="May">5</cell>
+                    <cell column="Jun">6</cell>
+                </item>
+                <item>
+                    <name>monetary</name>
+                    <cell column="Jul">7</cell>
+                    <cell column="Aug">8</cell>
+                </item>
+            </data>
+        </metric>
+        <metric id="data2">
+            <items xpath="//data[@id='simple-cost-2']//items"/>
+            <data xpath="//data[@id='simple-cost-2']//views/view[1]">
+                <item>
+                    <name>costs</name>
+                    <cell column="May">5</cell>
+                    <cell column="Jun">6</cell>
+                </item>
+                <item>
+                    <name>monetary</name>
+                    <cell column="Jan">4</cell>
+                    <cell column="Feb">3</cell>
+                    <cell column="Mar">2</cell>
+                    <cell column="Apr">1</cell>
+                    <cell column="Jul">7</cell>
+                    <cell column="Aug">8</cell>
+                </item>
+            </data>
+            <data xpath="//data[@id='simple-cost-2']//views/view[2]">
+                <item>
+                    <name>monetary</name>
+                    <cell column="Sep">-2.3456</cell>
+                    <cell column="Oct">0</cell>
+                    <cell column="Nov">10.5</cell>
+                    <cell column="Dec">12.5</cell>
+                </item>
+            </data>
+        </metric>
+    </data>
+
+    <cost id="est-1">
+        <type>estimated</type>
+        <amount>5000</amount>
+        <date>{time} - 5</date>
+        <end-date>{time} + 5</end-date>
+        <description>test estimated 1</description>
+    </cost>
+
+    <cost id="est-2">
+        <type>estimated</type>
+        <amount>4000</amount>
+        <date>{time} + 1</date>
+        <description>test estimated 2</description>
+    </cost>
+
+    <cost id="act-1">
+        <type>actual</type>
+        <amount>3000</amount>
+        <date>{time} - 60</date>
+        <description>test actual 1</description>
+    </cost>
+
+    <cost id="act-2">
+        <type>actual</type>
+        <amount>1000</amount>
+        <date>{time} + 60</date>
+        <description>test actual 2</description>
+    </cost>
+
+</config>

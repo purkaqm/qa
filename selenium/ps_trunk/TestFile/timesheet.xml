@@ -1,0 +1,161 @@
+<config>
+    <timesheets id="submit">
+        <line>
+            <work xpath="//work[@id='work1']" how_to_set='favorites'/>
+            <activity xpath="//tag[@id='activity']/tag[1]/name"/>
+            <billing_category>1 - Category 1</billing_category>
+            <day day="sun">1</day>
+            <day day="mon">2</day>
+            <day day="tue">3</day>
+            <day day="wed">4</day>
+            <day day="thu">5</day>
+            <day day="fri">6</day>
+            <day day="sat">7</day>
+        </line>
+        <line>
+            <work xpath="//work[@id='work2']" how_to_set='browse'/>
+            <activity xpath="//tag[@id='activity']/tag[2]/name"/>
+            <billing_category>2 - Category 2</billing_category>
+            <day day="sun">1</day>
+            <day day="mon">2</day>
+            <day day="tue">3</day>
+            <day day="wed">4</day>
+            <day day="thu">5</day>
+            <day day="fri">6</day>
+            <day day="sat">7</day>
+        </line>
+        <line>
+            <work xpath="//work[@id='work3']" how_to_set='search'/>
+            <billing_category>1 - Category 1</billing_category>
+            <activity xpath="//tag[@id='activity']/tag[3]/name"/>
+            <day day="sun">1</day>
+            <day day="mon">2</day>
+            <day day="tue">3</day>
+            <day day="wed">4</day>
+            <day day="thu">5</day>
+            <day day="fri">6</day>
+            <day day="sat">7</day>
+        </line>
+        <line>
+            <work xpath="//work[@id='work4']"/>
+            <billing_category>2 - Category 2</billing_category>
+            <activity xpath="//tag[@id='activity']/tag[4]/name"/>
+            <day day="sun">1</day>
+            <day day="mon">2</day>
+            <day day="tue">3</day>
+            <day day="wed">4</day>
+            <day day="thu">5</day>
+            <day day="fri">6</day>
+            <day day="sat">7</day>
+        </line>
+    </timesheets>
+
+    <timesheets id="copy">
+        <line>
+            <work xpath="//work[@id='work1']"/>
+            <activity xpath="//tag[@id='activity']/tag[1]/name"/>
+            <billing_category>1 - Category 1</billing_category>
+            <day day="sun">23</day>
+            <day day="mon">657</day>
+            <day day="tue">9.45</day>
+            <day day="wed">8.0</day>
+            <day day="thu">8.0</day>
+            <day day="fri">6</day>
+            <day day="sat">7</day>
+        </line>
+        <line>
+            <work xpath="//work[@id='work2']"/>
+            <activity xpath="//tag[@id='activity']/tag[2]/name"/>
+            <billing_category>2 - Category 2</billing_category>
+            <day day="sun">1.3</day>
+            <day day="mon">2.5</day>
+            <day day="tue">3.55</day>
+            <day day="wed">423</day>
+            <day day="thu">325</day>
+            <day day="fri">26</day>
+            <day day="sat">27</day>
+        </line>
+
+        <line>
+            <work xpath="//work[@id='work3']"/>
+
+            <activity xpath="//tag[@id='activity']/tag[4]/name"/>
+            <day day="sun">9.0</day>
+            <day day="mon">2.4</day>
+            <day day="tue">3.5</day>
+            <day day="wed">4.6</day>
+            <day day="thu">5.7</day>
+            <day day="fri">6.3</day>
+            <day day="sat">7.9</day>
+        </line>
+        <line>
+            <work xpath="//work[@id='work4']"/>
+
+            <activity xpath="//tag[@id='activity']/tag[3]/name"/>
+            <day day="sun">1.23</day>
+            <day day="mon">32</day>
+            <day day="tue">3.4</day>
+            <day day="wed">434</day>
+            <day day="thu">54</day>
+            <day day="fri">6.67</day>
+            <day day="sat">7.45</day>
+        </line>
+    </timesheets>
+
+    <timesheets id="reject">
+        <line>
+            <work xpath="//work[@id='work3']"/>
+            <day day="sun">2.3</day>
+            <day day="mon">1.7</day>
+            <day day="tue">91.45</day>
+            <day day="wed">81.0</day>
+            <day day="thu">82.0</day>
+            <day day="fri">62</day>
+            <day day="sat">72</day>
+        </line>
+        <line>
+            <work xpath="//work[@id='work2']"/>
+            <day day="sun">3.3</day>
+            <day day="mon">25</day>
+            <day day="tue">7.4</day>
+            <day day="wed">8</day>
+            <day day="thu">3</day>
+            <day day="fri">8</day>
+            <day day="sat">8</day>
+        </line>
+    </timesheets>
+
+    <timesheets id="resubmit">
+        <line>
+            <work xpath="//work[@id='work3']"/>
+            <day day="sun">1</day>
+            <day day="mon">2</day>
+            <day day="tue">3</day>
+            <day day="wed">4</day>
+            <day day="thu">5</day>
+            <day day="fri">6</day>
+            <day day="sat">7</day>
+        </line>
+        <line>
+            <work xpath="//work[@id='work2']"/>
+            <day day="sun">1</day>
+            <day day="mon">2</day>
+            <day day="tue">3</day>
+            <day day="wed">4</day>
+            <day day="thu">5</day>
+            <day day="fri">6</day>
+            <day day="sat">7</day>
+        </line>
+        <line>
+            <work xpath="//work[@id='work1']"/>
+            <day day="fri">6</day>
+            <day day="sat">7</day>
+        </line>
+        <line>
+            <work xpath="//work[@id='work4']"/>
+            <day day="sun">1</day>
+            <day day="mon">2</day>
+        </line>
+    </timesheets>
+
+</config>

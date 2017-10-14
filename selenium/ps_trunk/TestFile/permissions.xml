@@ -1,0 +1,547 @@
+<config>
+    <role id="core-set">
+        <name>Test Role Name</name>
+        <plural_name>Role PName</plural_name>
+        <sequence>1</sequence>
+        <description>This is a description</description>
+        <use-timestamp>true</use-timestamp>
+        <is_custom>true</is_custom>
+    </role>
+    <role id="core-set-edit">
+        <description>This is a description=MODIFIED=</description>
+    </role>
+
+    <permissions target="wi" id="custom-set-wi">
+        <category name="finance">
+            <user xpath="//user[@id='default-user']"/>
+        </category>
+    </permissions>
+    <permissions target="usr" id="custom-set-usr">
+        <category name="guest">
+            <user xpath="//user[@id='default-user']"/>
+        </category>
+    </permissions>
+    <permissions target="grp" id="custom-set-grp">
+        <category name="view">
+            <user xpath="//user[@id='default-user']"/>
+        </category>
+    </permissions>
+    <permissions target="mt" id="custom-set-mt">
+        <category name="edit">
+            <user xpath="//user[@id='default-user']"/>
+        </category>
+    </permissions>
+    <permissions target="ctx" id="custom-set-ctx">
+        <category name="finance">
+            <user xpath="//user[@id='default-user']"/>
+        </category>
+    </permissions>
+    <permissions target="mtb" id="custom-set-mtb">
+        <category name="work">
+            <user xpath="//user[@id='default-user']"/>
+        </category>
+    </permissions>
+
+
+    <category id="new-wi" name="wi">
+        <use-timestamp>true</use-timestamp>
+        <description>Description WI</description>
+        <sequence>1</sequence>
+        <object_type>wi</object_type>
+    </category>
+    <category id="new-ctx" name="ctx">
+        <use-timestamp>true</use-timestamp>
+        <description>Description CTX</description>
+        <sequence>2</sequence>
+        <object_type>ctx</object_type>
+    </category>
+    <category id="new-usr" name="usr">
+        <use-timestamp>true</use-timestamp>
+        <description>Description USR</description>
+        <sequence>3</sequence>
+        <object_type>usr</object_type>
+    </category>
+    <category id="new-grp" name="grp">
+        <use-timestamp>true</use-timestamp>
+        <description>Description GRP</description>
+        <sequence>4</sequence>
+        <object_type>grp</object_type>
+    </category>
+    <category id="new-mt" name="mt">
+        <use-timestamp>true</use-timestamp>
+        <description>Description MT</description>
+        <sequence>5</sequence>
+        <object_type>mt</object_type>
+    </category>
+    <category id="new-mtb" name="mtb">
+        <use-timestamp>true</use-timestamp>
+        <description>Description MTB</description>
+        <sequence>6</sequence>
+        <object_type>mtb</object_type>
+    </category>
+
+    <permissions id="new-1">
+        <category>
+            <permission value="true">VIEW</permission>
+            <permission value="false">EDIT</permission>
+            <permission value="true">DELETE</permission>
+            <permission value="false">VIEW_PERMISSIONS</permission>
+        </category>
+    </permissions>
+    <permissions id="new-2">
+        <category>
+            <permission value="true">VIEW</permission>
+            <permission value="true">EDIT</permission>
+            <permission value="false">DELETE</permission>
+            <permission value="true">VIEW_PERMISSIONS</permission>
+        </category>
+    </permissions>
+    <permissions id="new-3">
+        <category>
+            <permission value="true">SHARE_PORTFOLIOS</permission>
+            <permission value="false">MEASURE_TEMPLATE</permission>
+            <permission value="true">CREATE_NON_TEMPLATE_WORK</permission>
+            <permission value="false">CREATE_ROOT_WORK</permission>
+        </category>
+    </permissions>
+    <permissions id="new-4">
+        <category>
+            <permission value="false">SHARE_PORTFOLIOS</permission>
+            <permission value="true">MEASURE_TEMPLATE</permission>
+            <permission value="false">CREATE_NON_TEMPLATE_WORK</permission>
+            <permission value="true">CREATE_ROOT_WORK</permission>
+        </category>
+    </permissions>
+    <permissions id="new-5">
+        <category>
+            <permission value="true">VIEW_ACCOUNTS</permission>
+            <permission value="false">APPROVE_REJECT_TIMESHEETS</permission>
+            <permission value="true">CREATE_EDIT_RATE_TABLES</permission>
+        </category>
+    </permissions>
+    <permissions id="new-6">
+        <category>
+            <permission value="true">VIEW_ACCOUNTS</permission>
+            <permission value="true">APPROVE_REJECT_TIMESHEETS</permission>
+            <permission value="false">CREATE_EDIT_RATE_TABLES</permission>
+        </category>
+    </permissions>
+
+
+    <permissions target="wi" id="wi-1">
+        <category name="none">
+            <permission value="false" disabled="true">VIEW</permission>
+            <permission value="false" disabled="true">EDIT</permission>
+            <permission value="false" disabled="true">DELETE</permission>
+            <permission value="false" disabled="true">VIEW_PERMISSIONS</permission>
+        </category>
+        <category name="guest">
+            <permission value="true">VIEW</permission>
+            <permission value="true">EDIT</permission>
+            <permission value="false">DELETE</permission>
+            <permission value="true">VIEW_PERMISSIONS</permission>
+        </category>
+        <category name="view">
+            <permission value="true">VIEW</permission>
+            <permission value="false">EDIT</permission>
+            <permission value="true">DELETE</permission>
+            <permission value="false">VIEW_PERMISSIONS</permission>
+        </category>
+        <category name="edit">
+            <permission value="true">VIEW</permission>
+            <permission value="true">EDIT</permission>
+            <permission value="false">DELETE</permission>
+            <permission value="true">VIEW_PERMISSIONS</permission>
+        </category>
+        <category name="work">
+            <permission value="true">VIEW</permission>
+            <permission value="false">EDIT</permission>
+            <permission value="true">DELETE</permission>
+            <permission value="false">VIEW_PERMISSIONS</permission>
+        </category>
+        <category name="finance">
+            <permission value="true">VIEW</permission>
+            <permission value="true">EDIT</permission>
+            <permission value="false">DELETE</permission>
+            <permission value="true">VIEW_PERMISSIONS</permission>
+        </category>
+        <category name="all">
+            <permission value="true" disabled="true">VIEW</permission>
+            <permission value="true" disabled="true">EDIT</permission>
+            <permission value="true" disabled="true">DELETE</permission>
+            <permission value="true" disabled="true">VIEW_PERMISSIONS</permission>
+        </category>
+    </permissions>
+
+    <permissions target="wi" id="wi-2">
+        <category name="none">
+            <permission value="false" disabled="true">VIEW</permission>
+            <permission value="false" disabled="true">EDIT</permission>
+            <permission value="false" disabled="true">DELETE</permission>
+            <permission value="false" disabled="true">VIEW_PERMISSIONS</permission>
+        </category>
+        <category name="guest">
+            <permission value="true">VIEW</permission>
+            <permission value="false">EDIT</permission>
+            <permission value="true">DELETE</permission>
+            <permission value="false">VIEW_PERMISSIONS</permission>
+        </category>
+        <category name="view">
+            <permission value="true">VIEW</permission>
+            <permission value="true">EDIT</permission>
+            <permission value="false">DELETE</permission>
+            <permission value="true">VIEW_PERMISSIONS</permission>
+        </category>
+        <category name="edit">
+            <permission value="true">VIEW</permission>
+            <permission value="false">EDIT</permission>
+            <permission value="true">DELETE</permission>
+            <permission value="false">VIEW_PERMISSIONS</permission>
+        </category>
+        <category name="work">
+            <permission value="true">VIEW</permission>
+            <permission value="true">EDIT</permission>
+            <permission value="false">DELETE</permission>
+            <permission value="true">VIEW_PERMISSIONS</permission>
+        </category>
+        <category name="finance">
+            <permission value="true">VIEW</permission>
+            <permission value="false">EDIT</permission>
+            <permission value="true">DELETE</permission>
+            <permission value="false">VIEW_PERMISSIONS</permission>
+        </category>
+        <category name="all">
+            <permission value="true" disabled="true">VIEW</permission>
+            <permission value="true" disabled="true">EDIT</permission>
+            <permission value="true" disabled="true">DELETE</permission>
+            <permission value="true" disabled="true">VIEW_PERMISSIONS</permission>
+        </category>
+    </permissions>
+
+    <permissions id="tmp-1">
+        <category name="none">
+            <permission value="false" disabled="true">VIEW</permission>
+            <permission value="false" disabled="true">EDIT</permission>
+            <permission value="false" disabled="true">DELETE</permission>
+            <permission value="false" disabled="true">VIEW_PERMISSIONS</permission>
+        </category>
+        <category name="guest">
+            <permission value="true">VIEW</permission>
+            <permission value="true">EDIT</permission>
+            <permission value="false">DELETE</permission>
+            <permission value="true">VIEW_PERMISSIONS</permission>
+        </category>
+        <category name="view">
+            <permission value="true">VIEW</permission>
+            <permission value="false">EDIT</permission>
+            <permission value="true">DELETE</permission>
+            <permission value="false">VIEW_PERMISSIONS</permission>
+        </category>
+        <category name="edit">
+            <permission value="true">VIEW</permission>
+            <permission value="true">EDIT</permission>
+            <permission value="false">DELETE</permission>
+            <permission value="true">VIEW_PERMISSIONS</permission>
+        </category>
+        <category name="work">
+            <permission value="true">VIEW</permission>
+            <permission value="false">EDIT</permission>
+            <permission value="true">DELETE</permission>
+            <permission value="false">VIEW_PERMISSIONS</permission>
+        </category>
+        <category name="all">
+            <permission value="true" disabled="true">VIEW</permission>
+            <permission value="true" disabled="true">EDIT</permission>
+            <permission value="true" disabled="true">DELETE</permission>
+            <permission value="true" disabled="true">VIEW_PERMISSIONS</permission>
+        </category>
+    </permissions>
+
+    <permissions id="tmp-2">
+        <category name="none">
+            <permission value="false" disabled="true">VIEW</permission>
+            <permission value="false" disabled="true">EDIT</permission>
+            <permission value="false" disabled="true">DELETE</permission>
+            <permission value="false" disabled="true">VIEW_PERMISSIONS</permission>
+        </category>
+        <category name="guest">
+            <permission value="true">VIEW</permission>
+            <permission value="false">EDIT</permission>
+            <permission value="true">DELETE</permission>
+            <permission value="false">VIEW_PERMISSIONS</permission>
+        </category>
+        <category name="view">
+            <permission value="true">VIEW</permission>
+            <permission value="true">EDIT</permission>
+            <permission value="false">DELETE</permission>
+            <permission value="true">VIEW_PERMISSIONS</permission>
+        </category>
+        <category name="edit">
+            <permission value="true">VIEW</permission>
+            <permission value="false">EDIT</permission>
+            <permission value="true">DELETE</permission>
+            <permission value="false">VIEW_PERMISSIONS</permission>
+        </category>
+        <category name="work">
+            <permission value="true">VIEW</permission>
+            <permission value="true">EDIT</permission>
+            <permission value="false">DELETE</permission>
+            <permission value="true">VIEW_PERMISSIONS</permission>
+        </category>
+        <category name="all">
+            <permission value="true" disabled="true">VIEW</permission>
+            <permission value="true" disabled="true">EDIT</permission>
+            <permission value="true" disabled="true">DELETE</permission>
+            <permission value="true" disabled="true">VIEW_PERMISSIONS</permission>
+        </category>
+    </permissions>
+
+    <permissions target="usr" id="usr-1" xpath="//permissions[@id='tmp-1']"/>
+    <permissions target="usr" id="usr-2" xpath="//permissions[@id='tmp-2']"/>
+
+    <permissions target="grp" id="grp-1" xpath="//permissions[@id='tmp-1']"/>
+    <permissions target="grp" id="grp-2" xpath="//permissions[@id='tmp-2']"/>
+
+    <permissions target="mt" id="mt-1" xpath="//permissions[@id='tmp-1']"/>
+    <permissions target="mt" id="mt-2" xpath="//permissions[@id='tmp-2']"/>
+
+    <permissions target="ctx" id="ctx-1">
+        <category name="none">
+            <permission value="false" disabled="true">SHARE_PORTFOLIOS</permission>
+            <permission value="false" disabled="true">MEASURE_TEMPLATE</permission>
+            <permission value="false" disabled="true">CREATE_NON_TEMPLATE_WORK</permission>
+            <permission value="false" disabled="true">CREATE_ROOT_WORK</permission>
+        </category>
+        <category name="guest">
+            <permission value="true">SHARE_PORTFOLIOS</permission>
+            <permission value="true">MEASURE_TEMPLATE</permission>
+            <permission value="false">CREATE_NON_TEMPLATE_WORK</permission>
+            <permission value="true">CREATE_ROOT_WORK</permission>
+        </category>
+        <category name="view">
+            <permission value="true">SHARE_PORTFOLIOS</permission>
+            <permission value="false">MEASURE_TEMPLATE</permission>
+            <permission value="true">CREATE_NON_TEMPLATE_WORK</permission>
+            <permission value="false">CREATE_ROOT_WORK</permission>
+        </category>
+        <category name="edit">
+            <permission value="true">SHARE_PORTFOLIOS</permission>
+            <permission value="true">MEASURE_TEMPLATE</permission>
+            <permission value="false">CREATE_NON_TEMPLATE_WORK</permission>
+            <permission value="true">CREATE_ROOT_WORK</permission>
+        </category>
+        <category name="work">
+            <permission value="true">SHARE_PORTFOLIOS</permission>
+            <permission value="false">MEASURE_TEMPLATE</permission>
+            <permission value="true">CREATE_NON_TEMPLATE_WORK</permission>
+            <permission value="false">CREATE_ROOT_WORK</permission>
+        </category>
+        <category name="finance">
+            <permission value="false">SHARE_PORTFOLIOS</permission>
+            <permission value="true">MEASURE_TEMPLATE</permission>
+            <permission value="false">CREATE_NON_TEMPLATE_WORK</permission>
+            <permission value="true">CREATE_ROOT_WORK</permission>
+        </category>
+        <category name="all">
+            <permission value="true" disabled="true">SHARE_PORTFOLIOS</permission>
+            <permission value="true" disabled="true">MEASURE_TEMPLATE</permission>
+            <permission value="true" disabled="true">CREATE_NON_TEMPLATE_WORK</permission>
+            <permission value="true" disabled="true">CREATE_ROOT_WORK</permission>
+        </category>
+    </permissions>
+
+    <permissions target="ctx" id="ctx-2">
+        <category name="none">
+            <permission value="false" disabled="true">SHARE_PORTFOLIOS</permission>
+            <permission value="false" disabled="true">MEASURE_TEMPLATE</permission>
+            <permission value="false" disabled="true">CREATE_NON_TEMPLATE_WORK</permission>
+            <permission value="false" disabled="true">CREATE_ROOT_WORK</permission>
+        </category>
+        <category name="guest">
+            <permission value="true">SHARE_PORTFOLIOS</permission>
+            <permission value="false">MEASURE_TEMPLATE</permission>
+            <permission value="true">CREATE_NON_TEMPLATE_WORK</permission>
+            <permission value="false">CREATE_ROOT_WORK</permission>
+        </category>
+        <category name="view">
+            <permission value="false">SHARE_PORTFOLIOS</permission>
+            <permission value="true">MEASURE_TEMPLATE</permission>
+            <permission value="false">CREATE_NON_TEMPLATE_WORK</permission>
+            <permission value="true">CREATE_ROOT_WORK</permission>
+        </category>
+        <category name="edit">
+            <permission value="true">SHARE_PORTFOLIOS</permission>
+            <permission value="false">MEASURE_TEMPLATE</permission>
+            <permission value="true">CREATE_NON_TEMPLATE_WORK</permission>
+            <permission value="false">CREATE_ROOT_WORK</permission>
+        </category>
+        <category name="work">
+            <permission value="false">SHARE_PORTFOLIOS</permission>
+            <permission value="true">MEASURE_TEMPLATE</permission>
+            <permission value="false">CREATE_NON_TEMPLATE_WORK</permission>
+            <permission value="true">CREATE_ROOT_WORK</permission>
+        </category>
+        <category name="finance">
+            <permission value="true">SHARE_PORTFOLIOS</permission>
+            <permission value="false">MEASURE_TEMPLATE</permission>
+            <permission value="true">CREATE_NON_TEMPLATE_WORK</permission>
+            <permission value="false">CREATE_ROOT_WORK</permission>
+        </category>
+        <category name="all">
+            <permission value="true" disabled="true">SHARE_PORTFOLIOS</permission>
+            <permission value="true" disabled="true">MEASURE_TEMPLATE</permission>
+            <permission value="true" disabled="true">CREATE_NON_TEMPLATE_WORK</permission>
+            <permission value="true" disabled="true">CREATE_ROOT_WORK</permission>
+        </category>
+    </permissions>
+
+    <permissions target="mtb" id="mtb-1">
+        <category name="none">
+            <permission value="false" disabled="true">VIEW_ACCOUNTS</permission>
+            <permission value="false" disabled="true">APPROVE_REJECT_TIMESHEETS</permission>
+            <permission value="false" disabled="true">CREATE_EDIT_RATE_TABLES</permission>
+        </category>
+        <category name="guest">
+            <permission value="true" ignored="true">VIEW_ACCOUNTS</permission>
+            <permission value="true">APPROVE_REJECT_TIMESHEETS</permission>
+            <permission value="false">CREATE_EDIT_RATE_TABLES</permission>
+        </category>
+        <category name="view">
+            <permission value="true" ignored="true">VIEW_ACCOUNTS</permission>
+            <permission value="false">APPROVE_REJECT_TIMESHEETS</permission>
+            <permission value="true">CREATE_EDIT_RATE_TABLES</permission>
+        </category>
+        <category name="edit">
+            <permission value="true" ignored="true">VIEW_ACCOUNTS</permission>
+            <permission value="true">APPROVE_REJECT_TIMESHEETS</permission>
+            <permission value="false">CREATE_EDIT_RATE_TABLES</permission>
+        </category>
+        <category name="work">
+            <permission value="true" ignored="true">VIEW_ACCOUNTS</permission>
+            <permission value="false">APPROVE_REJECT_TIMESHEETS</permission>
+            <permission value="true">CREATE_EDIT_RATE_TABLES</permission>
+        </category>
+        <category name="all">
+            <permission value="true" disabled="true">VIEW_ACCOUNTS</permission>
+            <permission value="true" disabled="true">APPROVE_REJECT_TIMESHEETS</permission>
+            <permission value="true" disabled="true">CREATE_EDIT_RATE_TABLES</permission>
+        </category>
+    </permissions>
+
+    <permissions target="mtb" id="mtb-2">
+        <category name="none">
+            <permission value="false" disabled="true">VIEW_ACCOUNTS</permission>
+            <permission value="false" disabled="true">APPROVE_REJECT_TIMESHEETS</permission>
+            <permission value="false" disabled="true">CREATE_EDIT_RATE_TABLES</permission>
+        </category>
+        <category name="guest">
+            <permission value="true" ignored="true">VIEW_ACCOUNTS</permission>
+            <permission value="false">APPROVE_REJECT_TIMESHEETS</permission>
+            <permission value="true">CREATE_EDIT_RATE_TABLES</permission>
+        </category>
+        <category name="view">
+            <permission value="true" ignored="true">VIEW_ACCOUNTS</permission>
+            <permission value="true">APPROVE_REJECT_TIMESHEETS</permission>
+            <permission value="false">CREATE_EDIT_RATE_TABLES</permission>
+        </category>
+        <category name="edit">
+            <permission value="true" ignored="true">VIEW_ACCOUNTS</permission>
+            <permission value="false">APPROVE_REJECT_TIMESHEETS</permission>
+            <permission value="true">CREATE_EDIT_RATE_TABLES</permission>
+        </category>
+        <category name="work">
+            <permission value="true" ignored="true">VIEW_ACCOUNTS</permission>
+            <permission value="true">APPROVE_REJECT_TIMESHEETS</permission>
+            <permission value="false">CREATE_EDIT_RATE_TABLES</permission>
+        </category>
+        <category name="all">
+            <permission value="true" disabled="true">VIEW_ACCOUNTS</permission>
+            <permission value="true" disabled="true">APPROVE_REJECT_TIMESHEETS</permission>
+            <permission value="true" disabled="true">CREATE_EDIT_RATE_TABLES</permission>
+        </category>
+    </permissions>
+    <user id="none-user">
+        <use-timestamp>true</use-timestamp>
+        <exist>false</exist>
+        <first-name>None</first-name>
+        <second-name>User</second-name>
+        <login>NoneUser</login>
+        <password>qwer</password>
+        <email>test0@test.com</email>
+    </user>
+    <user id="view-user">
+        <use-timestamp>true</use-timestamp>
+        <exist>false</exist>
+        <first-name>View</first-name>
+        <second-name>User</second-name>
+        <login>ViewUser</login>
+        <password>qwer</password>
+        <email>test1@test.com</email>
+    </user>
+    <user id="edit-user">
+        <use-timestamp>true</use-timestamp>
+        <exist>false</exist>
+        <first-name>Edit</first-name>
+        <second-name>User</second-name>
+        <login>EditUser</login>
+        <password>qwer</password>
+        <email>test2@test.com</email>
+    </user>
+    <user id="guest-user">
+        <use-timestamp>true</use-timestamp>
+        <exist>false</exist>
+        <first-name>Guest</first-name>
+        <second-name>User</second-name>
+        <login>GuestUser</login>
+        <password>qwer</password>
+        <email>test3@test.com</email>
+    </user>
+    <user id="work-user">
+        <use-timestamp>true</use-timestamp>
+        <exist>false</exist>
+        <first-name>Work</first-name>
+        <second-name>User</second-name>
+        <login>WorkUser</login>
+        <password>qwer</password>
+        <email>test4@test.com</email>
+    </user>
+    <user id="all-user">
+        <use-timestamp>true</use-timestamp>
+        <exist>false</exist>
+        <first-name>All</first-name>
+        <second-name>User</second-name>
+        <login>AllUser</login>
+        <password>qwer</password>
+        <email>test5@test.com</email>
+    </user>
+    <permissions id="none-perm">
+        <category name="none">
+            <user xpath="//user[@id='none-user']"/>
+        </category>
+    </permissions>
+    <permissions id="view-perm">
+        <category name="view">
+            <user xpath="//user[@id='view-user']"/>
+        </category>
+    </permissions>
+    <permissions id="edit-perm">
+        <category name="edit">
+            <user xpath="//user[@id='edit-user']"/>
+        </category>
+    </permissions>
+    <permissions id="guest-perm">
+        <category name="guest">
+            <user xpath="//user[@id='guest-user']"/>
+        </category>
+    </permissions>
+    <permissions id="work-perm">
+        <category name="work">
+            <user xpath="//user[@id='work-user']"/>
+        </category>
+    </permissions>
+    <permissions id="all-perm">
+        <category name="all">
+            <user xpath="//user[@id='all-user']"/>
+        </category>
+    </permissions>
+</config>

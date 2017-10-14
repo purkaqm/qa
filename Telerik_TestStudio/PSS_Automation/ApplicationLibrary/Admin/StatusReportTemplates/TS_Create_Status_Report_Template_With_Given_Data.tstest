@@ -1,0 +1,313 @@
+{
+  "__type": "ArtOfTest.WebAii.Design.ProjectModel.Test",
+  "__value": {
+    "DomStatesCounter": {},
+    "WebKitExecutionDelay": 0,
+    "ReuseAppWindow": 0,
+    "ProfilerResultsDirectory": null,
+    "ProfilerServerName": null,
+    "ProfilerBenchmarkResultsFilePath": null,
+    "ProfilerBenchmarkResultsId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurationId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurations": {},
+    "CurrentReferences": [],
+    "Steps": {
+      "__type": "ArtOfTest.Common.Design.ProjectModel.AutomationStepList",
+      "__value": [
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "57cb321f-edd3-4cad-a00c-79dc376a04b4",
+            "Description": "Wait till Add/Edit Status Report Template is displayed",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "                                                            Pages.PS_StatusReportTemplatesPage.AddNewTemplateDialogDiv.Wait.ForExists();\r\n                                                            Pages.PS_StatusReportTemplatesPage.AddNewTemplateDialogDiv.Wait.ForVisible();\r\n                                                          ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 1,
+            "Id": "TS_CS_00",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Create_Status_Report_Template_With_Given_Dataidwvhqrk.lad",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "7a561760-00c5-4a00-b843-452eeaf6c3f3",
+            "Description": "Enter Name",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "                        string templateName = Data[\"StatusRepTemplateName\"].ToString()+Randomizers.generateRandomInt(10000,99999);\r\n                        ActiveBrowser.Window.SetFocus();\r\n                        Pages.PS_StatusReportTemplatesPage.AddNewTemplateNameInput.Click();\r\n                        Pages.PS_StatusReportTemplatesPage.AddNewTemplateNameInput.Focus();\r\n                        Actions.SetText(Pages.PS_StatusReportTemplatesPage.AddNewTemplateNameInput, templateName);\r\n                        //Pages.PS_StatusReportTemplatesPage.AddNewTemplateNameInput.SetValue(\"value\",metricName);\r\n                        SetExtractedValue(\"GeneratedStatusReportTemplateName\",templateName);",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 2,
+            "Id": "TS_CS_01",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Create_Status_Report_Template_With_Given_Data1i1nplwf.a0j",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "116daad1-bccd-493a-9682-12ba005762ea",
+            "Description": "Enter Description",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "                        if(Data[\"StatusRepTemplateDesc\"].ToString().Length > 0){\r\n                        ActiveBrowser.Window.SetFocus();\r\n                        Pages.PS_StatusReportTemplatesPage.AddNewTemplateDscTextArea.Click();\r\n                        Pages.PS_StatusReportTemplatesPage.AddNewTemplateDscTextArea.Focus();\r\n                        Actions.SetText(Pages.PS_StatusReportTemplatesPage.AddNewTemplateDscTextArea, Data[\"StatusRepTemplateDesc\"].ToString());\r\n                        //Pages.PS_StatusReportTemplatesPage.AddNewTemplateDscTextArea.SetValue(\"value\",Data[\"StatusRepTemplateDesc\"].ToString());\r\n                        \r\n                        }",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 3,
+            "Id": "TS_CS_02",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Create_Status_Report_Template_With_Given_Datagql5nlky.puf",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "f166c6c4-0bdb-4e99-8c0e-a87318872a6e",
+            "Description": "Select active checkbox",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "                        if(Data[\"StatusRepTemplateActive\"].ToString().ToLower().Contains(\"yes\")){\r\n                            Pages.PS_StatusReportTemplatesPage.AddNewTemplateActiveCheckbox.Click();\r\n                        }\r\n                       ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 4,
+            "Id": "TS_CS_03",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Create_Status_Report_Template_With_Given_Datajs4yhd3c.2hp",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "adf166cc-5ca7-4799-a368-b44820d82e1d",
+            "Description": "Choose Work Item",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "                       if(!Data[\"StatusRepTemplateWorkItem\"].ToString().ToLower().Contains(\"no\")){\r\n                           Pages.PS_StatusReportTemplatesPage.AddNewTmplWorkItemsSelDiv.Click();\r\n                           ActiveBrowser.RefreshDomTree();\r\n                           Pages.PS_StatusReportTemplatesPage.DoneButton.Wait.ForExists();\r\n                           Pages.PS_StatusReportTemplatesPage.DoneButton.Wait.ForVisible();\r\n                           \r\n                           \r\n                           \r\n                           string objectTypeStr = Data[\"StatusRepTemplateWorkItem\"].ToString();\r\n                           Log.WriteLine(objectTypeStr);\r\n                           string[] objectTypes = System.Text.RegularExpressions.Regex.Split(objectTypeStr, \"---\");\r\n                           \r\n                           for(int i=0; i < objectTypes.Length ; i++){\r\n                               System.Threading.Thread.Sleep(3000);\r\n                               string workItemCheckboxLocator = string.Format(AppLocators.get(\"add_status_report_tmplt_work_item\"),objectTypes[i]);\r\n                               if(ActiveBrowser.Find.AllByXPath(workItemCheckboxLocator).Count > 0){\r\n                                   HtmlInputCheckBox workItemChkbx = ActiveBrowser.Find.ByXPath<HtmlInputCheckBox>(workItemCheckboxLocator);\r\n                                   workItemChkbx.Click();\r\n                               }\r\n                               else{\r\n                                   Assert.IsTrue(false, objectTypes[i] + \" Not present in work items list\");\r\n                               }\r\n                           }\r\n                           \r\n                           Pages.PS_StatusReportTemplatesPage.DoneButton.Click();\r\n                       }\r\n                        ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 5,
+            "Id": "TS_CS_04",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Create_Status_Report_Template_With_Given_Databizfgpjc.jpv",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "c14d07ea-f039-4841-97c6-2423d10d4f46",
+            "Description": "Click Save button",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "                        Pages.PS_StatusReportTemplatesPage.AddNewTemplateSaveBtn.Click();\r\n                        ActiveBrowser.WaitUntilReady();\r\n                        ActiveBrowser.RefreshDomTree();\r\n                        \r\n                       ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 6,
+            "Id": "TS_CS_05",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Create_Status_Report_Template_With_Given_Datah5slnvln.egi",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        }
+      ]
+    },
+    "IndependentDescriptors": [],
+    "HtmlDescription": "",
+    "SilverlightEnabled": false,
+    "IsSilverlightApp": false,
+    "SilverlightAppWebUrl": "",
+    "SilverlightAppLocalDirectory": "",
+    "SilverlightAppRecordLocal": false,
+    "SilverlightAppOriginUri": null,
+    "WpfAppPath": null,
+    "UseDefaultWpfAppPath": false,
+    "TestAssembly": "PSS_Automation.dll",
+    "TestAssemblyPath": "bin",
+    "TestClass": "PSS_Automation.TS_Create_Status_Report_Template_With_Given_Data",
+    "IsManual": false,
+    "ResourceFilePath": "ApplicationLibrary\\Admin\\StatusReportTemplates\\TS_Create_Status_Report_Template_With_Given_Data.resx",
+    "HasCodeBehind": true,
+    "DataInfo": {
+      "__type": "ArtOfTest.Common.Design.Data.DataInfo",
+      "__value": {
+        "ConnectionString": "",
+        "DefaultToGrid": true,
+        "DataRange": "",
+        "LoadRecordsCount": null,
+        "DataTableName": "",
+        "DataProvider": "",
+        "DataEnabled": true,
+        "HasBuiltinGrid": false,
+        "DataType": 4,
+        "BuiltInData": null,
+        "BuiltInDocumentKey": null,
+        "TSQL": ""
+      }
+    },
+    "VSProperties": {},
+    "DeploymentItems": [],
+    "IsTestFragment": false,
+    "StopTestListOnFailure": false,
+    "InheritParentDataSource": true,
+    "BrowserType": 0,
+    "QcId": 0,
+    "QcFilePath": null,
+    "QcTestVersionStamp": 0,
+    "TestLinks": [],
+    "Description": "",
+    "Name": "TS_Create_Status_Report_Template_With_Given_Data",
+    "Owner": "",
+    "Path": "ApplicationLibrary\\Admin\\StatusReportTemplates\\TS_Create_Status_Report_Template_With_Given_Data.tstest",
+    "Priority": 0,
+    "TestType": 0,
+    "UniqueId": "08166184-b815-4df5-8469-ce58dbd1c15e",
+    "Id": "08166184-b815-4df5-8469-ce58dbd1c15e",
+    "ProjectId": "8482a1a8-662a-40c8-b69e-343a43a257af",
+    "Version": 200
+  }
+}

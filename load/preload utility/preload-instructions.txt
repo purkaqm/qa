@@ -1,0 +1,29 @@
+
+loadtest-preload.sh is a shell script that populates a PowerSteering server's cache in preparation for a load test.  The cache must be populated so the load test simulates a live site;  an empty cache means an unusually slow server.
+
+The script uses the UNIX 'wget' utility.  wget takes a URL as its parameter and fetches that URL from the web.  loadtest-preload.sh passes two additional parameters to wget:  "--spider" and "--load-cookies=cookies.txt".  The "--spider" parameter tells wget not to download anything (usually wget saves a local copy of the URL).  The "--load-cookies=cookies.txt" provides a cookies file that will allow the script to log in to the server.  The directory from which loadtest-preload.sh is being run must contain a valid cookies.txt file, or the script won't work.
+
+The cookies.txt file is server- and context-specific; each context has its own unique login cookie.  A cookies.txt file for the Raytheon context on QAAPP is provided.
+
+To make a new cookies.txt, do this:
+
+* Open a web browser.
+* Log in to the context to be tested, selecting 'Year' as the time period.
+* Close all browser windows.
+* Locate the browser's stored cookies.  Internet Explorer's cookies can generally be found in:
+    C:\Documents And Settings\<username>\Cookies
+  with one file for each cookie, where <username> is the logged-in users' login name.
+  Mozilla's cookies are found in:
+    C:\Documents And Settings\<username>\Application Data\Mozilla\Profiles\default\<unique id>\cookies.txt
+  with one file for *all* cookies.  The <unique id> changes, but there should be only one of them in the default\
+  directory.  Alternatively, Mozilla users can just use Start->Search->Files and Folders to search for files called
+  cookies.txt.
+* If using Internet Explorer, find the cookies file corresponding to the server to be tested.  Copy this file to the
+  loadtest-preload.sh directory and name it cookies.txt
+* If using Mozilla, copy cookies.txt to the loadtest-preload.sh directory and edit out all cookies except the login
+  cookie for the server to be tested.  (Merrily ignore the 'do not edit' warning in the cookies file.)
+
+The script itself is also server- and context-specific - the version in CVS points to the Raytheon context on QAAPP.  To adapt the script to a new server, use a text editor's search-and-replace feature to replace all occurrences of http://qaapp.cinteractive.com/raytheon/ with http://yourserver.cinteractive.com/yourcontext/.  The URLs in the script refer to Raytheon's database, so if you're using a different database you'll have to come up with a whole new set of URLs.
+
+When cookies.txt is in place, the script can be run either from a UNIX-based machine that has the wget utility (basically any of our Linux or FreeBSD servers), or from the Cygwin package on Windows.  Cygwin emulates a UNIX shell within Windows, and comes with the wget utility.  It can be downloaded from http://www.cygwin.com/.
+

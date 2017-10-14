@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="no"?>
+
+
+<Project>
+	<Tasks>
+		<Task Name="Test 35" PSObjectId="o2k00300000ecls6a5gg000000" TypeInfo="com.cinteractive.ps3.tollgate.Tollgate">
+			<Task Name="CP1" TypeInfo="com.cinteractive.ps3.tollgate.Checkpoint" ActualFinish="04/05/2002  17:00:00" PSObjectId="o2k00300000ecls6jffg000000">
+	                        <Relation PSObjectId="o2k00300000ecls6jf1g000000" Type="Finish-Start"/>
+	                </Task>
+			<Task Name="CP2" TypeInfo="com.cinteractive.ps3.tollgate.Checkpoint" Finish="04/02/2002 17:00:00" PSObjectId="o2k00300000ecls6jf1g000000">
+	                        <Relation PSObjectId="o2k00300000ecls6jf2g000000" Type="Finish-Start"/>
+	                </Task>
+			<Task Name="CP3" TypeInfo="com.cinteractive.ps3.tollgate.Checkpoint" Finish="04/05/2002  17:00:00"  PSObjectId="o2k00300000ecls6jf2g000000"/>
+		</Task>
+	</Tasks>
+	<Problems>
+		<Problem Type="DEPENDENCY_DESCR" PSObjectId="o2k00300000ecls6jffg000000">
+			<Recommendation Type="WORK_DATE_CHANGE"/>
+		</Problem>
+	</Problems>	
+</Project>

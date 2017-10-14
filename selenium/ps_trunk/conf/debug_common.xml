@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Debug for tests" verbose="1">
+    <test name="Common Tests (Acceptance, Content Filler, Measures, Gated Project)">
+        <groups>
+            <run>
+                <exclude name="development"/>
+
+                <include name="acceptance.test"/>
+                <include name="contentfiller.test"/>
+
+                <include name="gatedproject.test"/>
+                <include name="measures.test"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.contentfiller.TestDriver"/>
+            <class name="com.powersteeringsoftware.tests.acceptance.TestDriver"/>
+            <class name="com.powersteeringsoftware.tests.acceptance.TestCreateBasics"/>
+            <class name="com.powersteeringsoftware.tests.measures.TestDriver"/>
+            <class name="com.powersteeringsoftware.tests.gatedproject.TestDriver"/>
+        </classes>
+    </test>
+</suite>

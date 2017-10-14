@@ -1,0 +1,74 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Short tests" verbose="1">
+    <test name="validation:Validation UI Tests">
+        <classes>
+            <class name="com.powersteeringsoftware.tests.validation_ui.TestDriver"/>
+        </classes>
+    </test>
+
+    <test name="Common Tests (Acceptance, Content Filler, Measures, Gated Project)">
+        <groups>
+            <run>
+                <exclude name="development"/>
+
+                <include name="acceptance.test"/>
+                <include name="contentfiller.test"/>
+
+                <include name="gatedproject.test"/>
+                <include name="measures.test"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.contentfiller.TestDriver"/>
+            <class name="com.powersteeringsoftware.tests.acceptance.TestDriver"/>
+            <class name="com.powersteeringsoftware.tests.acceptance.TestCreateBasics"/>
+            <class name="com.powersteeringsoftware.tests.measures.TestDriver"/>
+            <class name="com.powersteeringsoftware.tests.gatedproject.TestDriver"/>
+        </classes>
+    </test>
+
+    <test name="Timesheets Tests">
+        <groups>
+            <run>
+                <include name="timesheets.test"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.timesheet.TestDriver"/>
+        </classes>
+    </test>
+
+    <test name="Permissions Tests">
+        <groups>
+            <run>
+                <include name="permissions.test"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.permissions.defaults.AddSet"/>
+            <class name="com.powersteeringsoftware.tests.permissions.categories.EditBasics"/>
+            <class name="com.powersteeringsoftware.tests.permissions.categories.CreateCategory"/>
+            <class name="com.powersteeringsoftware.tests.permissions.categories.EditNewCategory"/>
+            <class name="com.powersteeringsoftware.tests.permissions.categories.DeleteCategory"/>
+        </classes>
+    </test>
+
+    <test name="Report Tests">
+        <groups>
+            <run>
+                <include name="reports.test"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.reports.TestDriver"/>
+        </classes>
+    </test>
+
+    <test name="Search Tests">
+        <classes>
+            <class name="com.powersteeringsoftware.tests.search.TestDriver"/>
+        </classes>
+    </test>
+
+</suite>

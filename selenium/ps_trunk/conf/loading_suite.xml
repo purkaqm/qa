@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Loading Tests" verbose="1">
+    <test name="home page loading test">
+        <parameter name="count" value="3"/>
+        <parameter name="refresh-timeout" value="0"/>
+        <parameter name="random" value="false"/>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.parallel_loading.HomeLoadingTest"/>
+        </classes>
+    </test>
+</suite>

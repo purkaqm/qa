@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="no"?>
+
+
+<Project>
+	<Tasks>
+		<Task Name="Test3" PSObjectId="o2k00300000eclsr0p90000000">
+			<Task Duration="2400" Name="CP3" PSObjectId="o2k00300000eclss7a50000000"/>
+			<Task Duration="360" Name="CP2" PSObjectId="o2k00300000eclsrmfs0000000">
+				<Relation PSObjectId="o2k00300000eclss7a50000000" Type="Finish-Start"/>
+			</Task>
+			<Task Name="CP1" PSObjectId="o2k00300000eclsr61b0000000">
+				<Relation PSObjectId="o2k00300000eclsrmfs0000000" Type="Finish-Start"/>
+			</Task>
+		</Task>
+	</Tasks>
+	<ResourcePool/>
+</Project>

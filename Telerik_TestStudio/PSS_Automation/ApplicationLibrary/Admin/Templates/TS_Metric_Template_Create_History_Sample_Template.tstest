@@ -1,0 +1,832 @@
+{
+  "__type": "ArtOfTest.WebAii.Design.ProjectModel.Test",
+  "__value": {
+    "DomStatesCounter": {},
+    "WebKitExecutionDelay": 0,
+    "ReuseAppWindow": 0,
+    "ProfilerResultsDirectory": null,
+    "ProfilerServerName": null,
+    "ProfilerBenchmarkResultsFilePath": null,
+    "ProfilerBenchmarkResultsId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurationId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurations": {},
+    "CurrentReferences": [],
+    "Steps": {
+      "__type": "ArtOfTest.Common.Design.ProjectModel.AutomationStepList",
+      "__value": [
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "58182861-bb7b-4d07-955a-4ae7f8576d70",
+            "Description": "[TS_Metric_Template_Create_History_Sample_Template_CodedStep] : Click Create New link",
+            "CustomDescription": "Click Create New link",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.CreateNewLink.Click();\r\n            ActiveBrowser.WaitUntilReady();\r\n            Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.TemplateNameImput.Wait.ForVisible();",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 1,
+            "Id": "TS_Metric_Template_Create_History_Sample_Template_CodedStep",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Metric_Template_Create_History_Sample_Templaten13nsdym.twa",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "8524c129-4666-4793-a612-c20a509da810",
+            "Description": "Fill data in Basic Info tab",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CommentActionDescriptor",
+              "__value": {
+                "Comment": null,
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 2,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Metric_Template_Create_History_Sample_Templatehwqrrbzc.y3d",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "901c97b1-243a-490c-abf3-ce543ca3ed88",
+            "Description": "Execute test 'TS_Metric_Tempates_Fill_Basic_Info_Tab_Details'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "TS_Metric_Tempates_Fill_Basic_Info_Tab_Details",
+                "TestPath": "ApplicationLibrary\\Admin\\Templates\\TS_Metric_Tempates_Fill_Basic_Info_Tab_Details.tstest",
+                "TestUniqueId": "3b5d8179-e882-4441-b8a9-1044286992d1",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 3,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Metric_Template_Create_History_Sample_Templatexrfntmqm.rsw",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "21adb5f3-4497-4a69-bb84-e545e64372b0",
+            "Description": "[TS_Metric_Template_Create_History_Sample_Template_CodedStep1] : Click Next button",
+            "CustomDescription": "Click Next button",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.BasicInfoNextLink.Click();\r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 4,
+            "Id": "TS_Metric_Template_Create_History_Sample_Template_CodedStep1",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Metric_Template_Create_History_Sample_Templatestrhhl2t.mti",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "7af1a6cc-d1e9-4da4-bf0f-4469b5a61ba9",
+            "Description": "Fill data in Display tab",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CommentActionDescriptor",
+              "__value": {
+                "Comment": null,
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 5,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Metric_Template_Create_History_Sample_Templates2gyz2mf.vuu",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "094ee73b-ac90-4864-9dc4-f5014010b9e0",
+            "Description": "Execute test 'TS_Metric_Templates_Fill_Display_Tab_Details'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "TS_Metric_Templates_Fill_Display_Tab_Details",
+                "TestPath": "ApplicationLibrary\\Admin\\Templates\\TS_Metric_Templates_Fill_Display_Tab_Details.tstest",
+                "TestUniqueId": "290c9c75-d69a-494e-afa5-ca4345db7fd8",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 6,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Metric_Template_Create_History_Sample_Templateb0kwfg3j.f2x",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "d948e829-026f-474d-94a0-59a5a98fb3fe",
+            "Description": "[TS_Metric_Template_Create_History_Sample_Template_CodedStep2] : Click Next button",
+            "CustomDescription": "Click Next button",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.BasicInfoNextLink.Click();\r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 7,
+            "Id": "TS_Metric_Template_Create_History_Sample_Template_CodedStep2",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Metric_Template_Create_History_Sample_Templateiimmcd44.q1m",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "ce5c9d2d-d2c3-4657-af96-31f8a730429d",
+            "Description": "Fill data in View Tab",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CommentActionDescriptor",
+              "__value": {
+                "Comment": null,
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 8,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Metric_Template_Create_History_Sample_Templatejglah3iq.04z",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "14cfd3ea-4650-4985-ac32-a4caa5dab219",
+            "Description": "Execute test 'TS_Metric_Template_Fill_View_Tab_Details'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "TS_Metric_Template_Fill_View_Tab_Details",
+                "TestPath": "ApplicationLibrary\\Admin\\Templates\\TS_Metric_Template_Fill_View_Tab_Details.tstest",
+                "TestUniqueId": "433dee03-f354-445e-8fd9-809f838a66e6",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 9,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Metric_Template_Create_History_Sample_Templatea10a2sxh.gox",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "7fbca5d4-a737-4eea-a1d8-6b1f22d3d18c",
+            "Description": "[TS_Metric_Template_Create_History_Sample_Template_CodedStep3] : Click Next button",
+            "CustomDescription": "Click Next button",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.BasicInfoNextLink.Click();\r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 10,
+            "Id": "TS_Metric_Template_Create_History_Sample_Template_CodedStep3",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Metric_Template_Create_History_Sample_Templatek0v0fl2s.o5v",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "7101eeea-901b-4715-a868-9ffebd9e6a2f",
+            "Description": "Fill data in Line Items tab",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CommentActionDescriptor",
+              "__value": {
+                "Comment": null,
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 11,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Metric_Template_Create_History_Sample_Templatequ1klcl1.oyq",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "ea8c1229-0523-4edb-ac35-04d81266325c",
+            "Description": "Execute test 'TS_Metric_Templates_Fill_Line_Items_Tab_Details'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "TS_Metric_Templates_Fill_Line_Items_Tab_Details",
+                "TestPath": "ApplicationLibrary\\Admin\\Templates\\TS_Metric_Templates_Fill_Line_Items_Tab_Details.tstest",
+                "TestUniqueId": "e1e2551b-2cc1-49b8-9230-f794ff83311c",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 12,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Metric_Template_Create_History_Sample_Templateoo4x3b1p.4f5",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "264f3999-f493-4ae6-8f7b-8c3c63b6cf87",
+            "Description": "[TS_Metric_Template_Create_History_Sample_Template_CodedStep4] : Click Next button",
+            "CustomDescription": "Click Next button",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.BasicInfoNextLink.Click();\r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 13,
+            "Id": "TS_Metric_Template_Create_History_Sample_Template_CodedStep4",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Metric_Template_Create_History_Sample_Template104m2lal.bch",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "2d3f6761-2b98-42c9-800b-aa831f26c976",
+            "Description": "Fill data in Comutation tab",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CommentActionDescriptor",
+              "__value": {
+                "Comment": null,
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 14,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Metric_Template_Create_History_Sample_Templateja514b0v.bmw",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "0484f94d-eeb1-4739-8c2e-54ccae9baf7d",
+            "Description": "[TS_Metric_Template_Create_History_Sample_Template_CodedStep5] : Click Next button",
+            "CustomDescription": "Click Next button",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.BasicInfoNextLink.Click();\r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 15,
+            "Id": "TS_Metric_Template_Create_History_Sample_Template_CodedStep5",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Metric_Template_Create_History_Sample_Templatexbavw0al.brg",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "b8f66522-5d4c-4b4b-a593-d1abf4395b04",
+            "Description": "[TS_Metric_Template_Create_History_Sample_Template_CodedStep6] : Wait for Finish Tab",
+            "CustomDescription": "Wait for Finish Tab ",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.TemplateSubmitLink.Wait.ForVisible();\r\n            Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.FinishTabDisplayTable.Wait.ForVisible();\r\n            Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.FinishTabPropertiesTable.Wait.ForVisible();",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 16,
+            "Id": "TS_Metric_Template_Create_History_Sample_Template_CodedStep6",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Metric_Template_Create_History_Sample_Templatecxp02xrn.hyp",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "9ab90506-6862-4acc-8fd3-5306a10c839f",
+            "Description": "[TS_Metric_Template_Create_History_Sample_Template_CodedStep7] : Verify Finish tab information displayed as a Preview",
+            "CustomDescription": "Verify Finish tab information displayed as a Preview",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            HtmlTableCell basicInfoTabDetails = Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.Find.ByXPath<HtmlTableCell>(\"//table[@class='bgWhite']/tbody/tr[1]/td[1]\");\r\n            string basicInfoDetailsStr = basicInfoTabDetails.InnerText;\r\n            \r\n            Assert.IsTrue(basicInfoDetailsStr.ToLower().Contains(Data[\"MetricName\"].ToString().ToLower()), \"Metric Name should be displayed in Preview under Finish Tab\");\r\n            Assert.IsTrue(basicInfoDetailsStr.ToLower().Contains(Data[\"Description\"].ToString().ToLower()), \"Metric Description should be displayed in Preview under Finish Tab\");\r\n            \r\n            int viewCount = Int32.Parse(Data[\"TotalViews\"].ToString());\r\n            for(int i = 1; i <=viewCount;i++){\r\n                Assert.IsTrue(basicInfoDetailsStr.ToLower().Contains(Data[\"ViewName\"+i].ToString().ToLower()), \"View names should be displayed in Preview under Finish Tab\");\r\n            }\r\n            \r\n            HtmlTableCell rollUpCell = Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.Find.ByXPath<HtmlTableCell>(\"//td[@class='bgWhite'][span[contains(.,'Allow Rollup')]]\");\r\n            Assert.IsTrue(rollUpCell.InnerText.ToLower().Contains(Data[\"AllowRollUp\"].ToString().ToLower()), \"Allow Rollup info should be displayed in Preview under Finish Tab\");\r\n            \r\n            HtmlTableCell startEndDates = Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.Find.ByXPath<HtmlTableCell>(\"//td[@class='bgWhite'][span[contains(.,'Start Date')]]\");\r\n            Assert.IsTrue(startEndDates.InnerText.ToLower().Contains(Data[\"PeriodStartDate\"].ToString().ToLower()), \"Start Date info should be displayed in Preview under Finish Tab\");\r\n            Assert.IsTrue(startEndDates.InnerText.ToLower().Contains(Data[\"PeriodEndDate\"].ToString().ToLower()), \"End Date info should be displayed in Preview under Finish Tab\");\r\n            \r\n            HtmlTableCell frequencyCell = Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.Find.ByXPath<HtmlTableCell>(\"//td[@class='bgWhite'][span[contains(.,'Frequency Is')]]\");\r\n            Assert.IsTrue(frequencyCell.InnerText.ToLower().Contains(Data[\"Frequency\"].ToString().ToLower()), \"Frequency info should be displayed in Preview under Finish Tab\");\r\n            \r\n            HtmlTableCell sendReminderCell = Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.Find.ByXPath<HtmlTableCell>(\"//td[@class='bgWhite'][span[contains(.,'Send Reminders')]]\");\r\n            Assert.IsTrue(sendReminderCell.InnerText.ToLower().Contains(Data[\"SendReminder\"].ToString().ToLower()), \"Send Reminder info should be displayed in Preview under Finish Tab\");\r\n            \r\n            HtmlTableCell versionControlCell = Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.Find.ByXPath<HtmlTableCell>(\"//td[@class='bgWhite'][span[contains(.,'Version Control')]]\");\r\n            Assert.IsTrue(versionControlCell.InnerText.ToLower().Contains(Data[\"VersionControl\"].ToString().ToLower()), \"Version Control info should be displayed in Preview under Finish Tab\");\r\n            \r\n            HtmlTableCell periodsBackForwardCell = Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.Find.ByXPath<HtmlTableCell>(\"//td[@class='bgWhite'][span[contains(.,'Periods')]]\");\r\n            Assert.IsTrue(periodsBackForwardCell.InnerText.ToLower().Contains(Data[\"PeriodsBack\"].ToString().ToLower()), \"Periods Back info should be displayed in Preview under Finish Tab\");\r\n            Assert.IsTrue(periodsBackForwardCell.InnerText.ToLower().Contains(Data[\"PeriodsForward\"].ToString().ToLower()), \"Periods Forward info should be displayed in Preview under Finish Tab\");\r\n            \r\n            HtmlTableCell totalsCell = Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.Find.ByXPath<HtmlTableCell>(\"//td[@class='bgWhite'][span[contains(.,'Totals:')]]\");\r\n            Assert.IsTrue(totalsCell.InnerText.ToLower().Contains(Data[\"TotalsDisplayed\"].ToString().ToLower()), \"Totals info should be displayed in Preview under Finish Tab\");\r\n            \r\n            \r\n            \r\n            IList<HtmlTableRow> lineItemRowsInPreview = Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.Find.AllByXPath<HtmlTableRow>(\"//table[@class='bgWhite']/tbody/tr[2]//table[@class='bgDark']/tbody/tr\");\r\n            int enteredLineItemCount = Int32.Parse(Data[\"TotalLineItems\"].ToString());\r\n            Assert.IsTrue(lineItemRowsInPreview.Count == enteredLineItemCount + 1, \"Totals line item count displayed should match with line items entered\");\r\n            for(int j = 1;j<lineItemRowsInPreview.Count;j++){\r\n                string currentRowStr = lineItemRowsInPreview[j].InnerText.ToLower();\r\n                Log.WriteLine(currentRowStr);\r\n                Log.WriteLine(Data[\"LineItemName\"+j].ToString().ToLower());\r\n                Assert.IsTrue(currentRowStr.Contains(Data[\"LineItemName\"+j].ToString().ToLower()), \"Line Item Name should be displayed as Entered\");\r\n                Assert.IsTrue(currentRowStr.Contains(Data[\"LineItemDesc\"+j].ToString().ToLower()), \"Line Item Description should be displayed as Entered\");\r\n                Assert.IsTrue(currentRowStr.Contains(Data[\"LineItemSequence\"+j].ToString().ToLower()), \"Line Item Sequence should be displayed as Entered\");\r\n                Assert.IsTrue(currentRowStr.Contains(Data[\"LineItemDataType\"+j].ToString().ToLower()), \"Line Item Type should be displayed as Entered\");\r\n                if(Data[\"LineItemDataType\"+j].ToString().ToLower().Contains(\"cost\") || Data[\"LineItemDataType\"+j].ToString().ToLower().Contains(\"separator\")){\r\n                    continue;\r\n                }\r\n                if(Data[\"LineItemRollUp\"+j].ToString().ToLower().Contains(\"yes\")){\r\n                    Assert.IsTrue(currentRowStr.Contains(Data[\"LineItemRollUp\"+j].ToString().ToLower()), \"Line Item RollUp should be displayed as Entered\");\r\n                }\r\n                Assert.IsTrue(currentRowStr.Contains(Data[\"LineItemBehavior\"+j].ToString().ToLower()), \"Line Item Behavior should be displayed as Entered\");\r\n                if(Data[\"LineItemBehavior\"+j].ToString().ToLower().Contains(\"static\") || Data[\"LineItemConstraint\"+j].ToString().ToLower().Contains(\"none\")){\r\n                    continue;\r\n                }\r\n                Assert.IsTrue(currentRowStr.Contains(Data[\"LineItemConstraint\"+j].ToString().ToLower()), \"Line Item Constraint should be displayed as Entered\");\r\n                              \r\n            }\r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 17,
+            "Id": "TS_Metric_Template_Create_History_Sample_Template_CodedStep7",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Metric_Template_Create_History_Sample_Templatetrcjrdg3.o04",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "0aa19ce8-4bef-41e4-bb29-d14995006572",
+            "Description": "[TS_Metric_Template_Create_History_Sample_Template_CodedStep8] : Click Submit button",
+            "CustomDescription": "Click Submit button",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.TemplateSubmitLink.Click();\r\n            ActiveBrowser.WaitUntilReady();\r\n            \r\n            \r\n            ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 18,
+            "Id": "TS_Metric_Template_Create_History_Sample_Template_CodedStep8",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Metric_Template_Create_History_Sample_Templater34yofj5.ry4",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "7bf7dee9-6c8f-4683-9c16-7e2d7be24d1a",
+            "Description": "[TS_Metric_Template_Create_History_Sample_Template_CodedStep9] : Wait till Summary Page is displayed",
+            "CustomDescription": "Wait till Summary Page is displayed",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            Pages.PS_MetricTemplatesPage.TemplatesContainerFrame.SummaryTable.Wait.ForVisible();\r\n            string title = Pages.PS_HomePage.PageTitleDiv.InnerText;\r\n            Assert.IsTrue(title.Contains(GetExtractedValue(\"GeneratedMetricName\").ToString()),\"Template title should be displayed\");",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 19,
+            "Id": "TS_Metric_Template_Create_History_Sample_Template_CodedStep9",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Metric_Template_Create_History_Sample_Templatejtdxtlbz.dxo",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        }
+      ]
+    },
+    "IndependentDescriptors": [],
+    "HtmlDescription": "",
+    "SilverlightEnabled": false,
+    "IsSilverlightApp": false,
+    "SilverlightAppWebUrl": "",
+    "SilverlightAppLocalDirectory": "",
+    "SilverlightAppRecordLocal": false,
+    "SilverlightAppOriginUri": null,
+    "WpfAppPath": null,
+    "UseDefaultWpfAppPath": false,
+    "TestAssembly": "PSS_Automation.dll",
+    "TestAssemblyPath": "bin",
+    "TestClass": "PSS_Automation.TS_Metric_Template_Create_History_Sample_Template",
+    "IsManual": false,
+    "ResourceFilePath": "ApplicationLibrary\\Admin\\Templates\\TS_Metric_Template_Create_History_Sample_Template.resx",
+    "HasCodeBehind": true,
+    "DataInfo": {
+      "__type": "ArtOfTest.Common.Design.Data.DataInfo",
+      "__value": {
+        "ConnectionString": "",
+        "DefaultToGrid": false,
+        "DataRange": "",
+        "LoadRecordsCount": null,
+        "DataTableName": "Sample_Template$",
+        "DataProvider": "MetricsData.xls",
+        "DataEnabled": true,
+        "HasBuiltinGrid": false,
+        "DataType": 5,
+        "BuiltInData": null,
+        "BuiltInDocumentKey": null,
+        "TSQL": ""
+      }
+    },
+    "VSProperties": {},
+    "DeploymentItems": [],
+    "IsTestFragment": false,
+    "StopTestListOnFailure": false,
+    "InheritParentDataSource": false,
+    "BrowserType": 0,
+    "QcId": 0,
+    "QcFilePath": null,
+    "QcTestVersionStamp": 0,
+    "TestLinks": [],
+    "Description": "",
+    "Name": "TS_Metric_Template_Create_History_Sample_Template",
+    "Owner": "",
+    "Path": "ApplicationLibrary\\Admin\\Templates\\TS_Metric_Template_Create_History_Sample_Template.tstest",
+    "Priority": 0,
+    "TestType": 0,
+    "UniqueId": "bd88258d-7521-4802-b763-f66771375b07",
+    "Id": "bd88258d-7521-4802-b763-f66771375b07",
+    "ProjectId": "8482a1a8-662a-40c8-b69e-343a43a257af",
+    "Version": 200
+  }
+}

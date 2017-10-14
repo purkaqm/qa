@@ -1,0 +1,69 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Daily test suite" verbose="1">  
+ 
+     <test name="Gated Projects" enabled="true">
+        <groups><run>    
+                <include name="gatedproject.test"/>                        
+        </run></groups>
+        <classes>           
+            <class name="com.powersteeringsoftware.tests.gatedproject.TestDriver"/> 
+            <class name="com.powersteeringsoftware.tests.contentfiller.TestDriver" />
+        </classes>
+    </test>
+
+    <test name="ContentFiller" enabled="true">
+        <groups><run>
+            <include name="contentfiller.test" />
+        </run></groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.contentfiller.TestDriver" />       
+        </classes>
+    </test>
+
+    <test name="Acceptance" enabled="true">
+        <groups><run>
+            <include name="acceptance.test" />
+        </run></groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.acceptance.TestDriver" />
+            <class name="com.powersteeringsoftware.tests.acceptance.TestCreateBasics" />       
+        </classes>
+    </test>
+
+    <test name="Measures" enabled="true">
+        <groups><run>
+            <include name="measures.test"/>
+        </run></groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.measures.TestDriver"/>       
+        </classes>
+    </test>
+
+    <test name="Timesheets" enabled="true">
+        <groups><run>
+            <include name="timesheets.test"/>
+        </run></groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.timesheet.TestDriver"/>        
+        </classes>
+    </test>
+
+
+     
+    <test name="Permissions" enabled="true">
+        <groups><run>
+            <include name="permissions.test" />
+        </run></groups>
+        <classes>
+            <class name="com.powersteeringsoftware.tests.permissions.defaults.AddSet"/> 
+            <class name="com.powersteeringsoftware.tests.permissions.defaults.EditBasics"/>           
+            <class name="com.powersteeringsoftware.tests.permissions.categories.EditBasics"/>
+            <class name="com.powersteeringsoftware.tests.permissions.categories.CreateCategory" />
+            <class name="com.powersteeringsoftware.tests.permissions.categories.EditNewCategory" />   
+            <class name="com.powersteeringsoftware.tests.permissions.categories.DeleteCategory" />     
+        </classes>
+    </test>
+
+
+ </suite>

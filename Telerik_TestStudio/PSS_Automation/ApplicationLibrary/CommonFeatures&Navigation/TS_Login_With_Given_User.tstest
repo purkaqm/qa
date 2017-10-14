@@ -1,0 +1,153 @@
+{
+  "__type": "ArtOfTest.WebAii.Design.ProjectModel.Test",
+  "__value": {
+    "DomStatesCounter": {},
+    "WebKitExecutionDelay": 0,
+    "ReuseAppWindow": 0,
+    "ProfilerResultsDirectory": null,
+    "ProfilerServerName": null,
+    "ProfilerBenchmarkResultsFilePath": null,
+    "ProfilerBenchmarkResultsId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurationId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurations": {},
+    "CurrentReferences": [],
+    "Steps": {
+      "__type": "ArtOfTest.Common.Design.ProjectModel.AutomationStepList",
+      "__value": [
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "ea5c950d-e668-4074-a335-e892a73d7355",
+            "Description": "Navigate to Landing Page and Login",
+            "CustomDescription": "Navigate to Landing Page and Login",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "             string suffix = GetExtractedValue(\"UserSuffix\").ToString();\r\n             ActiveBrowser.NavigateTo(CustomUtils.getProjectBaseURL(this.ExecutionContext.DeploymentDirectory.ToString()), true);\r\n             Manager.ActiveBrowser.WaitUntilReady();\r\n             Manager.ActiveBrowser.Window.Maximize(); \r\n             string firstname = string.Format(\"Firstname{0}\",suffix);\r\n            string lastname = string.Format(\"Lastname{0}\",suffix);\r\n            string username = string.Format(\"Username{0}\",suffix);\r\n            string password = string.Format(\"Password{0}\",suffix);\r\n           \r\n            if(isUserLoggedIn()){\r\n                string firstLast = Pages.PS_HomePage.FirstNameLastNameDiv.TextContent;\r\n                Log.WriteLine(firstLast);\r\n                string expectedFirst = Data[firstname].ToString();\r\n                string expectedLast = Data[lastname].ToString();\r\n                \r\n                if(firstLast.Contains(expectedFirst) && firstLast.Contains(expectedLast)){\r\n                   return; \r\n                }\r\n                else{\r\n                    \r\n                  // Execute test 'TS_Logout'\r\n                  this.ExecuteTest(\"ApplicationLibrary\\\\CommonFeatures&Navigation\\\\TS_Logout.tstest\");\r\n                  Manager.ActiveBrowser.WaitUntilReady(); \r\n                  Manager.ActiveBrowser.ClearCache(BrowserCacheType.Cookies); \r\n                  \r\n                    \r\n                }\r\n                \r\n            }\r\n            \r\n            ActiveBrowser.Actions.SetText(Pages.PS_LoginPage.UsernameTextField,Data[username].ToString());\r\n            ActiveBrowser.Actions.SetText(Pages.PS_LoginPage.PasswordTextField,Data[password].ToString());\r\n            Pages.PS_LoginPage.SignInSubmitButton.Click();\r\n            \r\n            if(Data[\"IsLicencePopUp\"].ToString().Contains(\"Yes\")){\r\n                Pages.PS_LicencePopup.ContinueButton.Wait.ForVisible();\r\n                Pages.PS_LicencePopup.ContinueButton.Click();\r\n            }\r\n            \r\n            ActiveBrowser.WaitUntilReady();\r\n            \r\n            //below code is due to cookie error on firefox and chrome... need to remove...\r\n            System.Threading.Thread.Sleep(3000);\r\n            if(ActiveBrowser.PageTitle.Contains(\"Session Expired\")){\r\n                ActiveBrowser.NavigateTo(CustomUtils.getProjectBaseURL(this.ExecutionContext.DeploymentDirectory.ToString()), true);\r\n                ActiveBrowser.Actions.SetText(Pages.PS_LoginPage.UsernameTextField,Data[username].ToString());\r\n                ActiveBrowser.Actions.SetText(Pages.PS_LoginPage.PasswordTextField,Data[password].ToString());\r\n                Pages.PS_LoginPage.SignInSubmitButton.Click();\r\n            }\r\n            \r\n           SetExtractedValue(\"CurrentUsername\",Data[username].ToString());\r\n           SetExtractedValue(\"CurrentUserFirstname\",Data[firstname].ToString());\r\n           SetExtractedValue(\"CurrentUserLastname\",Data[lastname].ToString()); \r\n           SetExtractedValue(\"CurrentUserPassword\",Data[password].ToString());\r\n         ",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 1,
+            "Id": "TS_Login_with_given_user_CodedStep",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Login_with_given_user4qg2ir21.wsi",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "f55bf044-3be6-47f4-bcf0-12c1a8a4434d",
+            "Description": "Verify User Logged in",
+            "CustomDescription": "Verify User Logged in",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            // Wait for Exists 'LogOutLink'\r\n            Pages.PS_HomePage.LogOutLink.Wait.ForExists();\r\n            // Wait for element 'CenterContainerDiv' 'is' visible.\r\n            Pages.PS_HomePage.CenterContainerDiv.Wait.ForVisible();\r\n            // Verify element 'LeftNavigationBarDiv' 'is' visible.\r\n            Assert.AreEqual(true, Pages.PS_HomePage.LeftNavigationBarDiv.IsVisible(),\"User should be on Home Page after Login\");",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 2,
+            "Id": "TS_Login_with_given_user_CodedStep1",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "TS_Login_with_given_userhododube.atr",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        }
+      ]
+    },
+    "IndependentDescriptors": [],
+    "HtmlDescription": "",
+    "SilverlightEnabled": false,
+    "IsSilverlightApp": false,
+    "SilverlightAppWebUrl": "",
+    "SilverlightAppLocalDirectory": "",
+    "SilverlightAppRecordLocal": false,
+    "SilverlightAppOriginUri": null,
+    "WpfAppPath": null,
+    "UseDefaultWpfAppPath": false,
+    "TestAssembly": "PSS_Automation.dll",
+    "TestAssemblyPath": "bin",
+    "TestClass": "PSS_Automation.TS_Login_With_Given_User",
+    "IsManual": false,
+    "ResourceFilePath": "ApplicationLibrary\\CommonFeatures&Navigation\\TS_Login_with_given_user.resx",
+    "HasCodeBehind": true,
+    "DataInfo": {
+      "__type": "ArtOfTest.Common.Design.Data.DataInfo",
+      "__value": {
+        "ConnectionString": "",
+        "DefaultToGrid": false,
+        "DataRange": "",
+        "LoadRecordsCount": null,
+        "DataTableName": "Basic$",
+        "DataProvider": "LoginData.xlsx",
+        "DataEnabled": true,
+        "HasBuiltinGrid": false,
+        "DataType": 5,
+        "BuiltInData": null,
+        "BuiltInDocumentKey": null,
+        "TSQL": ""
+      }
+    },
+    "VSProperties": {},
+    "DeploymentItems": [],
+    "IsTestFragment": false,
+    "StopTestListOnFailure": false,
+    "InheritParentDataSource": true,
+    "BrowserType": 0,
+    "QcId": 0,
+    "QcFilePath": null,
+    "QcTestVersionStamp": 0,
+    "TestLinks": [],
+    "Description": "",
+    "Name": "TS_Login_With_Given_User",
+    "Owner": "",
+    "Path": "ApplicationLibrary\\CommonFeatures&Navigation\\TS_Login_With_Given_User.tstest",
+    "Priority": 0,
+    "TestType": 0,
+    "UniqueId": "62c99b87-79a9-4e80-8c0a-75b5fed9800f",
+    "Id": "62c99b87-79a9-4e80-8c0a-75b5fed9800f",
+    "ProjectId": "8482a1a8-662a-40c8-b69e-343a43a257af",
+    "Version": 200
+  }
+}

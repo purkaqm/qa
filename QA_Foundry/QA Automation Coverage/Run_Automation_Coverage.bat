@@ -1,0 +1,2 @@
+ruby QA_Automation_Coverage.rb
+pause

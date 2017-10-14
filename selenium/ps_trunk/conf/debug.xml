@@ -1,0 +1,34 @@
+ <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Debug" verbose="1">  
+     <test name="Debug test" enabled="true">
+        <groups>    
+            <run>
+                  <include name="addtag" />
+<!-- 
+                <include name="acceptance.test" />
+                <include name="contentfiller.test" />
+                <include name="gatedproject.test"/>
+                <include name="timesheets.test"/>   
+                <include name="measures.test"/>
+                <include name="permissions.test" />
+ -->                          
+            </run>
+        </groups>
+       
+        <packages>
+            <package name="com.powersteeringsoftware.tests.permissions.defaults"/>             
+            <package name="com.powersteeringsoftware.tests.permissions.categories"/>
+            <package name="com.powersteeringsoftware.tests.permissions.access"/>             
+        </packages>
+       
+        <classes>
+            <class name="com.powersteeringsoftware.tests.contentfiller.TestDriver" />
+            <class name="com.powersteeringsoftware.tests.acceptance.TestDriver" />
+            <class name="com.powersteeringsoftware.tests.acceptance.TestCreateBasics" />
+            <class name="com.powersteeringsoftware.tests.measures.TestDriver"/>
+            <class name="com.powersteeringsoftware.tests.timesheet.TestDriver"/>
+            <class name="com.powersteeringsoftware.tests.gatedproject.TestDriver"/>                        
+        </classes>
+    </test>
+ </suite>

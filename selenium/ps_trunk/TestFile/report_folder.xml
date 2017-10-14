@@ -1,0 +1,267 @@
+<config>
+    <report-folder isMy="false">testReportFolder</report-folder>
+
+    <report-wizard>
+        <tabs id="testFillingRWTabs">
+            <tab name="Type">
+                <category name="Projects"/>
+                <type name="Projects"/>
+            </tab>
+
+            <tab name="Definition">
+                <portfolio name="-- My Projects"/>
+                <parent-folder name="ROOT WORK FOR AUTOTESTS&gt;WORK_ITEM_TESTING"/>
+                <!-- "My Company&gt;Marketing"/ -->
+                <work-types>
+                    <work-type name="Work Items"/>
+                    <!--work-type name="Gated Projects"/-->
+                    <!--work-type name="Gated Project None Sequetials"/-->
+                    <work-type name="Gates"/>
+                </work-types>
+                <status-filter name="Status changed">
+                    <status name="On Track"/>
+                    <range-type name="Year to Date"/>
+                </status-filter>
+                <metric-filter name="Has metric">
+                    <metric name="MetricTemplate1"/>
+                </metric-filter>
+                <related-work-filter name="Related Work item">
+                    <work name="GATED PROJECT FNLT"/>
+                </related-work-filter>
+            </tab>
+
+            <tab name="Columns">
+                <column-group name="Project" option="Project">
+                    <column name="Name"/>
+                    <column name="Status"/>
+                    <column name="Owner"/>
+                    <column name="Percent complete"/>
+                    <column name="Priority"/>
+                </column-group>
+                <column-group name="Project / Owner" option="Owner">
+                    <column name="Name"/>
+                    <column name="Timezone"/>
+                </column-group>
+                <!--column-group name="Project / Tags" option="Tags">
+                    <column name="AUTOTESTS TAG 1"/>
+                    <column name="AUTOTESTS TAG 2"/>
+                    <column name="WSTS00"/>
+                    <column name="WSTS01"/>
+                    <column name="WSTS02"/>
+                    <column name="Location_2011.09.12_03:26:21_GMT"/>
+                </column-group-->
+                <!--column-group name="Project / Custom Fields" option="Custom Fields">
+                    <column name="Sample Checkboxes"/>
+                </column-group-->
+                <column-group name="User defined">
+                    <column option="Arithmetic calculation" name="Name1" expr="[9]+[10]+[11]" expr2="[9]+[10]"/>
+                    <!-- expr="[76]+[77]+[78]+[79]+[80]+[81]+[82]" -->
+                </column-group>
+            </tab>
+
+            <tab name="Filter">
+                <columnFilters step="1">
+                    <column-group name="Project" selectAll="true">
+                        <column name="Active phase">
+                            <filter type="FT_PHASE" process="DMAIC_AUTOTEST">
+                                <value>All</value>
+                                <!--  
+                                <value>Define</value>
+                                <value>Analyze</value>
+                                <value>Control</value>
+                                <value>Measure</value>
+                                <value>Improve</value>
+                                <value>Completed</value>
+                                -->
+                            </filter>
+                        </column>
+                        <column name="Is project">
+                            <filter type="FT_SELECTOR">
+                                <value>All</value>
+                            </filter>
+                        </column>
+                        <column name="Priority">
+                            <filter type="FT_CHBOX">
+                                <value>1 - Highest</value>
+                                <value>2 - High</value>
+                                <value>3 - Average</value>
+                            </filter>
+                        </column>
+                        <column name="Is archived">
+                            <filter type="FT_SELECTOR">
+                                <value>No</value>
+                            </filter>
+                        </column>
+                        <column name="Status">
+                            <filter type="FT_CHBOX">
+                                <value>Proposed</value>
+                                <value>Not Started</value>
+                                <value>On Track</value>
+                                <value>Completed</value>
+                            </filter>
+                        </column>
+                        <column name="Name">
+                            <filter type="FT_TEXT_WITH_CLAUSE" clause="Starts with">
+                                <value>GP</value>
+                            </filter>
+                        </column>
+                    </column-group>
+                    <column-group name="Project / Tags">
+                        <column name="AUTOTESTS TAG 1">
+                            <filter type="FT_TAG" clause="Include" criterion="With any of the following values">
+                                <value>a</value>
+                                <value>b</value>
+                                <value>c</value>
+                            </filter>
+                        </column>
+                        <column name="Location_2011.09.12_03:26:21_GMT">
+                            <filter type="FT_TAG" clause="Include" criterion="With any value"/>
+                        </column>
+                    </column-group>
+                    <column-group name="Project / Owner">
+                        <column name="Timezone">
+                            <filter type="FT_CHBOX">
+                                <value>GMT+5:00</value>
+                                <value>GMT-8:00</value>
+                                <value>GMT+9:00</value>
+                                <value>GMT</value>
+                            </filter>
+                        </column>
+                    </column-group>
+                    <column-group name="User defined">
+                        <column name="Name1">
+                            <filter type="FT_NUMERIC_WITH_CLAUSE" clause="less than">
+                                <value>3</value>
+                            </filter>
+                        </column>
+                    </column-group>
+                </columnFilters>
+                <columnFilters step="2">
+                    <column-group name="Project / Tags">
+                        <column name="WSTS00">
+                            <filter type="FT_TAG" clause="Include" criterion="With any of the following values">
+                                <value>WSTV0000</value>
+                                <value>WSTV0002</value>
+                            </filter>
+                        </column>
+                    </column-group>
+                    <column-group name="Project / Custom Fields">
+                        <column name="Sample Checkboxes">
+                            <filter type="FT_CF_CHBOX" clause="All the following values">
+                                <value>All</value>
+                            </filter>
+                        </column>
+                    </column-group>
+                </columnFilters>
+            </tab>
+
+            <tab name="Sort">
+                <groupby>
+                    <column name="Project / Name">
+                        <sort order="ASC" custom="true"/>
+                    </column>
+                    <column name="Project / Status">
+                        <sort order="ASC" custom="false"/>
+                    </column>
+                </groupby>
+                <additional-sort>
+                    <column name="Project / Priority">
+                        <sort order="DESC" custom="false"/>
+                    </column>
+                </additional-sort>
+            </tab>
+
+            <tab name="Summary">
+                <column name="Project / Priority">
+                    <summary value="DISTCOUNT" displayLabel="true"/>
+                </column>
+            </tab>
+
+            <tab name="Layout">
+                <paper-size value="A2 (1190px X 1684px)"/>
+            </tab>
+
+            <tab name="Chart">
+                <chart type="BAR" orientation="Horizontal"> <!-- No chart Bar Line Pie --> <!-- Horizontal Vertical  -->
+                    <!--  grouping value="" groupby=""/ -->
+                    <define-data axis="Project / Name">
+                        <data-series series="# of items" drawAsLine="false" newScale="false"/>
+                    </define-data>
+                    <!-- <define-data  divideBy=""  wedgeSize=""/> -->
+                    <styling>
+                        <position></position>
+                        <size>Extra Large</size>
+                        <font></font>
+                        <legendPos></legendPos>
+                        <labelPos></labelPos>
+                        <background fromColor="" toColor=""></background>
+                    </styling>
+                </chart>
+            </tab>
+
+            <tab name="Save">
+                <name>RW Projects report with filters</name>
+                <description>RW Projects report with filters</description>
+                <location isMy="false"/>
+                <scheduler>
+                    <frequency>Daily</frequency>
+                    <end-after>5</end-after>
+                </scheduler>
+                <mailing>
+                    <email-to></email-to>
+                    <format>PDF</format>
+                    <message>RW Projects report with filters</message>
+                </mailing>
+            </tab>
+
+        </tabs>
+        <tabs id="testSaveFromAnyTab">
+            <tab name="Save">
+                <name>report</name>
+                <description>RW Projects</description>
+                <location isMy="true"/>
+            </tab>
+        </tabs>
+        <tabs id="testSaveAsReport1">
+            <tab name="Save">
+                <name>testSaveAsReport-1</name>
+                <description>For test case testSaveAsReport</description>
+                <location isMy="true"/>
+            </tab>
+        </tabs>
+        <tabs id="testSaveAsReport2">
+            <tab name="Save">
+                <name>testSaveAsReport-2</name>
+                <description>For test case testSaveAsReport</description>
+            </tab>
+        </tabs>
+        <tabs id="testSaveAsReport3">
+            <tab name="Save">
+                <name>testSaveAsReport-3</name>
+                <description>For test case testSaveAsReport</description>
+            </tab>
+        </tabs>
+        <tabs id="testReportNameClick1">
+            <tab name="Save">
+                <name>testReportNameClick1 - edited</name>
+                <description>For test case testReportNameClick - edit</description>
+                <location xpath="//report-folder"/>
+            </tab>
+        </tabs>
+        <tabs id="testReportNameClick2">
+            <tab name="Save">
+                <name>testReportNameClick2</name>
+                <description>For test case testReportNameClick</description>
+                <location xpath="//report-folder"/>
+            </tab>
+        </tabs>
+    </report-wizard>
+</config>
+        <!-- &gt;My Company&gt;Initiative Marketing -->
+        <!-- <filter clause="Include..Any of...equal to" criterion="With any of the following values"> -->
+        <!-- TODO for new testing database
+        1. Append metric template: MetricTemplate1
+        2. Append Related Work for a GP type
+        3.
+
+        -->

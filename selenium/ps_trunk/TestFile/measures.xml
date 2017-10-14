@@ -1,0 +1,166 @@
+<config>
+    <measure id="3">
+        <name>Measure3</name>
+        <description>Description 3.</description>
+    </measure>
+    <measure id="4">
+        <name>Measure4</name>
+        <description>Description 4.</description>
+    </measure>
+    <measure id="5">
+        <name>Measure5</name>
+        <description>Description 5.</description>
+    </measure>
+    <measure id="6">
+        <name>Measure6</name>
+        <description>Description 6.</description>
+    </measure>
+    <measure id="7">
+        <name>Measure7</name>
+        <description>Description 7.</description>
+    </measure>
+    <measure id="8">
+        <name>Measure8</name>
+        <description>Description 8.</description>
+    </measure>
+
+    <measure id="CreateMTFormulaGoal">
+        <name>CreateMTFormulaGoal</name>
+        <description>goal,formula</description>
+        <is_library>true</is_library>
+        <indicator_type>goal</indicator_type>
+        <is_manual>false</is_manual>
+        <thresholds>
+            <threshold>
+                <value>50</value>
+            </threshold>
+            <threshold>
+                <value>100</value>
+            </threshold>
+        </thresholds>
+        <use-timestamp>true</use-timestamp>
+    </measure>
+
+    <measure id="CreateMTFormulaVariance">
+        <name>CreateMTFormulaVariance</name>
+        <description>variance,formula</description>
+        <is_library>true</is_library>
+        <indicator_type>variance</indicator_type>
+        <is_manual>false</is_manual>
+        <thresholds>
+            <threshold>
+                <value>100</value>
+            </threshold>
+            <threshold>
+                <value>200</value>
+            </threshold>
+            <threshold>
+                <value>300</value>
+            </threshold>
+            <threshold>
+                <value>400</value>
+            </threshold>
+        </thresholds>
+        <use-timestamp>true</use-timestamp>
+    </measure>
+
+    <measure id="Test_CreateMTManualGoal">
+        <name>Test_CreateMTManualGoal</name>
+        <description>goal,manual</description>
+        <is_library>true</is_library>
+        <indicator_type>goal</indicator_type>
+        <is_manual>true</is_manual>
+        <thresholds>
+            <threshold>
+                <value>50</value>
+            </threshold>
+            <threshold>
+                <value>100</value>
+            </threshold>
+        </thresholds>
+        <use-timestamp>true</use-timestamp>
+    </measure>
+
+    <measure id="Test_CreateMTManualVariance">
+        <name>Test_CreateMTManualVariance</name>
+        <description>variance,manual</description>
+        <is_library>true</is_library>
+        <indicator_type>variance</indicator_type>
+        <is_manual>true</is_manual>
+        <thresholds>
+            <threshold>
+                <value>100</value>
+            </threshold>
+            <threshold>
+                <value>200</value>
+            </threshold>
+            <threshold>
+                <value>300</value>
+            </threshold>
+            <threshold>
+                <value>400</value>
+            </threshold>
+        </thresholds>
+        <use-timestamp>true</use-timestamp>
+    </measure>
+
+    <measure id="copy">
+        <name>This_is_copy_of_Test_CreateMTManualGoal</name>
+        <description>variance,manual; copy of Test_CreateMTManualGoal</description>
+        <use-timestamp>true</use-timestamp>
+    </measure>
+
+    <measure id="instance">
+        <name>the_instance</name>
+        <is_library>false</is_library>
+        <description>formula and variance measure instance</description>
+        <use-timestamp>true</use-timestamp>
+        <indicator_type>variance</indicator_type>
+        <is_manual>false</is_manual>
+        <units_message>measure units</units_message>
+        <display_format>float</display_format>
+        <effective_dates>always</effective_dates>
+        <test_schedule time_of_day="240">daily</test_schedule>
+        <work xpath="//work[@id='work0']"/>
+        <thresholds>
+            <threshold>
+                <value>1000.0</value>
+            </threshold>
+            <threshold>
+                <value>1000.0</value>
+            </threshold>
+            <threshold>
+                <value>1000.0</value>
+            </threshold>
+            <threshold>
+                <value>1000.0</value>
+            </threshold>
+        </thresholds>
+    </measure>
+
+    <measure id="edit">
+        <is_library>false</is_library>
+        <description>description after edit. formula and variance measure instance</description>
+        <indicator_type>variance</indicator_type>
+        <is_manual>false</is_manual>
+        <units_message>measure units (edit)</units_message>
+        <display_format>integer</display_format>
+        <effective_dates start="08/09/2010" end="08/31/2010">absolute</effective_dates>
+        <test_schedule every="2" time_of_day="600">daily</test_schedule>
+        <history_schedule every="3" time_of_day="120">daily</history_schedule>
+        <thresholds>
+            <threshold>
+                <value>1001.1</value>
+            </threshold>
+            <threshold>
+                <value>2001.2</value>
+            </threshold>
+            <threshold>
+                <value>3001.3</value>
+            </threshold>
+            <threshold>
+                <value>4001.4</value>
+            </threshold>
+        </thresholds>
+    </measure>
+</config>
